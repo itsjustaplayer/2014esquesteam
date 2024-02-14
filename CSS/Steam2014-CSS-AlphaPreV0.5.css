@@ -1,0 +1,2804 @@
+
+/*STEAM 2014
+BY IJAP, ASSISTED BY TERSIS WILVIN
+CSS BASED OFF STEAM 2014'S CSS*/
+        /* Avatars */
+        .playerAvatar {
+            padding: 3px;
+            border-radius: 3px;
+            background-color: #545454;
+        }
+        .playerAvatar.offline {
+
+            background: -moz-linear-gradient(top, #706c6b 5%, #4e4d4d 95%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #706c6b), color-stop(95%, #4e4d4d));
+            background: -webkit-linear-gradient(top, #706c6b 5%, #4e4d4d 95%);
+            background: -o-linear-gradient(top, #706c6b 5%, #4e4d4d 95%);
+            background: -ms-linear-gradient(top, #706c6b 5%, #4e4d4d 95%);
+            background: linear-gradient(to bottom, #706c6b 5%, #4e4d4d 95%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#706c6b', endColorstr='#4e4d4d', GradientType=0);
+            /* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+            filter: none;
+        }
+        .playerAvatar.ignored {}
+        /* #8dccff to 6da1d0 */
+        .playerAvatar.online {
+            background-color: #7bafd6;
+
+            background: -moz-linear-gradient(top, #7bafd6 5%, #506d92 95%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #7bafd6), color-stop(95%, #506d92));
+            background: -webkit-linear-gradient(top, #7bafd6 5%, #506d92 95%);
+            background: -o-linear-gradient(top, #7bafd6 5%, #506d92 95%);
+            background: -ms-linear-gradient(top, #7bafd6 5%, #506d92 95%);
+            background: linear-gradient(to bottom, #7bafd6 5%, #506d92 95%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7bafd6', endColorstr='#506d92', GradientType=0);
+            /* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+            filter: none;
+        }
+        .playerAvatar.online img {
+            border-color: #4d5761;
+        }
+        /* gradient from #b3fc55 to #8cc82c */
+        .playerAvatar.in-game {
+            background-color: #9bc861;
+
+            background: -moz-linear-gradient(top, #9bc861 5%, #789e4c 95%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #9bc861), color-stop(95%, #789e4c));
+            background: -webkit-linear-gradient(top, #9bc861 5%, #789e4c 95%);
+            background: -o-linear-gradient(top, #9bc861 5%, #789e4c 95%);
+            background: -ms-linear-gradient(top, #9bc861 5%, #789e4c 95%);
+            background: linear-gradient(to bottom, #9bc861 5%, #789e4c 95%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc861', endColorstr='#789e4c', GradientType=0);
+            /* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+            filter: none;
+        }
+        .playerAvatar.in-game img {
+            border-color: #525a4f;
+        }
+        .playerAvatar {
+            width: 34px;
+            height: 34px;
+        }
+        .playerAvatar img {
+            width: 32px;
+            height: 32px;
+            border: 1px solid #545454;
+            border-radius: 3px;
+            padding: 0px;
+        }
+
+        .playerAvatar.medium {
+            width: 66px;
+            height: 66px;
+        }
+        .playerAvatar.medium img {
+            width: 64px;
+            height: 64px;
+        }
+
+        .playerAvatar.full {
+            width: 186px;
+            height: 186px;
+        }
+        .playerAvatar.full img {
+            width: 184px;
+            height: 184px;
+        }
+
+        .playerAvatar.tiny {
+            width: 22px;
+            height: 22px;
+            padding: 2px;
+        }
+        .playerAvatar.tiny img {
+            width: 22px;
+            height: 22px;
+            border: none;
+        }
+
+        .playerAvatar_friendindicator {
+            position: absolute;
+            left: 26px;
+            top: 23px;
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images//friendindicator_small.png');
+            width: 20px;
+            height: 20px;
+            z-index: 2;
+
+            cursor: pointer;
+        }
+
+        .persona,
+        a.persona,
+        .persona a {
+            color: #898989;
+        }
+
+        .persona.online,
+        a.persona.online,
+        .persona.online a {
+            color: #86b5d9;
+        }
+
+        .persona.in-game,
+        a.persona.in-game,
+        .persona.in-game a {
+            color: #8bc53f;
+        }
+
+
+
+        .miniprofile_hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1200;
+        }
+
+        .miniprofile_hover_inner.shadow_content {
+            margin: 11px;
+        }
+
+        .miniprofile_content {
+            width: 302px;
+            border-radius: 3px;
+
+            color: #828282;
+            font-size: 14px;
+        }
+
+        .miniprofile_top {
+            border: 1px solid #333538;
+            padding: 7px 8px;
+            background: -moz-linear-gradient(top, #33425a 5%, #282f3d 95%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #33425a), color-stop(95%, #282f3d));
+            background: -webkit-linear-gradient(top, #33425a 5%, #282f3d 95%);
+            background: -o-linear-gradient(top, #33425a 5%, #282f3d 95%);
+            background: -ms-linear-gradient(top, #33425a 5%, #282f3d 95%);
+            background: linear-gradient(to bottom, #33425a 5%, #282f3d 95%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33425a', endColorstr='#282f3d', GradientType=0);
+            ;
+        }
+
+        .miniprofile_player {
+            position: relative;
+            min-height: 72px;
+        }
+
+        .miniprofile_player .playerAvatar {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .miniprofile_player .player_content {
+            padding-left: 80px;
+            word-wrap: break-word;
+        }
+
+        .miniprofile_player .playername {
+            font-size: 16px;
+        }
+
+        .miniprofile_player .playername .nickname {
+            color: #9b9b9b;
+        }
+
+        .miniprofile_favorite_badge {
+            position: relative;
+
+            margin-top: 7px;
+
+            background-color: #282f3e;
+            border: 1px solid #212121;
+            border-radius: 3px;
+            padding: 7px 4px;
+            height: 34px;
+        }
+        .miniprofile_favorite_badge .favorite_badge_icon {
+            position: absolute;
+            top: 7px;
+            left: 4px;
+        }
+        .miniprofile_favorite_badge .favorite_badge_icon img {
+            width: 34px;
+            height: 34px;
+        }
+        .miniprofile_favorite_badge .favorite_badge_description {
+            font-size: 12px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-left: 44px;
+            padding-top: 3px;
+        }
+
+        .miniprofile_ingame {
+            border-left: 1px solid #1f1f1f;
+            border-right: 1px solid #1f1f1f;
+            border-bottom: 1px solid #1f1f1f;
+
+            padding: 8px;
+            height: 45px;
+            position: relative;
+
+            background: -moz-linear-gradient(top, #525151 5%, #292827 95%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #525151), color-stop(95%, #292827));
+            background: -webkit-linear-gradient(top, #525151 5%, #292827 95%);
+            background: -o-linear-gradient(top, #525151 5%, #292827 95%);
+            background: -ms-linear-gradient(top, #525151 5%, #292827 95%);
+            background: linear-gradient(to bottom, #525151 5%, #292827 95%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#525151', endColorstr='#292827', GradientType=0);
+        }
+
+        .miniprofile_ingame .game_logo {
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            width: 121px;
+            height: 45px;
+        }
+
+        .miniprofile_ingame .game_content {
+            padding-left: 128px;
+            padding-top: 6px;
+
+            font-size: 12px;
+        }
+
+        .hover_arrow {
+            position: absolute;
+            top: 30px;
+        }
+
+        .miniprofile_arrow {
+            border-top: 9px solid transparent;
+            border-bottom: 9px solid transparent;
+            width: 0;
+            height: 0;
+        }
+
+        .miniprofile_arrow.left {
+            border-right: 8px solid #313f56;
+            left: 4px;
+        }
+
+        .miniprofile_arrow.right {
+            border-left: 8px solid #313f56;
+            right: 4px;
+        }
+
+        .miniprofile_arrow_inner {
+            position: absolute;
+            top: -6px;
+            background-repeat: no-repeat;
+            width: 7px;
+            height: 1px;
+        }
+
+
+        .miniprofile_arrow.left .miniprofile_arrow_inner {
+            left: 2px;
+        }
+
+        .miniprofile_arrow.right .miniprofile_arrow_inner {
+            right: 2px;
+        }
+
+
+        .miniprofile_teammember {
+            margin-top: 5px;
+
+            line-height: 45px;
+            height: 45px;
+
+            padding-left: 10px;
+            width: 274px;
+
+            color: #ffffff;
+            font-size: 13px;
+            font-family: 'Motiva Sans', Arial, Helvetica, Verdana, sans-serif;
+
+            background-repeat: no-repeat;
+            background-position: top left;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .miniprofile_teammember.team_red {
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/promo/summer2014/minip_red.png');
+        }
+        .miniprofile_teammember.team_blue {
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/promo/summer2014/minip_blue.png');
+        }
+        .miniprofile_teammember.team_pink {
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/promo/summer2014/minip_pink.png');
+        }
+        .miniprofile_teammember.team_green {
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/promo/summer2014/minip_green.png');
+        }
+        .miniprofile_teammember.team_purple {
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/promo/summer2014/minip_purple.png');
+        }
+
+        /*
+ * BACKGROUND/BODY
+ */
+        body.v6 {
+            background-color: #3A3837!important;
+
+            /* background: #1b2838; */
+        }
+
+        body.v6 .store_nav .popup_block_new .popup_body {
+            border: 1px solid #82807c;
+            position: relative;
+            background-color: #3b3938;
+            background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/popups/bg_popup.png);
+            background-repeat: repeat-x;
+            background-position: top;
+        }
+
+        body.v6 .store_nav .popup_menu_subheader {
+            font-family: "Motiva Sans", Sans-serif;
+            font-weight: normal!important;
+            margin-top: 16px;
+            margin-bottom: 0px;
+            margin-left: 14px;
+            margin-right: 13px;
+            font-variant: small-caps;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            font-size: 11px;
+            color: #B0AEAC;
+            text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            background: #1b2838;
+            color: #acb2b8;
+        }
+        body.v6 {
+            background: #1b2838;
+        }
+        body.v6.game_bg {
+            background: #1b2838;
+        }
+
+        .game_page_background.game {
+            background-image: none !important;
+        }
+        .main_content_ctn,
+        .page_content_ctn {
+            background-image: url(http://store.akamai.steamstatic.com/public/images/v5/content_bg.png);
+            background-repeat: repeat-x;
+            background-color: #000000;
+        }
+        /*LOGIN*/
+        body.login.global .page_content {
+            background-image: url(http://store.akamai.steamstatic.com/public/images/v5/content_bg.png);
+            background-repeat: repeat-x;
+            background-color: #000000;
+        }
+        .newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh .newlogindialog_FormContainer_3jLIH {
+            background-color: #262626;
+            padding: 24px 32px;
+            flex: 1;
+            border-radius: unset;
+            min-width: 636px;
+            position: relative;
+            border: 1px solid #4d4b49;
+            color: #b0aeac;
+            line-height: 18px;
+        }
+
+        .newlogindialog_Login_ZOBYq .newlogindialog_FieldLabel_3d8dp.newlogindialog_Highlight_XyqzE {
+            color: #b0aeac;
+            font-weight: 500;
+        }
+
+        .qrlogin_LoginQR_1wtS3 {
+            position: relative;
+            width: calc(200px - 2.5em);
+            height: calc(200px - 2.5em);
+            border-style: solid;
+            border-color: #fff;
+            border-width: 1.25em;
+            border-radius: unset;
+        }
+
+        /*
+ * GENERIC POPUP
+ */
+        .pulldown {
+            padding-left: 5px;
+            padding-right: 18px;
+            background-image: url('http://store.akamai.steamstatic.com/public/shared/images/popups/btn_arrow_down_padded.png');
+            background-position: right center;
+            background-repeat: no-repeat;
+
+            cursor: pointer;
+        }
+
+        span.popup_menu_pulldown_indicator {
+            display: inline-block;
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/popups/btn_arrow_down.png');
+            vertical-align: middle;
+            width: 9px;
+            height: 4px;
+        }
+
+
+        .popup_block_new {
+            z-index: 200;
+            position: absolute;
+            box-shadow: 0 0 12px #000000;
+        }
+
+        .popup_block_new .popup_body {
+            border: 1px solid #82807c;
+            position: relative;
+
+            background-color: #3b3938;
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/popups/bg_popup.png');
+            background-repeat: repeat-x;
+            background-position: top;
+        }
+
+        .popup_block_new .popup_body.popup_menu {}
+
+        .popup_menu .popup_menu_item {
+            display: block;
+            padding: 5px 12px;
+            color: #e5e4dc;
+
+            text-transform: none;
+            font-size: 13px;
+            font-weight: normal;
+            line-height: normal;
+            text-align: left;
+        }
+
+        .popup_menu a.popup_menu_item {
+            text-decoration: none;
+        }
+
+        .popup_menu span.popup_menu_item {
+            cursor: default;
+        }
+
+        .popup_menu .popup_menu_item:hover,
+        .popup_menu .popup_menu_item.focus {
+            text-decoration: none;
+            background-color: #212d3d;
+        }
+
+
+        .popup_menu_subheader {
+            color: #9e9995;
+            font-size: 11px;
+            padding: 2px 12px 3px 12px;
+            cursor: default;
+        }
+
+        .popup_menu_item,
+        .popup_menu_subheader {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .popup_menu_hint {
+            float: right;
+            margin-left: 8px;
+        }
+
+        .popup_menu_subarea {
+            color: #9e9995;
+            font-size: 11px;
+            background-color: #3b3938;
+            margin: 8px 12px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .popup_menu_subarea_inner {
+            margin: 0 auto;
+            width: 138px;
+        }
+
+
+        .popup_menu .hr {
+            height: 1px;
+            background-color: #82807c;
+            margin: 10px 12px 0 12px;
+        }
+
+
+        .friendPlayerLevel {
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 16px;
+            border: solid white 2px;
+            height: 28px;
+            width: 28px;
+            line-height: 28px;
+            text-align: center;
+
+            cursor: default;
+        }
+
+
+        .friendPlayerLevel .friendPlayerLevelNum {
+            color: #9b9b9b;
+        }
+
+        .friendPlayerLevel.lvl_0 {
+            border-color: #9b9b9b;
+        }
+
+        .friendPlayerLevel.lvl_10 {
+            border-color: #c02942;
+        }
+
+        .friendPlayerLevel.lvl_20 {
+            border-color: #d95b43;
+        }
+
+        .friendPlayerLevel.lvl_30 {
+            border-color: #fecc23;
+        }
+
+        .friendPlayerLevel.lvl_40 {
+            border-color: #467a3c;
+        }
+
+        .friendPlayerLevel.lvl_50 {
+            border-color: #4e8ddb;
+        }
+
+        .friendPlayerLevel.lvl_60 {
+            border-color: #7652c9;
+        }
+
+        .friendPlayerLevel.lvl_70 {
+            border-color: #c252c9;
+        }
+
+        .friendPlayerLevel.lvl_80 {
+            border-color: #542437;
+        }
+
+        .friendPlayerLevel.lvl_90 {
+            border-color: #997c52;
+        }
+
+        .friendPlayerLevel.lvl_100,
+        .friendPlayerLevel.lvl_200,
+        .friendPlayerLevel.lvl_300,
+        .friendPlayerLevel.lvl_400 {
+            border: none;
+            border-radius: 0;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+
+            font-size: 14px;
+
+            height: 32px;
+            width: 32px;
+            line-height: 32px;
+        }
+
+        .friendPlayerLevel.lvl_100 {
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/community/levels_hexagons.png');
+        }
+
+        .friendPlayerLevel.lvl_200 {
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/community/levels_shields.png');
+        }
+
+        .friendPlayerLevel.lvl_300 {
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/community/levels_books.png');
+            text-shadow: 1px 1px #1a1a1a;
+        }
+
+        .friendPlayerLevel.lvl_400 {
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/community/levels_chevrons.png');
+        }
+
+        .friendPlayerLevel.lvl_plus_10 {
+            background-position: 0 -32px;
+        }
+        .friendPlayerLevel.lvl_plus_20 {
+            background-position: 0 -64px;
+        }
+        .friendPlayerLevel.lvl_plus_30 {
+            background-position: 0 -96px;
+        }
+        .friendPlayerLevel.lvl_plus_40 {
+            background-position: 0 -128px;
+        }
+        .friendPlayerLevel.lvl_plus_50 {
+            background-position: 0 -160px;
+        }
+        .friendPlayerLevel.lvl_plus_60 {
+            background-position: 0 -192px;
+        }
+        .friendPlayerLevel.lvl_plus_70 {
+            background-position: 0 -224px;
+        }
+        .friendPlayerLevel.lvl_plus_80 {
+            background-position: 0 -256px;
+        }
+        .friendPlayerLevel.lvl_plus_90 {
+            background-position: 0 -288px;
+        }
+
+        .newmodal {
+            position: absolute;
+
+            max-width: 900px;
+            /* our page width */
+            min-width: 500px;
+        }
+
+        .newmodal_header_border {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            background: -moz-linear-gradient(top, #797272 5%, #2e2e2e 95%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #797272), color-stop(95%, #2e2e2e));
+            background: -webkit-linear-gradient(top, #797272 5%, #2e2e2e 95%);
+            background: -o-linear-gradient(top, #797272 5%, #2e2e2e 95%);
+            background: -ms-linear-gradient(top, #797272 5%, #2e2e2e 95%);
+            background: linear-gradient(to bottom, #797272 5%, #2e2e2e 95%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#797272', endColorstr='#2e2e2e', GradientType=0);
+            padding: 1px 1px 0 1px;
+            border-bottom: 1px solid #4a4943;
+        }
+
+        .newmodal_header {
+            height: 44px;
+            line-height: 44px;
+            padding: 0 16px;
+            text-align: left;
+
+            font-size: 16px;
+            color: #ffffff;
+
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            background-color: #393937;
+            background: -moz-linear-gradient(top, #484846 5%, #272626 95%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #484846), color-stop(95%, #272626));
+            background: -webkit-linear-gradient(top, #484846 5%, #272626 95%);
+            background: -o-linear-gradient(top, #484846 5%, #272626 95%);
+            background: -ms-linear-gradient(top, #484846 5%, #272626 95%);
+            background: linear-gradient(to bottom, #484846 5%, #272626 95%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484846', endColorstr='#272626', GradientType=0);
+        }
+
+        .newmodal_close {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVBREZBRDlBNzdCNzExRTI5ODAzRUE3MDU0Mzk5MjM5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVBREZBRDlCNzdCNzExRTI5ODAzRUE3MDU0Mzk5MjM5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NUFERkFEOTg3N0I3MTFFMjk4MDNFQTcwNTQzOTkyMzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NUFERkFEOTk3N0I3MTFFMjk4MDNFQTcwNTQzOTkyMzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4iulRzAAABPElEQVR42mI8cuQIAyWABUqbAXEylH0fiDtwqI8FYhsoewEQH4cZcBaI64DYG8p/AVWADDyAeD4QMwPxJiA+BRJkgkr+BeJoIL4D5U8DYi0kzepAvAKq+TJU7V9kA0DgIxD7Q2lOIF4NpfmBeAuUfg3EPkD8BaaJCc2Z14A4EcoGuWAC1NkqQPwLqvkRsgYmLAG1HoiboOw0IA6EshNh/iZkAAjUA/FBJP5KIF6GTSEuAwygUQsDflAxogwQAuJ10AAExcpNKHsjEIsSMoAZGl2K0EALBeIIKFsOKSpxGtACxK5Qdi4QX4DiAqiYExB34TIgBIgrkAJtFpLcdKgYCBQBcRRMghGamUBxfhKIeaB+NkFOLFAAkjsDTZXfgdgK5DpYXvBGiqYpWDQzQMVAYZKDlDcuMFKanQECDAAqw0LA+GRiqAAAAABJRU5ErkJggg== );
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            float: right;
+            margin-top: 14px;
+            height: 16px;
+            width: 16px;
+
+            opacity: 0.7;
+        }
+
+        .newmodal_close:hover {
+            opacity: 1;
+        }
+
+        .newmodal_content_border {
+            background: -moz-linear-gradient(top, #4c4c4c 5%, #4a6279 95%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #4c4c4c), color-stop(95%, #4a6279));
+            background: -webkit-linear-gradient(top, #4c4c4c 5%, #4a6279 95%);
+            background: -o-linear-gradient(top, #4c4c4c 5%, #4a6279 95%);
+            background: -ms-linear-gradient(top, #4c4c4c 5%, #4a6279 95%);
+            background: linear-gradient(to bottom, #4c4c4c 5%, #4a6279 95%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#4a6279', GradientType=0);
+            background-color: #4c4c4c;
+            padding: 0 1px 1px 1px;
+        }
+
+        .newmodal_content {
+            background: -moz-linear-gradient(top, #252b33 5%, #1d1d1d 25%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #252b33), color-stop(25%, #1d1d1d));
+            background: -webkit-linear-gradient(top, #252b33 5%, #1d1d1d 25%);
+            background: -o-linear-gradient(top, #252b33 5%, #1d1d1d 25%);
+            background: -ms-linear-gradient(top, #252b33 5%, #1d1d1d 25%);
+            background: linear-gradient(to bottom, #252b33 5%, #1d1d1d 25%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#252b33', endColorstr='#1d1d1d', GradientType=0);
+            background-color: #1d1d1d;
+
+            overflow: auto;
+            word-wrap: break-word;
+
+            padding: 15px 21px;
+
+            font-size: 13px;
+            color: #939393;
+
+            position: relative;
+        }
+
+        .newmodal_content_innerbg {
+            background-color: #323233;
+            border: 1px solid #4d4b49;
+            padding: 8px;
+
+            color: #8f8f8f;
+        }
+
+        .newmodal_buttons {
+            text-align: right;
+            margin-top: 12px;
+        }
+
+        .newmodal_buttons .btn_medium {
+            margin-left: 12px;
+        }
+
+        .newmodal_prompt_description {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .newmodal_prompt_input {}
+
+        .newmodal_prompt_input input[type=text] {
+            width: 100%;
+        }
+
+        .newmodal_prompt_textarea {
+            height: 396px;
+        }
+
+        .newmodal_prompt_with_textarea {
+            display: inline-block;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            width: 500px;
+        }
+
+        .gray_bevel input,
+        .gray_bevel textarea {
+            border: none;
+            outline: none;
+            background-color: #565658;
+            font-size: 13px;
+            color: #BFBFBF;
+        }
+
+        .gray_bevel.fullwidth {
+            display: block;
+        }
+
+        .gray_bevel.fullwidth.for_text_input input,
+        .gray_bevel.fullwidth textarea {
+            width: 100%;
+        }
+
+        input.gray_bevel {
+            height: 20px;
+        }
+
+        textarea.gray_bevel,
+        .gray_bevel textarea {
+            resize: none;
+        }
+
+        select.gray_bevel {
+            background-color: #565658;
+            border-radius: 3px;
+            border: 1px solid #262627;
+            box-shadow: 1px 1px 0px #39393a;
+            color: #BFBFBF;
+
+            margin-bottom: 6px;
+            outline: none;
+
+            padding: 0px;
+            line-height: 27px;
+            height: 27px;
+            font-size: 14px;
+        }
+
+        .waiting_dialog_container {
+            line-height: 32px;
+        }
+
+        .waiting_dialog_throbber {
+            width: 32px;
+            height: 32px;
+            background: url('https://web.archive.org/web/20140705173030im_/http://cdn.steamcommunity.com/public/images/login/throbber.gif') center center no-repeat;
+            margin-right: 5px;
+            float: left;
+        }
+
+        .emoticon_hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1200;
+        }
+
+        .emoticon_hover_content {
+            padding: 6px 10px 6px 6px;
+            background-color: #3b3938;
+            border: 1px solid #797979;
+
+            margin: 12px;
+            box-shadow: 0 0 12px #000000;
+            white-space: nowrap;
+        }
+
+        .emoticon_hover_content.client {
+            margin: 0;
+            box-shadow: none;
+            display: inline-block;
+        }
+
+        .emoticon_hover_content_inner {
+            position: relative;
+            min-height: 54px;
+            padding-left: 62px;
+            font-size: 13px;
+        }
+
+        .emoticon_hover_content_inner img.emoticon_large {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .emoticon_hover_title {
+            padding-top: 8px;
+            color: #898989;
+        }
+
+        .emoticon_hover_desc {
+            color: #686868;
+        }
+
+        .emoticon_hover_arrow {
+            width: 13px;
+            height: 26px;
+            background-image: url('https://steamstore-a.akamaihd.net/public/shared/images/popups/hover_arrow_both.gif');
+            background-repeat: no-repeat;
+
+            position: absolute;
+            top: 26px;
+        }
+
+        .emoticon_hover_arrow.left {
+            background-position: left top;
+
+            left: 0;
+        }
+
+        .emoticon_hover_arrow.right {
+            background-position: right top;
+
+            right: 0;
+        }
+
+
+
+        /*
+ * HEADER
+ */
+        /* apply 16px padding to the sides of all the page-wide divs to prevent content
+	from touching the sides on small resolutions */
+        div#footer,
+        div#global_header,
+        div#store_header,
+        div#main,
+        div.page_area {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        #global_action_menu > * {
+            vertical-align: unset;
+        }
+        div.page_content {
+            width: 940px;
+            margin: 0px auto;
+        }
+
+
+        div#global_header {
+            background-image: url('https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg');
+            background-color: #000000;
+            border-bottom: 1px solid #4D4B48;
+            background-position: center top;
+            min-width: 940px;
+        }
+
+        /**/
+        div#global_header .content {
+            background-image: url('https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg');
+            background-position: center top;
+            position: relative;
+            width: 940px;
+            height: 104px;
+            margin: 0px auto;
+
+            z-index: 402;
+        }
+
+
+        div#global_header .menuitem.supernav_active {
+            color: #b8b6b4;
+        }
+
+        div#global_header .menuitem.supernav_active::after {
+            content: "";
+            display: none;
+            width: 100%;
+            height: 2.5px;
+            background: #1a9fff;
+            border-radius: 3px;
+            animation: slide 0.1s;
+            margin-top: 2px;
+        }
+        div#global_header {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            background-color: #000000;
+            font-size: 12px;
+        }
+
+        div#global_actions {
+            position: absolute;
+            right: 0px;
+            top: 6px;
+
+            height: 21px;
+            line-height: 21px;
+
+            color: #b8b6b4;
+            font-size: 11px;
+
+            z-index: 401;
+        }
+
+        div#global_actions a.global_action_link {
+            padding: 0px 4px;
+            color: #b8b6b4;
+        }
+
+        div#global_actions .global_action_link:hover {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+
+
+        div#global_actions .user_avatar {
+            float: right;
+            margin-left: 3px;
+        }
+
+        div#global_header div.logo {
+            float: left;
+            padding-top: 30px;
+            margin-right: 40px;
+            width: 176px;
+            height: 44px;
+            /*  background-image: 
+ url("http://store.akamai.steamstatic.com/public/images/v5/globalheader_logo.png");*/
+        }
+
+        #logo_holder a img {
+            background-image: url(https://steamstore-a.akamaihd.net/public/images/v5/globalheader_logo.png);
+            object-position: 176px;
+        }
+
+        div#global_header .menuitem {
+            display: block;
+            position: relative;
+
+            padding-top: 40px;
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-bottom: 7px;
+            line-height: 16px;
+
+            float: left;
+            font-size: 14px;
+            color: #b8b6b4;
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div#global_header .menuitem.active,
+        div#global_header .menuitem:hover {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        div#global_header .menuitem.active {
+            background-image: url('http://cdn.store.steampowered.com/public/shared/images/header/globalheader_highlight.png');
+            background-repeat: repeat-x;
+        }
+
+        div#global_header .activebg {
+            display: none;
+        }
+
+        #header_wallet_ctn {
+            text-align: right;
+            padding-right: 12px;
+            line-height: normal;
+        }
+
+        #language_pulldown,
+        #account_pulldown {
+            display: inline-block;
+            margin: 1px;
+            padding-left: 4px;
+            line-height: 19px;
+        }
+
+        #language_pulldown.focus,
+        #account_pulldown.focus {
+            margin: 0px;
+            border: 1px solid #82807C;
+            color: #ffffff;
+        }
+
+        #account_dropdown > .popup_body {
+            width: 150px;
+        }
+
+        .header_installsteam_btn {
+            float: left;
+            position: relative;
+            height: 21px;
+            margin-right: 3px;
+        }
+
+
+        .header_installsteam_btn_green .header_installsteam_btn_leftcap,
+        .header_installsteam_btn_green .header_installsteam_btn_rightcap,
+        .header_installsteam_btn_green .header_installsteam_btn {
+            background-image: url('https://steamstore-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_green.png');
+        }
+
+        .header_installsteam_btn_gray .header_installsteam_btn_leftcap,
+        .header_installsteam_btn_gray .header_installsteam_btn_rightcap,
+        .header_installsteam_btn_gray .header_installsteam_btn {
+            background-image: url('https://steamstore-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_gray.png');
+        }
+
+
+
+        .header_installsteam_btn {
+            display: inline-block;
+            background-image: url('https://steamstore-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_green.png');
+      
+            padding-left: 0px;
+            padding-right: 0px;
+            height: 21px;
+            line-height: 21px;
+            background-position: 0px -21px;
+            background-repeat: repeat-x;
+            text-decoration: none;
+            color: #e5e4dc;
+            font-weight: normal;
+        }
+
+        .header_installsteam_btn_content {
+            display: inline-block;
+            padding-left: 35px;
+            background-position: 10px 3px;
+            background-image: url(https://store.akamai.steamstatic.com/public/shared/images/header/btn_header_installsteam_download.png?v=1);
+            background-repeat: no-repeat;
+            text-decoration: none;
+            color: #e5e4dc;
+            background-color: unset!important;
+            font-weight: normal;
+        }
+
+        .header_installsteam_btn_content:hover {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+
+        div#global_header .menuitem_new {
+            position: absolute;
+            top: 27px;
+            font-size: 11px;
+            color: #85b0df
+        }
+
+        div#global_header .submenuitem {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 11px;
+            color: #b8b6b4;
+            padding-right: 10px;
+        }
+
+        div#global_header .submenuitem.active,
+        div#global_header .submenuitem:hover {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        div#global_header .submenuitem.moderator {
+            color: #b80000;
+        }
+
+        div#global_header .submenuitem.active.moderator,
+        div#global_header .submenuitem.moderator:hover {
+            color: #ff0000;
+        }
+
+        .community_sub_nav {
+            position: absolute;
+            left: 7px;
+            top: 65px;
+            width: 650px;
+            font-size: 14px;
+        }
+
+        .menuitem.username {
+            max-width: 250px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .supernav_content {
+            max-width: 138px;
+            background: #000 url(https://steamstore-a.akamaihd.net/public/shared/images/dd_web.jpg) top left no-repeat;
+            padding: unset;
+            box-shadow: 3px 3px 5px -3px #000;
+            text-align: left;
+            padding-top: 7px;
+            padding-left: 7px;
+            padding-right: 7px;
+            padding-bottom: 7px;
+            z-index: 500;
+        }
+
+        .supernav_content > a {
+            display: block;
+            padding: 6px 0;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .supernav_content > a:hover {
+            color: #4897cf;
+            text-decoration: none;
+        }
+
+
+        /* steam inbox */
+        /* notification box */
+        #header_notification_area {
+            float: left;
+            margin-right: 3px;
+            margin-top: 2px;
+            margin-left: 8px;
+        }
+
+        .header_notification_btn {
+            position: relative;
+            height: 29px;
+
+            cursor: pointer;
+        }
+
+        .header_notification_empty {
+            background-image: url('http://cdn.store.steampowered.com/public/shared/images/header/btn_notification_grey.png');
+            background-repeat: no-repeat;
+            background-position: center top;
+            width: 29px;
+        }
+
+        .header_notification_empty:hover,
+        .header_notification_empty.focus {
+            background-position: center bottom;
+        }
+
+        .header_notification_green {
+            padding: 0 28px 0 10px;
+
+            background-repeat: repeat-x;
+            background-position: 0 -29px;
+
+            line-height: 29px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .header_notification_green,
+        .header_notification_green .leftcap,
+        .header_notification_green .rightcap {
+            background-image: url('http://cdn.store.steampowered.com/public/shared/images/header/btn_notification_green.png?=1');
+        }
+
+        .header_notification_green:hover,
+        .header_notification_green.focus {
+            background-position: 0 -87px;
+        }
+
+        .header_notification_green:hover .leftcap,
+        .header_notification_green.focus .leftcap {
+            background-position: 0 -58px;
+        }
+        .header_notification_green:hover .rightcap,
+        .header_notification_green.focus .rightcap {
+            background-position: right -58px;
+        }
+
+        .header_notification_green .leftcap {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 5px;
+            height: 29px;
+            background-position: left top;
+        }
+
+        .header_notification_green .rightcap {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20px;
+            height: 29px;
+            background-position: right top;
+        }
+
+        #header_notification_dropdown .popup_menu_item {
+            line-height: 30px;
+            padding: 0 12px 0 12px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            color: #bfbfbf;
+        }
+
+        #header_notification_dropdown .popup_menu_item.active_inbox_item {
+            color: #70ba24;
+        }
+
+        .header_notification_dropdown_seperator {
+            margin: 0 7px;
+            height: 1px;
+            background-color: #6b6865;
+        }
+
+        .notification_icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-right: 16px;
+
+            background-image: url('http://cdn.store.steampowered.com/public/shared/images/header/inbox_icons_sprite.png');
+        }
+
+        .header_notification_comments .notification_icon {
+            background-position: 0 0;
+        }
+
+        .header_notification_items .notification_icon {
+            background-position: 0 -16px;
+        }
+
+        .header_notification_invites .notification_icon {
+            background-position: 0 -32px;
+        }
+
+        .header_notification_gifts .notification_icon {
+            background-position: 0 -48px;
+        }
+
+        .header_notification_offlinemessages .notification_icon {
+            background-position: 0 -64px;
+        }
+
+        /* these are shown conditionally so not a big deal that they aren't in the sprite */
+        .header_notification_tradeoffers .notification_icon {
+            background-image: url('http://cdn.store.steampowered.com/public/shared/images/header/inbox_tradeoffers.png');
+        }
+
+        .header_notification_asyncgame .notification_icon {
+            background-image: url('http://cdn.store.steampowered.com/public/shared/images/header/inbox_async_game.png');
+        }
+
+        .header_notification_asyncgameinvite .notification_icon {
+            background-image: url('http://cdn.store.steampowered.com/public/shared/images/header/inbox_async_game_invite.png');
+        }
+
+        /* re-uses comment icon */
+        .header_notification_moderatormessage .notification_icon {
+            background-image: url('http://cdn.store.steampowered.com/public/shared/images/header/inbox_moderator_message.png');
+        }
+
+
+        #header_parental_area {
+            float: left;
+            margin-right: 3px;
+            margin-top: -6px;
+            margin-left: 8px;
+        }
+
+        .header_parental_btn {
+            position: relative;
+            top: -1px;
+            height: 30px;
+
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/header/btn_parent.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            padding: 0 30px 0 10px;
+        }
+
+        #header_parental_link.header_parental_btn {
+            cursor: pointer;
+        }
+
+        #header_parental_link.header_parental_locked:hover,
+        .header_parental_locked.focus {
+            background-position: 0 -86px;
+        }
+
+        #header_parental_link.header_parental_unlocked:hover,
+        .header_parental_unlocked:focus {
+            background-position: 0 -28px;
+        }
+
+        .header_parental_unlocked {
+            background-position: 0 1px;
+        }
+
+        .header_parental_locked {
+            background-position: 0 -57px;
+        }
+
+        /* dynamic links */
+        .dynamiclink_box {
+            font-family: Helvetica, Arial, sans-serif;
+            border: 1px solid #404042;
+            background-color: #343435;
+            padding: 6px;
+            margin: 10px 15% 10px 0px;
+            height: 88px;
+            -moz-box-shadow: 0 0 10px #000000;
+            -webkit-box-shadow: 0 0 10px #000000;
+            box-shadow: 0 0 3px 0 #111111;
+
+            cursor: pointer;
+        }
+
+        .dynamiclink_box.noPopup {
+            cursor: default;
+        }
+
+        .dynamiclink_box.workshop_item {
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/sharedfiles/bg_shared_item_workshop.jpg');
+        }
+
+        .dynamiclink_box.greenlight_item {
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/sharedfiles/bg_shared_item_greenlight.jpg');
+        }
+
+        .dynamiclink_box.webguide_item {
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-image: url('https://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/sharedfiles/bg_shared_item_guide.jpg');
+        }
+
+        .dynamiclink_box.newspost .dynamiclink_description {
+            padding-top: 10px;
+        }
+
+        .dynamiclink_box:hover {
+            border-color: #97C0E3;
+        }
+
+        img.dynamiclink_preview {
+            height: 88px;
+            float: left;
+            margin-right: 14px;
+        }
+        .dynamiclink_content {
+            overflow: hidden;
+            color: #898989;
+            font-size: 11px;
+            height: 88px;
+            line-height: normal;
+            text-align: left;
+        }
+        .dynamiclink_name {
+            font-size: 14px;
+            color: #e7e7e7;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .dynamiclink_name .dynamiclink_type {
+            color: #898989;
+        }
+        .dynamiclink_url {
+            margin-top: 8px;
+        }
+        .dynamiclink_url a,
+        .dynamiclink_author a {
+            color: #bfbfbf;
+            text-decoration: none;
+        }
+        .dynamiclink_url a:hover,
+        .dynamiclink_author a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .dynamiclink_url a,
+        .dynamiclink_authorname {
+            color: #bfbfbf;
+        }
+
+        .dynamiclink_youtubeviewvideoembedded {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
+
+        /*
+.dynamiclink_youtubeviewvideoembedded {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	height: auto;
+	width: 580px;
+	height: 353px;
+}
+*/
+        .dynamiclink_youtubeviewvideoembedded iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .dynamiclink_youtubeviews {
+            padding-top: 4px;
+            padding-bottom: 4px;
+            color: #bfbfbf;
+        }
+
+        .adult_content_age_gate {
+            padding-top: 88px;
+            text-align: center;
+            width: 460px;
+            margin: 0 auto;
+
+            color: #ffffff;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .adult_content_age_gate p {
+            padding: 26px 0;
+        }
+
+        .jsTooltip {
+            background-color: #c2c2c2;
+            padding: 5px;
+            border-radius: 2px;
+            box-shadow: 0 0 3px #000;
+            max-width: 225px;
+            color: #3d3d3f;
+            font-size: 11px;
+            text-align: left;
+        }
+
+        /* early access tag on reviews*/
+        .early_access_review {
+            background-color: #4d6c8b;
+            border: 1px solid #779abc;
+            text-transform: uppercase;
+            font-family: arial;
+            font-size: 11px;
+            color: #9ac7f3;
+            padding: 1px 4px 0px 4px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        /*slider*/
+        .slider {
+            height: 13px;
+            position: relative;
+            background-color: #323232;
+            position: absolute;
+            left: 0px;
+            right: 1px;
+            top: 0;
+            bottom: 0;
+            background-color: rgba( 0, 0, 0, 0.2);
+            border-radius: 3px;
+        }
+
+        .slider_ctn .handle {
+            position: absolute;
+            top: 0px;
+            width: 60px;
+            height: 13px;
+            cursor: pointer;
+            background-image: url(https://web.archive.org/web/20140705173032im_/http://store.akamai.steamstatic.com/public/images/v5/control_slider.png);
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+
+        .slider_ctn .slider_left,
+        .slider_ctn .slider_right {
+            position: absolute;
+            width: 38px;
+            top: 0;
+            bottom: 0;
+            background-color: rgba( 0, 0, 0, 0.4);
+            border-radius: 3px;
+            cursor: pointer;
+            display: none;
+        }
+
+        /*game page*/
+        /* breadcrumbs*/
+        .blockbg {
+            background-color: #000000;
+            padding: 0px 4px;
+            float: left;
+        }
+
+        .breadcrumbs .blockbg {
+            background-color: #262626;
+        }
+
+        .breadcrumbs a {
+            color: #b0aeac;
+        }
+
+        .breadcrumbs {
+
+            font-size: 14px;
+            color: #626467;
+        }
+
+        .apphub_HomeHeaderContent .apphub_AppName {
+            color: white;
+            font-family: Motiva Sans, Arial, Helvetica, sans-serif;
+            font-size: 26px;
+            line-height: 32px;
+            text-overflow: ellipsis;
+            padding-left: 12px;
+            float: left;
+        }
+
+
+        .apphub_HomeHeaderContent .apphub_AppIcon {
+            position: relative;
+            margin-left: 12px;
+            height: 32px;
+            width: 32px;
+            float: left;
+            display: unset;
+        }
+
+
+        .apphub_HomeHeaderContent .apphub_HeaderStandardTop {
+            position: relative;
+            margin: 0px auto;
+            text-align: left;
+            padding-top: 7px;
+            height: 46px;
+            background-image: url(https://web.archive.org/web/20140705173102im_/http://cdn.store.steampowered.com/public/shared/images/apphubs/bg_header.png);
+            background-repeat: repeat-x;
+        }
+
+        .apphub_OtherSiteInfo {
+            position: relative;
+            float: right;
+            right: 11px;
+        }
+
+        .game_description_snippet {
+            overflow: hidden;
+            font-size: 12px;
+            line-height: 18px;
+            padding-right: 16px;
+        }
+        .apphub_background {
+            background-image: url(http://store.akamai.steamstatic.com/public/images/v5/content_bg.png)!important;
+            background-repeat: repeat-x;
+            background-color: #000000;
+            background-position: center top;
+            background-attachment: fixed;
+
+            background-size: contain;
+        }
+
+        #game_highlights {
+            color: #626366;
+            margin-bottom: 1px;
+            height: 435px;
+            background: #626366;
+            background-image: url(http://store.akamai.steamstatic.com/public/images/v5/game_highlight_bg.png);
+
+            background-position: top;
+        }
+        .queue_ctn {
+            width: 940px;
+            background: #262626;
+            margin: 0px auto;
+            margin-bottom: 16px;
+            border: 1px solid #4d4b49;
+        }
+
+        .block_content {
+            border: 1px solid #4d4b49;
+            background-color: #262626;
+            font-size: 12px;
+            color: #b0aeac;
+        }
+        .block_content page_content {
+            border: 1px solid #4d4b49;
+            background-color: #262626;
+            font-size: 12px;
+            color: #b0aeac;
+        }
+        .glance_ctn {
+            padding: 16px 16px 0px 0px;
+        }
+        .highlight_ctn {
+            height: 450px;
+            padding-top: 16px;
+            padding-left: 16px;
+        }
+
+        img.game_header_image_full {
+            width: 292px;
+            height: 136px;
+        }
+
+        #game_highlights a {
+            color: #529cde;
+        }
+        .game_review_summary.positive {
+            color: #529cde;
+        }
+        .app_tag {
+            display: inline-block;
+            line-height: 19px;
+            padding: 0 7px;
+            color: #b0aeac !important;
+            background-color: #384959;
+            margin-right: 2px;
+            border-radius: 3px;
+            box-shadow: 1px 1px 0 0 #000000;
+            cursor: pointer;
+            margin-bottom: 3px;
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
+        #store_nav_area .store_nav_bg {
+            height: 35px;
+            padding: 0px 0px;
+            background: linear-gradient(to bottom, #5a5654 0%, #6e6a69 100%);
+            background-position: 0px 0px;
+        }
+
+
+        .searchbox {
+            background-image: url(http://store.akamai.steamstatic.com/public/images/v5/store_header_search.png?v=2);
+            color: #a6a5a2;
+            width: 240px;
+            height: 27px;
+            position: relative;
+            z-index: 2;
+        }
+        .searchbox {
+
+            background-color: unset;
+            border-radius: 3px;
+            border: 1px solid rgba( 0, 0, 0, 0.3);
+            box-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.2);
+            color: #fff;
+            margin-bottom: 0px;
+            outline: none;
+            height: 27px;
+            padding: 0px 6px;
+            cursor: unset!important;
+        }
+
+
+        .searchbox:hover {
+            background-image: url(http://store.akamai.steamstatic.com/public/images/v5/store_header_search.png?v=2);
+            box-shadow: unset;
+            border-radius: 3px;
+            border: 1px solid rgba( 0, 0, 0, 0.3);
+            box-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.2);
+            color: #fff;
+            margin-bottom: 0px;
+            outline: none;
+            height: 27px;
+            padding: 0px 6px;
+            cursor: unset;
+        }
+
+        .searchbox input.default {
+            border: none;
+            color: #cdcac1;
+
+            margin-left: 8px;
+            width: 206px;
+            outline: none;
+        }
+        .searchbox input {
+            border: none;
+
+            color: #cdcac1;
+            margin-left: 8px;
+            width: 206px;
+            outline: none;
+        }
+
+        .searchbox input::placeholder {
+            color: #cdcac1;
+        }
+        div#store_search {
+            float: right;
+            border-left: 1px solid #000000;
+            padding: 4px 4px;
+            height: 27px;
+        }
+
+        a#store_search_link img {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 1px;
+            right: -1px;
+            background-image: url();
+        }
+
+
+        .search_result_row,
+        .search_result_row:hover {
+            position: relative;
+            background-color: #1f1f1f;
+            border-color: #1f1f1f;
+            padding-left: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            display: block;
+            text-decoration: none;
+            color: #c6d4df;
+            font-family: "Motiva Sans", Sans-serif;
+            font-weight: 300;
+        }
+
+        .search_result_row .col.search_name {
+            width: 250px;
+            margin-left: 5px;
+        }
+
+        .search_result_row .col.search_released {
+            width: 85px;
+            color: #c6d4df;
+            font-size: 11px;
+            line-height: 45px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        #term {
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #c6d4df;
+            border-radius: 0px;
+            box-shadow: unset;
+            width: 300px;
+            padding: 5px;
+            max-width: calc( 100% - 80px - 2px);
+        }
+
+        .game_page_background.game:before {
+            background-image: url(http://cdn.akamai.steamstatic.com/steam/apps/253430/page.bg.jpg?t=1400449790);
+        }
+
+        .forum_op_avatar {
+            position: absolute;
+            left: 12px;
+            top: 12px;
+        }
+
+        .rightcol.game_meta_data .block {
+
+            border: none;
+            border-left: 1px solid #262626;
+            background-image: url(https://web.archive.org/web/20140705173032im_/http://store.akamai.steamstatic.com/public/images/v5/rightcol_bg_block.png);
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            background: #262626;
+        }
+        .rightcol.game_meta_data .block.heading {
+            margin-bottom: 1px;
+            background-color: #3C3D3E;
+            color: #d6d7d8;
+            font-size: 12px;
+            padding: 7px 10px;
+        }
+
+        /* early access */
+        div.early_access_header .heading {
+            height: 118px;
+            background-image: url(https://store.akamai.steamstatic.com/public/images/v5/earlyaccess_banner.png?v=1);
+            padding: 10px 10px;
+            color: #acd8ff;
+            font-size: 13px;
+        }
+
+        /*Store Elements*/
+        .game_area_purchase_game {
+            position: relative;
+            border: 1px solid #4d4b49;
+            background-color: #262626;
+            font-size: 12px;
+            color: #898a8c;
+            padding-left: 16px;
+            padding-bottom: 26px;
+            margin-bottom: 28px;
+            z-index: 1;
+        }
+
+        .game_area_purchase_game,
+        .game_area_offsite_purchase {
+            position: relative;
+            background: -webkit-linear-gradient( 150deg, rgba(38, 38, 38, 1) 5%, rgba(38, 38, 38, 1) 95%);
+            background: linear-gradient( -60deg, rgba(38, 38, 38, 1)5%, rgba(38, 38, 38, 1)95%);
+            border-radius: 0px;
+            font-family: "Motiva Sans", Sans-serif;
+            font-weight: normal;
+            font-size: 13px;
+            color: #c6d4df;
+            padding-left: 16px;
+            padding-bottom: 16px;
+            margin-bottom: 28px;
+            z-index: 1;
+        }
+
+        .game_area_details_specs_ctn .label {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 8px;
+            height: 100%;
+            background-color: #1a1a1a;
+            width: 100%;
+            border-radius: 1px;
+            color: #8bc53f;
+        }
+
+        .discount_block .discount_prices {
+            background: #000000;
+            padding-left: 4px;
+        }
+
+        .discount_final_price {
+            color: #d6d7d8;
+            line-height: 16px;
+            font-size: 15px;
+        }
+
+        .discount_pct {
+            background-color: #4c6b22;
+            color: #ffffff;
+        }
+        .discount_block .discount_pct,
+        .discount_pct {
+            font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+            font-weight: normal;
+            font-weight: 500;
+            color: #ffffff;
+            background-color: #4c6b22;
+            display: inline-block;
+        }
+
+
+        .game_purchase_discount .discount_original_price {
+            position: absolute;
+            left: auto;
+            right: 6px;
+            top: 2px;
+            font-size: 11px;
+        }
+
+        .discount_original_price {
+            font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+            color: #626366;
+        }
+
+
+        a.game_area_details_specs_ctn .label {
+            color: #8bc53f;
+        }
+        .game_language_options td span {
+            font-weight: bold;
+            color: #8bc53f;
+        }
+
+        .controllersupportinfo_LocSection_38m8D {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #1a1a1a;
+            color: #8bc53f;
+        }
+
+        .controllersupportinfo_ImgSection_28V2e {
+            padding: 0px 6px;
+            display: flex;
+            background: unset;
+        }
+
+        .controllersupportinfo_LocString_5bHD6.controllersupportinfo_Personalized_3Q8sx {
+            color: #8bc53f;
+        }
+
+        .controllersupportinfo_LocString_5bHD6:hover {
+
+            color: #ffff;
+            cursor: pointer;
+            text-decoration: none;
+            background: #67c1f5;
+            background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
+        }
+
+
+        .game_language_options td {
+            color: #B0AEAC;
+            padding: 3px 0px 3px 0px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .all_languages {
+            text-decoration: none;
+            color: #B0AEAC;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+            display: inline-block;
+        }
+        .block .block_title {
+            font-size: 12px;
+            color: #B0AEAC;
+            margin-bottom: 2px;
+        }
+        .details_block a {
+            font-family: "Motiva Sans", Sans-serif;
+            font-weight: 300;
+            color: #B0AEAC;
+        }
+
+        .block a.linkbar {
+            min-height: 17px;
+            padding-top: 8px;
+            padding-left: 8px;
+            padding-bottom: 4px;
+            line-height: 17px;
+            background-image: url(https://web.archive.org/web/20140705173032im_/http://store.akamai.steamstatic.com/public/images/v5/bg_link_bar.png);
+            background-repeat: no-repeat;
+            background-position: right;
+            color: #B0AEAC;
+            border-radius: 1px;
+            display: block;
+            margin-bottom: 2px;
+            text-decoration: none;
+        }
+        .leftcol .block .block_header {
+            background-image: url(https://web.archive.org/web/20140705173032im_/http://store.akamai.steamstatic.com/public/images/v5/maincol_bg_gray.png);
+            background-repeat: no-repeat;
+            background-color: #303030;
+        }
+        .block .block_header {
+            position: relative;
+            height: 25px;
+            line-height: 25px;
+            color: #d6d7d8;
+            border-bottom: 1px solid #000000;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .block .block_header div,
+        .block .block_header h4 {
+            padding: 0px 16px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .block_footer .right,
+        .block_header .right {
+            position: absolute;
+            right: 0px;
+            border-left: 1px solid #000000;
+            height: 26px;
+        }
+        body.v6 h2 {
+            padding: 0px 16px;
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: unset;
+            color: #d6d7d8;
+            margin: 0 0 10px;
+            letter-spacing: 0.03em;
+        }
+
+        .game_description_column .block .block_header .right a {
+            float: right;
+            background-color: unset;
+            border-radius: 1px;
+            color: #B0AEAC;
+            font-size: 10px;
+            text-transform: uppercase;
+            padding: 2px 4px;
+        }
+        /*Event Banner*/
+        .saleEventBannerStyle {
+
+            display: none!important;
+        }
+        /*Reviews*/
+        .review_box {
+            border-top: 1px solid #425a76;
+            background: -moz-linear-gradient(left, #20201f 5%, #252626 95%);
+            background: -webkit-gradient(linear, left top, right top, color-stop(5%, #20201f), color-stop(95%, #252626));
+            background: -webkit-linear-gradient(left, #20201f 5%, #252626 95%);
+            background: -o-linear-gradient(left, #20201f 5%, #252626 95%);
+            background: -ms-linear-gradient(left, #20201f 5%, #252626 95%);
+            background: linear-gradient(to right, #20201f 5%, #252626 95%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20201f', endColorstr='#252626', GradientType=1);
+            margin-bottom: 26px;
+        }
+
+        .review_box .control_block .text {
+            display: inline-block;
+            margin-right: 9px;
+            color: #898a8c;
+            font-size: 12px;
+        }
+
+
+        /*Hover Box */
+        .game_hover_box {
+            border: 1px solid #82807c;
+            background-color: #3b3938;
+            width: 306px;
+            color: #b0aeac;
+            font-size: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 12px #000000;
+            background: #3b3938;
+            width: 306px;
+        }
+        .game_hover .hover_arrow_left {
+            width: 13px;
+            height: 26px;
+            background-image: url(https://web.archive.org/web/20140705173032im_/http://store.akamai.steamstatic.com/public/images/v5/hover_arrow_both.gif);
+            background-repeat: no-repeat;
+            background-position: left top;
+            position: absolute;
+            top: 48px;
+            left: 0px;
+        }
+        .game_hover_box h4.hover_title {
+            color: #FFFFFF;
+            font-weight: normal;
+            font-size: 15px;
+            font-weight: normal;
+            text-transform: unset;
+            letter-spacing: 0px;
+            margin-top: -4px;
+            line-height: 17px;
+            margin-bottom: 4px;
+        }
+
+        .hover_tag_row .app_tag {
+            display: inline-block;
+            line-height: 19px;
+            padding: 0 7px;
+            color: #b0aeac !important;
+            background-color: #384959;
+            margin-right: 2px;
+            border-radius: 3px;
+            box-shadow: 1px 1px 0 0 #000000;
+            cursor: pointer;
+            margin-bottom: 3px;
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .hover_details_block,
+        .hover_details_block_full {
+            display: block;
+            border-radius: 2px;
+            margin-right: 3px;
+            background-color: #384959;
+            padding: 4px;
+            line-height: 20px;
+            height: 20px;
+        }
+
+        /*
+ * Store Platforms
+ */
+        span.platform_img {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background-repeat: no-repeat;
+        }
+
+        img.platform_small,
+        .platform_img {
+            vertical-align: middle;
+            margin-right: 1px;
+        }
+
+        span.platform_img.win {
+            background-image: url(http://store.akamai.steamstatic.com/public/images/v5/platforms/platform_win.png);
+        }
+
+        span.platform_img.mac {
+            background-image: url(http://store.akamai.steamstatic.com/public/images/v5/platforms/platform_mac.png);
+        }
+
+        span.platform_img.linux {
+            width: 72px;
+            background-image: url(https://web.archive.org/web/20140705173032im_/http://store.akamai.steamstatic.com/public/images/v5/platforms/platform_steamplay_only.png);
+        }
+
+        .col.search_name .platform_img {
+            opacity: 1;
+        }
+        /*Community*/
+        .community_home_title {
+            font-weight: normal;
+            font-size: 24px;
+            color: #529cde;
+            text-align: left;
+        }
+        .community_home_header .appHubShortcut,
+        .community_home_header .appHubShortcut a,
+        .community_home_header .appHubShortcut a:visited {
+            color: #8c8b8a;
+        }
+        .new_items_text {
+            color: #355c93;
+        }
+        .new_items_num {
+            font-size: 12px;
+            line-height: 15px;
+            color: #529cde;
+        }
+
+
+
+.apphub_sectionTab.active > span {
+    padding: 0 19px;
+    border-radius: 2px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    display: block;
+    background: #445b7c;
+    background: -moz-linear-gradient(top, #445b7c 5%, #364963 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#445b7c), color-stop(95%,#364963));
+    background: -webkit-linear-gradient(top, #445b7c 5%,#364963 95%);
+    background: -o-linear-gradient(top, #445b7c 5%,#364963 95%);
+    background: -ms-linear-gradient(top, #445b7c 5%,#364963 95%);
+    background: linear-gradient(to bottom, #445b7c 5%,#364963 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#445b7c', endColorstr='#364963',GradientType=0 );
+}
+
+.apphub_sectionTabsHR {
+    background-color: #364963;
+    height: 5px;
+    width: 948px;
+    margin: 0px auto;
+}
+
+.apphub_sectionTabs {
+    position: relative;
+    padding-top: 18px;
+    margin-left: 10px;
+    font-size: 13px;
+    z-index: 10;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+}
+.community_home_tabs {
+  
+    font-family: "Arial", Sans-serif;
+    font-weight: normal;
+}
+
+
+.community_home_search_players{
+    position: relative;
+    height: 18px;
+    background-color: #3a3a3a;
+    margin-top: 5px;
+    border: 1px solid #939393;
+}
+
+
+#community_home_search_players a img {
+         background-image: url(https://steamstore-a.akamaihd.net/public/images/v5/globalheader_logo.png);
+    object-position: 176px;
+}
+
+input.community_home_search_players_input {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 250px;
+    background-color: #3a3a3a;
+    font-style: italic;
+}
+
+.community_home_search_players_image {
+    position: absolute;
+    top: 5px;
+    right: 4px;
+    width: 23px;
+    height: 18px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    
+}
+    .btn_darkblue_white_innerfade > span {
+    border-radius: 2px;
+    display: block;
+    background: #445b7c;
+    background: -moz-linear-gradient(top, #445b7c 5%, #364963 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#445b7c), color-stop(95%,#364963));
+    background: -webkit-linear-gradient(top, #445b7c 5%,#364963 95%);
+    background: -o-linear-gradient(top, #445b7c 5%,#364963 95%);
+    background: -ms-linear-gradient(top, #445b7c 5%,#364963 95%);
+    background: linear-gradient(to bottom, #445b7c 5%,#364963 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#445b7c', endColorstr='#364963',GradientType=0 );
+}
+    
+    .btn_darkblue_white_innerfade {
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #fff !important;
+    background: #57749e;
+    background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#57749e), color-stop(95%,#364963));
+    background: -webkit-linear-gradient(top, #57749e 5%,#364963 95%);
+    background: -o-linear-gradient(top, #57749e 5%,#364963 95%);
+    background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);
+    background: linear-gradient(to bottom, #57749e 5%,#364963 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );
+}
+
+.apphub_CardContentAuthorBlock {
+    height: 19px;
+    padding: 4px;
+    background-color: #3e3d3d;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.apphub_Card {
+    position: relative;
+    float: left;
+    background-color: #1b1b1b;
+    border: 1px solid #343434;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    padding: 0px;
+    -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+.apphub_CardContentType {
+    visibility: hidden;
+    width: auto;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px;
+    z-index: 2;
+    background-image: url(https://web.archive.org/web/20140627012040im_/http://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/item_type_hover.png);
+}
+
+#modalContentTitleBar {
+    color: white;
+    padding: 4px 2px;
+    text-align: left;
+    background: rgb(88,88,88);
+    background: -moz-linear-gradient(top, rgba(88,88,88,1) 0%, rgba(76,76,76,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(88,88,88,1)), color-stop(100%,rgba(76,76,76,1)));
+    background: -webkit-linear-gradient(top, rgba(88,88,88,1) 0%,rgba(76,76,76,1) 100%);
+    background: -o-linear-gradient(top, rgba(88,88,88,1) 0%,rgba(76,76,76,1) 100%);
+    background: -ms-linear-gradient(top, rgba(88,88,88,1) 0%,rgba(76,76,76,1) 100%);
+    background: linear-gradient(to bottom, rgba(88,88,88,1) 0%,rgba(76,76,76,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585858', endColorstr='#4c4c4c',GradientType=0 );
+}
+
+body.flat_page {
+  font-size: 0.75em;
+    background-color: #2d2d2b;
+    background-image: url(https://web.archive.org/web/20140722183907im_/http://steamcommunity-a.akamaihd.net/public/images/skin_1/bg.gif);
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    color: #939393;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+   
+.workshop_item_header {
+    
+    padding-bottom: 110px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE3MTcxNyIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMjAyMCIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+    background: -moz-linear-gradient(top, rgba(23,23,23,0.8) 0%, rgba(32,32,32,0.8) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(23,23,23,0.8)), color-stop(100%,rgba(32,32,32,0.8)));
+    background: -webkit-linear-gradient(top, rgba(23,23,23,0.8) 0%,rgba(32,32,32,0.8) 100%);
+    background: -o-linear-gradient(top, rgba(23,23,23,0.8) 0%,rgba(32,32,32,0.8) 100%);
+    background: -ms-linear-gradient(top, rgba(23,23,23,0.8) 0%,rgba(32,32,32,0.8) 100%);
+    background: linear-gradient(to bottom, rgba(23,23,23,0.8) 0%,rgba(32,32,32,0.8) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171717', endColorstr='#252525',GradientType=0 );
+    box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
+}
+
+
+#modalContent.modal_frame {
+    min-width: 480px;
+    height: 600px;
+    border: 2px solid #4b4b4b;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    background-color: black;
+}
+
+.sectionTab.active > span {
+    height: 35px;
+    line-height: 36px;
+    padding: 0 19px;
+    border-radius: 2px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    display: block;
+    /* background: #445b7c; */
+    background: -moz-linear-gradient(top, #445b7c 5%, #364963 95%);
+    /* background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#445b7c), color-stop(95%,#364963)); */
+    /* background: -webkit-linear-gradient(top, #445b7c 5%,#364963 95%); */
+    background: -o-linear-gradient(top, #445b7c 5%,#364963 95%);
+    background: -ms-linear-gradient(top, #445b7c 5%,#364963 95%);
+    background: linear-gradient(to bottom, #445b7c 5%,#364963 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#445b7c', endColorstr='#364963',GradientType=0 );
+}
+
+
+
+.workshop_item_header .highlight_ctn{
+    height: 450px;
+    padding-top: 0px;
+    padding-left: 0px;
+}
+    
+
+.responsive_tab_baseline {
+       background-color: #364862;
+    height: 5px;
+    left: 0px;
+    width: 950px;
+}
+
+.workshop_item_header .col_right {
+    margin-left: auto;
+    width: 268px;
+    padding-left: 14px;
+}
+
+.workshopTagsTitle {
+    color: #787875;
+}
+
+.detailsStatNumChangeNotes {
+    padding-top: 5px;
+    color: #8f98a0;;
+    font-size: 13px;
+}
+
+.friendBlock {
+    background-image: none;
+    width: 264px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    margin-top: 4px;
+    margin-right: 12px;
+    padding-left: 4px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    background-color: #2d2d2c;
+    font-size: 12px;
+    line-height: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-color: #3c3c3c;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.rightSectionTopTitle {
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #529CDE;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+#ig_bottom .sidebar .panel {
+    background: #1b1b1b;
+    background: rgba(27,27,27,.36);
+    border-radius: 4px;
+    padding: 10px 10px 10px 11px;
+    margin: 0 0 10px 0;
+    border: 1px solid #1f1f20;
+    box-shadow: 1px 1px 0 0 #39393a;
+}
+
+.detailBox.altFooter {
+    background: url(https://web.archive.org/web/20140722183912im_/http://steamcommunity-a.akamaihd.net/public/images/groups/content_footer_fade.png) bottom right no-repeat, url(https://web.archive.org/web/20140722183912im_/http://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png) 0px 8px no-repeat, url(https://web.archive.org/web/20140722183912im_/http://steamcommunity-a.akamaihd.net/public/images/groups/content_header_rule.png) -4px 0px no-repeat;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+.trendingdiscussions .forum_topic.unread .forum_topic_name {
+    color: #529cde;
+}
+.trendingdiscussions .forum_topic .forum_topic_name {
+    color: #427eb3;
+}
+
+
+.community_home_search_title {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    color: #828282;
+}
+
+.community_home_app_shortcuts_list_header {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    color: #828282;
+}
+
+.community_home_search_apps {
+    position: relative;
+    height: 18px;
+    background-color: #2f3e55;
+    margin-top: 5px;
+    border: 1px solid #6283b2;
+}
+
+.community_home_search_players  {
+    border-radius: 0px;
+}
+
+.community_home_search_apps{
+    border-radius: 0px;
+}
+
+.community_home_app_shortcuts {
+    border-radius: 4px;
+    border: 1px solid #1f1f20;
+    box-shadow: 1px 1px 0 0 #39393a;
+}
+.community_home_search_box  {
+    border-radius: 4px;
+    border: 1px solid #1f1f20;
+    box-shadow: 1px 1px 0 0 #39393a;
+}
+.apphub_CardContentMain .UserReviewCardContent_Footer .gradient {
+    background: -moz-linear-gradient(top, rgba(27,27,27,0) 0%, rgba(27,27,27,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(27,27,27,0)), color-stop(100%,rgba(27,27,27,1)));
+    background: -webkit-linear-gradient(top, rgba(27,27,27,0) 0%,rgba(27,27,27,1) 100%);
+    background: -o-linear-gradient(top, rgba(27,27,27,0) 0%,rgba(27,27,27,1) 100%);
+    background: -ms-linear-gradient(top, rgba(27,27,27,0) 0%,rgba(27,27,27,1) 100%);
+    background: linear-gradient(to bottom, rgba(27,27,27,0) 0%,rgba(27,27,27,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001b1b1b', endColorstr='#1b1b1b',GradientType=0 );
+    height: 50px;
+}
+
+        /*buttons*/
+        .ico16 {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url(https://steamstore-a.akamaihd.net/public/shared/images/buttons/icons_16.png);
+            vertical-align: text-top;
+        }
+
+        .ico16.thumb_upv6 {
+            background-position: -80px 0px;
+        }
+
+        .ico16.thumb_downv6 {
+            background-position: -32px 0px;
+        }
+
+        .btnv6_blue_hoverfade {
+            border-radius: 2px;
+            border: none;
+            padding: 1px;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none !important;
+            color: #fff !important;
+            background: #57749e;
+            background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #57749e), color-stop(95%, #364963));
+            background: -webkit-linear-gradient(top, #57749e 5%, #364963 95%);
+            background: -o-linear-gradient(top, #57749e 5%, #364963 95%);
+            background: -ms-linear-gradient(top, #57749e 5%, #364963 95%);
+            background: linear-gradient(to bottom, #57749e 5%, #364963 95%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963', GradientType=0);
+        }
+        .btnv6_grey_black {
+            border-radius: 2px;
+            border: none;
+            padding: 1px;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none !important;
+            color: #ebebeb !important;
+            background: #1a1a1a;
+        }
+        .store_nav .tab > span {
+            font-size: 11px;
+            color: #ffffff;
+            text-transform: uppercase;
+            line-height: 33px;
+            padding: 0px 15px;
+            display: block;
+            background: #5a5654;
+            background: -moz-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5a5654), color-stop(100%, #6e6a69));
+            background: -webkit-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+            background: -o-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+            background: -ms-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+            background: linear-gradient(to bottom, #5a5654 0%, #6e6a69 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a5654', endColorstr='#6e6a69', GradientType=0);
+        }
+
+        .store_nav .tab {
+            font-size: 11px;
+            color: #ffffff;
+            text-transform: uppercase;
+            line-height: 33px;
+
+            display: block;
+            background: #5a5654;
+            background: -moz-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5a5654), color-stop(100%, #6e6a69));
+            background: -webkit-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+            background: -o-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+            background: -ms-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+            background: linear-gradient(to bottom, #5a5654 0%, #6e6a69 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a5654', endColorstr='#6e6a69', GradientType=0);
+            float: left;
+            border-right: 1px solid #000000;
+            cursor: pointer;
+        }
+        .store_nav .tab:hover > span,
+        .store_nav .tab:hover,
+        .store_nav .tab.focus > span,
+        .store_nav .tab.focus {
+            background: #82807c;
+            filter: none;
+        }
+
+        .game_purchase_action_bg {
+            height: 34px;
+            background-color: #3c3d3e;
+            padding: 3px 3px 3px 0px;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+        }
+        .game_purchase_action .game_purchase_price {
+            background-color: #000000;
+            font-size: 13px;
+            padding-top: 8px;
+            padding-left: 12px;
+            padding-right: 12px;
+            height: 26px;
+        }
+        .btn_green_steamui {
+            border-radius: 2px;
+            border: none;
+            padding: 1px;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none !important;
+            color: #fff;
+
+            background: transparent;
+            text-shadow: 1px 1px 0px rgba( 0, 0, 0, 0);
+        }
+
+        .btn_medium > span,
+        input.btn_medium {
+            display: inline-grid;
+            padding: 0 15px;
+            line-height: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 11px;
+            font-family: 'Arial';
+        }
+        .btn_green_steamui > span {
+            border-radius: 2px;
+            display: block;
+            background-image: url(http://store.akamai.steamstatic.com/public/images/v5/btn_addtocart_repeat.gif)/* background: #6fa720;
+    background: -webkit-linear-gradient( top, #BBDD90 0%, #577B27 50%);
+   /* background: linear-gradient( to bottom, #6fa720 5%, #588a1b 95%);*/
+            /* background: linear-gradient( to right, #75b022 5%, #588a1b 95%); */
+        }
+
+.main_content_ctn, .app_agegate  {
+    width: 940px;
+    margin: 0px auto;
+    min-height: 100%;
+    height: 100%;
+    padding-top: 16px;
+    width: 940px;
+    background-image: unset!important;
+    background-repeat: repeat-x;
+    background-color: #262626;
+    background: #262626;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0px;
+}
+
+#app_agegate select {
+    padding: 2px;
+    height: 22px;
+    color: #ffffff;
+    background-color: #4d4b49;
+    border: solid #82807c 1px;
+    vertical-align: top;
+}
+
+.agegate_birthday_selector {
+    background: none;
+}
+.agegate_birthday_desc {
+    font-size: 13px;
+    padding-bottom: 10px;
+    color: #ffffff;
+}
+
+.agegate_text_container .note {
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    margin-bottom: 20px;
+    color: #626366;
+}
+
+body.v6 h2 {
+    display: none;
+}
+
+/*body.v6 {
+   background-image: url(http://store.akamai.steamstatic.com/public/images/v5/content_bg.png)!important;
+    background-repeat: repeat-x;
+    background-color: #000000;
+}*/
+.responsive_page_content_overlay {
+    visibility: unset;
+    opacity: 1;
+    background-image: url(http://store.akamai.steamstatic.com/public/images/v5/content_bg.png)!important;
+    background-repeat: repeat-x;
+    background-color: #000000;
+    position: fixed;
+    top: 00px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: visibility 0.5s, opacity 0.5s;
+}
+
+
+.agegate_text_container {
+    text-align: center;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.agegate_text_container .img_ctn {
+    margin: 15px 0 15px 0;
+    padding: 0px;
+}
+
+.agegate_text_container.btns {
+    margin-top: 0vh;
+    height: 50px;
+}
+
+.agegate_wizard {
+    display: none;
+}
+
+#app_agegate .preferences {
+    margin-top: 0px;
+    font-size: 14px;
+    padding-top: 5px;
+    color: #9db2be;
+}
+
+.newmodal_header_border {
+    display: none!important;
+}
