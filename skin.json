@@ -1,0 +1,21 @@
+{
+    "Steam-WebKit": "webkit.css",
+    "UseDefaultPatches": true,
+    "author": "ItsJustAPlayer",
+    "description": "2014 Store",
+    "name": "2014-Esque Steam",
+    "version": "1.1.5",
+    },
+    "source": "https://github.com/itsjustaplayer/2014esquesteam/tree/main",
+    "github": {
+        "owner": "itsjustaplayer",
+        "repo_name": "2014esquesteam"
+    },
+    "tags": [
+        "Dark",
+        "Classic"
+    ],
+    "header_image": "https.example.com/test.png",
+    "splash_image": "https.example.com/test.png",
+    ]
+}
