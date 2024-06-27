@@ -1,0 +1,24 @@
+{
+    "name": "2014-Esque Steam",
+    "author": "ItsJustAPlayer",
+    "target": "Desktop",
+    "version": "1.1.5",
+    "description": "2014-esque STEAM is a website theme that currently tries to style the current steam website design into ones reminiscent of STEAM's V5(2014) layout.",
+    "manifest_version": 9,
+    "tabs": {
+        "library": ["Steam|SteamLibraryWindow", "desktopoverlay", "desktopcontextmenu"],
+        "friends": ["desktopchat", "Remote Play"],
+        "all": ["library", "friends"]
+    },
+    "patches": {
+        "Web Pages": {
+            "type": "checkbox",
+            "values": {
+                "Yes": {
+                    "webkit.css": ["store"]
+                },
+                "No": {}
+            }
+        }
+    }
+}
