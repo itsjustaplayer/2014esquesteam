@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         2014-Esque STEAM
-@version      1.1.5
+@version      1.1.8
 @namespace    //userstyles.world/user/ItsJustAPlayer
 @description  2014-esque STEAM is a website theme that currently tries to style the current steam website design into ones reminiscent of STEAM's V5(2014) layout, currently in BETA
 @author       ItsJustAPlayer
@@ -1548,20 +1548,21 @@ div#global_header .submenuitem.moderator:hover {
 display:none;
 }
 
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Grey_2Sj0M {
+._1jW5_Ycv6jGKu28A1OSIQK{
     background-color: transparent;
     width: 28px;
     height: 28px;
    
 }
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Grey_2Sj0M svg {
+._1jW5_Ycv6jGKu28A1OSIQK svg{
     display:none;
 }
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S svg {
+._1jW5_Ycv6jGKu28A1OSIQK svg{
     display:none;
 }
 
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Grey_2Sj0M:not(.greenenvelope_Disabled_3KMlw):hover {
+
+._1jW5_Ycv6jGKu28A1OSIQK._34A9kjlnmgfUWSmr16VjXE:not(._3h1sV2qrp20U37VwC47pM2):hover {
     background-color: transparent;
     transition-property: none;
     transition-duration: 0ms;
@@ -1578,7 +1579,7 @@ display:none;
     border-radius: 0px 0px 3px 3px;
     
 }
-.greenenvelope_NotificationsButton_2Z7Ed {
+._1jW5_Ycv6jGKu28A1OSIQK{
     width: 29px;
     height: 28px;
     float: left;
@@ -1586,7 +1587,7 @@ display:none;
     margin-top: 2px;
     margin-left: 2px;
 }
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S {
+._1jW5_Ycv6jGKu28A1OSIQK._2Hpe0_DGY0TBz45Lg0zUr9 {
      background: linear-gradient(to bottom, #799B2C 5%, #5C7E10 95%);
     
    /*  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAtUExURd3d3f///+no6JCOjby7utLS0YWDgbGwr/T09KalpJuZmHp3dsfGxm9sagAAAGmW7zAAAAAPdFJOU///////////////////ANTcmKEAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABSSURBVChTncxRDoAwCANQOibb3OT+x90QNNE/7Q/pCynpK/+AcCU5cI6+iQMKV+ttRwCoE5IM3IB29M7rBlQutrDeHIYkmzB3aGe1ZIdnPoPqBGvCCkERArFYAAAAAElFTkSuQmCC");*/
@@ -1595,7 +1596,7 @@ display:none;
     background-color: #5c7e10;
     color: #fff;
 }
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S:after {
+._1jW5_Ycv6jGKu28A1OSIQK._2Hpe0_DGY0TBz45Lg0zUr9:after {
      content:"";  
      width: 29px;
      height: 28px;
@@ -1606,7 +1607,7 @@ display:none;
  
 }
 
-.greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Green_1ad8S:hover {
+._1jW5_Ycv6jGKu28A1OSIQK._2Hpe0_DGY0TBz45Lg0zUr9:not(._3h1sV2qrp20U37VwC47pM2):hover {
      background: linear-gradient(to bottom, #799B2C 5%, #799B2C 95%);
 }
 /* dynamic links */
@@ -2477,6 +2478,9 @@ a#store_search_link img {
     border-bottom: 1px solid #000000;
     
 }
+    .tab_item:nth-child(odd) {
+    background-color: #1a1a1a !important;
+}
 
 .tab_item_overlay {
 display: block;
@@ -2676,7 +2680,7 @@ div.early_access_header .devnotes .morebutton {
 }
 
 .discount_block .discount_prices {
-    background: #000000!important;
+    background: transparent;
     padding-left: 4px;
 }
 
@@ -3139,6 +3143,7 @@ border-bottom: 1px solid #000000;
     line-height: 20px;
 }
 
+
 .winter{
         background-image: url(//web.archive.org/web/20140705214443im_///store.akamai.steamstatic.com/public/images/v5/maincol_bg_gray.png);
     background-repeat: no-repeat;
@@ -3285,6 +3290,7 @@ a.gutter_item {
     background: #2d2d2b;
 
 }
+    
 .commentthread_pagelinks {
     margin: 0 0px;
 }
@@ -3295,7 +3301,24 @@ a.gutter_item {
     padding-bottom: 20px;
     background: none;
 }
+    
+    .profile_comment_area .commentthread_header {
 
+    font-family: "Motiva Sans", Sans-serif;
+    color: #828282;
+    font-size: 20px;
+    border-bottom: none;
+    padding: 6px 10px;
+ 
+    line-height: 26px;
+    border-radius: 3px;
+    background-color: #141414;
+
+}
+    
+    .commentthread_pagelink {
+      font-size: 14px;   
+    }
 /*Achievements*/
 
 a.communitylink_achievement.communitylink_achivement_plusmore {
@@ -4962,7 +4985,37 @@ body.headerOverride.responsive_page .responsive_page_frame.with_header .responsi
     padding: 0;
     background-size: 2px 687px;
 }
+    
+    /*Profile Pages*/
+    
+    .profile_topfriends.profile_count_link_preview .friendBlock {
 
+    border-width: 0px;
+}
+  /*this code makesp rofiles more accurate, with the L of removing any customization, thisi s oging to be added as a togglable option for "nostalgia mode"
+ /*  .profile_customization_header {
+    font-family: 'Motiva Sans Thin', Arial, Helvetica, Verdana, sans-serif;
+    color: #5491cf;
+    font-size: 20px;
+    line-height: 30px;
+       background: none;
+}
+    .profile_customization {
+    position: relative;
+    background-image: url(https://steamcommunity-a.akamaihd.net/public/images/profile/showcase_bg.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-color: #141414;
+
+}
+    
+    .profile_recentgame_header.profile_customization_header {
+     color: #828282;   
+    }
+    
+    .profile_customization:has(.profile_recentgame_header.profile_customization_header){
+       background-image: none;  
+    }*/
 /*error*/
 
 .error_ctn #BG_top {
@@ -5947,6 +6000,7 @@ input.btn_medium {
     cursor: pointer;
     padding: 0px 16px;
     color: #939393;
+    font-size: 14px;
 }
 
 .pagebtn:not(.disabled):hover, a.pagebtn:not(.disabled):hover {
@@ -6188,7 +6242,456 @@ i.ico18.thumb_down{
     border-radius: 2px;
 
 }
-/*AGE CHECK*/
+
+    
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/220/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/220/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/300/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/300/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/240/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/240/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/20/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/20/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("//store.steampowered.com/app/30/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/30/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/40/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/40/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/50/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/50/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/60/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/60/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/60/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/60/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/70/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/70/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/130/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/130/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/240/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/240/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/280/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/280/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/380/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/380/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/400/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/400/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/420/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/420/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/500/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/500/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/550/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/550/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/440/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/440/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/570/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/570/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/50130/"), url-prefix("https://store.steampowered.com/app/1030830/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/50130/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/40990/"), url-prefix("https://store.steampowered.com/app/1030840/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/40990/page_bg_generated.jpg?t=1400449790)!important;
+}
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/4000/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/4000/page_bg_generated.jpg?t=1400449790)!important;
+}
+
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/271590/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/271590/page_bg_generated.jpg?t=1400449790)!important;
+}
+
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/620/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/620/page.bg.jpg?t=1400449790)!important;
+}
+
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/730/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/730/page.bg.jpg?t=1400449790)!important;
+}
+
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/204360/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/204360/page.bg.jpg?t=1400449790)!important;
+}
+
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/80/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/80/page_bg_generated.jpg?t=1400449790)!important;
+}
+
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/app/1840/") {
+.game_page_background.game {
+    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/1840/page_bg_generated.jpg?t=1400449790)!important;
+}
+
+.game_page_background.game:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(0%) brightness(1);
+    z-index: 1;
+}
+}
+
+@-moz-document url-prefix("https://store.steampowered.com/agecheck/app") {
+
+    
+    /*AGE CHECK*/
     
     .main_content_ctn,
 .app_agegate {
@@ -6224,9 +6727,7 @@ i.ico18.thumb_down{
     color: #626366;
 }
 
-body.v6 h2 {
-    display: none;
-}
+
 
 /*body.v6 {
    background-image: url(//store.akamai.steamstatic.com/public/images/v5/content_bg.png)!important;
@@ -6300,450 +6801,4 @@ body.v6 h2 {
     color: #e5e4dc;
 }
     
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/220/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/220/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/300/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/300/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/240/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/240/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/20/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/20/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/30/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/30/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/40/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/40/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/50/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/50/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/60/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/60/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/60/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/60/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/70/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/70/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/130/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/130/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/240/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/240/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/280/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/280/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/380/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/380/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/400/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/400/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/420/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/420/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/500/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/500/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/550/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/550/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/440/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/440/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/570/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/570/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/50130/"), url-prefix("//store.steampowered.com/app/1030830/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/50130/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/40990/"), url-prefix("//store.steampowered.com/app/1030840/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/40990/page_bg_generated.jpg?t=1400449790)!important;
-}
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/4000/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/4000/page_bg_generated.jpg?t=1400449790)!important;
-}
-
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/271590/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/271590/page_bg_generated.jpg?t=1400449790)!important;
-}
-
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/620/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/620/page.bg.jpg?t=1400449790)!important;
-}
-
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/730/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/730/page.bg.jpg?t=1400449790)!important;
-}
-
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/204360/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/204360/page.bg.jpg?t=1400449790)!important;
-}
-
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/80/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/80/page_bg_generated.jpg?t=1400449790)!important;
-}
-
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("//store.steampowered.com/app/1840/") {
-.game_page_background.game {
-    background-image: url(//cdn.akamai.steamstatic.com/steam/apps/1840/page_bg_generated.jpg?t=1400449790)!important;
-}
-
-.game_page_background.game:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: grayscale(0%) brightness(1);
-    z-index: 1;
-}
-}
-
-@-moz-document url-prefix("store.steampowered.com/agecheck/app") {
-
 }
