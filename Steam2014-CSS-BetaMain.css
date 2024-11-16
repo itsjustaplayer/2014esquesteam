@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         2014-Esque STEAM
-@version      1.1.8
+@version      1.1.9
 @namespace    //userstyles.world/user/ItsJustAPlayer
 @description  2014-esque STEAM is a website theme that currently tries to style the current steam website design into ones reminiscent of STEAM's V5(2014) layout, currently in BETA
 @author       ItsJustAPlayer
@@ -1567,8 +1567,8 @@ display:none;
     transition-property: none;
     transition-duration: 0ms;
       display: block;
-    width: 29px;
-    height: 28px;
+    width: 33px;
+    height: 32px;
     padding: 0px;
     margin: 0px;     
  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFnSURBVDhPxZI/bsIwFMa/JBAEQlGkSAUO0LBEmRCMdMwFyp4rwAGaXqFMHIKFsrOWCxSlUnc6pBJdaP4QNzZ2mgBSxdSf9OTnZ7/Pz8+WTPMWl5BlGfV6HYfDAVEUIU1TvlLmTEBRFDQaDX0ynrxnUy2zr9lsZgSfARM6pSSgqio6nQ5G96OPZrN5w8P0dLJ4Xsi+72O/34MQwlcKApqmwbZtDId3SVa+woInbDav0mq1QhAEPFIQ8B48hFH0K50hSRL3jj49Wa1WJe/R49GsV3xEFMckjmMUjd5ZWBiGbPwOw9IhuYDjONB1HUmSsM7TUfj0Bai1Wi24rsszjuRX8P03przdbrFcLlmzigwGA/T7feZ3u2Z+t7wCQbvdhmVZqNVq7C9UKhUYhoFer8d3nEAroJY1iOx2OzKdPpH1+oVOc+icxgUih1VfFChuuoRYvyjwV7JgPp+XBM6+8rWcNfFa/lsA+AETDwXLz114zAAAAABJRU5ErkJggg==) no-repeat #181818;
