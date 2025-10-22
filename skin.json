@@ -1,4 +1,5 @@
 {
+    {
     "Steam-WebKit": "webkit.css",
     "UseDefaultPatches": true,
     "author": "ItsJustAPlayer",
@@ -19,4 +20,5 @@
     "header_image": "https.example.com/test.png",
     "splash_image": "https.example.com/test.png",
     ]
+    }
 }
