@@ -10,13 +10,32 @@
 @-moz-document url("store.steampowered.com"), domain("steamcommunity.com"), domain("help.steampowered.com"), domain("steampowered.com") {
 /* STEAM 2014 Theme – Refactored
    Referenced with V5 files */
- /*FONTS*/
+    
+    
+/* ==========================
+   GLOBAL COMPONENTS
+========================== */
+    
+/* ==========================
+    
+   FONTS
+    
+========================== */
+    
     div#global_header .menuitem {
                 font-family: Arial, Helvetica, sans-serif;
     }
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 12px;
+}
     
+/* ==========================
     
- /*Header*/
+   HEADER
+    
+========================== */
     div.logo, #logo_holder img {
     float: inline-start;
     padding-top: 30px;
@@ -26,7 +45,8 @@
     margin-right: 40px;
         content:url("https://store.akamai.steamstatic.com/public/images/v5/globalheader_logo.png");
     }
-    .banner_open_in_steam { /*Hides "open in steam banner"*/
+     /* Hides "open in steam banner" */
+    .banner_open_in_steam {
     display:none;
     }
     
@@ -93,5 +113,80 @@
     background-repeat: repeat-x;
     background-position: top;
      }
+
+    /* Install Steam Button */
+    .header_installsteam_btn {
+    float: left;
+    position: relative;
+    height: 21px;
+    line-height: 21px;
+    margin-right: 3px;
+    background-image:     
+        url(http://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/header/btn_header_installsteam_green.png);
+        background-position: 0px -21px;
+        background-repeat: repeat-x;
+        
+    }
+    .header_installsteam_btn_content {
+    padding-left: 27px;
+    padding-right: 7px;
+        background-image:    url(http://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/header/btn_header_installsteam_green.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    
+     .header_installsteam_btn_content &:hover {
+        background-color: #6c901800!important;
+       }
+    }
+
+    .header_installsteam_btn_content:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+    
+    
+   
+    /* SUPERNAV */
+    div#global_header .submenuitem {
+        text-transform: uppercase;
+        font-size: 11px;
+	    color: #b8b6b4;
+	    padding-right: 10px;
+        padding-left: 0px;
+}
+    
+
+
+    .supernav_content {
+    max-width: 132px;
+    background: #000 url(https://steamstore-a.akamaihd.net/public/shared/images/dd_web.jpg) top left no-repeat;
+    padding: 5px 15px 10px 15px;
+    box-shadow: 3px 3px 5px -3px #000;
+    text-align: left;
+
+}
+    
+    .supernav_content > a {
+	display: block;
+	padding: 6px 0;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+    .supernav_content > a:hover {
+	color: #4897cf;
+	text-decoration: none;
+}
+    
+    div#global_header .submenuitem.active, div#global_header .submenuitem:hover {
+	text-decoration: none;
+    background: none;
+	color: #ffffff;
+}
+    
+/* ==========================
+   BUTTONS (Reusable)
+========================== */
+
 
 }
