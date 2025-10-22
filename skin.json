@@ -1,5 +1,13 @@
 {
- 
+    "name": "2014-Esque Steam",
+    "source": "https://github.com/itsjustaplayer/2014esquesteam/tree/client",
+    "header_image": "https://.example.com/test.png",
+    "splash_image": "https://.example.com/test.png",
+    "tags": [
+        "Dark",
+        "Classic"
+    ],
+    "version": "1.1.5",
     "Steam-WebKit": "webkit.css",
     "UseDefaultPatches": true,
     "author": "ItsJustAPlayer",
@@ -11,13 +19,5 @@
         "owner": "itsjustaplayer",
         "repo_name": "2014esquesteam"
     },
-    "header_image": "yettobeadded",
-    "name": "2014-Esque Steam",
-    "source": "https://github.com/itsjustaplayer/2014esquesteam/tree/client",
-    "splash_image": "yettobeadded",
-    "tags": [
-        "Dark",
-        "Classic"
-    ],
-    "version": "1.1.5"
+ 
 }
