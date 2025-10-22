@@ -1,0 +1,97 @@
+/* ==UserStyle==
+@name         2014-Esque STEAM: REFACTORED
+@version      1.1.6
+@namespace    //userstyles.world/user/ItsJustAPlayer
+@description  2014-esque STEAM reimagines today’s Steam website with the nostalgic charm of its classic V5 (2014) design. Currently in ALPHA, it brings back the look and feel of the golden era—modernized for today’s web.
+@author       ItsJustAPlayer
+@license      GNU GPLv3
+==/UserStyle== */
+
+@-moz-document url("store.steampowered.com"), domain("steamcommunity.com"), domain("help.steampowered.com"), domain("steampowered.com") {
+/* STEAM 2014 Theme – Refactored
+   Referenced with V5 files */
+ /*FONTS*/
+    div#global_header .menuitem {
+                font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    
+ /*Header*/
+    div.logo, #logo_holder img {
+    float: inline-start;
+    padding-top: 30px;
+    margin-inline-end: 40px;
+    width: 176px;
+    height: 44px;
+    margin-right: 40px;
+        content:url("https://store.akamai.steamstatic.com/public/images/v5/globalheader_logo.png");
+    }
+    .banner_open_in_steam { /*Hides "open in steam banner"*/
+    display:none;
+    }
+    
+    
+    div#global_header {
+    background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg);
+    background-position: center top;
+    border-bottom: 1px solid #4D4B48;
+    min-width: 940px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+     }
+    
+    div#global_header .content {
+    background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg);
+    background-position: center top;
+    position: relative;
+    width: 940px;
+    height: 104px;
+    margin: 0px auto;
+    z-index: 402;
+        }
+        div#global_header .menuitem:hover {
+    color: #ffffff;
+    text-decoration: none;
+        }
+        div#global_header .menuitem {
+    display: block;
+    position: relative;
+    padding-top: 40px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 7px;
+    line-height: 16px;
+    float: left;
+    font-size: 14px;
+    color: #b8b6b4;
+    text-transform: uppercase;
+        }
+    div#global_header .menuitem.supernav_active {
+    color: #b8b6b4;
+}
+    div#global_header .menuitem.supernav_active {
+    &::after {
+        content: "";
+        display: none;
+    }
+}
+    
+    
+    /*Remove "Open in steam prompt"*/    
+    .open_in_steam_container {
+    display:none;
+    }
+    
+    
+    /*PopUp Background*/
+    .popup_block_new .popup_body {
+    border: 1px solid #82807c;
+    position: relative;
+    background-color: #3b3938;
+    background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/popups/bg_popup.png);
+    background-repeat: repeat-x;
+    background-position: top;
+     }
+
+}
