@@ -1,21 +1,23 @@
 {
+ 
     "Steam-WebKit": "webkit.css",
     "UseDefaultPatches": true,
     "author": "ItsJustAPlayer",
-    "description": "2014 Store",
-    "name": "2014-Esque Steam",
-    "version": "1.1.5",
-    },
-    "source": "https://github.com/itsjustaplayer/2014esquesteam/tree/main",
+    "description": "2014-esque STEAM is a website theme that currently tries to style the current steam website design into ones reminiscent of STEAM's V5(2014) layout.",
+    "discord_support": {
+        "inviteCodeExcludingLink": "hfKf5zRDHu"
+    } 
     "github": {
         "owner": "itsjustaplayer",
         "repo_name": "2014esquesteam"
     },
+    "header_image": "yettobeadded",
+    "name": "2014-Esque Steam",
+    "source": "https://github.com/itsjustaplayer/2014esquesteam/tree/client",
+    "splash_image": "yettobeadded",
     "tags": [
         "Dark",
         "Classic"
     ],
-    "header_image": "https.example.com/test.png",
-    "splash_image": "https.example.com/test.png",
-    ]
+    "version": "1.0"
 }
