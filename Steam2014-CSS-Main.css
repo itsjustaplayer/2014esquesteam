@@ -53,17 +53,42 @@
     display:none;
     }
     
+    #global_action_menu > * {
+    vertical-align: middle;
+}
     
     div#global_header {
     background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg);
     background-position: center top;
     border-bottom: 1px solid #4D4B48;
     min-width: 940px;
-    font-family: "Motiva Sans", Sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 11px;
+        
      }
     
+    div#global_actions {
+    position: absolute;
+    right: 0px;
+    top: 6px;
+    height: 21px;
+    line-height: 21px;
+    color: #b8b6b4;
+    font-size: 11px;
+    z-index: 401;
+}
+    /*Pulldown */
+    .pulldown {
+    margin-right: 0px;
+    padding-left: 5px;
+    padding-right: 18px;
+    background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_arrow_down_padded.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+  
     div#global_header .content {
     background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg);
     background-position: center top;
@@ -120,29 +145,34 @@
      }
 
     /* Install Steam Button */
+
     
     .header_installsteam_btn {
+    margin-right: 3px;
+    margin-top: 2px;
     float: left;
     position: relative;
     height: 21px;
     line-height: 21px;
-    margin-right: 3px;
     background-image:     
         url(http://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/header/btn_header_installsteam_green.png);
         background-position: 0px -21px;
         background-repeat: repeat-x;
         
     }
+    
     .header_installsteam_btn_content {
     padding-left: 27px;
     padding-right: 7px;
-        background-image:    url(http://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/header/btn_header_installsteam_green.png);
-    background-position: 0px 0px;
     background-repeat: no-repeat;
+    display: inline-block;
+    background-position: 7px 3px;
+    background-image: url(//store.akamai.steamstatic.com/public/shared/images/header/btn_header_installsteam_download.png?v=1);
+    text-decoration: none;
+    color: #e5e4dc;
+    background-color: unset!important;
+    font-weight: normal;
     
-    .header_installsteam_btn_content, &:hover {
-        background-color: #6c901800!important;
-     }
     }
 
     .header_installsteam_btn_content:hover {
@@ -248,6 +278,14 @@
     width: 18px;
     display: none;
     }
+    
+    /*  DROP DOWN MENUS */
+    .oeCR-_-EhS8CaxEaFAqDZ{
+        top: 7070px;
+        position: relative;
+
+    }
+    
 /* ==========================
    BUTTONS (Reusable)
 ========================== */
