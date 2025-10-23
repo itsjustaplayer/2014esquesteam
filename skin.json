@@ -1,23 +1,74 @@
 {
-    "name": "2014-Esque Steam",
-    "source": "https://github.com/itsjustaplayer/2014esquesteam/tree/client",
-    "header_image": "https://.example.com/test.png",
-    "splash_image": "https://.example.com/test.png",
-    "tags": [
-        "Dark",
-        "Classic"
+ "Conditions": {
+        "HyperAccuracy Mode": {
+            "default": "no",
+            "description": "Disables or drastically change website elements for pixel accurate-accuracy.",
+            "values": {
+                "no": {
+                    "TargetCss": {
+                        "affects": [".*"],  "src": "normalmode/main.css"
+                    }
+                },
+                "yes": {
+                    "TargetCss": {
+                        "affects": [".*"], "src": "hyperaccuracymode/main.css"
+                    }
+                }
+            }
+        }
+    },
+        "Configuration": [
+        {
+            "Name": "HyperAccuracy Mode",
+            "ToolTip": "Disables or drastically change website elements for pixel accurate-accuracy.",
+            "Type": "CheckBox",
+            "Value": false
+        }
     ],
-    "version": "1.1.5",
+
+       "Patches": [
+        {
+            "MatchRegexString": "^Steam$",
+            "TargetCss": "webkit.css"
+            
+        },
+        {
+            "MatchRegexString": ".*",
+            "Statement": [
+                {
+                    "Equals": true,
+                    "False": {
+                        "TargetCss": "normalmode/main.css"
+                    },
+                    "If": "HyperAccuracy Mode",
+                    "True": {
+                        "TargetCss": "hyperaccuracymode/main.css"
+                    }
+                }
+            ]
+        }
+    ],
+
+    "version": "1.2.0",
     "Steam-WebKit": "webkit.css",
     "UseDefaultPatches": true,
     "author": "ItsJustAPlayer",
     "description": "2014-esque STEAM is a website theme that currently tries to style the current steam website design into ones reminiscent of STEAM's V5(2014) layout.",
     "discord_support": {
         "inviteCodeExcludingLink": "hfKf5zRDHu"
-    } 
+    },
     "github": {
         "owner": "itsjustaplayer",
         "repo_name": "2014esquesteam"
     },
+    "name": "2014-Esque Steam",
+    "source": "https://github.com/itsjustaplayer/2014esquesteam/tree/client",
+    "header_image": "https://example.com/test.png",
+    "splash_image": "https://example.com/test.png",
+    
+    "tags": [
+        "Dark",
+        "Classic"
+    ]
  
 }
