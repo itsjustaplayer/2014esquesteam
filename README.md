@@ -3,4 +3,4 @@
 
 The project aims to recreate the visual identity and structure of the 2014 Steam design while maintaining compatibility with the modern platform.
 
-This version is currently in BETA, and features are subject to change as development continues.
+This version is currently in ALPHA, and features are subject to change as development continues.
