@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         2014-Esque STEAM: REFACTORED
-@version      0.1.1
+@version      1.1.6
 @namespace    //userstyles.world/user/ItsJustAPlayer
 @description  2014-esque STEAM reimagines today’s Steam website with the nostalgic charm of its classic V5 (2014) design. Currently in ALPHA, it brings back the look and feel of the golden era—modernized for today’s web.
 @author       ItsJustAPlayer
@@ -502,8 +502,29 @@
             }
         }
         
+        
+        .game_area_purchase_platform{ /*GAME OS SUPPORT BOX*/
+           /* SYSTEM ICONS REPLACEMENT*/
+            .platform_img { /*PLATFORM IMAGE BASIC SPECIFICATIONS*/
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background-repeat: no-repeat;
+            } 
+            
+            .win{ /*WINDOWS*/
+                background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_win.png")
+            }
+            .linux{ /*LINUX*/
+                background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_linux.png")
+            }
+            .mac{ /*MACOS*/
+                background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_mac.png")
+            }
+            
+        }
+        
 }
-    
     
     
     .discount_original_price {
