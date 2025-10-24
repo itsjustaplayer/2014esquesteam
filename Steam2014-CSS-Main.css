@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         2014-Esque STEAM: REFACTORED
-@version      0.1.0
+@version      0.1.1
 @namespace    //userstyles.world/user/ItsJustAPlayer
 @description  2014-esque STEAM reimagines today’s Steam website with the nostalgic charm of its classic V5 (2014) design. Currently in ALPHA, it brings back the look and feel of the golden era—modernized for today’s web.
 @author       ItsJustAPlayer
@@ -53,11 +53,13 @@
     background-color: #000000;
     font-size: 12px;
 }
+    
 /* ==========================
     
    HEADER
     
 ========================== */
+    
     #logo_holder img {
     float: inline-start;
     width: 176px;
@@ -65,14 +67,16 @@
     margin-right: 40px;
         content:url("https://store.akamai.steamstatic.com/public/images/v5/globalheader_logo.png");
     }
+    
      /* Hides "open in steam banner" */
+    
     .banner_open_in_steam {
     display:none;
     }
     
 
     
-    div#global_header { /*Header Background and font*/
+    div#global_header { /*Global Header */
     background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg);
     background-position: center top;
     border-bottom: 1px solid #4D4B48;
@@ -90,7 +94,8 @@
         margin: 0px auto;
         z-index: 402;
         }
-        
+        /* SUPERNAV */
+    
         .menuitem { /*Individual Header buttons like "Store", "Community" and etc.*/
         display: block;
         position: relative;
@@ -119,19 +124,47 @@
             }
          
         }
+        
+        .supernav_content {
+         max-width: 132px;
+         background: #000 url(https://steamstore-a.akamaihd.net/public/shared/images/dd_web.jpg) top left no-repeat;
+         padding: 5px 15px 10px 15px;
+         box-shadow: 3px 3px 5px -3px #000;
+         text-align: left;
+            &a {
+	        display: block;
+	        padding: 6px 0;
+	        text-transform: uppercase;
+	        font-size: 12px;
+               &:hover {
+	           color: #4897cf;
+	           text-decoration: none;
+               }
+            }
+}
        
-             
         .submenuitem {
         text-transform: uppercase;
         font-size: 11px;
 	    color: #b8b6b4;
 	    padding-right: 10px;
         padding-left: 0px;
+            &.active{
+	        text-decoration: none;
+            background: none;
+	        color: #ffffff;
+            }
+            &:hover {
+	        text-decoration: none;
+            background: none;
+	        color: #ffffff;
+            }
         }
         
-        
-     }
+}
     
+       
+  
     div#global_actions {
         & > #global_action_menu  {
     right: 0px;
@@ -213,42 +246,8 @@
 	    color: #ffffff;
         }
     }
-    
-
-    
-
-
    
-    /* SUPERNAV */
-    
 
-    .supernav_content {
-    max-width: 132px;
-    background: #000 url(https://steamstore-a.akamaihd.net/public/shared/images/dd_web.jpg) top left no-repeat;
-    padding: 5px 15px 10px 15px;
-    box-shadow: 3px 3px 5px -3px #000;
-    text-align: left;
-         &a {
-	     display: block;
-	     padding: 6px 0;
-	     text-transform: uppercase;
-	     font-size: 12px;
-            &:hover {
-	        color: #4897cf;
-	        text-decoration: none;
-            }
-         }
-}
-    
-    
-
-    
-    div#global_header .submenuitem.active, div#global_header .submenuitem:hover {
-	text-decoration: none;
-    background: none;
-	color: #ffffff;
-}
-    
     /* STORE NAVIGATION AREA */
     
     ._7FiqKP7fZJGltkwRxPG6s{ /*The equivalent to store_nav_area*/
@@ -416,36 +415,25 @@
         }
 }
     
+/* ==========================
+   GAME PAGE
+========================== */
+    
+   .game_page_background{ /*Fixes the height to accomodate the navigation bar being more downwards*/
+       &.game {
+       --store-menu-overlap-height: 69px;
+       }
+}
+    
+    
+    
     
 /* ==========================
    STORE
 ========================== */
-    .game_purchase_action_bg { /* Game purchase box background*/
-    height: 34px;
-    background-color: #3c3d3e;
-    padding: 3px 3px 3px 0px;
-    border-radius: 3px;
-
-    -moz-border-radius: 3px;
-}
-    .game_purchase_action { /*Game purchase box*/
-        &.game_purchase_price{ /*Game Purchase Page Box Price Tag*/
-        background-color: #000000;
-        font-size: 13px;
-        padding-top: 8px;
-        padding-left: 12px;
-        padding-right: 12px;
-        margin-left: 3px;
-        height: 26px;
-        }
-}
-    .price, .match_price {
-    font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
-    font-size: 11px;
-    color: #b0aeac;
-}
     
-    /*Game Area Purchase Box*/
+ 
+      /*Game Area Purchase Box*/
     .game_area_purchase_game {
     position: relative;
     background: none;
@@ -458,13 +446,92 @@
     padding-bottom: 26px;
     margin-bottom: 28px;
     z-index: 1;
+        
+        .game_purchase_discount_countdown {
+        color: #898a8c;
+        }
+        
+        .game_purchase_action { /*Game purchase box*/
+        
+           .game_purchase_price{ /*Game Purchase Page Box Price Tag*/
+            
+            background-color: #000000;
+            font-size: 13px;
+            padding-top: 8px;
+            padding-left: 12px;
+            padding-right: 12px;
+            margin-left: 3px;
+            height: 26px;
+            }
+        
+         
+            .discount_block { /*Discont Price Box*/
+            position: relative;
+            background-color: #000000;
+            }
+          
+            .game_purchase_discount{
+               
+            float: left;
+            margin-left: 3px;
+            height: 34px;
+            
+               .discount_pct {
+               left: 0px;
+               width: 69px;
+               height: 34px;
+               line-height: 34px;
+               font-size: 25px;
+               text-align: center;
+               background-color: #4c6b22;
+               color: #ffffff;
+               }
+            }   
+        
+            .game_purchase_action_bg{ /*Game Purchase Box Background*/
+            
+            height: 34px;
+            background-color: #3c3d3e;
+            padding: 3px 3px 3px 0px;
+            border-radius: 3px;
+            -moz-border-radius: 3px;     
+            }
+        
+            .discount_prices {
+            background-color: #000000;   
+            }
+        }
+        
 }
+    
+    
+    
+    .discount_original_price {
+    font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+    color: #626366;
+    text-decoration: line-through;
+}
+    
+    .discount_final_price {
+    font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+    color: #d6d7d8;
+}
+    
+    .price, .match_price {
+    font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+    font-size: 11px;
+    color: #b0aeac;
+}
+    
     /*Game title font*/
     .game_area_purchase_game h1, .game_area_offsite_purchase h1, .game_area_purchase_game h2.title.title {
     font-size: 21px;
     line-height: 21px;
     font-family: Arial, Helvetica, sans-serif;
 }
+   
+    /* SYSTEM ICONS REPLACEMENT*/
+    
     
     
 /* ==========================
