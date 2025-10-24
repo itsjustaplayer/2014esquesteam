@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         2014-Esque STEAM: REFACTORED
-@version      1.1.6
+@version      0.0.2
 @namespace    //userstyles.world/user/ItsJustAPlayer
 @description  2014-esque STEAM reimagines today’s Steam website with the nostalgic charm of its classic V5 (2014) design. Currently in ALPHA, it brings back the look and feel of the golden era—modernized for today’s web.
 @author       ItsJustAPlayer
@@ -423,8 +423,241 @@
        &.game {
        --store-menu-overlap-height: 69px;
        }
+       
+       & > #tabletGrid{
+           .page_content_ctn{
+                .page_title_area.game_title_area{
+                padding-top: 7px;
+                margin-bottom: 18px;
+                    & > .breadcrumbs {
+                    font-family: Arial, Helvetica, sans-serif;    
+                    font-size: 14px;
+                    color: #626467;
+                        & > .blockbg {
+                        background-color: #262626;
+                        padding: 0px 4px;
+                        float: left;
+                        }
+                      
+                        a {
+                        color: #b0aeac;
+                        }  
+                        
+                    }
+                    & > .apphub_HomeHeaderContent {
+                            
+                            .apphub_HeaderStandardTop {
+                            position: relative;
+                            margin: 0px auto;
+                            text-align: left;
+                            padding-top: 7px;
+                            height: 46px;
+                            background-image: url(https://store.akamai.steamstatic.com/public/shared/images/apphubs/bg_header.png);
+                            background-repeat: repeat-x;
+                                .apphub_OtherSiteInfo {
+                                position: relative;
+                                float: right;
+                                right: 11px;
+                                    
+                                }
+                                .apphub_AppIcon {
+                                    display: block;
+                                position: relative;
+                                margin-left: 12px;
+                                height: 32px;
+                                width: 32px;
+                                float: left;
+                                }
+                                .apphub_AppName {
+                                font-family: Arial, Helvetica, sans-serif;
+                                color: white;
+                                font-size: 26px;
+                                padding-left: 12px;
+                                float: left;
+                                max-width: 700px;
+                                }
+                                
+                                
+                            }
+                    }
+                    
+                   
+                }
+               
+                    #game_highlights {
+                    color: #626366;
+                    margin-bottom: 1px;
+                    height: 466px;
+                    background-image:
+                        url(https://web.archive.org/web/20140920210036im_/http://store.akamai.steamstatic.com/public/images/v5/game_highlight_bg.png);
+                    background-repeat: repeat-x;
+                        background-position: top;
+                        
+                        .leftcol {
+                            .highlight_ctn {
+                            height: 450px;
+                            padding-top: 16px;
+                            padding-left: 16px;
+                                .highlight_overflow {
+                                
+                                margin-right: 0px;
+                             
+                                }
+                            }
+                      
+                        }
+                        
+                        .rightcol {
+                        width: 308px;
+                        margin-left: 14px;
+                            .glance_ctn {
+                            padding: 16px 16px 0px 0px;
+                                .game_header_image_ctn {
+                                    .game_header_image_full {
+                                    width: 292px;
+                                    height: 136px;
+                                    }
+                                   
+                                }
+                                .game_description_snippet {
+                                max-height: 105px;
+                                overflow: hidden;
+                                font-size: 12px;
+                                color: #626366;
+                                line-height: 14px;
+                                padding-right: 0px;
+                                }
+                                
+                            }
+                            
+                        }
+                    }
+                    
+                    .block_content {
+                    border: 1px solid #4d4b49;
+                    background-color: #262626;
+                    font-size: 12px;
+                    color: #b0aeac;
+                    }
+           }
+      }
 }
     
+/* ==========================
+   VIDEO PLAYER
+========================== */  
+    
+    .aKceKkwAmCX8Ar8qWcJ7T { /*EQUIVALENT TO html5_video_overlay*/
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0px 0px 0px 0px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.8);
+        ._2eh4iDod50HkFNh5C0fVW6 { /*EQUIVALENT TO progress_bar_wrapper*/
+    touch-action: none;
+    position: absolute;
+    bottom: 0px;
+    top: 21px;
+    left: 0px;
+    right: 0px;
+    background-color: #2c2b28;
+            ._3ezjd4FAgey-Olcl2qvfD4{ /*EQUIVALENT TO progress_bar_container*/
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 1px;
+            background-color: #2c2b28;
+                ._3ezyMaw8mNCokAmQuZDbj1 { /*EQUIVALENT TO progress_bar*/
+                background-color: #6f9fc8;
+                }
+                ._3f4Y1kM_nEtTF4DINVZ_rx{  /*EQUIVALENT TO progress_bar_background*/
+                    background-color: #595959;
+                }
+            }
+    }
+        
+        ._2gDbG9frVoBgp4J9N1vA7I { /*EQUIVALENT TO control_container*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #2c2b28;
+    height: 19px;
+            ._3XkD6Vq8YzOkmEr9odYcX4 { /*BUTTON SIZE ICON*/
+                        color: #b8bcbf;
+                        width: 19px;
+                        height: 19px;
+                & > svg {
+                    display:none;
+                }
+                &::after {
+                    content:"";
+                    color: #b8bcbf;
+                    width: 19px;
+                    height: 19px;
+                    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FAQExNPQD1HQAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAHhJREFUOMtjjIyMZCALsPz7928k6GT6hw3I+ZX/IwSw62RgYFAIqCSg8y82AHGPUlD1X9yA6T82APeMamjdfxwAn50QoBZWj1UNC7INWMG1ZbXYYwXNBjRweXEVzvjEY+elRZX4UgIuO8/PL8PvC0YbG5vRvIIPAADvxSAevqB/CQAAAABJRU5ErkJggg==);
+                }
+            }
+            
+            .ppGte6hTuxkoYS4d0ffwc{ /* Video Controls*/
+                gap: 3px;
+                .Ul_JQ5e-7WyVgJwFfykCb { /*Video Time*/
+                font-size: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                color: #9d9d9d;
+                white-space: nowrap;
+                user-select: none;
+                align-self: center;
+                display: inline-flex;
+                gap: 3px;
+                line-height: 19px;
+                margin-right: 5px;
+                float: right;
+                }
+                
+                ._1j6rW_OLdrZ-Erj3ayEBt5{ /*Volume Bar*/
+                    ._3XkD6Vq8YzOkmEr9odYcX4 { /*BUTTON SIZE ICON*/
+                        &::after {
+                            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FAQEyM0FKEhQAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAaBJREFUOMtj1NHWYCALMDGQC4jV6ezixsbGRpROR0cnNXV1CJuXl09UVDQ+IZmXl4+AzszM7EmTp/LB1Onp669bu/rz508uLm44dfLw8EyYODkrOwcuwsnJGRAQFBuXcPjQQRlZWWERERSdPDw8Jiamjo5O8xcscnZ2QTaLmZl57pxZtrZ2TMxMr1+/0tLUhoizQCgNDc35CxZhOpuHh2fN2g0hwQE3rl+3sba9eu2qlpY2UWH75cuXz58/+QcE7ty5XV5e4e2bN6KiYsTGyr69e01Nzb5//05yfKpraHz+/JmTk5M0nTw8PM7OLhs3rDcyNnn48IG0tMzr169QdH76/On0qVNPnz7F9GdiQtyXL19sbe3Onz8nLS3z+vVrFJ23bt5MSooPCQ7YsGE9muarV6/k5hWcPXvm9ZvXMrKy9+7eweLaL1++1NZUdXS0IQt+//793Lmzc2bPdHV1f/L48f3793D6c+mSxYkJcZ8+fYKLzJ0zy8ralpeXb8+eXXBBFqwBc+bM6ZDgQDiXjY1NWlpm3brVnz8jjGMcgJwNAO7wmMDjuhRMAAAAAElFTkSuQmCC);
+                        }
+                    }
+                    
+                
+                }
+            
+                
+            }
+            
+            ._2iPvkLeM34oiIhYNFbtIaL { /* Video Player Configs*/
+                gap: 3px;
+                  ._3XkD6Vq8YzOkmEr9odYcX4 { /*BUTTON SIZE ICON*/
+                        &::after {
+                            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FARYVIXFfZMwAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAGBJREFUOMtj1NHWYCALMDGQC1jk5GThnEePHuNXjayYhRgNmEbLyclS4FqsLiHGWhZkp27bvhu/Ni9PV7h+8l07qpOY1AePGHigEwRycrIsxCda6rkWOd2RlFcYByBnAwBu7B+wiL65mQAAAABJRU5ErkJggg==);
+                        }
+                        &:has(.DpzfSpwcCrmcxUf4Hb6nM)::after {
+                            content: none !important;
+                            background: none !important;
+                        }
+                    }
+                .DpzfSpwcCrmcxUf4Hb6nM { /*BUTTON SIZE ICON*/
+                 display:inline;
+                
+                }
+                
+            }
+         
+            
+    }
+ 
+}
+    
+   
+/* ==========================
+   GAME REVIEWS
+========================== */  
     
     
     
@@ -468,6 +701,12 @@
             .discount_block { /*Discont Price Box*/
             position: relative;
             background-color: #000000;
+                
+                .bundle_base_discount { /*Discount Price Box for BUNDLES*/
+                background-color: #4c6b22;
+                color: #ffffff;
+                height: 34px;
+                }
             }
           
             .game_purchase_discount{
@@ -499,6 +738,40 @@
         
             .discount_prices {
             background-color: #000000;   
+                .discount_final_price.your_price {
+                font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+                color: #d6d7d8;
+                     .your_price_label {
+                      color: #626366;
+                     }
+                }
+               
+            }
+            
+              /*Bundle Button*/
+            .btn_packageinfo{
+               .btn_blue_steamui{
+                   &.btn_medium{
+                       > span {
+                       display: none;
+                       }
+              
+                       &::after{
+                       content: "PACKAGE INFO";
+                       display: inline-block;
+                       background-image: url("https://store.akamai.steamstatic.com/public/images/v5/btn_packageinfo_repeat.gif");
+                       height: 34px;
+                       font-size: 11px;
+                       color: #ffffff;
+                       text-align: center;
+                       padding: 0px 11px;
+                       line-height: 34px;
+                       background-repeat: repeat-x;
+                       text-transform: uppercase;
+                       min-width: 80px;
+                       }
+                   }
+               } 
             }
         }
         
@@ -516,12 +789,14 @@
                 background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_win.png")
             }
             .linux{ /*LINUX*/
-                background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_linux.png")
+                background-image: url("https://images.steamusercontent.com/ugc/10414975101062247569/9C844C8149D2A06A5A85A542FC049025D8CEA0D9/")
             }
             .mac{ /*MACOS*/
                 background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_mac.png")
             }
-            
+            .music { /*MUSIC*/
+                background-image: url("https://images.steamusercontent.com/ugc/14771200981187913751/4CED5B4A814D3CD411EC72A53B0497C771388251/");
+            }
         }
         
 }
@@ -551,7 +826,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
    
-    /* SYSTEM ICONS REPLACEMENT*/
     
     
     
@@ -646,13 +920,18 @@
           text-transform: uppercase;
           min-width: 80px;
           }
+          &:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span  {
+          background: transparent;
+          background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_addtocart_repeat.gif);
+          background-repeat: repeat-x;
+          }
   
 }
     
-.btn_addtocart { /*self explanatory add to cart button*/
+    .btn_addtocart { /*self explanatory add to cart button*/
     position: relative;
     height: 34px;
-}
+    }
     
     .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active) { /*Generic Blue Medium Button*/
     border-radius: 2px;
@@ -688,7 +967,7 @@
 
     #shareEmbedRow { /*share embed row, which had dark medium buttons*/
         
-        &.btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active) { /*Generic Gray Medium Button*/
+        .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active) { /*Generic Gray Medium Button*/
         border-radius: 2px;
         border: none;
         padding: 1px;
@@ -707,5 +986,27 @@
         }
     }
     
+    .app_tag {
+    display: inline-block;
+    line-height: 19px;
+    padding: 0 7px;
+    color: #b0aeac;
+    background-color: #384959;
+    margin-right: 2px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0 0 #000000;
+    cursor: pointer;
+    margin-bottom: 3px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+        
+        &:hover {
+        text-decoration: none;
+        background: #516980;
+        color: #ffffff;
+        }
+    }
     
 }
