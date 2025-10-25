@@ -7,11 +7,17 @@
                 "no": {
                     "TargetCss": {
                         "affects": [".*"],  "src": "normalmode/main.css"
+                    },
+                     "TargetJs": {
+                        "affects": [".*"], "src": "JS/main.js"
                     }
                 },
                 "yes": {
                     "TargetCss": {
                         "affects": [".*"], "src": "hyperaccuracymode/main.css"
+                    },
+                    "TargetJs": {
+                        "affects": [".*"], "src": "JS/main.js"
                     }
                 }
             }
@@ -28,11 +34,6 @@
 
        "Patches": [
         {
-            "MatchRegexString": "^Steam$",
-            "TargetCss": "webkit.css"
-            
-        },
-        {
             "MatchRegexString": ".*",
             "Statement": [
                 {
@@ -46,12 +47,22 @@
                     }
                 }
             ]
+            
+        },
+        {
+            "MatchRegexString":"https://.*.steampowered.com",
+            "TargetCss":"webkit.css"
+        },
+        {
+            "MatchRegexString":"https://steamcommunity.com",
+            "TargetCss":"webkit.css"
         }
+        
     ],
 
-    "version": "1.2.1",
+    "version": "1.2.0",
     "Steam-WebKit": "webkit.css",
-    "UseDefaultPatches": true,
+    "UseDefaultPatches": false,
     "author": "ItsJustAPlayer",
     "description": "2014-esque STEAM is a website theme that currently tries to style the current steam website design into ones reminiscent of STEAM's V5(2014) layout.",
     "discord_support": {
