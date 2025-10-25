@@ -1,700 +1,1001 @@
 
-/* ==========================
-   GLOBAL COMPONENTS
-========================== */
-    
-/* STEAM 2014 Theme – Refactored
-   Referenced with V5 files */
-    /*test file*/
-/* ==========================
-    
-   FONTS
-    
-========================== */
-    
-    div#global_header .menuitem {
-                font-family: Arial, Helvetica, sans-serif;
-    }
-    body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-    font-size: 12px;
-}
-    body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-    background-color: #000000;
-    font-size: 12px;
-}
-    
-    button._175B12uOwmeGBNcSaQFe-Z {
-    font-family: Arial, Helvetica, sans-serif;
-   
-}
-       ._16jZ3HEbtaJTl80pQINN2Y, ._16jZ3HEbtaJTl80pQINN2Y button, ._16jZ3HEbtaJTl80pQINN2Y input {
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    .game_purchase_action .game_purchase_price {
-  font-family: Arial, Helvetica, sans-serif;
-}
-    body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-    background-color: #000000;
-    font-size: 12px;
-}
-    
-/* ==========================
-    
-   HEADER
-    
-========================== */
-    
-    #logo_holder img {
-    float: inline-start;
-    width: 176px;
-    height: 44px;
-    margin-right: 40px;
-        content:url("https://store.akamai.steamstatic.com/public/images/v5/globalheader_logo.png");
-    }
-    
-     /* Hides "open in steam banner" */
-    
-    .banner_open_in_steam {
-    display:none;
-    }
-    
-
-    
-    div#global_header { /*Global Header */
-    background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg);
-    background-position: center top;
-    border-bottom: 1px solid #4D4B48;
-    min-width: 940px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    font-size: 11px;
-        
-        .content { /*Header Background 2 the sequel*/
-        background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg);
-        background-position: center top;
-        position: relative;
-        width: 940px;
-        height: 104px;
-        margin: 0px auto;
-        z-index: 402;
-        }
-        /* SUPERNAV */
-    
-        .menuitem { /*Individual Header buttons like "Store", "Community" and etc.*/
-        display: block;
-        position: relative;
-        padding-top: 40px;
-        padding-left: 7px;
-        padding-right: 7px;
-        padding-bottom: 7px;
-        line-height: 16px;
-        float: left;
-        font-size: 14px;
-        color: #b8b6b4;
-        text-transform: uppercase;
-            &.supernav_active { /*supernav button color*/
-             color: #b8b6b4;    
-            }
-            
-            &.supernav_active { /*this removes the blue underline used*/
-                &::after {
-                content: "";
-                display: none;
-                }
-            }
-            &.supernav_active:hover { /*this changes the supernav button color to white*/
-            color: #ffffff;
-            text-decoration: none;
-            }
-         
-        }
-        
-        .supernav_content {
-         max-width: 132px;
-         background: #000 url(https://steamstore-a.akamaihd.net/public/shared/images/dd_web.jpg) top left no-repeat;
-         padding: 5px 15px 10px 15px;
-         box-shadow: 3px 3px 5px -3px #000;
-         text-align: left;
-            &a {
-	        display: block;
-	        padding: 6px 0;
-	        text-transform: uppercase;
-	        font-size: 12px;
-               &:hover {
-	           color: #4897cf;
-	           text-decoration: none;
-               }
-            }
-}
-       
-        .submenuitem {
-        text-transform: uppercase;
-        font-size: 11px;
-	    color: #b8b6b4;
-	    padding-right: 10px;
-        padding-left: 0px;
-            &.active{
-	        text-decoration: none;
-            background: none;
-	        color: #ffffff;
-            }
-            &:hover {
-	        text-decoration: none;
-            background: none;
-	        color: #ffffff;
-            }
-        }
-        
-}
-    
-       
-  
-    div#global_actions {
-        & > #global_action_menu  {
-    right: 0px;
-    top: 6px;
-    height: 21px;
-    line-height: 21px;
-    color: #b8b6b4;
-    font-size: 11px;
-    z-index: 401;
-            & > * {
-            vertical-align: middle;
-            }
-        }
-        
-     
-}
-    
-
-    /*Pulldown */
-    .pulldown {
-    margin-right: 0px;
-    padding-left: 5px;
-    padding-right: 18px;
-    background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_arrow_down_padded.png);
-    background-position: right center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-  
-
-    
-    /*Remove "Open in steam prompt"*/    
-    
-    .open_in_steam_container {
-    display:none;
-    }
-    
-    
-    /*PopUp Background*/
-    
-    .popup_block_new .popup_body {
-    border: 1px solid #82807c;
-    position: relative;
-    background-color: #3b3938;
-    background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/popups/bg_popup.png);
-    background-repeat: repeat-x;
-    background-position: top;
-     }
-
-    /* Install Steam Button */
-
-    
-    .header_installsteam_btn {
-    margin-right: 3px;
-    float: left;
-    position: relative;
-    height: 21px;
-    line-height: 20px;
-    background-image:     
-        url(http://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/header/btn_header_installsteam_green.png);
-        background-position: 0px -21px;
-        background-repeat: repeat-x;
-        
-    }
-    
-    .header_installsteam_btn_content {
-    padding-left: 27px;
-    padding-right: 7px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    background-position: 7px 3px;
-    background-image: url(//store.akamai.steamstatic.com/public/shared/images/header/btn_header_installsteam_download.png?v=1);
-    text-decoration: none;
-    color: #e5e4dc;
-    background-color: unset!important;
-    font-weight: normal;
-        &:hover {
-	    text-decoration: none;
-	    color: #ffffff;
-        }
-    }
-   
-
-    /* STORE NAVIGATION AREA */
-    
-    ._7FiqKP7fZJGltkwRxPG6s{ /*The equivalent to store_nav_area*/
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 24px;
-    height: 49px;
-}
-   ._16jZ3HEbtaJTl80pQINN2Y{ /*The equivalent to store_nav_area*/
-        position: relative;
-    width: 940px;
-    margin: 0px auto;
-    z-index: 300;
-       background: none;
-       
-     ._1u2HkRz_FnAfR5OjfjexgF{ /*The equivalent to store_nav_bg and store_nav*/
-               height: 35px;
-    padding: 7px 0px;
-    background-image: url(https://store.akamai.steamstatic.com/public/images/v5/store_header_gradients.png);
-    background-repeat: repeat-x;
-    background-position: 0px -115px;
-       }
-       
-       .h2B3SGR_w4RWdrnsRZEcD._1TqaEZH4pd8k4LJDCTVmBo {
-    display:none;
-       }
-       
-}
+	/* STEAM 2014 Theme – Refactored Referenced with V5 files */
+	/* ========================== GLOBAL COMPONENTS ========================== */
+	/* FONTS*/
+	/*SCROLLBAR*/
+	/* ========================== HEADER ========================== */
+	/* Hides "open in steam banner" */
+	/*Pulldown */
+	/*Remove "Open in steam prompt"*/
+	/*PopUp Background*/
+	/* Install Steam Button */
+	/* STORE NAVIGATION AREA */
+	/* Search Bar */
+	/*Search Result Modal Window*/
+	/* .SWL3uBHWmdcYwUXE9yD0y{
+		 Equivalent to popup_body 
+	}
+	*/
+	/* DROP DOWN MENUS */
+	/* ========================== HOME PAGE ========================== */
+	/* CAROUSEL & CAPSULES*/
+	/*TODO: CAROUSEL*/
+	/* ========================== GAME PAGE ========================== */
+	/* ========================== VIDEO PLAYER ========================== */
+	/* ========================== GAME REVIEWS ========================== */
+	/* ========================== STORE ========================== */
+	/*Game Area Purchase Box*/
+	/*Game title font*/
+	/* ========================== BUTTONS (Reusable) ========================== */
+	 [role="main"] {
+		/*global background*/
+		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/content_bg.png);
+		 background-repeat: repeat-x;
+		 background-color: #000;
+		 background-position: 0 66px;
+	}
+	 [role="main"]::before {
+		 content: "";
+		 position: absolute;
+		 width: 100%;
+		 height: 66px;
+		 background: #3b3938;
+	}
+	 div#global_header .menuitem {
+		 font-family: Arial, Helvetica, sans-serif;
+	}
+	 body {
+		 font-family: Arial, Helvetica, sans-serif !important;
+		 color: #fff;
+		 font-size: 12px;
+	}
+	 body {
+		 font-family: Arial, Helvetica, sans-serif;
+		 color: #fff;
+		 background-color: #000;
+		 font-size: 12px;
+	}
+	 button._175B12uOwmeGBNcSaQFe-Z {
+		 font-family: Arial, Helvetica, sans-serif;
+	}
+	 ._16jZ3HEbtaJTl80pQINN2Y, ._16jZ3HEbtaJTl80pQINN2Y button, ._16jZ3HEbtaJTl80pQINN2Y input {
+		 font-family: Arial, Helvetica, sans-serif;
+	}
+	 .game_purchase_action .game_purchase_price {
+		 font-family: Arial, Helvetica, sans-serif;
+	}
+	 body {
+		 font-family: Arial, Helvetica, sans-serif;
+		 color: #fff;
+		 background-color: #000;
+		 font-size: 12px;
+	}
+	 ::-webkit-scrollbar {
+		 height: 12px;
+		 width: 15px;
+		 background: #2c2c2c;
+	}
+	 ::-webkit-scrollbar-thumb:hover {
+		 background-color: #d1d1d1;
+	}
+	 ::-webkit-scrollbar-thumb {
+		 width: 10px;
+		 background-color: #9f9f9f;
+		 border: 3px solid rgba(0, 0, 0, 0);
+	}
+	 #logo_holder img {
+		 float: inline-start;
+		 width: 176px;
+		 height: 44px;
+		 margin-right: 40px;
+		 content: url("https://store.akamai.steamstatic.com/public/images/v5/globalheader_logo.png");
+	}
+	 .banner_open_in_steam {
+		 display: none;
+	}
+	 div#global_header {
+		/*Global Header */
+		 background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg);
+		 background-position: center top;
+		 border-bottom: 1px solid #4d4b48;
+		 min-width: 940px;
+		 font-family: Arial, Helvetica, sans-serif;
+		 font-weight: normal;
+		 font-size: 11px;
+		/* SUPERNAV */
+	}
+	 div#global_header .content {
+		/*Header Background 2 the sequel*/
+		 background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg);
+		 background-position: center top;
+		 position: relative;
+		 width: 940px;
+		 height: 104px;
+		 margin: 0px auto;
+		 z-index: 402;
+	}
+	 div#global_header .menuitem {
+		/*Individual Header buttons like "Store", "Community" and etc.*/
+		 display: block;
+		 position: relative;
+		 padding-top: 40px;
+		 padding-left: 7px;
+		 padding-right: 7px;
+		 padding-bottom: 7px;
+		 line-height: 16px;
+		 float: left;
+		 font-size: 14px;
+		 color: #b8b6b4;
+		 text-transform: uppercase;
+	}
+	 div#global_header .menuitem.supernav_active {
+		/*supernav button color*/
+		 color: #b8b6b4;
+	}
+	 div#global_header .menuitem.supernav_active {
+		/*this removes the blue underline used*/
+	}
+	 div#global_header .menuitem.supernav_active::after {
+		 content: "";
+		 display: none;
+	}
+	 div#global_header .menuitem.supernav_active:hover {
+		/*this changes the supernav button color to white*/
+		 color: #fff;
+		 text-decoration: none;
+	}
+	 div#global_header .supernav_content {
+		 max-width: 132px;
+		 background: #000 url(https://steamstore-a.akamaihd.net/public/shared/images/dd_web.jpg) top left no-repeat;
+		 padding: 5px 15px 10px 15px;
+		 box-shadow: 3px 3px 5px -3px #000;
+		 text-align: left;
+	}
+	 div#global_header .supernav_contenta {
+		 display: block;
+		 padding: 6px 0;
+		 text-transform: uppercase;
+		 font-size: 12px;
+	}
+	 div#global_header .supernav_contenta:hover {
+		 color: #4897cf;
+		 text-decoration: none;
+	}
+	 div#global_header .submenuitem {
+		 text-transform: uppercase;
+		 font-size: 11px;
+		 color: #b8b6b4;
+		 padding-right: 10px;
+		 padding-left: 0px;
+	}
+	 div#global_header .submenuitem.active {
+		 text-decoration: none;
+		 background: none;
+		 color: #fff;
+	}
+	 div#global_header .submenuitem:hover {
+		 text-decoration: none;
+		 background: none;
+		 color: #fff;
+	}
+	 div#global_actions > #global_action_menu {
+		 right: 0px;
+		 top: 6px;
+		 height: 21px;
+		 line-height: 21px;
+		 color: #b8b6b4;
+		 font-size: 11px;
+		 z-index: 401;
+	}
+	 div#global_actions > #global_action_menu > * {
+		 vertical-align: middle;
+	}
+	 .pulldown {
+		 margin-right: 0px;
+		 padding-left: 5px;
+		 padding-right: 18px;
+		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_arrow_down_padded.png);
+		 background-position: right center;
+		 background-repeat: no-repeat;
+		 cursor: pointer;
+	}
+	 .open_in_steam_container {
+		 display: none;
+	}
+	 .popup_block_new .popup_body {
+		 border: 1px solid #82807c;
+		 position: relative;
+		 background-color: #3b3938;
+		 background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/popups/bg_popup.png);
+		 background-repeat: repeat-x;
+		 background-position: top;
+	}
+	 .header_installsteam_btn {
+		 margin-right: 3px;
+		 float: left;
+		 position: relative;
+		 height: 21px;
+		 line-height: 20px;
+		 background-image: url(http://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/header/btn_header_installsteam_green.png);
+		/*TODO: UPLOAD TO STEAM CLOUD*/
+		 background-position: 0px -21px;
+		 background-repeat: repeat-x;
+	}
+	 .header_installsteam_btn_content {
+		 padding-left: 27px;
+		 padding-right: 7px;
+		 background-repeat: no-repeat;
+		 display: inline-block;
+		 background-position: 7px 3px;
+		 background-image: url(https://store.akamai.steamstatic.com/public/shared/images/header/btn_header_installsteam_download.png?v=1);
+		 text-decoration: none;
+		 color: #e5e4dc;
+		 background-color: unset !important;
+		 font-weight: normal;
+	}
+	 .header_installsteam_btn_content:hover {
+		 text-decoration: none;
+		 color: #fff;
+	}
+	 ._7FiqKP7fZJGltkwRxPG6s {
+		/*The equivalent to store_nav_area*/
+		 position: absolute;
+		 left: 0px;
+		 right: 0px;
+		 top: 24px;
+		 height: 49px;
+	}
+	 ._16jZ3HEbtaJTl80pQINN2Y {
+		/*The equivalent to store_nav_area*/
+		 position: relative;
+		 width: 940px;
+		 margin: 0px auto;
+		 z-index: 300;
+		 background: none;
+	}
+	 ._16jZ3HEbtaJTl80pQINN2Y ._1u2HkRz_FnAfR5OjfjexgF {
+		/*The equivalent to store_nav_bg and store_nav*/
+		 height: 35px;
+		 padding: 7px 0px;
+		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/store_header_gradients.png);
+		 background-repeat: repeat-x;
+		 background-position: 0px -115px;
+	}
+	 ._16jZ3HEbtaJTl80pQINN2Y .h2B3SGR_w4RWdrnsRZEcD._1TqaEZH4pd8k4LJDCTVmBo {
+		 display: none;
+	}
+	 ._1KU9eASfov1GnFQRbyLIdR {
+		/*It's the equivalent to store_search*/
+		 float: right;
+		 border-left: 1px solid #000;
+		 padding: 4px 4px;
+		 height: 27px;
+		 min-width: 253px;
+		 max-width: 253px;
+		 background: none;
+	}
+	 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL {
+		/*Search Bar when dropdown menu is enabled*/
+	}
+	 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5 {
+		/*It's the equivalent to store_nav_search_term*/
+		 border: none;
+		 background: none;
+	}
+	 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5, ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5 input {
+		 border: none;
+		 color: #cdcac1;
+		 width: 206px;
+		 font-family: "Motiva Sans", Arial, sans-serif;
+	}
+	 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5:hover {
+		/*this removes blue border when hovering the searchbar.*/
+		 border: none;
+	}
+	 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5:hover::placeholder {
+		/*this just guarantees it doesn't change the text color, although theres better global way of doing this, it's been like 20 years since i did CSS and i'm a game developer not a web developer, bro.*/
+		 color: #cdcac1;
+	}
+	 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5:focus::placeholder {
+		/*This is some sutpid way of hiding the text when you click to write in the searchbox, just like how it behaved back then.*/
+		 font-size: 0px;
+	}
+	 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5::placeholder {
+		/*This changes the placeholder text "Search the Store" to be lowercase just like it was, and the irhgt color*/
+		 color: #cdcac1;
+		 font-size: 13px;
+		 text-transform: lowercase;
+	}
+	 ._2AD2O_FEWy7izR8sZZjjI6 {
+		/*It's the equivalent to searchbox*/
+		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/store_header_search.png?v=2);
+		 color: #a6a5a2;
+		 width: 253px;
+		 height: 27px;
+		 position: relative;
+		 z-index: 250;
+		 font-family: Arial, Helvetica, sans-serif;
+	}
+	 ._2tlUAG6WNyYFlk9caIiLj5 {
+		/*It's the equivalent to store_nav_search_term*/
+		/*Search bar when its clicked and vivisble */
+		 border: none;
+	}
+	 ._2tlUAG6WNyYFlk9caIiLj5, ._2tlUAG6WNyYFlk9caIiLj5 input {
+		 border: none;
+		 color: #cdcac1;
+		 width: 206px;
+		 font-family: "Motiva Sans", Arial, sans-serif;
+	}
+	 ._2tlUAG6WNyYFlk9caIiLj5:hover {
+		/*this removes blue border when hovering the searchbar.*/
+		 border: none;
+	}
+	 ._2tlUAG6WNyYFlk9caIiLj5:hover::placeholder {
+		/*this just guarantees it doesn't change the text color, although theres better global way of doing this, it's been like 20 years since i did CSS and i'm a game developer not a web developer, bro.*/
+		 color: #cdcac1;
+	}
+	 ._2tlUAG6WNyYFlk9caIiLj5:focus::placeholder {
+		/*This is some sutpid way of hiding the text when you click to write in the searchbox, just like how it behaved back then.*/
+		 font-size: 0px;
+	}
+	 ._2tlUAG6WNyYFlk9caIiLj5::placeholder {
+		/*This changes the placeholder text "Search the Store" to be lowercase just like it was, and the irhgt color*/
+		 color: #cdcac1;
+		 font-size: 13px;
+		 text-transform: lowercase;
+	}
+	 ._2tlUAG6WNyYFlk9caIiLj5:focus-visible {
+		 border: none;
+		 outline: none;
+		 box-shadow: none;
+		 background: none;
+	}
+	 ._1Yo-ZsBr-KbVMyAMXEYszd {
+		/* equivalent to store_nav_search_term*/
+		 background-image: url("https://store.akamai.steamstatic.com/public/images/v5/store_header_search.png?v=2)");
+		 background-position: 27px 0px;
+	}
+	 ._1Yo-ZsBr-KbVMyAMXEYszd svg {
+		/*hides the svg and keeps its size*/
+		 width: 18px;
+		 display: none;
+	}
+	 [id^="searchSuggestions_"] {
+		/*Equivalent to search_suggestion_contents*/
+		 border: 1px solid #82807c;
+		 position: relative;
+		 background-color: #3b3938;
+		 background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/popups/bg_popup.png);
+		 background-repeat: repeat-x;
+		 background-position: top;
+		 border-radius: 0px;
+	}
+	 .oeCR-_-EhS8CaxEaFAqDZ {
+		/*This lowers the base of the Dropdown menu 70px down to align with the current SuperNav*/
+		 top: 70px;
+		 position: relative;
+	}
+	 .h2B3SGR_w4RWdrnsRZEcD._19o1GB7ysfrWKLYpqZ6aXu._2IyR9WyPwYb15ILBjPvLR9 {
+		 background: none;
+	}
+	 .h2B3SGR_w4RWdrnsRZEcD._1TqaEZH4pd8k4LJDCTVmBo {
+		 height: 0px;
+	}
+	 .store_main_capsule .screenshots {
+		 display: none;
+	}
+	 .game_page_background {
+		/*Fixes the height to accomodate the navigation bar being more downwards*/
+	}
+	 .game_page_background.game {
+		 --store-menu-overlap-height: 63px;
+		 background-size: 1004px 570px;
+		 height: 1024px;
+		 min-width: 972px;
+	}
+	 .game_page_background.game:before {
+		 content: "";
+		 position: absolute;
+		 width: 100%;
+		 height: 100%;
+		 background: inherit;
+		 background-size: 1004px 570px;
+		 filter: grayscale(70%) brightness(1) saturate(0.5) hue-rotate(-20deg);
+		 top: 0px;
+		 z-index: 0;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .game_background_glow {
+		 background: linear-gradient(0deg, black 100px, transparent);
+		/*this adds the black gradient that smoothens out the game background image*/
+		 background-position: bottom;
+		 padding-bottom: 1px;
+		 background-repeat: no-repeat;
+		 margin: 0px auto;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .game_background_lighten {
+		 background: unset;
+		 width: 0%;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .block {
+		 border: none;
+		 border-left: 1px solid #262626;
+		 background-color: #262626;
+		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/rightcol_bg_block.png);
+		 background-position: bottom right;
+		 background-repeat: no-repeat;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .block.game_media_and_summary_ctn {
+		 background-image: unset;
+		 background-color: unset;
+		 border: none;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area {
+		 padding-top: 7px;
+		 margin-bottom: 18px;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .breadcrumbs {
+		 font-family: Arial, Helvetica, sans-serif;
+		 font-size: 14px;
+		 color: #626467;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .breadcrumbs > .blockbg {
+		 background-color: #262626;
+		 padding: 0px 4px;
+		 float: left;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .breadcrumbs a {
+		 color: #b0aeac;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .apphub_HomeHeaderContent .apphub_HeaderStandardTop {
+		 position: relative;
+		 margin: 0px auto;
+		 text-align: left;
+		 padding-top: 7px;
+		 height: 46px;
+		 background-image: url(https://store.akamai.steamstatic.com/public/shared/images/apphubs/bg_header.png);
+		 background-repeat: repeat-x;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .apphub_HomeHeaderContent .apphub_HeaderStandardTop .apphub_OtherSiteInfo {
+		 position: relative;
+		 float: right;
+		 right: 11px;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .apphub_HomeHeaderContent .apphub_HeaderStandardTop .apphub_AppIcon {
+		 display: block;
+		 position: relative;
+		 margin-left: 12px;
+		 height: 32px;
+		 width: 32px;
+		 float: left;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .apphub_HomeHeaderContent .apphub_HeaderStandardTop .apphub_AppName {
+		 font-family: Arial, Helvetica, sans-serif;
+		 color: white;
+		 font-size: 26px;
+		 padding-left: 12px;
+		 float: left;
+		 max-width: 700px;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights {
+		 color: #626366;
+		 margin-bottom: 1px;
+		 height: 466px;
+		 background-image: url(https://web.archive.org/web/20140920210036im_/http://store.akamai.steamstatic.com/public/images/v5/game_highlight_bg.png);
+		 background-repeat: repeat-x;
+		 background-position: top;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn {
+		 height: 450px;
+		 padding-top: 16px;
+		 padding-left: 16px;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .highlight_overflow {
+		 margin-right: 0px;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .slider_ctn .handle {
+		/*SLIDER*/
+		 position: absolute;
+		 top: 0;
+		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/control_slider.png);
+		 background-repeat: no-repeat;
+		 background-position: left;
+		 background-color: rgba(0, 0, 0, 0.2);
+		 border-radius: 3px;
+		 height: 18px;
+		 width: 60px;
+		 cursor: pointer;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .slider {
+		 left: 0px;
+		 width: 600px;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .slider_left {
+		 display: none;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .slider_right {
+		 display: none;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol {
+		 width: 308px;
+		 margin-left: 14px;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn {
+		 padding: 16px 16px 0px 0px;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .game_header_image_ctn .game_header_image_full {
+		 width: 292px;
+		 height: 136px;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .game_description_snippet {
+		 max-height: 105px;
+		 overflow: hidden;
+		 font-size: 12px;
+		 color: #626366;
+		 line-height: 14px;
+		 padding-right: 0px;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .glance_ctn_responsive_left {
+		 color: #626366;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .user_reviews {
+		 font-size: 12px;
+		 color: #626366;
+		 margin-top: 10px;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .release_date .date {
+		 color: #626366;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .release_date .subtitle {
+		 color: #626366;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .dev_row .column {
+		 color: #626366;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .block_content {
+		 border: 1px solid #4d4b49;
+		 background-color: #262626;
+		 font-size: 12px;
+		 color: #b0aeac;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .queue_overflow_ctn .queue_ctn {
+		 width: 940px;
+		 border: 1px solid #4d4b49;
+		 background: #262626;
+		 margin: 0px auto 16px;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .game_area_details_specs_ctn {
+		 background-color: unset;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .game_area_details_specs_ctn .icon {
+		 background-color: #1a1a1a;
+		 width: 30px;
+		 height: 22px;
+		 padding-top: 4px;
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .game_area_details_specs_ctn .icon > img {
+		 filter: brightness(0.6);
+	}
+	 .game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .game_area_details_specs_ctn .label {
+		 color: #8bc53f;
+		 background-color: #1a1a1a;
+		 padding: 7px 8px;
+		 padding-top: 5px;
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T {
+		/*EQUIVALENT TO html5_video_overlay*/
+		 position: absolute;
+		 right: 0;
+		 bottom: 0;
+		 left: 0;
+		 padding: 0px 0px 0px 0px;
+		 height: 35px;
+		 background-color: rgba(0, 0, 0, 0.8);
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2eh4iDod50HkFNh5C0fVW6 {
+		/*EQUIVALENT TO progress_bar_wrapper*/
+		 touch-action: none;
+		 position: absolute;
+		 bottom: 0px;
+		 top: 21px;
+		 left: 0px;
+		 right: 0px;
+		 background-color: #2c2b28;
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2eh4iDod50HkFNh5C0fVW6 ._3ezjd4FAgey-Olcl2qvfD4 {
+		/*EQUIVALENT TO progress_bar_container*/
+		 position: absolute;
+		 top: 2px;
+		 left: 2px;
+		 right: 2px;
+		 bottom: 1px;
+		 background-color: #2c2b28;
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2eh4iDod50HkFNh5C0fVW6 ._3ezjd4FAgey-Olcl2qvfD4 ._3ezyMaw8mNCokAmQuZDbj1 {
+		/*EQUIVALENT TO progress_bar*/
+		 background-color: #6f9fc8;
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2eh4iDod50HkFNh5C0fVW6 ._3ezjd4FAgey-Olcl2qvfD4 ._3f4Y1kM_nEtTF4DINVZ_rx {
+		/*EQUIVALENT TO progress_bar_background*/
+		 background-color: #595959;
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I {
+		/*EQUIVALENT TO control_container*/
+		 display: flex;
+		 flex-direction: row;
+		 justify-content: space-between;
+		 background-color: #2c2b28;
+		 height: 19px;
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._3XkD6Vq8YzOkmEr9odYcX4 {
+		/*BUTTON SIZE ICON*/
+		 color: #b8bcbf;
+		 width: 19px;
+		 height: 19px;
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._3XkD6Vq8YzOkmEr9odYcX4 > svg {
+		 display: none;
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._3XkD6Vq8YzOkmEr9odYcX4::after {
+		 content: "";
+		 color: #b8bcbf;
+		 width: 19px;
+		 height: 19px;
+		 background-image: url(data:image/png;
+		base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FAQExNPQD1HQAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAHhJREFUOMtjjIyMZCALsPz7928k6GT6hw3I+ZX/IwSw62RgYFAIqCSg8y82AHGPUlD1X9yA6T82APeMamjdfxwAn50QoBZWj1UNC7INWMG1ZbXYYwXNBjRweXEVzvjEY+elRZX4UgIuO8/PL8PvC0YbG5vRvIIPAADvxSAevqB/CQAAAABJRU5ErkJggg==);
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc {
+		/* Video Controls*/
+		 gap: 3px;
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc .Ul_JQ5e-7WyVgJwFfykCb {
+		/*Video Time*/
+		 font-size: 10px;
+		 font-family: Arial, Helvetica, sans-serif;
+		 text-align: center;
+		 color: #9d9d9d;
+		 white-space: nowrap;
+		 user-select: none;
+		 align-self: center;
+		 display: inline-flex;
+		 gap: 3px;
+		 line-height: 19px;
+		 margin-right: 5px;
+		 float: right;
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc ._1j6rW_OLdrZ-Erj3ayEBt5 {
+		/*Volume Bar*/
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc ._1j6rW_OLdrZ-Erj3ayEBt5 ._3XkD6Vq8YzOkmEr9odYcX4 {
+		/*BUTTON SIZE ICON*/
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc ._1j6rW_OLdrZ-Erj3ayEBt5 ._3XkD6Vq8YzOkmEr9odYcX4::after {
+		 background-image: url(data:image/png;
+		base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FAQEyM0FKEhQAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAaBJREFUOMtj1NHWYCALMDGQC4jV6ezixsbGRpROR0cnNXV1CJuXl09UVDQ+IZmXl4+AzszM7EmTp/LB1Onp669bu/rz508uLm44dfLw8EyYODkrOwcuwsnJGRAQFBuXcPjQQRlZWWERERSdPDw8Jiamjo5O8xcscnZ2QTaLmZl57pxZtrZ2TMxMr1+/0tLUhoizQCgNDc35CxZhOpuHh2fN2g0hwQE3rl+3sba9eu2qlpY2UWH75cuXz58/+QcE7ty5XV5e4e2bN6KiYsTGyr69e01Nzb5//05yfKpraHz+/JmTk5M0nTw8PM7OLhs3rDcyNnn48IG0tMzr169QdH76/On0qVNPnz7F9GdiQtyXL19sbe3Onz8nLS3z+vVrFJ23bt5MSooPCQ7YsGE9muarV6/k5hWcPXvm9ZvXMrKy9+7eweLaL1++1NZUdXS0IQt+//793Lmzc2bPdHV1f/L48f3793D6c+mSxYkJcZ8+fYKLzJ0zy8ralpeXb8+eXXBBFqwBc+bM6ZDgQDiXjY1NWlpm3brVnz8jjGMcgJwNAO7wmMDjuhRMAAAAAElFTkSuQmCC);
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL {
+		/* Video Player Configs*/
+		 gap: 3px;
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL ._3XkD6Vq8YzOkmEr9odYcX4 {
+		/*BUTTON SIZE ICON*/
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL ._3XkD6Vq8YzOkmEr9odYcX4::after {
+		 background-image: url(data:image/png;
+		base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FARYVIXFfZMwAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAGBJREFUOMtj1NHWYCALMDGQC1jk5GThnEePHuNXjayYhRgNmEbLyclS4FqsLiHGWhZkp27bvhu/Ni9PV7h+8l07qpOY1AePGHigEwRycrIsxCda6rkWOd2RlFcYByBnAwBu7B+wiL65mQAAAABJRU5ErkJggg==);
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL ._3XkD6Vq8YzOkmEr9odYcX4:has(.DpzfSpwcCrmcxUf4Hb6nM)::after {
+		 content: none !important;
+		 background: none !important;
+	}
+	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL .DpzfSpwcCrmcxUf4Hb6nM {
+		/*BUTTON SIZE ICON*/
+		 display: inline;
+	}
+	 .game_area_purchase_game {
+		 position: relative;
+		 background: none;
+		 font-family: Arial, Helvetica, sans-serif;
+		 border: 1px solid #4d4b49;
+		 background-color: #262626;
+		 font-size: 12px;
+		 padding: 16px;
+		 padding-bottom: 26px;
+		 margin-bottom: 28px;
+		 z-index: 1;
+	}
+	 .game_area_purchase_game .game_purchase_discount_countdown {
+		 color: #898a8c;
+	}
+	 .game_area_purchase_game .game_purchase_action {
+		/*Game purchase box*/
+		/*Bundle Button*/
+	}
+	 .game_area_purchase_game .game_purchase_action .game_purchase_price {
+		/*Game Purchase Page Box Price Tag*/
+		 background-color: #000;
+		 font-size: 13px;
+		 padding-top: 8px;
+		 padding-left: 12px;
+		 padding-right: 12px;
+		 margin-left: 3px;
+		 height: 26px;
+	}
+	 .game_area_purchase_game .game_purchase_action .discount_block {
+		/*Discont Price Box*/
+		 position: relative;
+		 background-color: #000;
+	}
+	 .game_area_purchase_game .game_purchase_action .discount_block .bundle_base_discount {
+		/*Discount Price Box for BUNDLES*/
+		 background-color: #4c6b22;
+		 color: #fff;
+		 height: 34px;
+	}
+	 .game_area_purchase_game .game_purchase_action .game_purchase_discount {
+		 float: left;
+		 margin-left: 3px;
+		 height: 34px;
+	}
+	 .game_area_purchase_game .game_purchase_action .game_purchase_discount .discount_pct {
+		 left: 0px;
+		 width: 69px;
+		 height: 34px;
+		 line-height: 34px;
+		 font-size: 25px;
+		 text-align: center;
+		 background-color: #4c6b22;
+		 color: #fff;
+	}
+	 .game_area_purchase_game .game_purchase_action .game_purchase_action_bg {
+		/*Game Purchase Box Background*/
+		 height: 34px;
+		 background-color: #3c3d3e;
+		 padding: 3px 3px 3px 0px;
+		 border-radius: 3px;
+		 -moz-border-radius: 3px;
+	}
+	 .game_area_purchase_game .game_purchase_action .discount_prices {
+		 background-color: #000;
+	}
+	 .game_area_purchase_game .game_purchase_action .discount_prices .discount_final_price.your_price {
+		 font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+		 color: #d6d7d8;
+	}
+	 .game_area_purchase_game .game_purchase_action .discount_prices .discount_final_price.your_price .your_price_label {
+		 color: #626366;
+	}
+	 .game_area_purchase_game .game_purchase_action .btn_packageinfo .btn_blue_steamui.btn_medium > span {
+		 display: none;
+	}
+	 .game_area_purchase_game .game_purchase_action .btn_packageinfo .btn_blue_steamui.btn_medium::after {
+		 content: "PACKAGE INFO";
+		 display: inline-block;
+		 background-image: url("https://store.akamai.steamstatic.com/public/images/v5/btn_packageinfo_repeat.gif");
+		 height: 34px;
+		 font-size: 11px;
+		 color: #fff;
+		 text-align: center;
+		 padding: 0px 11px;
+		 line-height: 34px;
+		 background-repeat: repeat-x;
+		 text-transform: uppercase;
+		 min-width: 80px;
+	}
+	 .game_area_purchase_game .game_area_purchase_platform {
+		/*GAME OS SUPPORT BOX*/
+		/* SYSTEM ICONS REPLACEMENT*/
+	}
+	 .game_area_purchase_game .game_area_purchase_platform .platform_img {
+		/*PLATFORM IMAGE BASIC SPECIFICATIONS*/
+		 display: inline-block;
+		 width: 22px;
+		 height: 22px;
+		 background-repeat: no-repeat;
+	}
+	 .game_area_purchase_game .game_area_purchase_platform .win {
+		/*WINDOWS*/
+		 background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_win.png");
+	}
+	 .game_area_purchase_game .game_area_purchase_platform .linux {
+		/*LINUX*/
+		 background-image: url("https://images.steamusercontent.com/ugc/10414975101062247569/9C844C8149D2A06A5A85A542FC049025D8CEA0D9/");
+	}
+	 .game_area_purchase_game .game_area_purchase_platform .mac {
+		/*MACOS*/
+		 background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_mac.png");
+	}
+	 .game_area_purchase_game .game_area_purchase_platform .music {
+		/*MUSIC*/
+		 background-image: url("https://images.steamusercontent.com/ugc/14771200981187913751/4CED5B4A814D3CD411EC72A53B0497C771388251/");
+	}
+	 .discount_original_price {
+		 font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+		 color: #626366;
+		 text-decoration: line-through;
+	}
+	 .discount_final_price {
+		 font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+		 color: #d6d7d8;
+	}
+	 .price, .match_price {
+		 font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+		 font-size: 11px;
+		 color: #b0aeac;
+	}
+	 .game_area_purchase_game h1, .game_area_offsite_purchase h1, .game_area_purchase_game h2.title.title {
+		 font-size: 21px;
+		 line-height: 21px;
+		 font-family: Arial, Helvetica, sans-serif;
+	}
+	 button._175B12uOwmeGBNcSaQFe-Z {
+		/* Equivalent to the tab button used in the store navigation bar*/
+		 float: left;
+		 border-right: 1px solid #000;
+		 padding: 1px;
+		 gap: 0px;
+		 text-decoration: none;
+		 cursor: pointer;
+		 background: #74706f;
+		 background: -moz-linear-gradient(top, #74706f 0%, #6e6a69 100%);
+		 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #74706f), color-stop(100%, #6e6a69));
+		 background: -webkit-linear-gradient(top, #74706f 0%, #6e6a69 100%);
+		 background: -o-linear-gradient(top, #74706f 0%, #6e6a69 100%);
+		 background: -ms-linear-gradient(top, #74706f 0%, #6e6a69 100%);
+		 background: linear-gradient(to bottom, #74706f 0%, #6e6a69 100%);
+		 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#74706f', endColorstr='#6e6a69', GradientType=0);
+	}
+	 button._175B12uOwmeGBNcSaQFe-Z:hover {
+		/* Hover*/
+		 background: #82807c;
+		 filter: none;
+	}
+	 button._175B12uOwmeGBNcSaQFe-Z svg {
+		/*This hides the SVG pulldown icon*/
+		 display: none;
+	}
+	 .vj9hwW9u0MpjH7MVjjNw0 {
+		/*equivalent to tab > span*/
+		 font-size: 11px;
+		 color: #fff;
+		 text-transform: uppercase;
+		 line-height: 33px;
+		 padding: 0px 15px;
+		 padding-right: 7px;
+		 display: block;
+		 background: #5a5654;
+		 background: -moz-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+		 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5a5654), color-stop(100%, #6e6a69));
+		 background: -webkit-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+		 background: -o-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+		 background: -ms-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+		 background: linear-gradient(to bottom, #5a5654 0%, #6e6a69 100%);
+		 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5a5654', endColorstr='#6e6a69', GradientType=0);
+	}
+	 .vj9hwW9u0MpjH7MVjjNw0:hover {
+		/*equivalent to tab > span*/
+		 background: #82807c;
+		 filter: none;
+	}
+	 .vj9hwW9u0MpjH7MVjjNw0::after {
+		/*Replaces the svg with the original pulldown icon*/
+		 transition-property: transform;
+		 content: "";
+		 transition-duration: 0.2s;
+		 transition-timing-function: ease-in-out;
+		 width: 19px;
+		 height: 12px;
+		 padding: 0;
+		 display: inline-block;
+		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_arrow_down_padded.png);
+		 background-position: center;
+		 background-repeat: no-repeat;
+		 cursor: pointer;
+		 vertical-align: text-bottom;
+	}
+	 .btn_green_steamui {
+		/* Green button*/
+		 height: 34px;
+	}
+	 .btn_green_steamui > span {
+		 border-radius: 2px;
+		 border: none;
+		 padding: 1px 11px;
+		 display: inline-block;
+		 cursor: pointer;
+		 text-decoration: none !important;
+		 background: transparent;
+		 text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+		 height: 34px;
+		 font-size: 11px;
+		 color: #fff;
+		 text-align: center;
+		 line-height: 34px;
+		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_addtocart_repeat.gif);
+		 background-repeat: repeat-x;
+		 text-transform: uppercase;
+		 min-width: 80px;
+	}
+	 .btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
+		 background: transparent;
+		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_addtocart_repeat.gif);
+		 background-repeat: repeat-x;
+	}
+	 .btn_addtocart {
+		/*self explanatory add to cart button*/
+		 position: relative;
+		 height: 34px;
+	}
+	 .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active) {
+		/*Generic Blue Medium Button*/
+		 border-radius: 2px;
+		 border: none;
+		 padding: 1px;
+		 display: inline-block;
+		 cursor: pointer;
+		 text-decoration: none !important;
+		 color: #fff !important;
+		 background: #57749e;
+		 background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
+		 background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #57749e), color-stop(95%, #364963));
+		 background: -webkit-linear-gradient(top, #57749e 5%, #364963 95%);
+		 background: -o-linear-gradient(top, #57749e 5%, #364963 95%);
+		 background: -ms-linear-gradient(top, #57749e 5%, #364963 95%);
+		 background: linear-gradient(to bottom, #57749e 5%, #364963 95%);
+		 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57749e', endColorstr='#364963', GradientType=0);
+	}
+	 .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+		/*Generic Blue Medium Button HOVER*/
+		 text-decoration: none !important;
+		 color: #fff !important;
+		 background: #688bb1;
+		 background: -moz-linear-gradient(top, #688bb1 5%, #415877 95%);
+		 background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #688bb1), color-stop(95%, #415877));
+		 background: -webkit-linear-gradient(top, #688bb1 5%, #415877 95%);
+		 background: -o-linear-gradient(top, #688bb1 5%, #415877 95%);
+		 background: -ms-linear-gradient(top, #688bb1 5%, #415877 95%);
+		 background: linear-gradient(to bottom, #688bb1 5%, #415877 95%);
+		 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#688bb1', endColorstr='#415877', GradientType=0);
+	}
+	 #shareEmbedRow {
+		/*share embed row, which had dark medium buttons*/
+	}
+	 #shareEmbedRow .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active) {
+		/*Generic Gray Medium Button*/
+		 border-radius: 2px;
+		 border: none;
+		 padding: 1px;
+		 display: inline-block;
+		 cursor: pointer;
+		 text-decoration: none !important;
+		 color: #ebebeb !important;
+		 background: #1a1a1a;
+	}
+	 #shareEmbedRow .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+		/*Generic Gray Medium Button Hover*/
+		 text-decoration: none !important;
+		 color: #000 !important;
+		 background: #97c0e3;
+	}
+	 .app_tag {
+		 display: inline-block;
+		 line-height: 19px;
+		 padding: 0 7px;
+		 color: #b0aeac;
+		 background-color: #384959;
+		 margin-right: 2px;
+		 border-radius: 3px;
+		 box-shadow: 1px 1px 0 0 #000;
+		 cursor: pointer;
+		 margin-bottom: 3px;
+		 max-width: 200px;
+		 white-space: nowrap;
+		 overflow: hidden;
+		 text-overflow: ellipsis;
+	}
+	 .app_tag:hover {
+		 text-decoration: none;
+		 background: #516980;
+		 color: #fff;
+	}
  
-    /* Search Bar */
-    
-    ._1KU9eASfov1GnFQRbyLIdR{ /*It's the equivalent to store_search*/
-    float: right;
-    border-left: 1px solid #000000;
-    padding: 4px 4px;
-    height: 27px;
-    min-width: 253px;
-    max-width: 253px;
-    background: none;
-        
-        &._1u5lJbV7kBEJq4lH6V2RzL {  /*Search Bar when dropdown menu is enabled*/
-        
-             &._2tlUAG6WNyYFlk9caIiLj5{
-                 
-                & , input { /*It's the equivalent to store_nav_search_term*/
-                border: none;
-                color: #cdcac1;
-                width: 206px;
-                font-family: "Motiva Sans", Arial, sans-serif;
-                }  
-        
-                &:hover { /*this removes blue border when hovering the searchbar.*/
-                border:none;
-                   &::placeholder { /*this just guarantees it doesn't change the text color, although theres better global way of doing this, 
-                   it's been like 20 years since i did CSS and i'm a game developer not a web developer, bro.*/
-                   color: #cdcac1;
-                   }
-                }
-                 
-                &:focus::placeholder { /*This is some sutpid way of hiding the text when you click to write in the searchbox, 
-                just like how it behaved back then.*/
-                font-size: 0px;
-                }
-                 
-                &::placeholder { /*This changes the placeholder text "Search the Store" to be lowercase just like it was, and the irhgt color*/
-                color: #cdcac1;
-                font-size: 13px;
-                text-transform: lowercase;
-                }
-                 
-             border: none;
-             background: none;
-
-             }
-        }
-   }
-    
-    ._2AD2O_FEWy7izR8sZZjjI6{ /*It's the equivalent to searchbox*/
-    background-image: url(https://store.akamai.steamstatic.com/public/images/v5/store_header_search.png?v=2);
-    color: #a6a5a2;
-    width: 253px;
-    height: 27px;
-    position: relative;
-    z-index: 250;
-    font-family: Arial, Helvetica, sans-serif;
-    }
-    ._2tlUAG6WNyYFlk9caIiLj5{ /*It's the equivalent to store_nav_search_term*/
-        
-        & , input { 
-        border: none;
-        color: #cdcac1;
-        width: 206px;
-        font-family: "Motiva Sans", Arial, sans-serif;
-        }  
-        
-        &:hover { /*this removes blue border when hovering the searchbar.*/
-        border:none;
-            &::placeholder { /*this just guarantees it doesn't change the text color, although theres better global way of doing this, it's been like 20 years
-            since i did CSS and i'm a game developer not a web developer, bro.*/
-            color: #cdcac1;
-            }
-        }
-        
-        &:focus::placeholder { /*This is some sutpid way of hiding the text when you click to write in the searchbox, just like how it behaved back then.*/
-        font-size: 0px;
-        }
-        
-        &::placeholder { /*This changes the placeholder text "Search the Store" to be lowercase just like it was, and the irhgt color*/
-        color: #cdcac1;
-        font-size: 13px;
-        text-transform: lowercase;
-        }
-            
-        /*Search bar when its clicked and vivisble */
-        &:focus-visible {
-        border: none;
-        outline: none;
-        box-shadow: none;
-        background: none;
-        }
-        
-    border: none;
-    }
-    
-    ._1Yo-ZsBr-KbVMyAMXEYszd{ /* equivalent to store_nav_search_term*/
-         
-    background-image: url("https://store.akamai.steamstatic.com/public/images/v5/store_header_search.png?v=2)");
-    background-position: 27px 0px;
-        & svg { /*hides the svg and keeps its size*/
-        width: 18px;
-        display: none;
-        }
-    }
-    
-    /*Search Result Modal Window*/
-    
-    
-    .SWL3uBHWmdcYwUXE9yD0y{ /*Equivalent to popup_body*/
-    }
-    
-    #searchSuggestions_«r0»{ /*Equivalent to search_suggestion_contents*/
-              border: 1px solid #82807c;
-    position: relative;
-    background-color: #3b3938;
-    background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/popups/bg_popup.png);
-    background-repeat: repeat-x;
-    background-position: top;
-    border-radius: 0px;
-    }
-    /*  DROP DOWN MENUS */
-    .oeCR-_-EhS8CaxEaFAqDZ{ /*This lowers the base of the Dropdown menu 70px down to align with the current SuperNav*/
-        top: 70px;
-        position: relative;
-
-    }
-   
-    
-     .h2B3SGR_w4RWdrnsRZEcD {
-        &._19o1GB7ysfrWKLYpqZ6aXu._2IyR9WyPwYb15ILBjPvLR9 {
-        background: none;
-        }
-        &._1TqaEZH4pd8k4LJDCTVmBo {
-        height: 0px;
-        }
-}
-    
-/* ==========================
-   GAME PAGE
-========================== */
-    
-   .game_page_background{ /*Fixes the height to accomodate the navigation bar being more downwards*/
-       &.game {
-       --store-menu-overlap-height: 69px;
-       }
-}
-    
-    
-    
-    
-/* ==========================
-   STORE
-========================== */
-    
- 
-      /*Game Area Purchase Box*/
-    .game_area_purchase_game {
-    position: relative;
-    background: none;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid #4d4b49;
-    background-color: #262626;
-    font-size: 12px;
-    color: #2e3a51;
-    padding: 16px;
-    padding-bottom: 26px;
-    margin-bottom: 28px;
-    z-index: 1;
-        
-        .game_purchase_discount_countdown {
-        color: #898a8c;
-        }
-        
-        .game_purchase_action { /*Game purchase box*/
-        
-           .game_purchase_price{ /*Game Purchase Page Box Price Tag*/
-            
-            background-color: #000000;
-            font-size: 13px;
-            padding-top: 8px;
-            padding-left: 12px;
-            padding-right: 12px;
-            margin-left: 3px;
-            height: 26px;
-            }
-        
-         
-            .discount_block { /*Discont Price Box*/
-            position: relative;
-            background-color: #000000;
-            }
-          
-            .game_purchase_discount{
-               
-            float: left;
-            margin-left: 3px;
-            height: 34px;
-            
-               .discount_pct {
-               left: 0px;
-               width: 69px;
-               height: 34px;
-               line-height: 34px;
-               font-size: 25px;
-               text-align: center;
-               background-color: #4c6b22;
-               color: #ffffff;
-               }
-            }   
-        
-            .game_purchase_action_bg{ /*Game Purchase Box Background*/
-            
-            height: 34px;
-            background-color: #3c3d3e;
-            padding: 3px 3px 3px 0px;
-            border-radius: 3px;
-            -moz-border-radius: 3px;     
-            }
-        
-            .discount_prices {
-            background-color: #000000;   
-            }
-        }
-        
-        
-        .game_area_purchase_platform{ /*GAME OS SUPPORT BOX*/
-           /* SYSTEM ICONS REPLACEMENT*/
-            .platform_img { /*PLATFORM IMAGE BASIC SPECIFICATIONS*/
-            display: inline-block;
-            width: 22px;
-            height: 22px;
-            background-repeat: no-repeat;
-            } 
-            
-            .win{ /*WINDOWS*/
-                background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_win.png")
-            }
-            .linux{ /*LINUX*/
-                background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_linux.png")
-            }
-            .mac{ /*MACOS*/
-                background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_mac.png")
-            }
-            
-        }
-        
-}
-    
-    
-    .discount_original_price {
-    font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
-    color: #626366;
-    text-decoration: line-through;
-}
-    
-    .discount_final_price {
-    font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
-    color: #d6d7d8;
-}
-    
-    .price, .match_price {
-    font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
-    font-size: 11px;
-    color: #b0aeac;
-}
-    
-    /*Game title font*/
-    .game_area_purchase_game h1, .game_area_offsite_purchase h1, .game_area_purchase_game h2.title.title {
-    font-size: 21px;
-    line-height: 21px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-   
-    /* SYSTEM ICONS REPLACEMENT*/
-    
-    
-    
-/* ==========================
-   BUTTONS (Reusable)
-========================== */
-    
-
-    
-    button._175B12uOwmeGBNcSaQFe-Z { /* Equivalent to the tab button used in the store navigation bar*/
-    float: left;
-    border-right: 1px solid #000000;
-    padding: 1px;
-    gap: 0px;
-    text-decoration: none;
-    cursor: pointer;
-    background: #74706f;
-    background: -moz-linear-gradient(top, #74706f 0%, #6e6a69 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #74706f), color-stop(100%, #6e6a69));
-    background: -webkit-linear-gradient(top, #74706f 0%, #6e6a69 100%);
-    background: -o-linear-gradient(top, #74706f 0%,#6e6a69 100%);
-    background: -ms-linear-gradient(top, #74706f 0%,#6e6a69 100%);
-    background: linear-gradient(to bottom, #74706f 0%, #6e6a69 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#74706f', endColorstr='#6e6a69',GradientType=0 );
-        &:hover { /* Hover*/
-        background: #82807c;
-        filter: none;
-        }
-        & svg{ /*This hides the SVG pulldown icon*/
-        display:none;
-        }
-    
-    }
-    
-    .vj9hwW9u0MpjH7MVjjNw0{ /*equivalent to tab > span*/
-        font-size: 11px;
-    color: #ffffff;
-    text-transform: uppercase;
-    line-height: 33px;
-    padding: 0px 15px;
-            padding-right: 7px;
-    display: block;
-    background: #5a5654;
-    background: -moz-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5a5654), color-stop(100%, #6e6a69));
-    background: -webkit-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
-    background: -o-linear-gradient(top, #5a5654 0%,#6e6a69 100%);
-    background: -ms-linear-gradient(top, #5a5654 0%,#6e6a69 100%);
-    background: linear-gradient(to bottom, #5a5654 0%, #6e6a69 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a5654', endColorstr='#6e6a69',GradientType=0 );
-        
-        &:hover{ /*equivalent to tab > span*/
-        background: #82807c;
-        filter: none;
-        }
-        &::after { /*Replaces the svg with the original pulldown icon*/
-        transition-property: transform;
-        content:"";
-        transition-duration: .2s;
-        transition-timing-function: ease-in-out;
-        width: 19px;
-        height: 12px;
-        padding: 0;
-        display: inline-block;
-        background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_arrow_down_padded.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        cursor: pointer;
-         vertical-align: text-bottom;
-        }
-    }
-
-      .btn_green_steamui  { /* Green button*/
-      height: 34px;
-          
-          & > span  {
-          border-radius: 2px;
-          border: none;
-          padding: 1px 11px;
-          display: inline-block;
-          cursor: pointer;
-          text-decoration: none !important;
-          background: transparent;
-          text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
-          height: 34px;
-          font-size: 11px;
-          color: #ffffff;
-          text-align: center;
-          line-height: 34px;
-          background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_addtocart_repeat.gif);
-          background-repeat: repeat-x;
-          text-transform: uppercase;
-          min-width: 80px;
-          }
-  
-}
-    
-.btn_addtocart { /*self explanatory add to cart button*/
-    position: relative;
-    height: 34px;
-}
-    
-    .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active) { /*Generic Blue Medium Button*/
-    border-radius: 2px;
-    border: none;
-    padding: 1px;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none !important;
-    color: #fff !important;
-    background: #57749e;
-    background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #57749e), color-stop(95%, #364963));
-    background: -webkit-linear-gradient(top, #57749e 5%, #364963 95%);
-    background: -o-linear-gradient(top, #57749e 5%,#364963 95%);
-    background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);
-    background: linear-gradient(to bottom, #57749e 5%, #364963 95%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );
-        
-         &:hover { /*Generic Blue Medium Button HOVER*/
-         text-decoration: none !important;
-         color: #fff !important;
-         background: #688bb1;
-         background: -moz-linear-gradient(top, #688bb1 5%, #415877 95%);
-         background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #688bb1), color-stop(95%, #415877));
-         background: -webkit-linear-gradient(top, #688bb1 5%, #415877 95%);
-         background: -o-linear-gradient(top, #688bb1 5%,#415877 95%);
-         background: -ms-linear-gradient(top, #688bb1 5%,#415877 95%);
-         background: linear-gradient(to bottom, #688bb1 5%, #415877 95%);
-         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#688bb1', endColorstr='#415877',GradientType=0 );
-         }
-        
-    }
-
-    #shareEmbedRow { /*share embed row, which had dark medium buttons*/
-        
-        &.btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active) { /*Generic Gray Medium Button*/
-        border-radius: 2px;
-        border: none;
-        padding: 1px;
-        display: inline-block;
-        cursor: pointer;
-        text-decoration: none !important;
-        color: #ebebeb !important;
-        background: #1a1a1a;
-            
-            &:hover { /*Generic Gray Medium Button Hover*/
-            text-decoration: none !important;
-            color: #000 !important;
-            background: #97C0E3;
-            }
-            
-        }
-    }
-    
