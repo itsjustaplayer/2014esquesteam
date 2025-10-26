@@ -1,6 +1,40 @@
+
+2014-Esque STEAM: REFACTORED DEVELOPMENTAL
+Enabled 
+Live preview
+Word wrap
+Use smart indentatio­n
+Use tabs with smart indentatio­n
+Autoclose brackets and quotes
+Autocomple­te on typing
+Double-clicking selects tokens
+Colorpicke­rs for CSS colors
+Display 'Applies to' info
+Tab size
+4
+Keymap
+sublime
+Theme
+default
+Highlight
+Token under cursor
+CSS Linter
+CSSLint
+Check for updates
+Update URL
+Dark/Light mode preference
+None (always applied)
+Dark
+Light
+Custom included sites
+*://www.aaa.com/*
+Custom excluded sites
+*://www.aaa.com/*
+ on change
+STEAM 2014 Theme – Refactored
 /* ==UserStyle==
 @name         2014-Esque STEAM: REFACTORED
-@version      0.0.4
+@version      0.0.5
 @namespace    //userstyles.world/user/ItsJustAPlayer
 @description  2014-esque STEAM reimagines today’s Steam website with the nostalgic charm of its classic V5 (2014) design. Currently in ALPHA, it brings back the look and feel of the golden era—modernized for today’s web.
 @author       ItsJustAPlayer
@@ -29,39 +63,37 @@ Referenced with V5 files */
         height: 66px;
         background: #3b3938;
     }
-
-
+    html:not(.rn_mobile_app) body.v7menu:not(.menu_background_overlap) .responsive_page_template_content {
+    padding-top: 0px;
+    }
 
     /* FONTS*/
     div#global_header .menuitem {
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    body {
         font-family: Arial, Helvetica, sans-serif!important;
-        color: #ffffff;
-        font-size: 12px;
     }
-    body {
-        font-family: Arial, Helvetica, sans-serif;
+    body.v6 {
+        font-family: Arial, Helvetica, sans-serif!important;
         color: #ffffff;
         background-color: #000000;
         font-size: 12px;
     }
+    body.v6 h2:not(.BB_Header2) {
+    font-family: Arial, Helvetica, sans-serif!important;
+            font-weight: bold;
 
+    text-transform: none;
+    }
+  
     button._175B12uOwmeGBNcSaQFe-Z {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif!important;
     }
-    ._16jZ3HEbtaJTl80pQINN2Y,
-    ._16jZ3HEbtaJTl80pQINN2Y button,
-    ._16jZ3HEbtaJTl80pQINN2Y input {
-        font-family: Arial, Helvetica, sans-serif;
-    }
+    
 
     .game_purchase_action .game_purchase_price {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif!important;
     }
     body {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif!important;
         color: #ffffff;
         background-color: #000000;
         font-size: 12px;
@@ -80,6 +112,8 @@ Referenced with V5 files */
         background-color: #9F9F9F;
         border: 3px solid rgba(0, 0, 0, 0);
     }
+
+    
     
 /* ==========================
     
@@ -311,10 +345,10 @@ Referenced with V5 files */
     float: right;
     border-left: 1px solid #000000;
     padding: 4px 4px;
-    height: 27px;
-    min-width: 253px;
-    max-width: 253px;
-    background: none;
+    height: 27px!important;
+    min-width: 253px!important;
+    max-width: 253px!important;
+    background: none!important;
         
         &._1u5lJbV7kBEJq4lH6V2RzL {  /*Search Bar when dropdown menu is enabled*/
         
@@ -402,11 +436,11 @@ Referenced with V5 files */
     
     ._1Yo-ZsBr-KbVMyAMXEYszd{ /* equivalent to store_nav_search_term*/
          
-    background-image: url("https://store.akamai.steamstatic.com/public/images/v5/store_header_search.png?v=2)");
-    background-position: 27px 0px;
+    background-image: url("https://store.akamai.steamstatic.com/public/images/v5/store_header_search.png?v=2)")!important;
+    background-position: 27px 0px!important;
         & svg { /*hides the svg and keeps its size*/
-        width: 18px;
-        display: none;
+        width: 18px!important;
+        display: none!important;
         }
     }
     
@@ -441,7 +475,7 @@ Referenced with V5 files */
         height: 0px;
         }
 }
-    /* ==========================
+/* ==========================
    HOME PAGE
 ========================== */
     .store_main_capsule .screenshots {
@@ -493,17 +527,23 @@ Referenced with V5 files */
 
 
                 .block {
+                    padding: unset;
                     border: none;
                     border-left: 1px solid #262626;
                     background-color: #262626;
                     background-image: url(https://store.akamai.steamstatic.com/public/images/v5/rightcol_bg_block.png);
                     background-position: bottom right;
                     background-repeat: no-repeat;
+                   
+                    
                 }
                 .block.game_media_and_summary_ctn {
                     background-image: unset;
                     background-color: unset;
                     border: none;
+                    &::before {
+                        display:none;
+                    }
                 }
                 .page_title_area.game_title_area {
                     padding-top: 7px;
@@ -560,6 +600,8 @@ Referenced with V5 files */
                 #game_highlights {
                     color: #626366;
                     margin-bottom: 1px;
+                    padding:unset;
+                    padding-bottom: unset;
                     height: 466px;
                     background-image: url(https://web.archive.org/web/20140920210036im_/http://store.akamai.steamstatic.com/public/images/v5/game_highlight_bg.png);
                     background-repeat: repeat-x;
@@ -570,14 +612,14 @@ Referenced with V5 files */
                             height: 450px;
                             padding-top: 16px;
                             padding-left: 16px;
+                            
                             .highlight_overflow {
-
                                 margin-right: 0px;
                             }
 
-
+                            /*SLIDER*/
                             .slider_ctn .handle {
-                                /*SLIDER*/
+                           
                                 position: absolute;
                                 top: 0;
                                 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/control_slider.png);
@@ -589,9 +631,13 @@ Referenced with V5 files */
                                 width: 60px;
                                 cursor: pointer;
                             }
+                            
                             .slider {
                                 left: 0px;
                                 width: 600px;
+                                height: 13px;
+                                position: relative;
+                                background-color: #323232;
                             }
 
                             .slider_left {
@@ -600,7 +646,37 @@ Referenced with V5 files */
                             .slider_right {
                                 display: none;
                             }
+                            
+                            /*Image Carousel*/
+                            .highlight_strip_item {
+                                float: left;
+                                height: 65px;
+                                width: 116px;
+                                cursor: pointer;
+                                text-align: center;
+                                background-color: #000000;
+                                position: relative;
+                                &.focus { /*equivalent to .highlight_selector*/
+                                 margin: 2px;
+                                 border: 0px solid #d6d7d8;
+                                    &::after{
+                                        content:"";
+                                        position: relative;
+                                        background-image: url(https://store.akamai.steamstatic.com/public/images/v5/game_highlight_activethumb.png);
+                                        width: 116px;
+                                        height: 77px;
+                                        z-index: 50;
+                                        transform: translateY(-90%);
+                                        top: -10px;
+                                        pointer-events: none;
+                                        display: inline-flex;
+                                    }
+                                }
+                            }
+                            
                         }
+                        
+                        
                     }
 
                     .rightcol {
@@ -608,12 +684,12 @@ Referenced with V5 files */
                         margin-left: 14px;
                         .glance_ctn {
                             padding: 16px 16px 0px 0px;
-                            .game_header_image_ctn {
-                                .game_header_image_full {
-                                    width: 292px;
-                                    height: 136px;
-                                }
+                            
+                            .game_header_image_full {
+                            width: 292px;
+                            height: 136px;
                             }
+                            
                             .game_description_snippet {
                                 max-height: 105px;
                                 overflow: hidden;
@@ -621,9 +697,19 @@ Referenced with V5 files */
                                 color: #626366;
                                 line-height: 14px;
                                 padding-right: 0px;
+                                &::after { /*Seperation Margin*/
+                                    display: inline-flex;
+                                    width: 292px;
+                                    height: 1px;
+                                    content:"";
+                                    border-bottom: 1px solid #3c3d3e;
+                                    margin: 6px 0px;
+                                }
+                                
                             }
                             .glance_ctn_responsive_left {
                                 color: #626366;
+                                
                             }
 
                             .user_reviews {
@@ -640,11 +726,68 @@ Referenced with V5 files */
                             .dev_row .column {
                                 color: #626366;
                             }
+                           
+                            .subtitle {
+                                 text-transform: none;
+                                font-size: 12px;
+                            }
                         }
+                                            
+                    .glance_tags_label { /*"Popular user-defined tags" label*/
+                    line-height: 19px;
+                    font-size: 11px;
+                    color: #626366;
                     }
+                     
+                    }
+
                 }
+                #shareEmbedRow{
+                    
+                    padding: 16px;
+                    border: none;
+                    border-left: 1px solid #262626;
+                    background-color: #262626;
+                    background-image: url(https://store.akamai.steamstatic.com/public/images/v5/rightcol_bg_block.png);
+                    background-position: bottom right;
+                    background-repeat: no-repeat;
+                    &::before{ /*reimplementation of block headers*/
+                       display:none;
+                    }
+                 
+            
+                    
+                }
+                 .ico16.reportv6 {
+                        background-position: -128px 0px;
+                    }
+                  
+                .game_language_options td span { /*changes the checkmark icons to the green one from v5*/
+                   font-size: 0px;
+                    &::after{
+                        display: inline-flex;
+                        content:"";
+                        height: 12px;
+                        width: 12px;
+                        background-image: url("https://store.akamai.steamstatic.com/public/images/ico/ico_greencheck.png");
+                    }
+                 
+                }
+                
+                .game_language_options td { /*changes languages box text color*/
+                     color: #B0AEAC;
+                 
+                }
+               
+                .all_languages { /*changes text color from "all languages" section */
+                    color: #B0AEAC;
+                    text-decoration: underline;
+                    
+                }
+                
 
                 .block_content {
+                    padding: 16px;
                     border: 1px solid #4d4b49;
                     background-color: #262626;
                     font-size: 12px;
@@ -659,8 +802,204 @@ Referenced with V5 files */
                         margin: 0px auto 16px;
                     }
                 }
+          
+                /*Description */
+                .game_area_description {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: normal;
+                    
+                     &.game_description_column{
+                        color: #898a8c;
+                    }
+                    &.game_description_column h2 {
+                    height: 26px;
+                    font-weight: bold;
+                    font-size: 14px;
+                    color: #FFFFFF;
+                    background-image: url(https://store.akamai.steamstatic.com/public/images/v5/maincol_gradient_rule.png);
+                    background-repeat: no-repeat;
+                    background-position: bottom left;
+                    margin-bottom: 6px;
+                    }
+                    & > h2.bb_tag {
+                    margin-top: 18px;
+                       color: #FFFFFF;
+                           font-weight: bold;
 
+                    }
+                    
+                    & p strong, & strong {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: bold;
+                        color: #FFFFFF;
+                    }
+                }
+               
+                /*System Requirements*/
+                .sysreq_contents{
+                    
+                      .game_area_sys_req strong {
+                    font-size: 12px;
+                    color: #626366;
+                    font-weight: normal;
+                    text-transform: none;
+                }
+                    
+                    
+                    .game_area_sys_req_leftCol, .game_area_sys_req_rightCol {
+                        float: left;
+                        width: 300px;
+                    }
+                    
+                    .game_area_sys_req ul {
+                        line-height: 15px;
+                        color: #898a8c;
+                    
+                    }
+                    
+                
+                }
+              
                 .rightcol.game_meta_data {
+                     .block {
+                    padding: unset;
+                    border: none;
+                    border-left: 1px solid #262626;
+                    background-color: #262626;
+                    background-image: url(https://store.akamai.steamstatic.com/public/images/v5/rightcol_bg_block.png);
+                    background-position: bottom right;
+                    background-repeat: no-repeat;
+                    &::before{ /*reimplementation of block headers*/
+                        content:"";
+                        background-repeat: no-repeat;
+                        background-color: #3C3D3E;
+                        position: relative;
+                        height: 25px;
+                        line-height: 25px;
+                        color: #d6d7d8;
+                        border-bottom: 1px solid #000000;
+                        font-weight: bold;
+                        font-size: 12px;
+                        display:block;
+                    }
+                    & > *{
+                        padding: 16px 16px;
+                    }
+                    .block_title {
+                        color: #626366;
+                        padding: 16px ;
+                        padding-bottom: 0px;
+
+                    }
+                         /*Achivements*/
+                    .communitylink_achievement_images{ /* most batshit insane hacky way of readding the "+99" text for when you had more than 3 achievments in a game, i hope steam never updates that area of the website :3*/
+                        gap: 0px;
+                        padding-top: 6px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        &::after{
+                            content:"+99";
+                            background-color: #4f5051;
+                            font-size: 27px;
+                            font-weight: bold;
+                            color: #000000;
+                            text-align: center;
+                            padding-top: 14px;
+                            height: 50px;
+                            float: left;
+                            width: 64px;
+                            margin-right: 3px;
+                            cursor: default;
+                            position: absolute;
+                            transform: translateX(202px);
+                        
+                            
+                        }
+                       
+                    
+                    }
+                    div.communitylink_achievement, a.communitylink_achievement { /*Sets the achivements icons to be this size*/
+                             width: 64px;
+                             height: 64px;
+                             margin-right: 3px;
+                             margin-bottom: 4px;
+                             aspect-ratio: 1 / 1;
+                        
+                    }
+                         /*Point shop stuff*/
+                         .communitylink_points_shop_images{ 
+                        gap: 0px;
+                        padding-top: 6px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        &::after{
+                            content:"+99";
+                            background-color: #4f5051;
+                            font-size: 27px;
+                            font-weight: bold;
+                            color: #000000;
+                            text-align: center;
+                            padding-top: 14px;
+                            height: 50px;
+                            float: left;
+                            width: 64px;
+                            margin-right: 3px;
+                            cursor: default;
+                            position: absolute;
+                            transform: translateX(202px);
+                        
+                            
+                        }
+                       
+                    
+                    }
+                         
+                         div.communitylink_points_shop_item, a.communitylink_points_shop_item { /*Sets the achivements icons to be this size*/
+                             width: 64px;
+                             height: 64px;
+                             margin-right: 3px;
+                             margin-bottom: 4px;
+                             aspect-ratio: 1 / 1;
+                        
+                    }
+                         
+                    #languageTable{
+                        padding-top: 6px;
+                    }
+                    
+                }
+                    
+                     .block_content {
+                    border: unset;
+                        
+                  
+                }
+                    .game_details b {
+                             font-family: Arial, Helvetica, sans-serif;
+                             color: #626366;
+                             font-weight: normal;
+                             text-transform: none;
+                             font-size: 12px;
+                    }
+                    
+            
+                    #genresAndManufacturer{
+                        &.details_block a {
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-weight: 300;
+                            color: #B0AEAC;
+                            text-decoration: underline;
+                            &:hover{
+                                color: #ffffff;
+                            }
+                        }
+                        
+                        
+                    }
+                    
+                    
                     .game_area_details_specs_ctn {
 
 
@@ -682,12 +1021,79 @@ Referenced with V5 files */
                             padding-top: 5px;
                         }
                     }
+                    
+                    a.communitylink_achievement.communitylink_achivement_plusmore { /*modifies the achievement button*/
+                        text-align: left;
+                        display: block;
+                        position: relative;
+                        min-width: 260px;
+                        height: 22px;
+                        background: none;
+                        background-image: url(https://store.akamai.steamstatic.com/public/images/v5/bg_link_bar.png);
+                        background-repeat: no-repeat;
+                        background-position: right;
+                        padding-top: 8px;
+                        padding-left: 8px;
+                        color: #B0AEAC;
+                        margin-bottom: 2px;
+                        font-size: 0px;
+                        transform: translateY(0%);
+                        
+                        &::after{ /*changes the text of the vieew all achivements button*/
+                            content:"View Achievements";
+                        font-size: 12px;
+                        text-decoration: none;
+                            
+                        }
+                        &:hover{ /*adds hovers*/
+                            color: #ffffff;
+                        }
+                    }
+                    a.communitylink_achievement.communitylink_achivement_plusmore br { /*hides "view all achievements button"*/
+                    display: none;
+                    }
+                    
+                    a.communitylink_points_shop_item.communitylink_achivement_plusmore { /*modifies the button*/
+                        text-align: left;
+                        display: block;
+                        position: relative;
+                        min-width: 260px;
+                        height: 22px;
+                        background: none;
+                        background-image: url(https://store.akamai.steamstatic.com/public/images/v5/bg_link_bar.png);
+                        background-repeat: no-repeat;
+                        background-position: right;
+                        padding-top: 8px;
+                        padding-left: 8px;
+                        color: #B0AEAC;
+                        margin-bottom: 2px;
+                        font-size: 0px;
+                        transform: translateY(0%);
+                        
+                        &::after{ /*changes the text of the vieew all items button*/
+                            content:"View Items";
+                        font-size: 12px;
+                        text-decoration: none;
+                            
+                        }
+                        &:hover{ /*adds hovers*/
+                            color: #ffffff;
+                        }
+                    }
+                    a.communitylink_points_shop_item.communitylink_achivement_plusmore br { /*hides "view all items button"*/
+                    display: none;
+                    }
+                    
+                    /*See More*/
                 }
             }
         }
     }
+    
+    
 
-    /* ==========================
+    
+/* ==========================
    VIDEO PLAYER
 ========================== */
     .aKceKkwAmCX8Ar8qWcJ7T {
@@ -803,10 +1209,19 @@ Referenced with V5 files */
     }
 
 
-    /* ==========================
+/* ==========================
    GAME REVIEWS
 ========================== */
-    /* ==========================
+    :where(#game_highlights) a {
+    color: #529cde;
+}
+    .game_review_summary.positive {
+    color: #529cde;
+}
+    
+    
+    
+/* ==========================
    STORE
 ========================== */
     /*Game Area Purchase Box*/
@@ -986,14 +1401,14 @@ Referenced with V5 files */
     button._175B12uOwmeGBNcSaQFe-Z {
         /* Equivalent to the tab button used in the store navigation bar*/
         float: left;
-        border-right: 1px solid #000000;
-        padding: 1px;
-        gap: 0px;
+        border-right: 1px solid #000000!important;
+        padding: 1px!important;
+        gap: 0px!important;
         text-decoration: none;
         cursor: pointer;
-        background: #74706f;
-        background: -moz-linear-gradient(top, #74706f 0%, #6e6a69 100%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #74706f), color-stop(100%, #6e6a69));
+        background: #74706f!important;
+        background: -moz-linear-gradient(top, #74706f 0%, #6e6a69 100%)!important;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #74706f), color-stop(100%, #6e6a69))!important;
         background: -webkit-linear-gradient(top, #74706f 0%, #6e6a69 100%);
         background: -o-linear-gradient(top, #74706f 0%, #6e6a69 100%);
         background: -ms-linear-gradient(top, #74706f 0%, #6e6a69 100%);
@@ -1001,12 +1416,12 @@ Referenced with V5 files */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#74706f', endColorstr='#6e6a69', GradientType=0);
         &:hover {
             /* Hover*/
-            background: #82807c;
-            filter: none;
+            background: #82807c!important;
+            filter: none!important;
         }
         & svg {
             /*This hides the SVG pulldown icon*/
-            display: none;
+            display: none!important;
         }
     }
 
@@ -1164,4 +1579,174 @@ Referenced with V5 files */
             color: #ffffff;
         }
     }
+    
+   .block a.linkbar {
+    display: block;
+    position: relative;
+    height: 22px;
+    background: none!important;
+    background-image: url(https://store.akamai.steamstatic.com/public/images/v5/bg_link_bar.png)!important;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    padding-top: 8px;
+    color: #B0AEAC;
+    margin-bottom: 2px;
+    text-decoration: none;
+       
+       &:hover {
+    
+    text-decoration: none;
+    color: #FFFFFF;
+       }
+    }
+    
+  
 }
+1
+/* ==UserStyle==
+2
+@name         2014-Esque STEAM: REFACTORED
+3
+@version      0.0.5
+4
+@namespace    //userstyles.world/user/ItsJustAPlayer
+5
+@description  2014-esque STEAM reimagines today’s Steam website with the nostalgic charm of its classic V5 (2014) design. Currently in ALPHA, it brings back the look and feel of the golden era—modernized for today’s web.
+6
+@author       ItsJustAPlayer
+7
+@license      GNU GPLv3
+8
+==/UserStyle== */
+Applies to
+
+URL
+store.steampowered.com
+Remove
+Add
+
+URLs on the domain
+steamcommunity.com
+Remove
+Add
+
+URLs on the domain
+help.steampowered.com
+Remove
+Add
+
+URLs on the domain
+steampowered.com
+Remove
+Add
+9
+@-moz-document url("store.steampowered.com"),
+10
+domain("steamcommunity.com"),
+11
+domain("help.steampowered.com"),
+12
+domain("steampowered.com") {
+13
+    /* STEAM 2014 Theme – Refactored
+14
+Referenced with V5 files */
+15
+    /* ==========================
+16
+   GLOBAL COMPONENTS
+17
+========================== */
+18
+    [role="main"] {
+19
+        /*global background*/
+20
+        background-image: url(https://store.akamai.steamstatic.com/public/images/v5/content_bg.png);
+21
+        background-repeat: repeat-x;
+22
+        background-color: #000000;
+23
+        background-position: 0 66px;
+24
+    }
+25
+    [role="main"]::before {
+26
+        content: "";
+27
+        position: absolute;
+28
+        width: 100%;
+29
+        height: 66px;
+30
+        background: #3b3938;
+31
+    }
+32
+    html:not(.rn_mobile_app) body.v7menu:not(.menu_background_overlap) .responsive_page_template_content {
+33
+    padding-top: 0px;
+34
+    }
+35
+​
+36
+    /* FONTS*/
+37
+    div#global_header .menuitem {
+38
+        font-family: Arial, Helvetica, sans-serif!important;
+39
+    }
+40
+    body.v6 {
+41
+        font-family: Arial, Helvetica, sans-serif!important;
+42
+        color: #ffffff;
+43
+        background-color: #000000;
+44
+        font-size: 12px;
+45
+    }
+46
+    body.v6 h2:not(.BB_Header2) {
+47
+    font-family: Arial, Helvetica, sans-serif!important;
+48
+            font-weight: bold;
+49
+​
+50
+    text-transform: none;
+51
+    }
+52
+  
+53
+    button._175B12uOwmeGBNcSaQFe-Z {
+54
+        font-family: Arial, Helvetica, sans-serif!important;
+55
+    }
+56
+    
+57
+​
+58
+    .game_purchase_action .game_purchase_price {
+59
+        font-family: Arial, Helvetica, sans-serif!important;
+60
+    }
+61
+    body {
+62
+        font-family: Arial, Helvetica, sans-serif!important;
+63
+        color: #ffffff;
