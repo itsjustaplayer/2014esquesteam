@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         2014-Esque STEAM: REFACTORED
-@version      0.0.5
+@version      0.0.6
 @namespace    //userstyles.world/user/ItsJustAPlayer
 @description  2014-esque STEAM reimagines today’s Steam website with the nostalgic charm of its classic V5 (2014) design. Currently in ALPHA, it brings back the look and feel of the golden era—modernized for today’s web.
 @author       ItsJustAPlayer
@@ -825,6 +825,40 @@ Referenced with V5 files */
                     
                 
                 }
+                
+                
+                .sysreq_tab {
+                    padding: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    margin-right: 10px;
+                    color: #D6D7D8;
+                    float: left;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                .sysreq_tab.active {
+                    color: #8BB9E0;
+                    background-color: black;
+                      &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                .sysreq_tabs, .discselect_tabs {
+ 
+                    font-size: 12px;
+                    padding-top: 10px;
+                    padding-left: 5px;
+                    margin-bottom: 15px;
+                    background: -moz-linear-gradient(top, #171E24 5%, #222D38 95%);
+                    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #171E24), color-stop(95%, #222D38));
+                    background: -webkit-linear-gradient(top, #171E24 5%, #222D38 95%);
+                    background: -o-linear-gradient(top, #171E24 5%,#222D38 95%);
+                    background: -ms-linear-gradient(top, #171E24 5%,#222D38 95%);
+                    background: linear-gradient(to bottom, #171E24 5%, #222D38 95%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171E24', endColorstr='#222D38 ',GradientType=0 );
+                }
               
                 .rightcol.game_meta_data {
                      .block {
@@ -986,6 +1020,23 @@ Referenced with V5 files */
                             padding: 7px 8px;
                             padding-top: 5px;
                         }
+                        
+                    
+                    }
+                    
+                        ._29jQMo9DGCmcSKyDIC3V7M{ /*.icon but for "acessibility stuff*/
+                            background-color: #1a1a1a;
+                            width: 30px;
+                            height: 22px;
+                            padding-top: 4px;
+                            ._1GkKPFI1K10GLg9538MMAF {
+                                filter: brightness(0.6);
+                            }
+                        }
+                    
+                    ._3sRe2CGQBgablPBz9Bc9c2{ /*.label for accessibility butotn shit idk*/
+                         color: #8bc53f;
+                            background-color: #1a1a1a;
                     }
                     
                     a.communitylink_achievement.communitylink_achivement_plusmore { /*modifies the achievement button*/
@@ -1049,15 +1100,137 @@ Referenced with V5 files */
                     a.communitylink_points_shop_item.communitylink_achivement_plusmore br { /*hides "view all items button"*/
                     display: none;
                     }
+                    .anticheat_nonkernel_notice {
+                        color: #529cde;
+                        background: rgb(255 255 255 / 10%);
+                    }
                     
                     /*See More*/
+                }
+                
+                .related_items_ctn{
+                    background: none;
+                    
+                    ._2BG1JKMgeqn_cr0rbRhRNA{ /*.block*/
+                        width: 614px;
+                        height: 164px;
+                        padding: unset;
+                        background-color: unset;
+                   
+                        .kR_xyFf2ghgC-Jexsw_5v{ /*.block header*/
+                                background-image: url(https://store.akamai.steamstatic.com/public/images/v5/maincol_bg_gray.png);
+                            background-repeat: no-repeat;
+                            background-color: #303030;
+                            height: 26px;
+                                margin-bottom: 1px;
+                            ._2BGZunVy7Z0-h18owewCzo { /*See more text*/
+                                font-size: 12px;
+                                text-transform: unset;
+                                font-weight: bold;
+                                padding: 0px 16px;
+                                font-family: Arial, Helvetica, sans-serif;
+                                letter-spacing: 0px;
+                                color: #d6d7d8;
+                            }
+                            ._1SnxJyZ5foWgNRCNLmKm6H{ /*EXCLUSIVE gray button for this*/
+                                padding: 0px 16px;
+                                font-weight: bold;
+                                font-size: 12px;
+                                position: absolute;
+                                right: 0px;
+                                border-left: 1px solid #000000;
+                                height: 26px;
+                                background: none;
+                              
+                                & > span {
+                                    padding: unset;
+                                     text-transform: uppercase;
+                                    color: #b0aeac!important;
+                                    font-weight: normal;
+                                font-size: 10px;
+                                }
+                            }
+                        }
+                        
+                        ._2M3SnYGvMvplWUC8yGhowo.SliderBody{
+                             border: 1px solid #4d4b49;
+                        background-color: #262626;
+                        font-size: 12px;
+                        color: #b0aeac;
+                        }
+                        
+                        ._292IWiCTro5jiTmIxiDfyc{/*small_cap*/
+                            display: block;
+                            float: left;
+                            width: 184px;
+                            height: 106px;
+                            padding-left: 9px;
+                            padding-right: 9px;
+                            padding-bottom: 12px;
+                            padding-top: 16px;
+                            border: 1px solid #262626;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            min-width: unset;
+                        }
+                        ._3Cc2bMRML2lEkSyi2IAZ9G{ /*unsets the weird width*/
+                            width: unset!important;
+                        }
+                        .jGiY7rrZh0o9qrh7XNnZU .carousel__slider-tray{ /*gap*/
+                            gap: 0px;
+                        }
+                        .SaleSectionCarousel .carousel__slider {
+                            padding: 0px 0px;
+                        }
+                        
+                        ._2eQ4mkpf4IzUp1e9NnM2Wr { /*game image*/
+                            width: 184px;
+                            height: 69px;
+                        }
+                        ._2oW_y7Mm3ihf1XQ0C1VWhx{
+                            padding: 39% 0 0 0;
+                        }
+                        ._22AcxR1RBDH6i-gjKRHYk0 {
+                            border-radius: 0px;
+                        }
+                        ._3lmdEmwrmqe-kicNCZ9v-I ._1X3j2g29SBtsrFMgNiKi_Y {
+                            margin-left: unset;
+                        }
+                        ._3j4dI1yA7cRfCvK8h406OB { /*text price*/
+                            font-size: 11px;
+                            font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+                            color: #b0aeac;
+                            padding: unset;
+                        }
+                        ._3lmdEmwrmqe-kicNCZ9v-I {
+                            background-color: unset;
+                        }
+                        
+                    }
+                    
+                    
                 }
             }
         }
     }
     
+/* ==========================
+   COMMUNITY PAGE
+========================== */    
+.apphub_background {
+    background-image: unset!important;
     
+    }
+    
+[role="main"]:has(.community_home_header) {
+    background: #262627 url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png);
+    background-position: 0 0px;
+    background-repeat: repeat-x;
+}
+    [role="main"]:has(.community_home_header)::before {
+    content: none;
 
+}
     
 /* ==========================
    VIDEO PLAYER
@@ -1119,7 +1292,7 @@ Referenced with V5 files */
                     color: #b8bcbf;
                     width: 19px;
                     height: 19px;
-                    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FAQExNPQD1HQAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAHhJREFUOMtjjIyMZCALsPz7928k6GT6hw3I+ZX/IwSw62RgYFAIqCSg8y82AHGPUlD1X9yA6T82APeMamjdfxwAn50QoBZWj1UNC7INWMG1ZbXYYwXNBjRweXEVzvjEY+elRZX4UgIuO8/PL8PvC0YbG5vRvIIPAADvxSAevqB/CQAAAABJRU5ErkJggg==);
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FARUVHVx2phIAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAElJREFUOMtjjIyMZCALsPz7928k6lQIqIQwHmxox+QSZSeaOKYylr9//2LViSaOqYzl////WHWiiWMqG7WTkJ2MNjY2o3kFHwAABHVqN1R2w8sAAAAASUVORK5CYII=);
                 }
             }
 
