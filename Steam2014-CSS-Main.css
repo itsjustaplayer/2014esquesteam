@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         2014-Esque STEAM: REFACTORED
-@version      0.0.7
+@version      0.0.8
 @namespace    //userstyles.world/user/ItsJustAPlayer
 @description  2014-esque STEAM reimagines today’s Steam website with the nostalgic charm of its classic V5 (2014) design. Currently in ALPHA, it brings back the look and feel of the golden era—modernized for today’s web.
 @author       ItsJustAPlayer
@@ -451,27 +451,237 @@ Referenced with V5 files */
 /*  CAROUSEL & CAPSULES*/
     /*TODO: CAROUSEL*/
     
+/* ===========================
+    WIDESTORE FIXES
+=========================== */
+    
+    /* 2025 Game Page Widening, directly taken from steam css, i'm not gonna reinvent the wheel and manually write everything just to change 1 value back to 940, lol */
+
+/* TODO: remove !important when the .widestore class is removed */
+    
+    .widestore .glance_mid_ctn {
+  
+     justify-content: unset;
+}
+    
+body.v6.narrowstore .page_content {
+	max-width: unset !important;
+	width: 940px !important;
+	margin: 0 auto !important;
+}
+
+body.v6 {
+	--store-page-width: 940px;
+}
+
+body.v6.widestore {
+	--store-page-width: 940px;
+}
+
+body.v6.widestore .page_content {
+	max-width: 940px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+body.v6.widestore .page_content.middle_page {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+
+.widestore .leftcol {
+	width: 616px;
+    float: left;
+}
+
+.widestore .rightcol {
+   width: 308px;
+}
+
+body.v6.widestore #store_header {
+	padding: 0 1%;
+}
+
+.widestore div#store_header .content {
+	max-width: 1200px;
+	width: 100%;
+}
+
+.widestore .cart_status_flex {
+	margin-right: 5px;
+}
+
+@media screen and (max-width: 910px) {
+	body.v6.widestore .page_content.middle_page {
+		display: block;
+		flex-direction: unset;
+	}
+
+	body.v6.widestore .page_content {
+		max-width: 940px;
+		width: auto;
+		margin: 0 2%;
+	}
+
+	body.v6.widestore .actionButtonsCtn {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 3px;
+	}
+
+	body.v6.widestore .actionButtonsCtn {
+		padding: 5px 0px;
+	}
+
+	body.v6.widestore .leftcol,
+	body.v6.widestore .rightcol {
+		float: none;
+		width: auto;
+		margin-left: 0;
+	}
+
+	body.v6.widestore .tab_item_cap_img {
+		width: 100%;
+		height: auto;
+		vertical-align: middle;
+	}
+
+	body.v6.widestore .carousel_container .arrow {
+		bottom: 0px;
+		top: auto;
+		height: 0px;
+		width: 0;
+		padding: 0px;
+
+		background: none;
+	}
+
+	body.v6.widestore .carousel_container .arrow > div {
+		width: 13px;
+		height: 20px;
+		background-size: cover;
+		display: none;
+		margin: 0 10px;
+	}
+
+	body.v6.widestore .carousel_container .arrow.left {
+		left: 0;
+	}
+
+	body.v6.widestore .carousel_container .arrow.left > div {
+		background-position-x: 13px;
+	}
+
+	body.v6.widestore .carousel_container .arrow.right {
+		right: 0;
+		text-align: right;
+	}
+
+	body.v6.widestore .carousel_container .carousel_items > * {
+		position: relative;
+		top: auto;
+		left: auto;
+		opacity: 1;
+	}
+
+	body.v6.widestore .specials_under10_content,
+	body.v6.widestore .live_streams_ctn {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	body.v6.widestore .carousel_container .carousel_items:not(.no_paging),
+	body.v6.widestore .carousel_container.maincap .carousel_items:not(.no_paging) {
+		overflow-x: scroll;
+		overflow-y: hidden;
+		box-sizing:content-box;
+
+
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-wrap: nowrap;
+
+		padding-bottom: 21px;
+	}
+
+	body.v6.widestore .carousel_container .carousel_items > * {
+		pointer-events: auto;
+		flex-shrink: 0;
+	}
+}
+
+@media screen and (max-width: 940px) and (min-width: 500px) {
+	body.v6.widestore .page_content {
+		width: 98%;
+	}
+}
+
+@media screen and (max-width: 940px) and (min-width: 910px) {
+	body.v6.widestore .related_items_ctn .page_content {
+		width: calc(100vw - 144px);
+	}
+}
+    
+    
     
 /* ==========================
    GAME PAGE
 ========================== */
+    
+     #purchase_note{
+         position:relative;
+            z-index:1;
+        
+     }
     .game_page_background {
+        
+        
+        img.legacy-bg { /*JS CLEANUP*/
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    opacity: 1 !important;
+}
+
+    
+        
+        
+        .page_top_area {
+    position: relative;
+    overflow-y: visible;
+        }
         /*Fixes the height to accomodate the navigation bar being more downwards*/
-        &.game {
+        .game_page_background_ctn.game {
             --store-menu-overlap-height: 63px;
-            background-size: 1004px 570px;
             height: 1024px;
             min-width: 972px;
-            &:before {
-                content: "";
+            max-width: 1004px;
+              z-index: 0;
+                filter: blur(0px); 
+                opacity: 1;
+                -webkit-mask-image: none; 
+                 mask-image: none;
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0) 30%,
+                rgba(0,0,0,1) 50%);
+            
+            
+            & img {
                 position: absolute;
-                width: 100%;
-                height: 100%;
                 background: inherit;
+                height: 570px;
+                width: 1004px;
                 background-size: 1004px 570px;
-                filter: grayscale(70%) brightness(1) saturate(0.5) hue-rotate(-20deg);
-                top: 0px;
+                top: -46px;
                 z-index: 0;
+                filter: blur(0px); 
+                opacity: 1;
+                -webkit-mask-image: none; 
+                 mask-image: none;
+                mix-blend-mode: color;
             }
         }
 
@@ -584,7 +794,7 @@ Referenced with V5 files */
                             }
 
                             /*SLIDER*/
-                            .slider_ctn .handle {
+                            ._1DvsO7ezbpz3pIVBWOLOzF .IJs3gGlk7XiekF90xqQtx ._2kGps6wpqMKuwW2LinnWW6 { /*equivakebt to slider_ctn .handle*/
                            
                                 position: absolute;
                                 top: 0;
@@ -593,12 +803,16 @@ Referenced with V5 files */
                                 background-position: left;
                                 background-color: rgba(0, 0, 0, 0.2);
                                 border-radius: 3px;
-                                height: 18px;
+                                height: 13px;
                                 width: 60px;
                                 cursor: pointer;
+                                border: none;
+                                &:hover{
+                                        background-position: right;
+                                }
                             }
                             
-                            .slider {
+                            .IJs3gGlk7XiekF90xqQtx { /*equivalent to slider*/
                                 left: 0px;
                                 width: 600px;
                                 height: 13px;
@@ -606,13 +820,10 @@ Referenced with V5 files */
                                 background-color: #323232;
                             }
 
-                            .slider_left {
+                            ._2LR-6h1uKQt4bj21r14zy5 { /*slider left*/
                                 display: none;
                             }
-                            .slider_right {
-                                display: none;
-                            }
-                            
+                          
                             /*Image Carousel*/
                             .highlight_strip_item {
                                 float: left;
@@ -754,6 +965,14 @@ Referenced with V5 files */
 
                 .block_content {
                     padding: 16px;
+                    border: 1px solid #4d4b49;
+                    background-color: #262626;
+                    font-size: 12px;
+                    color: #b0aeac;
+                }
+                
+                #broadcast.block_content {
+                    padding: 0px;
                     border: 1px solid #4d4b49;
                     background-color: #262626;
                     font-size: 12px;
@@ -1492,6 +1711,29 @@ Referenced with V5 files */
     background-color: #494949;
 }
     
+    
+    .apphub_sectionTab, a.apphub_sectionTab {
+    display: block;
+    float: left;
+    color: #dadada;
+    /* background-color: #3A3A3A; */
+    height: 30px;
+    line-height: 31px;
+    padding: 0px 12px;
+    margin-right: 5px;
+    text-decoration: none;
+    border-radius: 2px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    -moz-border-radius: 2px;
+    -moz-border-radius-bottomleft: 0px;
+    -moz-border-radius-bottomright: 0px;
+}
+    
+    /*Pop up community windows*/
+    
+    
+    
 /* ==========================
    VIDEO PLAYER
 ========================== */
@@ -2049,6 +2291,58 @@ Referenced with V5 files */
     height: 30px;
   
 }
+    
+.btn_darkblue_white_innerfade {
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #fff !important;
+    background: #57749e;
+    background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #57749e), color-stop(95%, #364963));
+    background: -webkit-linear-gradient(top, #57749e 5%, #364963 95%);
+    background: -o-linear-gradient(top, #57749e 5%,#364963 95%);
+    background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);
+    background: linear-gradient(to bottom, #57749e 5%, #364963 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );
+}
+.inner_bevel {
+    -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.75) inset, -2px -2px 5px rgba(150,150,150,1) inset;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75) inset, -2px -2px 5px rgba(150, 150, 150, 1) inset;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75) inset, -2px -2px 5px rgba(150, 150, 150, 1) inset;
+}
+.btn_darkblue_white_innerfade:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
+    background: #526d95;
+    background: -moz-linear-gradient(top, #526d95 5%, #415877 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #526d95), color-stop(95%, #415877));
+    background: -webkit-linear-gradient(top, #526d95 5%, #415877 95%);
+    background: -o-linear-gradient(top, #526d95 5%,#415877 95%);
+    background: -ms-linear-gradient(top, #526d95 5%,#415877 95%);
+    background: linear-gradient(to bottom, #526d95 5%, #415877 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#526d95', endColorstr='#415877',GradientType=0 );
+}
+    
+.btn_small > span, input.btn_small {
+    padding: 0 15px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.btn_darkblue_white_innerfade > span {
+    border-radius: 2px;
+    display: block;
+    background: #445b7c;
+    background: -moz-linear-gradient(top, #445b7c 5%, #364963 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #445b7c), color-stop(95%, #364963));
+    background: -webkit-linear-gradient(top, #445b7c 5%, #364963 95%);
+    background: -o-linear-gradient(top, #445b7c 5%,#364963 95%);
+    background: -ms-linear-gradient(top, #445b7c 5%,#364963 95%);
+    background: linear-gradient(to bottom, #445b7c 5%, #364963 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#445b7c', endColorstr='#364963',GradientType=0 );
+}
+    
     
   
 }
