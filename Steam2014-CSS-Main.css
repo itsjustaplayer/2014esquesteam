@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         2014-Esque STEAM: REFACTORED
-@version      0.0.8
+@version      0.0.9
 @namespace    //userstyles.world/user/ItsJustAPlayer
 @description  2014-esque STEAM reimagines today’s Steam website with the nostalgic charm of its classic V5 (2014) design. Currently in ALPHA, it brings back the look and feel of the golden era—modernized for today’s web.
 @author       ItsJustAPlayer
@@ -240,7 +240,122 @@ Referenced with V5 files */
     background-repeat: repeat-x;
     background-position: top;
      }
+    /*notifications & header logged in user info*/
+    
+    #account_pulldown:after {
+    content: "'s account"
+}
+    
+   ._1jW5_Ycv6jGKu28A1OSIQK._34A9kjlnmgfUWSmr16VjXE {
+    background-color: transparent;
+}
+    #header_notification_area {
+    float: left;
+    margin-right: 3px;
+    margin-top: -6px;
+    margin-left: 8px;
+    background-color: #1B1B18;
+}
 
+.header_notification_btn.header_notification_bell {
+    display: block;
+    width: 28px;
+    height: 28px;
+    padding: 0px;
+    margin: 0px;
+   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFPSURBVDhPxZOxb4JAFId/d4hook0TTNHgYAcTQ+hCgprYpf7hdpUwsBmX1rnBqQMNUaA8ONHDtmmnfsnL5b139x13F1ivp+MrGGNoNFRkWYokSfIxEx2ZKwFjHKqq3j4uFi95epPHu+/7evQRFaI6kkBRFHS7Xdj2w1uz2bwTZdo92263fL8PcTgcqVI2ciqBpmno9/sYje6P+ecrRbFGGIZst3tFFEWiciFYPi1xTBLpoHQPdRTO2ep5JTKAixFJmmZpmuIy6Mz1qG9SCcbjMVqtliQ4Bb0ARafTgeM4YkVJJaCmbduwLAucc0lAOw8GA0wmEzH7TCU4QSLDMIoXoTsgWbvdhmmaYoaMJIjjGOv1uljoui5msxmm0yl0XYfneWKWjCQIggDz+RzD4VBUSiinOsnrVAJq0qSfoP5msxFZybf/wm+5usS/8t8C4BOcG5Ok49Rf7wAAAABJRU5ErkJggg==) no-repeat #1B1B18;
+  /*  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFnSURBVDhPxZI/bsIwFMa/JBAEQlGkSAUO0LBEmRCMdMwFyp4rwAGaXqFMHIKFsrOWCxSlUnc6pBJdaP4QNzZ2mgBSxdSf9OTnZ7/Pz8+WTPMWl5BlGfV6HYfDAVEUIU1TvlLmTEBRFDQaDX0ynrxnUy2zr9lsZgSfARM6pSSgqio6nQ5G96OPZrN5w8P0dLJ4Xsi+72O/34MQwlcKApqmwbZtDId3SVa+woInbDav0mq1QhAEPFIQ8B48hFH0K50hSRL3jj49Wa1WJe/R49GsV3xEFMckjmMUjd5ZWBiGbPwOw9IhuYDjONB1HUmSsM7TUfj0Bai1Wi24rsszjuRX8P03przdbrFcLlmzigwGA/T7feZ3u2Z+t7wCQbvdhmVZqNVq7C9UKhUYhoFer8d3nEAroJY1iOx2OzKdPpH1+oVOc+icxgUih1VfFChuuoRYvyjwV7JgPp+XBM6+8rWcNfFa/lsA+AETDwXLz114zAAAAABJRU5ErkJggg==) no-repeat #181818;*/
+    background-position: center;
+    background-size: 16px;
+    background-color: #1B1B18;
+     border: 2px solid #4d4b49;
+    border-radius: 0px 0px 3px 3px;
+}
+
+ 
+._1jW5_Ycv6jGKu28A1OSIQK{
+    background-color: transparent;
+    width: 28px;
+    height: 28px;
+    float: left;
+    margin-right: 3px;
+    margin-top: 2px;
+    margin-left: 2px;
+    & > svg{
+        display:none;
+    }
+    &._34A9kjlnmgfUWSmr16VjXE{
+        &:not(._3h1sV2qrp20U37VwC47pM2){
+            &:hover{
+                background-color: transparent;
+                transition-property: none;
+                transition-duration: 0ms;
+                display: block;
+                width: 32px;
+                height: 32px;
+                padding: 0px;
+                margin: 0px;     
+ background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFnSURBVDhPxZI/bsIwFMa/JBAEQlGkSAUO0LBEmRCMdMwFyp4rwAGaXqFMHIKFsrOWCxSlUnc6pBJdaP4QNzZ2mgBSxdSf9OTnZ7/Pz8+WTPMWl5BlGfV6HYfDAVEUIU1TvlLmTEBRFDQaDX0ynrxnUy2zr9lsZgSfARM6pSSgqio6nQ5G96OPZrN5w8P0dLJ4Xsi+72O/34MQwlcKApqmwbZtDId3SVa+woInbDav0mq1QhAEPFIQ8B48hFH0K50hSRL3jj49Wa1WJe/R49GsV3xEFMckjmMUjd5ZWBiGbPwOw9IhuYDjONB1HUmSsM7TUfj0Bai1Wi24rsszjuRX8P03przdbrFcLlmzigwGA/T7feZ3u2Z+t7wCQbvdhmVZqNVq7C9UKhUYhoFer8d3nEAroJY1iOx2OzKdPpH1+oVOc+icxgUih1VfFChuuoRYvyjwV7JgPp+XBM6+8rWcNfFa/lsA+AETDwXLz114zAAAAABJRU5ErkJggg==) no-repeat #181818;
+                background-position: center;
+                background-size: 16px;
+                background-color: #1B1B18;
+                border: 2px solid #4d4b49;
+                border-radius: 0px 0px 3px 3px;
+            }
+        }
+   }
+    
+    &._2Hpe0_DGY0TBz45Lg0zUr9{
+     background: linear-gradient(to bottom, #799B2C 5%, #5C7E10 95%);
+    
+   /*  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAtUExURd3d3f///+no6JCOjby7utLS0YWDgbGwr/T09KalpJuZmHp3dsfGxm9sagAAAGmW7zAAAAAPdFJOU///////////////////ANTcmKEAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABSSURBVChTncxRDoAwCANQOibb3OT+x90QNNE/7Q/pCynpK/+AcCU5cI6+iQMKV+ttRwCoE5IM3IB29M7rBlQutrDeHIYkmzB3aGe1ZIdnPoPqBGvCCkERArFYAAAAAElFTkSuQmCC");*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #5c7e10;
+    color: #fff;
+        
+        &:after{
+     content:"";  
+     width: 28px;
+     height: 28px;
+     float: left;
+     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAtUExURd3d3f///+no6JCOjby7utLS0YWDgbGwr/T09KalpJuZmHp3dsfGxm9sagAAAGmW7zAAAAAPdFJOU///////////////////ANTcmKEAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABSSURBVChTncxRDoAwCANQOibb3OT+x90QNNE/7Q/pCynpK/+AcCU5cI6+iQMKV+ttRwCoE5IM3IB29M7rBlQutrDeHIYkmzB3aGe1ZIdnPoPqBGvCCkERArFYAAAAAElFTkSuQmCC");
+    background-position: center;
+    background-repeat: no-repeat;
+        }
+    }
+
+
+}
+
+
+
+._1jW5_Ycv6jGKu28A1OSIQK._2Hpe0_DGY0TBz45Lg0zUr9:not(._3h1sV2qrp20U37VwC47pM2):hover {
+     background: linear-gradient(to bottom, #799B2C 5%, #799B2C 95%);
+}
+    /* Player Avatars*/
+    
+    .playerAvatar.in-game {
+    background-color: #9bc861;
+    background: -moz-linear-gradient(top, #9bc861 5%, #789e4c 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #9bc861), color-stop(95%, #789e4c));
+    background: -webkit-linear-gradient(top, #9bc861 5%, #789e4c 95%);
+    background: -o-linear-gradient(top, #9bc861 5%,#789e4c 95%);
+    background: -ms-linear-gradient(top, #9bc861 5%,#789e4c 95%);
+    background: linear-gradient(to bottom, #9bc861 5%, #789e4c 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc861', endColorstr='#789e4c',GradientType=0 );
+    filter: none;
+}
+    .playerAvatar {
+    width: 34px;
+    height: 34px;
+}
+    .playerAvatar {
+    padding: 3px;
+    border-radius: 3px;
+    background-color: #545454;
+}
+    
     /* Install Steam Button */
 
     
@@ -274,7 +389,7 @@ Referenced with V5 files */
         }
     }
    
-
+    
     /* STORE NAVIGATION AREA */
     
     ._7FiqKP7fZJGltkwRxPG6s{ /*The equivalent to store_nav_area*/
@@ -2341,6 +2456,10 @@ body.v6.widestore #store_header {
     background: -ms-linear-gradient(top, #445b7c 5%,#364963 95%);
     background: linear-gradient(to bottom, #445b7c 5%, #364963 95%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#445b7c', endColorstr='#364963',GradientType=0 );
+}
+    
+.button {
+    font-family: Arial, Helvetica, sans-serif;
 }
     
     
