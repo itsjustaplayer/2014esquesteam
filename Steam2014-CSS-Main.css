@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         2014-Esque STEAM: REFACTORED
-@version      0.0.9
+@version      0.1.0
 @namespace    //userstyles.world/user/ItsJustAPlayer
 @description  2014-esque STEAM reimagines today’s Steam website with the nostalgic charm of its classic V5 (2014) design. Currently in ALPHA, it brings back the look and feel of the golden era—modernized for today’s web.
 @author       ItsJustAPlayer
@@ -240,6 +240,7 @@ Referenced with V5 files */
     background-repeat: repeat-x;
     background-position: top;
      }
+    
     /*notifications & header logged in user info*/
     
     #account_pulldown:after {
@@ -268,7 +269,10 @@ Referenced with V5 files */
     background-position: center;
     background-size: 16px;
     background-color: #1B1B18;
-     border: 2px solid #4d4b49;
+    border-top: 0px solid #4d4b49;
+    border-right: 2px solid #4d4b49;
+    border-bottom: 2px solid #4d4b49;
+    border-left: 2px solid #4d4b49;
     border-radius: 0px 0px 3px 3px;
 }
 
@@ -292,14 +296,17 @@ Referenced with V5 files */
                 transition-duration: 0ms;
                 display: block;
                 width: 32px;
-                height: 32px;
+                height: 30px;
                 padding: 0px;
                 margin: 0px;     
  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFnSURBVDhPxZI/bsIwFMa/JBAEQlGkSAUO0LBEmRCMdMwFyp4rwAGaXqFMHIKFsrOWCxSlUnc6pBJdaP4QNzZ2mgBSxdSf9OTnZ7/Pz8+WTPMWl5BlGfV6HYfDAVEUIU1TvlLmTEBRFDQaDX0ynrxnUy2zr9lsZgSfARM6pSSgqio6nQ5G96OPZrN5w8P0dLJ4Xsi+72O/34MQwlcKApqmwbZtDId3SVa+woInbDav0mq1QhAEPFIQ8B48hFH0K50hSRL3jj49Wa1WJe/R49GsV3xEFMckjmMUjd5ZWBiGbPwOw9IhuYDjONB1HUmSsM7TUfj0Bai1Wi24rsszjuRX8P03przdbrFcLlmzigwGA/T7feZ3u2Z+t7wCQbvdhmVZqNVq7C9UKhUYhoFer8d3nEAroJY1iOx2OzKdPpH1+oVOc+icxgUih1VfFChuuoRYvyjwV7JgPp+XBM6+8rWcNfFa/lsA+AETDwXLz114zAAAAABJRU5ErkJggg==) no-repeat #181818;
                 background-position: center;
                 background-size: 16px;
                 background-color: #1B1B18;
-                border: 2px solid #4d4b49;
+                border-top: 0px solid #4d4b49;
+                border-right: 2px solid #4d4b49;
+                border-bottom: 2px solid #4d4b49;
+                border-left: 2px solid #4d4b49;
                 border-radius: 0px 0px 3px 3px;
             }
         }
@@ -327,7 +334,6 @@ Referenced with V5 files */
 
 
 }
-
 
 
 ._1jW5_Ycv6jGKu28A1OSIQK._2Hpe0_DGY0TBz45Lg0zUr9:not(._3h1sV2qrp20U37VwC47pM2):hover {
@@ -360,17 +366,20 @@ Referenced with V5 files */
 
     
     .header_installsteam_btn {
+    background: linear-gradient(180deg, rgba(115, 136, 93, 1) 0%, rgba(79, 108, 52, 1) 100%);
     margin-right: 3px;
     float: left;
     position: relative;
     height: 21px;
     line-height: 20px;
-    background-image:     
-        url(http://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/header/btn_header_installsteam_green.png); /*TODO: UPLOAD TO STEAM CLOUD*/
-        background-position: 0px -21px;
-        background-repeat: repeat-x;
+        
+    /*background-image:     
+        url(https://steamstore-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_green.png); /*TODO: UPLOAD http://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/header/btn_header_installsteam_green.png TO STEAM CLOUD*/
+       /* background-position: 0px -21px;*/
+      /*  background-repeat: repeat-x;*/
         
     }
+
     
     .header_installsteam_btn_content {
     padding-left: 27px;
@@ -613,6 +622,31 @@ body.v6.widestore .page_content.middle_page {
 .widestore .rightcol {
    width: 308px;
 }
+body.v6.widestore .game_area_already_owned.page_content {
+    max-width: 940px;
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    height: 40px;
+    color: #fff;
+    position: relative;
+    background: -moz-linear-gradient(top, #3f5d1c 0%, #667a52 100%);
+    background: -webkit-gradient(linear, top, down, color-stop(0%, #3f5d1c), color-stop(100%, #667a52));
+    background: -webkit-linear-gradient(top, #3f5d1c 0%, #667a52 100%);
+    background: -o-linear-gradient(top, #3f5d1c 0%,#667a52 100%);
+    background: -ms-linear-gradient(top, #3f5d1c 0%, #667a52 100%);
+    background: linear-gradient(to down, #3f5d1c 0%, #667a52 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99a3cf06', endColorstr='#994b6a21',GradientType=1 );
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: unset;
+    }
+
+    body.v6.widestore .game_area_play_stats {
+    max-width: calc(940px - 32px);
+    width: 100%;
+    }
+    
 
 body.v6.widestore #store_header {
 	padding: 0 1%;
@@ -745,6 +779,14 @@ body.v6.widestore #store_header {
 /* ==========================
    GAME PAGE
 ========================== */
+     /*wish list & cart alignment*/
+        ._1wn1lBlAzl3HMRqS1llwie { /*class where the cart and wishlist buttons are located within*/
+            justify-content: flex-end;
+        }
+        
+        ._16jZ3HEbtaJTl80pQINN2Y ._7FiqKP7fZJGltkwRxPG6s { /*this is where both header subbuttons and the wish list shit is located*/
+            flex-direction: column-reverse;
+        }
     
      #purchase_note{
          position:relative;
@@ -760,9 +802,11 @@ body.v6.widestore #store_header {
     opacity: 1 !important;
 }
 
-    
-        
-        
+        /* hides queueActionsCtn*/
+        .queue_ctn .queue_actions_ctn {
+   display:none;
+}
+   
         .page_top_area {
     position: relative;
     overflow-y: visible;
@@ -840,9 +884,11 @@ body.v6.widestore #store_header {
                     padding-top: 7px;
                     margin-bottom: 18px;
                     & > .breadcrumbs {
+                        position:relative;
                         font-family: Arial, Helvetica, sans-serif;
                         font-size: 14px;
                         color: #626467;
+                        z-index:1;
                         & > .blockbg {
                             background-color: #262626;
                             padding: 0px 4px;
@@ -2461,7 +2507,37 @@ body.v6.widestore #store_header {
 .button {
     font-family: Arial, Helvetica, sans-serif;
 }
+    ._1wn1lBlAzl3HMRqS1llwie{
+            padding-right: 0px;
+            justify-content: flex-end;
+        & a._175B12uOwmeGBNcSaQFe-Z, button._175B12uOwmeGBNcSaQFe-Z { /*wishlist button*/
+            height:20px;
+            margin-right:2px;
+            padding: 0 20px;
+            text-transform: uppercase;
+            font-size: 11px!important;
+            font-family: Arial, Helvetica, sans-serif !important;
+            background: #5a5654;
+            background: -moz-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5a5654), color-stop(100%, #6e6a69));
+            background: -webkit-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+            background: -o-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+            background: -ms-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+            background: linear-gradient(to bottom, #5a5654 0%, #6e6a69 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a5654', endColorstr='#6e6a69', GradientType=0);
+        }    
+        & a._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5, button._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5 { /*cart button*/
+            margin: 0px;
+            background: 51672c;
+            background: -moz-linear-gradient(top, #51672c 0%, #6d7c4d 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #51672c), color-stop(100%, #6d7c4d));
+            background: -webkit-linear-gradient(top, #51672c 0%, #6d7c4d 100%);
+            background: -o-linear-gradient(top, #51672c 0%, #6d7c4d 100%);
+            background: -ms-linear-gradient(top, #51672c 0%, #6d7c4d 100%);
+            background: linear-gradient(to bottom, #51672c 0%, #6d7c4d 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a5654', endColorstr='#6e6a69', GradientType=0);
+        }
+    }
     
-    
-  
+
 }
