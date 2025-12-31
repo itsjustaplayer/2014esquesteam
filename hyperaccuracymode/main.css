@@ -1,1001 +1,2635 @@
+@charset "UTF-8";
+/* STEAM 2014 Theme – Refactored
+Referenced with V5 files */
+/* ==========================
+   GLOBAL COMPONENTS
+========================== */
+[role=main] {
+  /*global background*/
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/content_bg.png);
+  background-repeat: repeat-x;
+  background-color: #000000;
+  background-position: 0 66px;
+}
 
-	/* STEAM 2014 Theme – Refactored Referenced with V5 files */
-	/* ========================== GLOBAL COMPONENTS ========================== */
-	/* FONTS*/
-	/*SCROLLBAR*/
-	/* ========================== HEADER ========================== */
-	/* Hides "open in steam banner" */
-	/*Pulldown */
-	/*Remove "Open in steam prompt"*/
-	/*PopUp Background*/
-	/* Install Steam Button */
-	/* STORE NAVIGATION AREA */
-	/* Search Bar */
-	/*Search Result Modal Window*/
-	/* .SWL3uBHWmdcYwUXE9yD0y{
-		 Equivalent to popup_body 
-	}
-	*/
-	/* DROP DOWN MENUS */
-	/* ========================== HOME PAGE ========================== */
-	/* CAROUSEL & CAPSULES*/
-	/*TODO: CAROUSEL*/
-	/* ========================== GAME PAGE ========================== */
-	/* ========================== VIDEO PLAYER ========================== */
-	/* ========================== GAME REVIEWS ========================== */
-	/* ========================== STORE ========================== */
-	/*Game Area Purchase Box*/
-	/*Game title font*/
-	/* ========================== BUTTONS (Reusable) ========================== */
-	 [role="main"] {
-		/*global background*/
-		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/content_bg.png);
-		 background-repeat: repeat-x;
-		 background-color: #000;
-		 background-position: 0 66px;
-	}
-	 [role="main"]::before {
-		 content: "";
-		 position: absolute;
-		 width: 100%;
-		 height: 66px;
-		 background: #3b3938;
-	}
-	 div#global_header .menuitem {
-		 font-family: Arial, Helvetica, sans-serif;
-	}
-	 body {
-		 font-family: Arial, Helvetica, sans-serif !important;
-		 color: #fff;
-		 font-size: 12px;
-	}
-	 body {
-		 font-family: Arial, Helvetica, sans-serif;
-		 color: #fff;
-		 background-color: #000;
-		 font-size: 12px;
-	}
-	 button._175B12uOwmeGBNcSaQFe-Z {
-		 font-family: Arial, Helvetica, sans-serif;
-	}
-	 ._16jZ3HEbtaJTl80pQINN2Y, ._16jZ3HEbtaJTl80pQINN2Y button, ._16jZ3HEbtaJTl80pQINN2Y input {
-		 font-family: Arial, Helvetica, sans-serif;
-	}
-	 .game_purchase_action .game_purchase_price {
-		 font-family: Arial, Helvetica, sans-serif;
-	}
-	 body {
-		 font-family: Arial, Helvetica, sans-serif;
-		 color: #fff;
-		 background-color: #000;
-		 font-size: 12px;
-	}
-	 ::-webkit-scrollbar {
-		 height: 12px;
-		 width: 15px;
-		 background: #2c2c2c;
-	}
-	 ::-webkit-scrollbar-thumb:hover {
-		 background-color: #d1d1d1;
-	}
-	 ::-webkit-scrollbar-thumb {
-		 width: 10px;
-		 background-color: #9f9f9f;
-		 border: 3px solid rgba(0, 0, 0, 0);
-	}
-	 #logo_holder img {
-		 float: inline-start;
-		 width: 176px;
-		 height: 44px;
-		 margin-right: 40px;
-		 content: url("https://store.akamai.steamstatic.com/public/images/v5/globalheader_logo.png");
-	}
-	 .banner_open_in_steam {
-		 display: none;
-	}
-	 div#global_header {
-		/*Global Header */
-		 background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg);
-		 background-position: center top;
-		 border-bottom: 1px solid #4d4b48;
-		 min-width: 940px;
-		 font-family: Arial, Helvetica, sans-serif;
-		 font-weight: normal;
-		 font-size: 11px;
-		/* SUPERNAV */
-	}
-	 div#global_header .content {
-		/*Header Background 2 the sequel*/
-		 background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg);
-		 background-position: center top;
-		 position: relative;
-		 width: 940px;
-		 height: 104px;
-		 margin: 0px auto;
-		 z-index: 402;
-	}
-	 div#global_header .menuitem {
-		/*Individual Header buttons like "Store", "Community" and etc.*/
-		 display: block;
-		 position: relative;
-		 padding-top: 40px;
-		 padding-left: 7px;
-		 padding-right: 7px;
-		 padding-bottom: 7px;
-		 line-height: 16px;
-		 float: left;
-		 font-size: 14px;
-		 color: #b8b6b4;
-		 text-transform: uppercase;
-	}
-	 div#global_header .menuitem.supernav_active {
-		/*supernav button color*/
-		 color: #b8b6b4;
-	}
-	 div#global_header .menuitem.supernav_active {
-		/*this removes the blue underline used*/
-	}
-	 div#global_header .menuitem.supernav_active::after {
-		 content: "";
-		 display: none;
-	}
-	 div#global_header .menuitem.supernav_active:hover {
-		/*this changes the supernav button color to white*/
-		 color: #fff;
-		 text-decoration: none;
-	}
-	 div#global_header .supernav_content {
-		 max-width: 132px;
-		 background: #000 url(https://steamstore-a.akamaihd.net/public/shared/images/dd_web.jpg) top left no-repeat;
-		 padding: 5px 15px 10px 15px;
-		 box-shadow: 3px 3px 5px -3px #000;
-		 text-align: left;
-	}
-	 div#global_header .supernav_contenta {
-		 display: block;
-		 padding: 6px 0;
-		 text-transform: uppercase;
-		 font-size: 12px;
-	}
-	 div#global_header .supernav_contenta:hover {
-		 color: #4897cf;
-		 text-decoration: none;
-	}
-	 div#global_header .submenuitem {
-		 text-transform: uppercase;
-		 font-size: 11px;
-		 color: #b8b6b4;
-		 padding-right: 10px;
-		 padding-left: 0px;
-	}
-	 div#global_header .submenuitem.active {
-		 text-decoration: none;
-		 background: none;
-		 color: #fff;
-	}
-	 div#global_header .submenuitem:hover {
-		 text-decoration: none;
-		 background: none;
-		 color: #fff;
-	}
-	 div#global_actions > #global_action_menu {
-		 right: 0px;
-		 top: 6px;
-		 height: 21px;
-		 line-height: 21px;
-		 color: #b8b6b4;
-		 font-size: 11px;
-		 z-index: 401;
-	}
-	 div#global_actions > #global_action_menu > * {
-		 vertical-align: middle;
-	}
-	 .pulldown {
-		 margin-right: 0px;
-		 padding-left: 5px;
-		 padding-right: 18px;
-		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_arrow_down_padded.png);
-		 background-position: right center;
-		 background-repeat: no-repeat;
-		 cursor: pointer;
-	}
-	 .open_in_steam_container {
-		 display: none;
-	}
-	 .popup_block_new .popup_body {
-		 border: 1px solid #82807c;
-		 position: relative;
-		 background-color: #3b3938;
-		 background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/popups/bg_popup.png);
-		 background-repeat: repeat-x;
-		 background-position: top;
-	}
-	 .header_installsteam_btn {
-		 margin-right: 3px;
-		 float: left;
-		 position: relative;
-		 height: 21px;
-		 line-height: 20px;
-		 background-image: url(http://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/header/btn_header_installsteam_green.png);
-		/*TODO: UPLOAD TO STEAM CLOUD*/
-		 background-position: 0px -21px;
-		 background-repeat: repeat-x;
-	}
-	 .header_installsteam_btn_content {
-		 padding-left: 27px;
-		 padding-right: 7px;
-		 background-repeat: no-repeat;
-		 display: inline-block;
-		 background-position: 7px 3px;
-		 background-image: url(https://store.akamai.steamstatic.com/public/shared/images/header/btn_header_installsteam_download.png?v=1);
-		 text-decoration: none;
-		 color: #e5e4dc;
-		 background-color: unset !important;
-		 font-weight: normal;
-	}
-	 .header_installsteam_btn_content:hover {
-		 text-decoration: none;
-		 color: #fff;
-	}
-	 ._7FiqKP7fZJGltkwRxPG6s {
-		/*The equivalent to store_nav_area*/
-		 position: absolute;
-		 left: 0px;
-		 right: 0px;
-		 top: 24px;
-		 height: 49px;
-	}
-	 ._16jZ3HEbtaJTl80pQINN2Y {
-		/*The equivalent to store_nav_area*/
-		 position: relative;
-		 width: 940px;
-		 margin: 0px auto;
-		 z-index: 300;
-		 background: none;
-	}
-	 ._16jZ3HEbtaJTl80pQINN2Y ._1u2HkRz_FnAfR5OjfjexgF {
-		/*The equivalent to store_nav_bg and store_nav*/
-		 height: 35px;
-		 padding: 7px 0px;
-		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/store_header_gradients.png);
-		 background-repeat: repeat-x;
-		 background-position: 0px -115px;
-	}
-	 ._16jZ3HEbtaJTl80pQINN2Y .h2B3SGR_w4RWdrnsRZEcD._1TqaEZH4pd8k4LJDCTVmBo {
-		 display: none;
-	}
-	 ._1KU9eASfov1GnFQRbyLIdR {
-		/*It's the equivalent to store_search*/
-		 float: right;
-		 border-left: 1px solid #000;
-		 padding: 4px 4px;
-		 height: 27px;
-		 min-width: 253px;
-		 max-width: 253px;
-		 background: none;
-	}
-	 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL {
-		/*Search Bar when dropdown menu is enabled*/
-	}
-	 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5 {
-		/*It's the equivalent to store_nav_search_term*/
-		 border: none;
-		 background: none;
-	}
-	 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5, ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5 input {
-		 border: none;
-		 color: #cdcac1;
-		 width: 206px;
-		 font-family: "Motiva Sans", Arial, sans-serif;
-	}
-	 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5:hover {
-		/*this removes blue border when hovering the searchbar.*/
-		 border: none;
-	}
-	 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5:hover::placeholder {
-		/*this just guarantees it doesn't change the text color, although theres better global way of doing this, it's been like 20 years since i did CSS and i'm a game developer not a web developer, bro.*/
-		 color: #cdcac1;
-	}
-	 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5:focus::placeholder {
-		/*This is some sutpid way of hiding the text when you click to write in the searchbox, just like how it behaved back then.*/
-		 font-size: 0px;
-	}
-	 ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5::placeholder {
-		/*This changes the placeholder text "Search the Store" to be lowercase just like it was, and the irhgt color*/
-		 color: #cdcac1;
-		 font-size: 13px;
-		 text-transform: lowercase;
-	}
-	 ._2AD2O_FEWy7izR8sZZjjI6 {
-		/*It's the equivalent to searchbox*/
-		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/store_header_search.png?v=2);
-		 color: #a6a5a2;
-		 width: 253px;
-		 height: 27px;
-		 position: relative;
-		 z-index: 250;
-		 font-family: Arial, Helvetica, sans-serif;
-	}
-	 ._2tlUAG6WNyYFlk9caIiLj5 {
-		/*It's the equivalent to store_nav_search_term*/
-		/*Search bar when its clicked and vivisble */
-		 border: none;
-	}
-	 ._2tlUAG6WNyYFlk9caIiLj5, ._2tlUAG6WNyYFlk9caIiLj5 input {
-		 border: none;
-		 color: #cdcac1;
-		 width: 206px;
-		 font-family: "Motiva Sans", Arial, sans-serif;
-	}
-	 ._2tlUAG6WNyYFlk9caIiLj5:hover {
-		/*this removes blue border when hovering the searchbar.*/
-		 border: none;
-	}
-	 ._2tlUAG6WNyYFlk9caIiLj5:hover::placeholder {
-		/*this just guarantees it doesn't change the text color, although theres better global way of doing this, it's been like 20 years since i did CSS and i'm a game developer not a web developer, bro.*/
-		 color: #cdcac1;
-	}
-	 ._2tlUAG6WNyYFlk9caIiLj5:focus::placeholder {
-		/*This is some sutpid way of hiding the text when you click to write in the searchbox, just like how it behaved back then.*/
-		 font-size: 0px;
-	}
-	 ._2tlUAG6WNyYFlk9caIiLj5::placeholder {
-		/*This changes the placeholder text "Search the Store" to be lowercase just like it was, and the irhgt color*/
-		 color: #cdcac1;
-		 font-size: 13px;
-		 text-transform: lowercase;
-	}
-	 ._2tlUAG6WNyYFlk9caIiLj5:focus-visible {
-		 border: none;
-		 outline: none;
-		 box-shadow: none;
-		 background: none;
-	}
-	 ._1Yo-ZsBr-KbVMyAMXEYszd {
-		/* equivalent to store_nav_search_term*/
-		 background-image: url("https://store.akamai.steamstatic.com/public/images/v5/store_header_search.png?v=2)");
-		 background-position: 27px 0px;
-	}
-	 ._1Yo-ZsBr-KbVMyAMXEYszd svg {
-		/*hides the svg and keeps its size*/
-		 width: 18px;
-		 display: none;
-	}
-	 [id^="searchSuggestions_"] {
-		/*Equivalent to search_suggestion_contents*/
-		 border: 1px solid #82807c;
-		 position: relative;
-		 background-color: #3b3938;
-		 background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/popups/bg_popup.png);
-		 background-repeat: repeat-x;
-		 background-position: top;
-		 border-radius: 0px;
-	}
-	 .oeCR-_-EhS8CaxEaFAqDZ {
-		/*This lowers the base of the Dropdown menu 70px down to align with the current SuperNav*/
-		 top: 70px;
-		 position: relative;
-	}
-	 .h2B3SGR_w4RWdrnsRZEcD._19o1GB7ysfrWKLYpqZ6aXu._2IyR9WyPwYb15ILBjPvLR9 {
-		 background: none;
-	}
-	 .h2B3SGR_w4RWdrnsRZEcD._1TqaEZH4pd8k4LJDCTVmBo {
-		 height: 0px;
-	}
-	 .store_main_capsule .screenshots {
-		 display: none;
-	}
-	 .game_page_background {
-		/*Fixes the height to accomodate the navigation bar being more downwards*/
-	}
-	 .game_page_background.game {
-		 --store-menu-overlap-height: 63px;
-		 background-size: 1004px 570px;
-		 height: 1024px;
-		 min-width: 972px;
-	}
-	 .game_page_background.game:before {
-		 content: "";
-		 position: absolute;
-		 width: 100%;
-		 height: 100%;
-		 background: inherit;
-		 background-size: 1004px 570px;
-		 filter: grayscale(70%) brightness(1) saturate(0.5) hue-rotate(-20deg);
-		 top: 0px;
-		 z-index: 0;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .game_background_glow {
-		 background: linear-gradient(0deg, black 100px, transparent);
-		/*this adds the black gradient that smoothens out the game background image*/
-		 background-position: bottom;
-		 padding-bottom: 1px;
-		 background-repeat: no-repeat;
-		 margin: 0px auto;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .game_background_lighten {
-		 background: unset;
-		 width: 0%;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .block {
-		 border: none;
-		 border-left: 1px solid #262626;
-		 background-color: #262626;
-		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/rightcol_bg_block.png);
-		 background-position: bottom right;
-		 background-repeat: no-repeat;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .block.game_media_and_summary_ctn {
-		 background-image: unset;
-		 background-color: unset;
-		 border: none;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area {
-		 padding-top: 7px;
-		 margin-bottom: 18px;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .breadcrumbs {
-		 font-family: Arial, Helvetica, sans-serif;
-		 font-size: 14px;
-		 color: #626467;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .breadcrumbs > .blockbg {
-		 background-color: #262626;
-		 padding: 0px 4px;
-		 float: left;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .breadcrumbs a {
-		 color: #b0aeac;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .apphub_HomeHeaderContent .apphub_HeaderStandardTop {
-		 position: relative;
-		 margin: 0px auto;
-		 text-align: left;
-		 padding-top: 7px;
-		 height: 46px;
-		 background-image: url(https://store.akamai.steamstatic.com/public/shared/images/apphubs/bg_header.png);
-		 background-repeat: repeat-x;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .apphub_HomeHeaderContent .apphub_HeaderStandardTop .apphub_OtherSiteInfo {
-		 position: relative;
-		 float: right;
-		 right: 11px;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .apphub_HomeHeaderContent .apphub_HeaderStandardTop .apphub_AppIcon {
-		 display: block;
-		 position: relative;
-		 margin-left: 12px;
-		 height: 32px;
-		 width: 32px;
-		 float: left;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .apphub_HomeHeaderContent .apphub_HeaderStandardTop .apphub_AppName {
-		 font-family: Arial, Helvetica, sans-serif;
-		 color: white;
-		 font-size: 26px;
-		 padding-left: 12px;
-		 float: left;
-		 max-width: 700px;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights {
-		 color: #626366;
-		 margin-bottom: 1px;
-		 height: 466px;
-		 background-image: url(https://web.archive.org/web/20140920210036im_/http://store.akamai.steamstatic.com/public/images/v5/game_highlight_bg.png);
-		 background-repeat: repeat-x;
-		 background-position: top;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn {
-		 height: 450px;
-		 padding-top: 16px;
-		 padding-left: 16px;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .highlight_overflow {
-		 margin-right: 0px;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .slider_ctn .handle {
-		/*SLIDER*/
-		 position: absolute;
-		 top: 0;
-		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/control_slider.png);
-		 background-repeat: no-repeat;
-		 background-position: left;
-		 background-color: rgba(0, 0, 0, 0.2);
-		 border-radius: 3px;
-		 height: 18px;
-		 width: 60px;
-		 cursor: pointer;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .slider {
-		 left: 0px;
-		 width: 600px;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .slider_left {
-		 display: none;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .slider_right {
-		 display: none;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol {
-		 width: 308px;
-		 margin-left: 14px;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn {
-		 padding: 16px 16px 0px 0px;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .game_header_image_ctn .game_header_image_full {
-		 width: 292px;
-		 height: 136px;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .game_description_snippet {
-		 max-height: 105px;
-		 overflow: hidden;
-		 font-size: 12px;
-		 color: #626366;
-		 line-height: 14px;
-		 padding-right: 0px;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .glance_ctn_responsive_left {
-		 color: #626366;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .user_reviews {
-		 font-size: 12px;
-		 color: #626366;
-		 margin-top: 10px;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .release_date .date {
-		 color: #626366;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .release_date .subtitle {
-		 color: #626366;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .dev_row .column {
-		 color: #626366;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .block_content {
-		 border: 1px solid #4d4b49;
-		 background-color: #262626;
-		 font-size: 12px;
-		 color: #b0aeac;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .queue_overflow_ctn .queue_ctn {
-		 width: 940px;
-		 border: 1px solid #4d4b49;
-		 background: #262626;
-		 margin: 0px auto 16px;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .game_area_details_specs_ctn {
-		 background-color: unset;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .game_area_details_specs_ctn .icon {
-		 background-color: #1a1a1a;
-		 width: 30px;
-		 height: 22px;
-		 padding-top: 4px;
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .game_area_details_specs_ctn .icon > img {
-		 filter: brightness(0.6);
-	}
-	 .game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .game_area_details_specs_ctn .label {
-		 color: #8bc53f;
-		 background-color: #1a1a1a;
-		 padding: 7px 8px;
-		 padding-top: 5px;
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T {
-		/*EQUIVALENT TO html5_video_overlay*/
-		 position: absolute;
-		 right: 0;
-		 bottom: 0;
-		 left: 0;
-		 padding: 0px 0px 0px 0px;
-		 height: 35px;
-		 background-color: rgba(0, 0, 0, 0.8);
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2eh4iDod50HkFNh5C0fVW6 {
-		/*EQUIVALENT TO progress_bar_wrapper*/
-		 touch-action: none;
-		 position: absolute;
-		 bottom: 0px;
-		 top: 21px;
-		 left: 0px;
-		 right: 0px;
-		 background-color: #2c2b28;
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2eh4iDod50HkFNh5C0fVW6 ._3ezjd4FAgey-Olcl2qvfD4 {
-		/*EQUIVALENT TO progress_bar_container*/
-		 position: absolute;
-		 top: 2px;
-		 left: 2px;
-		 right: 2px;
-		 bottom: 1px;
-		 background-color: #2c2b28;
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2eh4iDod50HkFNh5C0fVW6 ._3ezjd4FAgey-Olcl2qvfD4 ._3ezyMaw8mNCokAmQuZDbj1 {
-		/*EQUIVALENT TO progress_bar*/
-		 background-color: #6f9fc8;
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2eh4iDod50HkFNh5C0fVW6 ._3ezjd4FAgey-Olcl2qvfD4 ._3f4Y1kM_nEtTF4DINVZ_rx {
-		/*EQUIVALENT TO progress_bar_background*/
-		 background-color: #595959;
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I {
-		/*EQUIVALENT TO control_container*/
-		 display: flex;
-		 flex-direction: row;
-		 justify-content: space-between;
-		 background-color: #2c2b28;
-		 height: 19px;
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._3XkD6Vq8YzOkmEr9odYcX4 {
-		/*BUTTON SIZE ICON*/
-		 color: #b8bcbf;
-		 width: 19px;
-		 height: 19px;
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._3XkD6Vq8YzOkmEr9odYcX4 > svg {
-		 display: none;
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._3XkD6Vq8YzOkmEr9odYcX4::after {
-		 content: "";
-		 color: #b8bcbf;
-		 width: 19px;
-		 height: 19px;
-		 background-image: url(data:image/png;
-		base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FAQExNPQD1HQAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAHhJREFUOMtjjIyMZCALsPz7928k6GT6hw3I+ZX/IwSw62RgYFAIqCSg8y82AHGPUlD1X9yA6T82APeMamjdfxwAn50QoBZWj1UNC7INWMG1ZbXYYwXNBjRweXEVzvjEY+elRZX4UgIuO8/PL8PvC0YbG5vRvIIPAADvxSAevqB/CQAAAABJRU5ErkJggg==);
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc {
-		/* Video Controls*/
-		 gap: 3px;
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc .Ul_JQ5e-7WyVgJwFfykCb {
-		/*Video Time*/
-		 font-size: 10px;
-		 font-family: Arial, Helvetica, sans-serif;
-		 text-align: center;
-		 color: #9d9d9d;
-		 white-space: nowrap;
-		 user-select: none;
-		 align-self: center;
-		 display: inline-flex;
-		 gap: 3px;
-		 line-height: 19px;
-		 margin-right: 5px;
-		 float: right;
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc ._1j6rW_OLdrZ-Erj3ayEBt5 {
-		/*Volume Bar*/
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc ._1j6rW_OLdrZ-Erj3ayEBt5 ._3XkD6Vq8YzOkmEr9odYcX4 {
-		/*BUTTON SIZE ICON*/
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc ._1j6rW_OLdrZ-Erj3ayEBt5 ._3XkD6Vq8YzOkmEr9odYcX4::after {
-		 background-image: url(data:image/png;
-		base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FAQEyM0FKEhQAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAaBJREFUOMtj1NHWYCALMDGQC4jV6ezixsbGRpROR0cnNXV1CJuXl09UVDQ+IZmXl4+AzszM7EmTp/LB1Onp669bu/rz508uLm44dfLw8EyYODkrOwcuwsnJGRAQFBuXcPjQQRlZWWERERSdPDw8Jiamjo5O8xcscnZ2QTaLmZl57pxZtrZ2TMxMr1+/0tLUhoizQCgNDc35CxZhOpuHh2fN2g0hwQE3rl+3sba9eu2qlpY2UWH75cuXz58/+QcE7ty5XV5e4e2bN6KiYsTGyr69e01Nzb5//05yfKpraHz+/JmTk5M0nTw8PM7OLhs3rDcyNnn48IG0tMzr169QdH76/On0qVNPnz7F9GdiQtyXL19sbe3Onz8nLS3z+vVrFJ23bt5MSooPCQ7YsGE9muarV6/k5hWcPXvm9ZvXMrKy9+7eweLaL1++1NZUdXS0IQt+//793Lmzc2bPdHV1f/L48f3793D6c+mSxYkJcZ8+fYKLzJ0zy8ralpeXb8+eXXBBFqwBc+bM6ZDgQDiXjY1NWlpm3brVnz8jjGMcgJwNAO7wmMDjuhRMAAAAAElFTkSuQmCC);
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL {
-		/* Video Player Configs*/
-		 gap: 3px;
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL ._3XkD6Vq8YzOkmEr9odYcX4 {
-		/*BUTTON SIZE ICON*/
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL ._3XkD6Vq8YzOkmEr9odYcX4::after {
-		 background-image: url(data:image/png;
-		base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FARYVIXFfZMwAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAGBJREFUOMtj1NHWYCALMDGQC1jk5GThnEePHuNXjayYhRgNmEbLyclS4FqsLiHGWhZkp27bvhu/Ni9PV7h+8l07qpOY1AePGHigEwRycrIsxCda6rkWOd2RlFcYByBnAwBu7B+wiL65mQAAAABJRU5ErkJggg==);
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL ._3XkD6Vq8YzOkmEr9odYcX4:has(.DpzfSpwcCrmcxUf4Hb6nM)::after {
-		 content: none !important;
-		 background: none !important;
-	}
-	 .aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL .DpzfSpwcCrmcxUf4Hb6nM {
-		/*BUTTON SIZE ICON*/
-		 display: inline;
-	}
-	 .game_area_purchase_game {
-		 position: relative;
-		 background: none;
-		 font-family: Arial, Helvetica, sans-serif;
-		 border: 1px solid #4d4b49;
-		 background-color: #262626;
-		 font-size: 12px;
-		 padding: 16px;
-		 padding-bottom: 26px;
-		 margin-bottom: 28px;
-		 z-index: 1;
-	}
-	 .game_area_purchase_game .game_purchase_discount_countdown {
-		 color: #898a8c;
-	}
-	 .game_area_purchase_game .game_purchase_action {
-		/*Game purchase box*/
-		/*Bundle Button*/
-	}
-	 .game_area_purchase_game .game_purchase_action .game_purchase_price {
-		/*Game Purchase Page Box Price Tag*/
-		 background-color: #000;
-		 font-size: 13px;
-		 padding-top: 8px;
-		 padding-left: 12px;
-		 padding-right: 12px;
-		 margin-left: 3px;
-		 height: 26px;
-	}
-	 .game_area_purchase_game .game_purchase_action .discount_block {
-		/*Discont Price Box*/
-		 position: relative;
-		 background-color: #000;
-	}
-	 .game_area_purchase_game .game_purchase_action .discount_block .bundle_base_discount {
-		/*Discount Price Box for BUNDLES*/
-		 background-color: #4c6b22;
-		 color: #fff;
-		 height: 34px;
-	}
-	 .game_area_purchase_game .game_purchase_action .game_purchase_discount {
-		 float: left;
-		 margin-left: 3px;
-		 height: 34px;
-	}
-	 .game_area_purchase_game .game_purchase_action .game_purchase_discount .discount_pct {
-		 left: 0px;
-		 width: 69px;
-		 height: 34px;
-		 line-height: 34px;
-		 font-size: 25px;
-		 text-align: center;
-		 background-color: #4c6b22;
-		 color: #fff;
-	}
-	 .game_area_purchase_game .game_purchase_action .game_purchase_action_bg {
-		/*Game Purchase Box Background*/
-		 height: 34px;
-		 background-color: #3c3d3e;
-		 padding: 3px 3px 3px 0px;
-		 border-radius: 3px;
-		 -moz-border-radius: 3px;
-	}
-	 .game_area_purchase_game .game_purchase_action .discount_prices {
-		 background-color: #000;
-	}
-	 .game_area_purchase_game .game_purchase_action .discount_prices .discount_final_price.your_price {
-		 font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
-		 color: #d6d7d8;
-	}
-	 .game_area_purchase_game .game_purchase_action .discount_prices .discount_final_price.your_price .your_price_label {
-		 color: #626366;
-	}
-	 .game_area_purchase_game .game_purchase_action .btn_packageinfo .btn_blue_steamui.btn_medium > span {
-		 display: none;
-	}
-	 .game_area_purchase_game .game_purchase_action .btn_packageinfo .btn_blue_steamui.btn_medium::after {
-		 content: "PACKAGE INFO";
-		 display: inline-block;
-		 background-image: url("https://store.akamai.steamstatic.com/public/images/v5/btn_packageinfo_repeat.gif");
-		 height: 34px;
-		 font-size: 11px;
-		 color: #fff;
-		 text-align: center;
-		 padding: 0px 11px;
-		 line-height: 34px;
-		 background-repeat: repeat-x;
-		 text-transform: uppercase;
-		 min-width: 80px;
-	}
-	 .game_area_purchase_game .game_area_purchase_platform {
-		/*GAME OS SUPPORT BOX*/
-		/* SYSTEM ICONS REPLACEMENT*/
-	}
-	 .game_area_purchase_game .game_area_purchase_platform .platform_img {
-		/*PLATFORM IMAGE BASIC SPECIFICATIONS*/
-		 display: inline-block;
-		 width: 22px;
-		 height: 22px;
-		 background-repeat: no-repeat;
-	}
-	 .game_area_purchase_game .game_area_purchase_platform .win {
-		/*WINDOWS*/
-		 background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_win.png");
-	}
-	 .game_area_purchase_game .game_area_purchase_platform .linux {
-		/*LINUX*/
-		 background-image: url("https://images.steamusercontent.com/ugc/10414975101062247569/9C844C8149D2A06A5A85A542FC049025D8CEA0D9/");
-	}
-	 .game_area_purchase_game .game_area_purchase_platform .mac {
-		/*MACOS*/
-		 background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_mac.png");
-	}
-	 .game_area_purchase_game .game_area_purchase_platform .music {
-		/*MUSIC*/
-		 background-image: url("https://images.steamusercontent.com/ugc/14771200981187913751/4CED5B4A814D3CD411EC72A53B0497C771388251/");
-	}
-	 .discount_original_price {
-		 font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
-		 color: #626366;
-		 text-decoration: line-through;
-	}
-	 .discount_final_price {
-		 font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
-		 color: #d6d7d8;
-	}
-	 .price, .match_price {
-		 font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
-		 font-size: 11px;
-		 color: #b0aeac;
-	}
-	 .game_area_purchase_game h1, .game_area_offsite_purchase h1, .game_area_purchase_game h2.title.title {
-		 font-size: 21px;
-		 line-height: 21px;
-		 font-family: Arial, Helvetica, sans-serif;
-	}
-	 button._175B12uOwmeGBNcSaQFe-Z {
-		/* Equivalent to the tab button used in the store navigation bar*/
-		 float: left;
-		 border-right: 1px solid #000;
-		 padding: 1px;
-		 gap: 0px;
-		 text-decoration: none;
-		 cursor: pointer;
-		 background: #74706f;
-		 background: -moz-linear-gradient(top, #74706f 0%, #6e6a69 100%);
-		 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #74706f), color-stop(100%, #6e6a69));
-		 background: -webkit-linear-gradient(top, #74706f 0%, #6e6a69 100%);
-		 background: -o-linear-gradient(top, #74706f 0%, #6e6a69 100%);
-		 background: -ms-linear-gradient(top, #74706f 0%, #6e6a69 100%);
-		 background: linear-gradient(to bottom, #74706f 0%, #6e6a69 100%);
-		 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#74706f', endColorstr='#6e6a69', GradientType=0);
-	}
-	 button._175B12uOwmeGBNcSaQFe-Z:hover {
-		/* Hover*/
-		 background: #82807c;
-		 filter: none;
-	}
-	 button._175B12uOwmeGBNcSaQFe-Z svg {
-		/*This hides the SVG pulldown icon*/
-		 display: none;
-	}
-	 .vj9hwW9u0MpjH7MVjjNw0 {
-		/*equivalent to tab > span*/
-		 font-size: 11px;
-		 color: #fff;
-		 text-transform: uppercase;
-		 line-height: 33px;
-		 padding: 0px 15px;
-		 padding-right: 7px;
-		 display: block;
-		 background: #5a5654;
-		 background: -moz-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
-		 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5a5654), color-stop(100%, #6e6a69));
-		 background: -webkit-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
-		 background: -o-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
-		 background: -ms-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
-		 background: linear-gradient(to bottom, #5a5654 0%, #6e6a69 100%);
-		 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5a5654', endColorstr='#6e6a69', GradientType=0);
-	}
-	 .vj9hwW9u0MpjH7MVjjNw0:hover {
-		/*equivalent to tab > span*/
-		 background: #82807c;
-		 filter: none;
-	}
-	 .vj9hwW9u0MpjH7MVjjNw0::after {
-		/*Replaces the svg with the original pulldown icon*/
-		 transition-property: transform;
-		 content: "";
-		 transition-duration: 0.2s;
-		 transition-timing-function: ease-in-out;
-		 width: 19px;
-		 height: 12px;
-		 padding: 0;
-		 display: inline-block;
-		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_arrow_down_padded.png);
-		 background-position: center;
-		 background-repeat: no-repeat;
-		 cursor: pointer;
-		 vertical-align: text-bottom;
-	}
-	 .btn_green_steamui {
-		/* Green button*/
-		 height: 34px;
-	}
-	 .btn_green_steamui > span {
-		 border-radius: 2px;
-		 border: none;
-		 padding: 1px 11px;
-		 display: inline-block;
-		 cursor: pointer;
-		 text-decoration: none !important;
-		 background: transparent;
-		 text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
-		 height: 34px;
-		 font-size: 11px;
-		 color: #fff;
-		 text-align: center;
-		 line-height: 34px;
-		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_addtocart_repeat.gif);
-		 background-repeat: repeat-x;
-		 text-transform: uppercase;
-		 min-width: 80px;
-	}
-	 .btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
-		 background: transparent;
-		 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_addtocart_repeat.gif);
-		 background-repeat: repeat-x;
-	}
-	 .btn_addtocart {
-		/*self explanatory add to cart button*/
-		 position: relative;
-		 height: 34px;
-	}
-	 .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active) {
-		/*Generic Blue Medium Button*/
-		 border-radius: 2px;
-		 border: none;
-		 padding: 1px;
-		 display: inline-block;
-		 cursor: pointer;
-		 text-decoration: none !important;
-		 color: #fff !important;
-		 background: #57749e;
-		 background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
-		 background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #57749e), color-stop(95%, #364963));
-		 background: -webkit-linear-gradient(top, #57749e 5%, #364963 95%);
-		 background: -o-linear-gradient(top, #57749e 5%, #364963 95%);
-		 background: -ms-linear-gradient(top, #57749e 5%, #364963 95%);
-		 background: linear-gradient(to bottom, #57749e 5%, #364963 95%);
-		 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57749e', endColorstr='#364963', GradientType=0);
-	}
-	 .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
-		/*Generic Blue Medium Button HOVER*/
-		 text-decoration: none !important;
-		 color: #fff !important;
-		 background: #688bb1;
-		 background: -moz-linear-gradient(top, #688bb1 5%, #415877 95%);
-		 background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #688bb1), color-stop(95%, #415877));
-		 background: -webkit-linear-gradient(top, #688bb1 5%, #415877 95%);
-		 background: -o-linear-gradient(top, #688bb1 5%, #415877 95%);
-		 background: -ms-linear-gradient(top, #688bb1 5%, #415877 95%);
-		 background: linear-gradient(to bottom, #688bb1 5%, #415877 95%);
-		 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#688bb1', endColorstr='#415877', GradientType=0);
-	}
-	 #shareEmbedRow {
-		/*share embed row, which had dark medium buttons*/
-	}
-	 #shareEmbedRow .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active) {
-		/*Generic Gray Medium Button*/
-		 border-radius: 2px;
-		 border: none;
-		 padding: 1px;
-		 display: inline-block;
-		 cursor: pointer;
-		 text-decoration: none !important;
-		 color: #ebebeb !important;
-		 background: #1a1a1a;
-	}
-	 #shareEmbedRow .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
-		/*Generic Gray Medium Button Hover*/
-		 text-decoration: none !important;
-		 color: #000 !important;
-		 background: #97c0e3;
-	}
-	 .app_tag {
-		 display: inline-block;
-		 line-height: 19px;
-		 padding: 0 7px;
-		 color: #b0aeac;
-		 background-color: #384959;
-		 margin-right: 2px;
-		 border-radius: 3px;
-		 box-shadow: 1px 1px 0 0 #000;
-		 cursor: pointer;
-		 margin-bottom: 3px;
-		 max-width: 200px;
-		 white-space: nowrap;
-		 overflow: hidden;
-		 text-overflow: ellipsis;
-	}
-	 .app_tag:hover {
-		 text-decoration: none;
-		 background: #516980;
-		 color: #fff;
-	}
- 
+[role=main]::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 66px;
+  background: #3b3938;
+}
+
+html:not(.rn_mobile_app) body.v7menu:not(.menu_background_overlap) .responsive_page_template_content {
+  padding-top: 0px;
+}
+
+/* FONTS*/
+div#global_header .menuitem {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+body.v6 {
+  font-family: Arial, Helvetica, sans-serif !important;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 12px;
+}
+
+body.v6 h2:not(.BB_Header2) {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: bold;
+  text-transform: none;
+}
+
+button._175B12uOwmeGBNcSaQFe-Z {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.game_purchase_action .game_purchase_price {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif !important;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 12px;
+  --store-menu-overlap-height: 56px;
+}
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+  height: 12px;
+  width: 15px;
+  background: #2C2C2C;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #D1D1D1;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: #9F9F9F;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+/* ==========================
+
+   HEADER
+
+========================== */
+#logo_holder img {
+  float: inline-start;
+  width: 176px;
+  height: 44px;
+  margin-right: 40px;
+  content: url("https://store.akamai.steamstatic.com/public/images/v5/globalheader_logo.png");
+}
+
+/* Hides "open in steam banner" */
+.banner_open_in_steam {
+  display: none;
+}
+
+div#global_header { /*Global Header */
+  background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg);
+  background-position: center top;
+  border-bottom: 1px solid #4D4B48;
+  min-width: 940px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+  /* SUPERNAV */
+}
+div#global_header .content { /*Header Background 2 the sequel*/
+  background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_bg.jpg);
+  background-position: center top;
+  position: relative;
+  width: 940px;
+  height: 104px;
+  margin: 0px auto;
+  z-index: 402;
+}
+div#global_header .menuitem { /*Individual Header buttons like "Store", "Community" and etc.*/
+  display: block;
+  position: relative;
+  padding-top: 40px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-bottom: 7px;
+  line-height: 16px;
+  float: left;
+  font-size: 14px;
+  color: #b8b6b4;
+  text-transform: uppercase;
+}
+div#global_header .menuitem.supernav_active { /*supernav button color*/
+  color: #b8b6b4;
+}
+div#global_header .menuitem.supernav_active { /*this removes the blue underline used*/ }
+div#global_header .menuitem.supernav_active::after {
+  content: "";
+  display: none;
+}
+div#global_header .menuitem.supernav_active:hover { /*this changes the supernav button color to white*/
+  color: #ffffff;
+  text-decoration: none;
+}
+div#global_header .supernav_content {
+  max-width: 132px;
+  background: #000 url(https://steamstore-a.akamaihd.net/public/shared/images/dd_web.jpg) top left no-repeat;
+  padding: 5px 15px 10px 15px;
+  box-shadow: 3px 3px 5px -3px #000;
+  text-align: left;
+}
+div#global_header .supernav_contenta {
+  display: block;
+  padding: 6px 0;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+div#global_header .supernav_contenta:hover {
+  color: #4897cf;
+  text-decoration: none;
+}
+div#global_header .submenuitem {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #b8b6b4;
+  padding-right: 10px;
+  padding-left: 0px;
+}
+div#global_header .submenuitem.active {
+  text-decoration: none;
+  background: none;
+  color: #ffffff;
+}
+div#global_header .submenuitem:hover {
+  text-decoration: none;
+  background: none;
+  color: #ffffff;
+}
+
+div#global_actions > #global_action_menu {
+  right: 0px;
+  top: 6px;
+  height: 21px;
+  line-height: 21px;
+  color: #b8b6b4;
+  font-size: 11px;
+  z-index: 401;
+}
+div#global_actions > #global_action_menu > * {
+  vertical-align: middle;
+}
+
+/*Pulldown */
+.pulldown {
+  margin-right: 0px;
+  padding-left: 5px;
+  padding-right: 18px;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_arrow_down_padded.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/*Remove "Open in steam prompt"*/
+.open_in_steam_container {
+  display: none;
+}
+
+/*PopUp Background*/
+.popup_block_new .popup_body {
+  border: 1px solid #82807c;
+  position: relative;
+  background-color: #3b3938;
+  background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/popups/bg_popup.png);
+  background-repeat: repeat-x;
+  background-position: top;
+}
+
+/*notifications & header logged in user info*/
+#account_pulldown:after {
+  content: "'s account";
+}
+
+._1jW5_Ycv6jGKu28A1OSIQK._34A9kjlnmgfUWSmr16VjXE {
+  background-color: transparent;
+}
+
+#header_notification_area {
+  float: left;
+  margin-right: 3px;
+  margin-top: -6px;
+  margin-left: 8px;
+  background-color: #1B1B18;
+}
+
+.header_notification_btn.header_notification_bell {
+  display: block;
+  width: 28px;
+  height: 28px;
+  padding: 0px;
+  margin: 0px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFPSURBVDhPxZOxb4JAFId/d4hook0TTNHgYAcTQ+hCgprYpf7hdpUwsBmX1rnBqQMNUaA8ONHDtmmnfsnL5b139x13F1ivp+MrGGNoNFRkWYokSfIxEx2ZKwFjHKqq3j4uFi95epPHu+/7evQRFaI6kkBRFHS7Xdj2w1uz2bwTZdo92263fL8PcTgcqVI2ciqBpmno9/sYje6P+ecrRbFGGIZst3tFFEWiciFYPi1xTBLpoHQPdRTO2ep5JTKAixFJmmZpmuIy6Mz1qG9SCcbjMVqtliQ4Bb0ARafTgeM4YkVJJaCmbduwLAucc0lAOw8GA0wmEzH7TCU4QSLDMIoXoTsgWbvdhmmaYoaMJIjjGOv1uljoui5msxmm0yl0XYfneWKWjCQIggDz+RzD4VBUSiinOsnrVAJq0qSfoP5msxFZybf/wm+5usS/8t8C4BOcG5Ok49Rf7wAAAABJRU5ErkJggg==) no-repeat #1B1B18;
+  /*  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFnSURBVDhPxZI/bsIwFMa/JBAEQlGkSAUO0LBEmRCMdMwFyp4rwAGaXqFMHIKFsrOWCxSlUnc6pBJdaP4QNzZ2mgBSxdSf9OTnZ7/Pz8+WTPMWl5BlGfV6HYfDAVEUIU1TvlLmTEBRFDQaDX0ynrxnUy2zr9lsZgSfARM6pSSgqio6nQ5G96OPZrN5w8P0dLJ4Xsi+72O/34MQwlcKApqmwbZtDId3SVa+woInbDav0mq1QhAEPFIQ8B48hFH0K50hSRL3jj49Wa1WJe/R49GsV3xEFMckjmMUjd5ZWBiGbPwOw9IhuYDjONB1HUmSsM7TUfj0Bai1Wi24rsszjuRX8P03przdbrFcLlmzigwGA/T7feZ3u2Z+t7wCQbvdhmVZqNVq7C9UKhUYhoFer8d3nEAroJY1iOx2OzKdPpH1+oVOc+icxgUih1VfFChuuoRYvyjwV7JgPp+XBM6+8rWcNfFa/lsA+AETDwXLz114zAAAAABJRU5ErkJggg==) no-repeat #181818;*/
+  background-position: center;
+  background-size: 16px;
+  background-color: #1B1B18;
+  border-top: 0px solid #4d4b49;
+  border-right: 2px solid #4d4b49;
+  border-bottom: 2px solid #4d4b49;
+  border-left: 2px solid #4d4b49;
+  border-radius: 0px 0px 3px 3px;
+}
+
+._1jW5_Ycv6jGKu28A1OSIQK {
+  background-color: transparent;
+  width: 28px;
+  height: 28px;
+  float: left;
+  margin-right: 3px;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+._1jW5_Ycv6jGKu28A1OSIQK > svg {
+  display: none;
+}
+._1jW5_Ycv6jGKu28A1OSIQK._34A9kjlnmgfUWSmr16VjXE:not(._3h1sV2qrp20U37VwC47pM2):hover {
+  background-color: transparent;
+  transition-property: none;
+  transition-duration: 0ms;
+  display: block;
+  width: 32px;
+  height: 30px;
+  padding: 0px;
+  margin: 0px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFnSURBVDhPxZI/bsIwFMa/JBAEQlGkSAUO0LBEmRCMdMwFyp4rwAGaXqFMHIKFsrOWCxSlUnc6pBJdaP4QNzZ2mgBSxdSf9OTnZ7/Pz8+WTPMWl5BlGfV6HYfDAVEUIU1TvlLmTEBRFDQaDX0ynrxnUy2zr9lsZgSfARM6pSSgqio6nQ5G96OPZrN5w8P0dLJ4Xsi+72O/34MQwlcKApqmwbZtDId3SVa+woInbDav0mq1QhAEPFIQ8B48hFH0K50hSRL3jj49Wa1WJe/R49GsV3xEFMckjmMUjd5ZWBiGbPwOw9IhuYDjONB1HUmSsM7TUfj0Bai1Wi24rsszjuRX8P03przdbrFcLlmzigwGA/T7feZ3u2Z+t7wCQbvdhmVZqNVq7C9UKhUYhoFer8d3nEAroJY1iOx2OzKdPpH1+oVOc+icxgUih1VfFChuuoRYvyjwV7JgPp+XBM6+8rWcNfFa/lsA+AETDwXLz114zAAAAABJRU5ErkJggg==) no-repeat #181818;
+  background-position: center;
+  background-size: 16px;
+  background-color: #1B1B18;
+  border-top: 0px solid #4d4b49;
+  border-right: 2px solid #4d4b49;
+  border-bottom: 2px solid #4d4b49;
+  border-left: 2px solid #4d4b49;
+  border-radius: 0px 0px 3px 3px;
+}
+._1jW5_Ycv6jGKu28A1OSIQK._2Hpe0_DGY0TBz45Lg0zUr9 {
+  background: linear-gradient(to bottom, #799B2C 5%, #5C7E10 95%);
+  /*  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAtUExURd3d3f///+no6JCOjby7utLS0YWDgbGwr/T09KalpJuZmHp3dsfGxm9sagAAAGmW7zAAAAAPdFJOU///////////////////ANTcmKEAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABSSURBVChTncxRDoAwCANQOibb3OT+x90QNNE/7Q/pCynpK/+AcCU5cI6+iQMKV+ttRwCoE5IM3IB29M7rBlQutrDeHIYkmzB3aGe1ZIdnPoPqBGvCCkERArFYAAAAAElFTkSuQmCC");*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #5c7e10;
+  color: #fff;
+}
+._1jW5_Ycv6jGKu28A1OSIQK._2Hpe0_DGY0TBz45Lg0zUr9:after {
+  content: "";
+  width: 28px;
+  height: 28px;
+  float: left;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAtUExURd3d3f///+no6JCOjby7utLS0YWDgbGwr/T09KalpJuZmHp3dsfGxm9sagAAAGmW7zAAAAAPdFJOU///////////////////ANTcmKEAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABSSURBVChTncxRDoAwCANQOibb3OT+x90QNNE/7Q/pCynpK/+AcCU5cI6+iQMKV+ttRwCoE5IM3IB29M7rBlQutrDeHIYkmzB3aGe1ZIdnPoPqBGvCCkERArFYAAAAAElFTkSuQmCC");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+._1jW5_Ycv6jGKu28A1OSIQK._2Hpe0_DGY0TBz45Lg0zUr9:not(._3h1sV2qrp20U37VwC47pM2):hover {
+  background: linear-gradient(to bottom, #799B2C 5%, #799B2C 95%);
+}
+
+/* Player Avatars*/
+.playerAvatar.in-game {
+  background-color: #9bc861;
+  background: -moz-linear-gradient(top, #9bc861 5%, #789e4c 95%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #9bc861), color-stop(95%, #789e4c));
+  background: -webkit-linear-gradient(top, #9bc861 5%, #789e4c 95%);
+  background: -o-linear-gradient(top, #9bc861 5%, #789e4c 95%);
+  background: -ms-linear-gradient(top, #9bc861 5%, #789e4c 95%);
+  background: linear-gradient(to bottom, #9bc861 5%, #789e4c 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#9bc861", endColorstr="#789e4c",GradientType=0 );
+  filter: none;
+}
+
+.playerAvatar.online, .friend_block_holder.friend_status_online .friend_block_avatar, .friend_activity.friend_status_online .friend_block_avatar, .appHubIconHolder.online, .avatar_block_status_online {
+  background-color: #7bafd6;
+  background: -moz-linear-gradient(top, #7bafd6 5%, #506d92 95%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #7bafd6), color-stop(95%, #506d92));
+  background: -webkit-linear-gradient(top, #7bafd6 5%, #506d92 95%);
+  background: -o-linear-gradient(top, #7bafd6 5%, #506d92 95%);
+  background: -ms-linear-gradient(top, #7bafd6 5%, #506d92 95%);
+  background: linear-gradient(to bottom, #7bafd6 5%, #506d92 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#7bafd6", endColorstr="#506d92", GradientType=0);
+  filter: none;
+}
+
+.playerAvatar, .friend_block_holder .friend_block_avatar, .friend_activity .friend_block_avatar {
+  width: 34px;
+  height: 34px;
+  padding: 3px;
+  border-radius: 3px;
+  background-color: #545454;
+}
+
+/* Install Steam Button */
+.header_installsteam_btn {
+  background: linear-gradient(180deg, rgb(115, 136, 93) 0%, rgb(79, 108, 52) 100%);
+  margin-right: 3px;
+  float: left;
+  position: relative;
+  height: 21px;
+  line-height: 20px;
+  /*background-image:     
+      url(https://steamstore-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_green.png); /*TODO: UPLOAD http://web.archive.org/web/20140705173030im_/http://cdn.store.steampowered.com/public/shared/images/header/btn_header_installsteam_green.png TO STEAM CLOUD*/
+  /* background-position: 0px -21px;*/
+  /*  background-repeat: repeat-x;*/
+}
+
+.header_installsteam_btn_content {
+  padding-left: 27px;
+  padding-right: 7px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: 7px 3px;
+  background-image: url(https://store.akamai.steamstatic.com/public/shared/images/header/btn_header_installsteam_download.png?v=1);
+  text-decoration: none;
+  color: #e5e4dc;
+  background-color: unset !important;
+  font-weight: normal;
+}
+.header_installsteam_btn_content:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* STORE NAVIGATION AREA */
+._7FiqKP7fZJGltkwRxPG6s { /*The equivalent to store_nav_area*/
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 24px;
+  height: 49px;
+}
+
+._16jZ3HEbtaJTl80pQINN2Y { /*The equivalent to store_nav_area*/
+  position: relative;
+  width: 940px;
+  margin: 0px auto;
+  z-index: 300;
+  background: none;
+}
+._16jZ3HEbtaJTl80pQINN2Y ._1u2HkRz_FnAfR5OjfjexgF { /*The equivalent to store_nav_bg and store_nav*/
+  height: 35px;
+  padding: 7px 0px;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/store_header_gradients.png);
+  background-repeat: repeat-x;
+  background-position: 0px -115px;
+}
+._16jZ3HEbtaJTl80pQINN2Y .h2B3SGR_w4RWdrnsRZEcD._1TqaEZH4pd8k4LJDCTVmBo {
+  display: none;
+}
+
+/* Search Bar */
+._1KU9eASfov1GnFQRbyLIdR { /*It's the equivalent to store_search*/
+  float: right;
+  border-left: 1px solid #000000;
+  padding: 4px 4px;
+  height: 27px !important;
+  min-width: 253px !important;
+  max-width: 253px !important;
+  background: none !important;
+}
+._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL { /*Search Bar when dropdown menu is enabled*/ }
+._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5 {
+  border: none;
+  background: none;
+}
+._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5, ._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5 input { /*It's the equivalent to store_nav_search_term*/
+  border: none;
+  color: #cdcac1;
+  width: 206px;
+  font-family: "Motiva Sans", Arial, sans-serif;
+}
+._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5:hover { /*this removes blue border when hovering the searchbar.*/
+  border: none;
+}
+._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5:hover::placeholder { /*this just guarantees it doesn't change the text color, although theres better global way of doing this, 
+it's been like 20 years since i did CSS and i'm a game developer not a web developer, bro.*/
+  color: #cdcac1;
+}
+._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5:focus::placeholder { /*This is some sutpid way of hiding the text when you click to write in the searchbox, 
+just like how it behaved back then.*/
+  font-size: 0px;
+}
+._1KU9eASfov1GnFQRbyLIdR._1u5lJbV7kBEJq4lH6V2RzL._2tlUAG6WNyYFlk9caIiLj5::placeholder { /*This changes the placeholder text "Search the Store" to be lowercase just like it was, and the irhgt color*/
+  color: #cdcac1;
+  font-size: 13px;
+  text-transform: lowercase;
+}
+
+._2AD2O_FEWy7izR8sZZjjI6 { /*It's the equivalent to searchbox*/
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/store_header_search.png?v=2);
+  color: #a6a5a2;
+  width: 253px;
+  height: 27px;
+  position: relative;
+  z-index: 250;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+._2tlUAG6WNyYFlk9caIiLj5 { /*It's the equivalent to store_nav_search_term*/
+  /*Search bar when its clicked and vivisble */
+  border: none;
+}
+._2tlUAG6WNyYFlk9caIiLj5, ._2tlUAG6WNyYFlk9caIiLj5 input {
+  border: none;
+  color: #cdcac1;
+  width: 206px;
+  font-family: "Motiva Sans", Arial, sans-serif;
+}
+._2tlUAG6WNyYFlk9caIiLj5:hover { /*this removes blue border when hovering the searchbar.*/
+  border: none;
+}
+._2tlUAG6WNyYFlk9caIiLj5:hover::placeholder { /*this just guarantees it doesn't change the text color, although theres better global way of doing this, it's been like 20 years
+since i did CSS and i'm a game developer not a web developer, bro.*/
+  color: #cdcac1;
+}
+._2tlUAG6WNyYFlk9caIiLj5:focus::placeholder { /*This is some sutpid way of hiding the text when you click to write in the searchbox, just like how it behaved back then.*/
+  font-size: 0px;
+}
+._2tlUAG6WNyYFlk9caIiLj5::placeholder { /*This changes the placeholder text "Search the Store" to be lowercase just like it was, and the irhgt color*/
+  color: #cdcac1;
+  font-size: 13px;
+  text-transform: lowercase;
+}
+._2tlUAG6WNyYFlk9caIiLj5:focus-visible {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: none;
+}
+
+._1Yo-ZsBr-KbVMyAMXEYszd { /* equivalent to store_nav_search_term*/
+  background-image: url("https://store.akamai.steamstatic.com/public/images/v5/store_header_search.png?v=2)") !important;
+  background-position: 27px 0px !important;
+}
+._1Yo-ZsBr-KbVMyAMXEYszd svg { /*hides the svg and keeps its size*/
+  width: 18px !important;
+  display: none !important;
+}
+
+/*Search Result Modal Window*/
+/* .SWL3uBHWmdcYwUXE9yD0y{ Equivalent to popup_body
+}*/
+[id^=searchSuggestions_] { /*Equivalent to search_suggestion_contents*/
+  border: 1px solid #82807c;
+  position: relative;
+  background-color: #3b3938;
+  background-image: url(https://steamstore-a.akamaihd.net/public/shared/images/popups/bg_popup.png);
+  background-repeat: repeat-x;
+  background-position: top;
+  border-radius: 0px;
+}
+
+/*  DROP DOWN MENUS */
+.oeCR-_-EhS8CaxEaFAqDZ { /*This lowers the base of the Dropdown menu 70px down to align with the current SuperNav*/
+  top: 70px;
+  position: relative;
+}
+
+.h2B3SGR_w4RWdrnsRZEcD._19o1GB7ysfrWKLYpqZ6aXu._2IyR9WyPwYb15ILBjPvLR9 {
+  background: none;
+}
+.h2B3SGR_w4RWdrnsRZEcD._1TqaEZH4pd8k4LJDCTVmBo {
+  height: 0px;
+}
+
+/* ==========================
+   HOME PAGE
+========================== */
+.store_main_capsule .screenshots {
+  display: none;
+}
+
+/*  CAROUSEL & CAPSULES*/
+/*TODO: CAROUSEL*/
+/* ===========================
+    WIDESTORE FIXES
+=========================== */
+/* 2025 Game Page Widening, directly taken from steam css, i'm not gonna reinvent the wheel and manually write everything just to change 1 value back to 940, lol */
+/* TODO: remove !important when the .widestore class is removed */
+.widestore .glance_mid_ctn {
+  justify-content: unset;
+}
+
+body.v6.narrowstore .page_content {
+  max-width: unset !important;
+  width: 940px !important;
+  margin: 0 auto !important;
+}
+
+body.v6 {
+  --store-page-width: 940px;
+}
+
+body.v6.widestore {
+  --store-page-width: 940px;
+}
+
+body.v6.widestore .page_content {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body.v6.widestore .page_content.middle_page {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.widestore .leftcol {
+  width: 616px;
+  float: left;
+}
+
+.widestore .rightcol {
+  width: 308px;
+}
+
+body.v6.widestore .game_area_already_owned.page_content {
+  max-width: 940px;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  height: 40px;
+  color: #fff;
+  position: relative;
+  background: -moz-linear-gradient(top, #3f5d1c 0%, #667a52 100%);
+  background: -webkit-linear-gradient(top, #3f5d1c 0%, #667a52 100%);
+  background: -o-linear-gradient(top, #3f5d1c 0%, #667a52 100%);
+  background: -ms-linear-gradient(top, #3f5d1c 0%, #667a52 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#99a3cf06", endColorstr="#994b6a21",GradientType=1 );
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: unset;
+}
+
+body.v6.widestore .game_area_play_stats {
+  max-width: 908px;
+  width: 100%;
+  background: #262626;
+  padding: 0px 16px 16px 16px;
+  margin: 0px auto;
+  margin-bottom: 40px;
+}
+
+.ds_owned_flag.ds_flag {
+  display: none;
+}
+
+.already_in_library {
+  padding-left: 16px;
+}
+
+body.v6.widestore #store_header {
+  padding: 0 1%;
+}
+
+.widestore div#store_header .content {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.widestore .cart_status_flex {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 910px) {
+  body.v6.widestore .page_content.middle_page {
+    display: block;
+    flex-direction: unset;
+  }
+  body.v6.widestore .page_content {
+    max-width: 940px;
+    width: auto;
+    margin: 0 2%;
+  }
+  body.v6.widestore .actionButtonsCtn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+  body.v6.widestore .actionButtonsCtn {
+    padding: 5px 0px;
+  }
+  body.v6.widestore .leftcol,
+  body.v6.widestore .rightcol {
+    float: none;
+    width: auto;
+    margin-left: 0;
+  }
+  body.v6.widestore .tab_item_cap_img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+  body.v6.widestore .carousel_container .arrow {
+    bottom: 0px;
+    top: auto;
+    height: 0px;
+    width: 0;
+    padding: 0px;
+    background: none;
+  }
+  body.v6.widestore .carousel_container .arrow > div {
+    width: 13px;
+    height: 20px;
+    background-size: cover;
+    display: none;
+    margin: 0 10px;
+  }
+  body.v6.widestore .carousel_container .arrow.left {
+    left: 0;
+  }
+  body.v6.widestore .carousel_container .arrow.left > div {
+    background-position-x: 13px;
+  }
+  body.v6.widestore .carousel_container .arrow.right {
+    right: 0;
+    text-align: right;
+  }
+  body.v6.widestore .carousel_container .carousel_items > * {
+    position: relative;
+    top: auto;
+    left: auto;
+    opacity: 1;
+  }
+  body.v6.widestore .specials_under10_content,
+  body.v6.widestore .live_streams_ctn {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  body.v6.widestore .carousel_container .carousel_items:not(.no_paging),
+  body.v6.widestore .carousel_container.maincap .carousel_items:not(.no_paging) {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    box-sizing: content-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 21px;
+  }
+  body.v6.widestore .carousel_container .carousel_items > * {
+    pointer-events: auto;
+    flex-shrink: 0;
+  }
+}
+@media screen and (max-width: 940px) and (min-width: 500px) {
+  body.v6.widestore .page_content {
+    width: 98%;
+  }
+}
+@media screen and (max-width: 940px) and (min-width: 910px) {
+  body.v6.widestore .related_items_ctn .page_content {
+    width: calc(100vw - 144px);
+  }
+}
+/* ==========================
+   GAME PAGE
+========================== */
+/*wish list & cart alignment*/
+._1wn1lBlAzl3HMRqS1llwie { /*class where the cart and wishlist buttons are located within*/
+  justify-content: flex-end;
+}
+
+._16jZ3HEbtaJTl80pQINN2Y ._7FiqKP7fZJGltkwRxPG6s { /*this is where both header subbuttons and the wish list shit is located*/
+  flex-direction: column-reverse;
+}
+
+#purchase_note {
+  position: relative;
+  z-index: 1;
+}
+
+.game_page_background {
+  /*queue and playtime*/
+  /* hides queueActionsCtn*/
+  /*Fixes the height to accomodate the navigation bar being more downwards*/
+}
+.game_page_background img.legacy-bg { /*JS CLEANUP*/
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
+}
+.game_page_background .queue_ctn .queue_actions_ctn {
+  display: none;
+}
+.game_page_background .page_top_area {
+  position: relative;
+  overflow-y: visible;
+}
+.game_page_background .game_page_background_ctn.game {
+  --store-menu-overlap-height: 63px;
+  height: 1024px;
+  min-width: 972px;
+  max-width: 1004px;
+  z-index: 0;
+  filter: blur(0px);
+  opacity: 1;
+  -webkit-mask-image: none;
+  mask-image: none;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgb(0, 0, 0) 50%);
+}
+.game_page_background .game_page_background_ctn.game img {
+  position: absolute;
+  background: inherit;
+  height: 570px;
+  width: 1004px;
+  background-size: 1004px 570px;
+  top: -46px;
+  z-index: 0;
+  filter: blur(0px);
+  opacity: 1;
+  -webkit-mask-image: none;
+  mask-image: none;
+  mix-blend-mode: color;
+}
+.game_page_background > #tabletGrid .page_content_ctn {
+  /*Description */
+  /*System Requirements*/
+}
+.game_page_background > #tabletGrid .page_content_ctn .game_background_glow {
+  background: linear-gradient(0deg, black 100px, transparent);
+  /*this adds the black gradient that smoothens out the game background image*/
+  background-position: bottom;
+  padding-bottom: 1px;
+  background-repeat: no-repeat;
+  margin: 0px auto;
+}
+.game_page_background > #tabletGrid .page_content_ctn .game_background_lighten {
+  background: unset;
+  width: 0%;
+}
+.game_page_background > #tabletGrid .page_content_ctn .block {
+  padding: unset;
+  border: none;
+  border-left: 1px solid #262626;
+  background-color: #262626;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/rightcol_bg_block.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+.game_page_background > #tabletGrid .page_content_ctn .block.game_media_and_summary_ctn {
+  background-image: unset;
+  background-color: unset;
+  border: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .block.game_media_and_summary_ctn::before {
+  display: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area {
+  padding-top: 17px;
+  margin-bottom: 18px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .breadcrumbs {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #626467;
+  z-index: 1;
+}
+.game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .breadcrumbs > .blockbg {
+  background-color: #262626;
+  padding: 0px 4px;
+  float: left;
+}
+.game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .breadcrumbs a {
+  color: #b0aeac;
+}
+.game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .apphub_HomeHeaderContent .apphub_HeaderStandardTop {
+  position: relative;
+  margin: 0px auto;
+  text-align: left;
+  padding-top: 7px;
+  height: 46px;
+  background-image: url(https://store.akamai.steamstatic.com/public/shared/images/apphubs/bg_header.png);
+  background-repeat: repeat-x;
+}
+.game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .apphub_HomeHeaderContent .apphub_HeaderStandardTop .apphub_OtherSiteInfo {
+  position: relative;
+  float: right;
+  right: 11px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .apphub_HomeHeaderContent .apphub_HeaderStandardTop .apphub_AppIcon {
+  display: block;
+  position: relative;
+  margin-left: 12px;
+  height: 32px;
+  width: 32px;
+  float: left;
+}
+.game_page_background > #tabletGrid .page_content_ctn .page_title_area.game_title_area > .apphub_HomeHeaderContent .apphub_HeaderStandardTop .apphub_AppName {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 26px;
+  padding-left: 12px;
+  float: left;
+  max-width: 700px;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights {
+  color: #626366;
+  margin-bottom: 1px;
+  padding: unset;
+  padding-bottom: unset;
+  height: 466px;
+  background-image: url(https://web.archive.org/web/20140920210036im_/http://store.akamai.steamstatic.com/public/images/v5/game_highlight_bg.png);
+  background-repeat: repeat-x;
+  background-position: top;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn {
+  height: 450px;
+  padding-top: 16px;
+  padding-left: 16px;
+  /*SLIDER*/
+  /*Image Carousel*/
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .highlight_overflow {
+  margin-right: 0px;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn ._1DvsO7ezbpz3pIVBWOLOzF .IJs3gGlk7XiekF90xqQtx ._2kGps6wpqMKuwW2LinnWW6 { /*equivakebt to slider_ctn .handle*/
+  position: absolute;
+  top: 0;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/control_slider.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  height: 13px;
+  width: 60px;
+  cursor: pointer;
+  border: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn ._1DvsO7ezbpz3pIVBWOLOzF .IJs3gGlk7XiekF90xqQtx ._2kGps6wpqMKuwW2LinnWW6:hover {
+  background-position: right;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .IJs3gGlk7XiekF90xqQtx { /*equivalent to slider*/
+  left: 0px;
+  width: 600px;
+  height: 13px;
+  position: relative;
+  background-color: #323232;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn ._2LR-6h1uKQt4bj21r14zy5 { /*slider left*/
+  display: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .highlight_strip_item {
+  float: left;
+  height: 65px;
+  width: 116px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #000000;
+  position: relative;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .highlight_strip_item.focus { /*equivalent to .highlight_selector*/
+  margin: 2px;
+  border: 0px solid #d6d7d8;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .leftcol .highlight_ctn .highlight_strip_item.focus::after {
+  content: "";
+  position: relative;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/game_highlight_activethumb.png);
+  width: 116px;
+  height: 77px;
+  z-index: 50;
+  transform: translateY(-90%);
+  top: -10px;
+  pointer-events: none;
+  display: inline-flex;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol {
+  width: 308px;
+  margin-left: 14px;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn {
+  padding: 16px 16px 0px 0px;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .game_header_image_full {
+  width: 292px;
+  height: 136px;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .game_description_snippet {
+  max-height: 105px;
+  overflow: hidden;
+  font-size: 12px;
+  color: #626366;
+  line-height: 14px;
+  padding-right: 0px;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .game_description_snippet::after { /*Seperation Margin*/
+  display: inline-flex;
+  width: 292px;
+  height: 1px;
+  content: "";
+  border-bottom: 1px solid #3c3d3e;
+  margin: 6px 0px;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .glance_ctn_responsive_left {
+  color: #626366;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .user_reviews {
+  font-size: 12px;
+  color: #626366;
+  margin-top: 10px;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .release_date .date {
+  color: #626366;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .release_date .subtitle {
+  color: #626366;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .dev_row .column {
+  color: #626366;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_ctn .subtitle {
+  text-transform: none;
+  font-size: 12px;
+}
+.game_page_background > #tabletGrid .page_content_ctn #game_highlights .rightcol .glance_tags_label { /*"Popular user-defined tags" label*/
+  line-height: 19px;
+  font-size: 11px;
+  color: #626366;
+}
+.game_page_background > #tabletGrid .page_content_ctn #shareEmbedRow {
+  padding: 16px;
+  border: none;
+  border-left: 1px solid #262626;
+  background-color: #262626;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/rightcol_bg_block.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+.game_page_background > #tabletGrid .page_content_ctn #shareEmbedRow::before { /*reimplementation of block headers*/
+  display: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .ico16.reportv6 {
+  background-position: -128px 0px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .game_language_options td span { /*changes the checkmark icons to the green one from v5*/
+  font-size: 0px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .game_language_options td span::after {
+  display: inline-flex;
+  content: "";
+  height: 12px;
+  width: 12px;
+  background-image: url("https://store.akamai.steamstatic.com/public/images/ico/ico_greencheck.png");
+}
+.game_page_background > #tabletGrid .page_content_ctn .game_language_options td { /*changes languages box text color*/
+  color: #B0AEAC;
+}
+.game_page_background > #tabletGrid .page_content_ctn .all_languages { /*changes text color from "all languages" section */
+  color: #B0AEAC;
+  text-decoration: underline;
+}
+.game_page_background > #tabletGrid .page_content_ctn .block_content {
+  padding: 16px;
+  border: 1px solid #4d4b49;
+  background-color: #262626;
+  font-size: 12px;
+  color: #b0aeac;
+}
+.game_page_background > #tabletGrid .page_content_ctn #broadcast.block_content {
+  padding: 0px;
+  border: 1px solid #4d4b49;
+  background-color: #262626;
+  font-size: 12px;
+  color: #b0aeac;
+}
+.game_page_background > #tabletGrid .page_content_ctn .queue_overflow_ctn .queue_ctn {
+  width: 940px;
+  border: 1px solid #4d4b49;
+  background: #262626;
+  margin: 0px auto 16px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .game_area_description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+.game_page_background > #tabletGrid .page_content_ctn .game_area_description.game_description_column {
+  color: #898a8c;
+}
+.game_page_background > #tabletGrid .page_content_ctn .game_area_description.game_description_column h2 {
+  height: 26px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #FFFFFF;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/maincol_gradient_rule.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  margin-bottom: 6px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .game_area_description > h2.bb_tag {
+  margin-top: 18px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.game_page_background > #tabletGrid .page_content_ctn .game_area_description p strong, .game_page_background > #tabletGrid .page_content_ctn .game_area_description strong {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.game_page_background > #tabletGrid .page_content_ctn .sysreq_contents .game_area_sys_req strong {
+  font-size: 12px;
+  color: #626366;
+  font-weight: normal;
+  text-transform: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .sysreq_contents .game_area_sys_req_leftCol, .game_page_background > #tabletGrid .page_content_ctn .sysreq_contents .game_area_sys_req_rightCol {
+  float: left;
+  width: 300px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .sysreq_contents .game_area_sys_req ul {
+  line-height: 15px;
+  color: #898a8c;
+}
+.game_page_background > #tabletGrid .page_content_ctn .sysreq_tab {
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  color: #D6D7D8;
+  float: left;
+}
+.game_page_background > #tabletGrid .page_content_ctn .sysreq_tab:hover {
+  text-decoration: underline;
+}
+.game_page_background > #tabletGrid .page_content_ctn .sysreq_tab.active {
+  color: #8BB9E0;
+  background-color: black;
+}
+.game_page_background > #tabletGrid .page_content_ctn .sysreq_tab.active:hover {
+  text-decoration: underline;
+}
+.game_page_background > #tabletGrid .page_content_ctn .sysreq_tabs, .game_page_background > #tabletGrid .page_content_ctn .discselect_tabs {
+  font-size: 12px;
+  padding-top: 10px;
+  padding-left: 5px;
+  margin-bottom: 15px;
+  background: -moz-linear-gradient(top, #171E24 5%, #222D38 95%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #171E24), color-stop(95%, #222D38));
+  background: -webkit-linear-gradient(top, #171E24 5%, #222D38 95%);
+  background: -o-linear-gradient(top, #171E24 5%, #222D38 95%);
+  background: -ms-linear-gradient(top, #171E24 5%, #222D38 95%);
+  background: linear-gradient(to bottom, #171E24 5%, #222D38 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#171E24", endColorstr="#222D38 ",GradientType=0 );
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data {
+  /*Recent game news*/
+  /*See More*/
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block {
+  padding: unset;
+  border: none;
+  border-left: 1px solid #262626;
+  background-color: #262626;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/rightcol_bg_block.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  /*Achivements*/
+  /*Point shop stuff*/
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block::before { /*reimplementation of block headers*/
+  content: "";
+  background-repeat: no-repeat;
+  background-color: #3C3D3E;
+  position: relative;
+  height: 25px;
+  line-height: 25px;
+  color: #d6d7d8;
+  border-bottom: 1px solid #000000;
+  font-weight: bold;
+  font-size: 12px;
+  display: block;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block > * {
+  padding: 16px 16px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block .block_title {
+  color: #626366;
+  padding: 16px;
+  padding-bottom: 0px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block .communitylink_achievement_images { /* most batshit insane hacky way of readding the "+99" text for when you had more than 3 achievments in a game, i hope steam never updates that area of the website :3*/
+  gap: 0px;
+  padding-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block .communitylink_achievement_images::after {
+  content: "+99";
+  background-color: #4f5051;
+  font-size: 27px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  padding-top: 14px;
+  height: 50px;
+  float: left;
+  width: 64px;
+  margin-right: 3px;
+  cursor: default;
+  position: absolute;
+  transform: translateX(202px);
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block div.communitylink_achievement, .game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block a.communitylink_achievement { /*Sets the achivements icons to be this size*/
+  width: 64px;
+  height: 64px;
+  margin-right: 3px;
+  margin-bottom: 4px;
+  aspect-ratio: 1/1;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block .communitylink_points_shop_images {
+  gap: 0px;
+  padding-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block .communitylink_points_shop_images::after {
+  content: "+99";
+  background-color: #4f5051;
+  font-size: 27px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  padding-top: 14px;
+  height: 50px;
+  float: left;
+  width: 64px;
+  margin-right: 3px;
+  cursor: default;
+  position: absolute;
+  transform: translateX(202px);
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block div.communitylink_points_shop_item, .game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block a.communitylink_points_shop_item { /*Sets the achivements icons to be this size*/
+  width: 64px;
+  height: 64px;
+  margin-right: 3px;
+  margin-bottom: 4px;
+  aspect-ratio: 1/1;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block #languageTable {
+  padding-top: 6px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block.responsive_apppage_details_right.heading {
+  background-repeat: no-repeat;
+  background-color: #3C3D3E;
+  position: relative;
+  height: 25px;
+  line-height: 25px;
+  color: #d6d7d8;
+  border-bottom: 1px solid #000000;
+  font-weight: bold;
+  font-size: 12px;
+  display: block;
+  padding-left: 16px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block.responsive_apppage_details_right.recommendation_reasons > hr {
+  padding: 0px;
+  background-color: #000;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block.responsive_apppage_details_right.recommendation_reasons p.reason.info:before {
+  content: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block.responsive_apppage_details_right.recommendation_reasons p.reason.for:before {
+  content: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block.responsive_apppage_details_right.recommendation_reasons p.reason.against:before {
+  content: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block.responsive_apppage_details_right.recommendation_reasons p.reason.info {
+  padding: 0px;
+  padding-left: 16px;
+  font-size: 12px;
+  padding-top: 5px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block.responsive_apppage_details_right.recommendation_reasons p.reason.for {
+  padding: 0px;
+  padding-left: 16px;
+  font-size: 12px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block.responsive_apppage_details_right.recommendation_reasons p.reason.against {
+  padding: 0px;
+  padding-left: 16px;
+  font-size: 12px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block.responsive_apppage_details_right.recommendation_reasons .curators_list {
+  padding: 0px;
+  padding-left: 16px;
+  font-size: 12px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block.responsive_apppage_details_right.recommendation_reasons .friend_blocks_grid {
+  padding: 0px;
+  padding-left: 16px;
+  font-size: 12px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block.responsive_apppage_details_right.recommendation_reasons .friend_blocks_grid:not(:has(~ .friend_blocks_grid)) {
+  /* styles apply ONLY to the last one */
+  padding-bottom: 16px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block.responsive_apppage_details_right.recommendation_reasons p {
+  color: #626366;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block.responsive_apppage_details_right.recommendation_reasons a {
+  color: #B0AEB0;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block.responsive_apppage_details_right::before {
+  content: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .block_content {
+  border: unset;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .game_details b {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #626366;
+  font-weight: normal;
+  text-transform: none;
+  font-size: 12px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data #genresAndManufacturer.details_block a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: #B0AEAC;
+  text-decoration: underline;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data #genresAndManufacturer.details_block a:hover {
+  color: #ffffff;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .game_area_details_specs_ctn {
+  background-color: unset;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .game_area_details_specs_ctn .icon {
+  background-color: #1a1a1a;
+  width: 30px;
+  height: 22px;
+  padding-top: 4px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .game_area_details_specs_ctn .icon > img {
+  filter: brightness(0.6);
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .game_area_details_specs_ctn .label {
+  color: #8bc53f;
+  background: #1a1a1a;
+  padding: 7px 8px;
+  padding-top: 5px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .game_area_details_specs_ctn .label:hover {
+  text-decoration: underline;
+  color: #8bc53f;
+  background: #1a1a1a;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data ._1CTHwmZmi5YE4kovZH_UIl { /*.game_area_details_specs_ctn for controllers*/ }
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data ._1CTHwmZmi5YE4kovZH_UIl ._3KAysk4dlhWETa6ixz7V2j {
+  color: #8bc53f;
+  background: #1a1a1a;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data ._1CTHwmZmi5YE4kovZH_UIl ._3KAysk4dlhWETa6ixz7V2j:hover {
+  text-decoration: underline;
+  color: #8bc53f;
+  background: #1a1a1a;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data ._1CTHwmZmi5YE4kovZH_UIl ._3FBEGAfvLQj4qYjstmZAPE {
+  color: #8bc53f;
+  padding: 7px 8px;
+  padding-top: 5px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data ._1CTHwmZmi5YE4kovZH_UIl .dxuI55RF56-dzbuXjj2W0 { /*icons for the controller support shit*/
+  background-color: #1a1a1a;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data ._1CTHwmZmi5YE4kovZH_UIl .dxuI55RF56-dzbuXjj2W0 > svg {
+  filter: brightness(0.6);
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data ._29jQMo9DGCmcSKyDIC3V7M { /*.icon but for "acessibility stuff*/
+  background-color: #1a1a1a;
+  width: 30px;
+  height: 22px;
+  padding-top: 4px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data ._29jQMo9DGCmcSKyDIC3V7M ._1GkKPFI1K10GLg9538MMAF {
+  filter: brightness(0.6);
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data ._3sRe2CGQBgablPBz9Bc9c2 { /*.label for accessibility butotn shit idk*/
+  color: #8bc53f;
+  background-color: #1a1a1a;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data ._3sRe2CGQBgablPBz9Bc9c2:hover {
+  text-decoration: underline;
+  color: #8bc53f;
+  background: #1a1a1a;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data a.communitylink_achievement.communitylink_achivement_plusmore { /*modifies the achievement button*/
+  text-align: left;
+  display: block;
+  position: relative;
+  min-width: 260px;
+  height: 22px;
+  background: none;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/bg_link_bar.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-top: 8px;
+  padding-left: 8px;
+  color: #B0AEAC;
+  margin-bottom: 2px;
+  font-size: 0px;
+  transform: translateY(0%);
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data a.communitylink_achievement.communitylink_achivement_plusmore::after { /*changes the text of the vieew all achivements button*/
+  content: "View Achievements";
+  font-size: 12px;
+  text-decoration: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data a.communitylink_achievement.communitylink_achivement_plusmore:hover { /*adds hovers*/
+  color: #ffffff;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data a.communitylink_achievement.communitylink_achivement_plusmore br { /*hides "view all achievements button"*/
+  display: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data a.communitylink_points_shop_item.communitylink_achivement_plusmore { /*modifies the button*/
+  text-align: left;
+  display: block;
+  position: relative;
+  min-width: 260px;
+  height: 22px;
+  background: none;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/bg_link_bar.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-top: 8px;
+  padding-left: 8px;
+  color: #B0AEAC;
+  margin-bottom: 2px;
+  font-size: 0px;
+  transform: translateY(0%);
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data a.communitylink_points_shop_item.communitylink_achivement_plusmore::after { /*changes the text of the vieew all items button*/
+  content: "View Items";
+  font-size: 12px;
+  text-decoration: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data a.communitylink_points_shop_item.communitylink_achivement_plusmore:hover { /*adds hovers*/
+  color: #ffffff;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data a.communitylink_points_shop_item.communitylink_achivement_plusmore br { /*hides "view all items button"*/
+  display: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .rightcol.game_meta_data .anticheat_nonkernel_notice {
+  color: #529cde;
+  background: rgba(255, 255, 255, 0.1);
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn {
+  background: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA { /*.block*/
+  width: 614px;
+  height: 164px;
+  padding: unset;
+  background-color: unset;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA .kR_xyFf2ghgC-Jexsw_5v { /*.block header*/
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/maincol_bg_gray.png);
+  background-repeat: no-repeat;
+  background-color: #303030;
+  height: 26px;
+  margin-bottom: 1px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA .kR_xyFf2ghgC-Jexsw_5v ._2BGZunVy7Z0-h18owewCzo { /*See more text*/
+  font-size: 12px;
+  text-transform: unset;
+  font-weight: bold;
+  padding: 0px 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0px;
+  color: #d6d7d8;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA .kR_xyFf2ghgC-Jexsw_5v ._1SnxJyZ5foWgNRCNLmKm6H { /*EXCLUSIVE gray button for this*/
+  padding: 0px 16px;
+  font-weight: bold;
+  font-size: 12px;
+  position: absolute;
+  right: 0px;
+  border-left: 1px solid #000000;
+  height: 26px;
+  background: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA .kR_xyFf2ghgC-Jexsw_5v ._1SnxJyZ5foWgNRCNLmKm6H > span {
+  padding: unset;
+  text-transform: uppercase;
+  color: #b0aeac !important;
+  font-weight: normal;
+  font-size: 10px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA ._2M3SnYGvMvplWUC8yGhowo.SliderBody {
+  border: 1px solid #4d4b49;
+  background-color: #262626;
+  font-size: 12px;
+  color: #b0aeac;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA ._292IWiCTro5jiTmIxiDfyc { /*small_cap*/
+  display: block;
+  float: left;
+  width: 184px;
+  height: 106px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-bottom: 12px;
+  padding-top: 16px;
+  border: 1px solid #262626;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: unset;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA ._292IWiCTro5jiTmIxiDfyc:hover {
+  border: 1px solid #8bb9e0;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA ._3Cc2bMRML2lEkSyi2IAZ9G { /*unsets the weird width*/
+  width: unset !important;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA .jGiY7rrZh0o9qrh7XNnZU .carousel__slider-tray { /*gap*/
+  gap: 0px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA .SaleSectionCarousel .carousel__slider {
+  padding: 0px 0px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA ._2eQ4mkpf4IzUp1e9NnM2Wr { /*game image*/
+  width: 184px;
+  height: 69px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA ._2oW_y7Mm3ihf1XQ0C1VWhx {
+  padding: 39% 0 0 0;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA ._22AcxR1RBDH6i-gjKRHYk0 {
+  border-radius: 0px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA ._3lmdEmwrmqe-kicNCZ9v-I ._1X3j2g29SBtsrFMgNiKi_Y {
+  margin-left: unset;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA ._3j4dI1yA7cRfCvK8h406OB { /*text price*/
+  font-size: 11px;
+  font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+  color: #b0aeac;
+  padding: unset;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn ._2BG1JKMgeqn_cr0rbRhRNA ._3lmdEmwrmqe-kicNCZ9v-I {
+  background-color: unset;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO { /*.block*/
+  width: 614px;
+  height: 164px;
+  padding: unset;
+  background-color: unset;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._1QLD0WY-y0hqefed0ZhMn1 { /*.block header*/
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/maincol_bg_gray.png);
+  background-repeat: no-repeat;
+  background-color: #303030;
+  height: 26px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._1QLD0WY-y0hqefed0ZhMn1 ._1SnxJyZ5foWgNRCNLmKm6H { /*EXCLUSIVE gray button for this*/
+  padding: 0px 16px;
+  font-weight: bold;
+  font-size: 12px;
+  right: 0px;
+  border-left: 1px solid #000000;
+  height: 26px;
+  background: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._1QLD0WY-y0hqefed0ZhMn1 ._1SnxJyZ5foWgNRCNLmKm6H > span {
+  padding: unset;
+  text-transform: uppercase;
+  color: #b0aeac !important;
+  font-weight: normal;
+  font-size: 10px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._1QLD0WY-y0hqefed0ZhMn1 ._33J1_MYWJVjXbCkBFCNr6f {
+  padding: 0px 16px;
+  font-weight: bold;
+  font-size: 12px;
+  right: 0px;
+  border-left: 1px solid #000000;
+  height: 26px;
+  background: none;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._1QLD0WY-y0hqefed0ZhMn1 ._33J1_MYWJVjXbCkBFCNr6f > div {
+  padding: unset;
+  text-transform: uppercase;
+  color: #b0aeac !important;
+  font-weight: normal;
+  margin-top: 4px;
+  font-size: 10px !important;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._1QLD0WY-y0hqefed0ZhMn1 ._1l0-iEDSNo_iZ95BUT31hW { /*text*/
+  font-size: 12px;
+  text-transform: unset;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0px;
+  color: #d6d7d8;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._1QLD0WY-y0hqefed0ZhMn1 .PO1KWbUEvLt8ZVYRTAvMt { /*icon*/
+  width: 18px;
+  height: 18px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._2M3SnYGvMvplWUC8yGhowo.SliderBody {
+  border: 1px solid #4d4b49;
+  background-color: #262626;
+  font-size: 12px;
+  color: #b0aeac;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO .XIDYByW4BEOm-YiOiwGmO .SaleSectionCarousel .carousel__slider {
+  padding: 0px 0px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO .jGiY7rrZh0o9qrh7XNnZU .carousel__slider-tray { /*gap*/
+  gap: 0px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._3o1Ri_nyL6GsPbTQZGSZcT {
+  gap: 0px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._3Cc2bMRML2lEkSyi2IAZ9G { /*unsets the weird width*/
+  width: unset !important;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._292IWiCTro5jiTmIxiDfyc { /*small_cap*/
+  display: block;
+  float: left;
+  width: 184px;
+  height: 106px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-bottom: 12px;
+  padding-top: 16px;
+  border: 1px solid #262626;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: unset;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._292IWiCTro5jiTmIxiDfyc:hover {
+  border: 1px solid #8bb9e0;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._2oW_y7Mm3ihf1XQ0C1VWhx {
+  padding: 39% 0 0 0;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._2eQ4mkpf4IzUp1e9NnM2Wr { /*game image*/
+  width: 184px;
+  height: 69px;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._1X3j2g29SBtsrFMgNiKi_Y {
+  margin-left: unset;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._3lmdEmwrmqe-kicNCZ9v-I {
+  background-color: unset;
+}
+.game_page_background > #tabletGrid .page_content_ctn .related_items_ctn .XIDYByW4BEOm-YiOiwGmO ._3j4dI1yA7cRfCvK8h406OB { /*text price*/
+  font-size: 11px;
+  font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+  color: #b0aeac;
+  padding: unset;
+}
+
+/* ==========================
+   POP UP MODALS
+========================== */
+._3vg1vYU7iTWqONciv9cuJN._1Ye_0niF2UqB8uQTbm8B6B {
+  opacity: 1;
+  width: 306px !important;
+}
+
+._3-pnCQRItoLzipK50ezpB4 {
+  left: 245px;
+  top: 100px;
+  position: relative;
+  padding: 12px;
+}
+
+._3-pnCQRItoLzipK50ezpB4::before { /*hover_arrow_left*/
+  content: "";
+  z-index: 2;
+  width: 13px;
+  height: 26px;
+  background-image: url(https://steamstore-a.akamaihd.net/public/images/v5/hover_arrow_both.gif);
+  background-repeat: no-repeat;
+  background-position: left top;
+  position: absolute;
+  top: 48px;
+  left: 0px;
+}
+
+._2jsr3PEq2iin7lU8wSO8X9 { /*game_hover_box hover_box*/
+  box-shadow: 0 0 12px #000000;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  border: 1px solid #82807c;
+  background: #3b3938;
+  width: 306px;
+  color: #b0aeac;
+  font-size: 12px;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.oAqlZTgPU37Nb8gBT5eAM {
+  background: #3b3938;
+  box-shadow: none;
+}
+
+.oAqlZTgPU37Nb8gBT5eAM ._2VvFLg2irh9gPAhhxE4Kpo ._2SWQMqXxu7mJMIuNemYJq8 .fTGViHKZf0UCl6es5T4KP ._1wO-t97gvSClMW2PGtV5-w { /*app_tag*/
+  margin-left: 4px;
+  position: relative;
+  display: inline-block;
+  line-height: 19px;
+  padding: 0 7px;
+  color: #b0aeac;
+  background-color: #384959;
+  margin-right: 2px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0 0 #000000;
+  cursor: pointer;
+  margin-bottom: 3px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+._1HFUCM8Np78V7DkzDIZp6z {
+  background-color: #1a1a1a;
+  padding: 5px;
+}
+
+span[title=Windows] {
+  /*WINDOWS*/
+  background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_win.png");
+  background-size: 15px;
+  width: 15px;
+  height: 15px;
+}
+span[title=Windows] svg {
+  display: none;
+}
+
+span[title="Linux / SteamOS"] {
+  /*LINUX*/
+  background-image: url("https://images.steamusercontent.com/ugc/10414975101062247569/9C844C8149D2A06A5A85A542FC049025D8CEA0D9/");
+  background-size: 15px;
+  width: 15px;
+  height: 15px;
+}
+span[title="Linux / SteamOS"] svg {
+  display: none;
+}
+
+span[title=macOS] {
+  /*MACOS*/
+  background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_mac.png");
+  background-size: 15px;
+  width: 15px;
+  height: 15px;
+}
+span[title=macOS] svg {
+  display: none;
+}
+
+.oAqlZTgPU37Nb8gBT5eAM ._2VvFLg2irh9gPAhhxE4Kpo ._1HFUCM8Np78V7DkzDIZp6z ._35ByaFjy9tZD1dLFAeHccQ {
+  padding: 0;
+  font-size: 1em;
+  color: #b0aeac;
+}
+
+._3qvppfM_u0yn2jrpoUo8RM ._2t-0jlGgIN_VM7R47pRKfF, ._3qvppfM_u0yn2jrpoUo8RM ._1wXL_MfRpdKQ3wZiNP5lrH, ._3qvppfM_u0yn2jrpoUo8RM ._2hfFpA6uUEs5kd5vOxYJuJ {
+  color: #b0aeac;
+}
+
+/* ==========================
+   COMMUNITY PAGE
+========================== */
+.apphub_background {
+  background-image: unset !important;
+}
+
+[role=main]:has(.community_home_header) {
+  background: #262627 url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png);
+  background-position: 0 0px;
+  background-repeat: repeat-x;
+}
+
+[role=main]:has(.community_home_header)::before {
+  content: none;
+}
+
+.community_activity_signin_buttons .btn_green_white_innerfade { /*equivalent to btn_login_green in the community pages*/
+  border-radius: 0px;
+  border: none;
+  padding: 1px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  background: unset;
+}
+.community_activity_signin_buttons .btn_green_white_innerfade > span {
+  background-image: url(https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_login_bg.png);
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #ffffff;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0px;
+}
+
+.btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
+  background: unset;
+  background-image: url(https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_login_bg.png);
+  border-radius: 0px;
+  border: none;
+}
+
+.btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+  background: unset;
+}
+
+.community_home_header {
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+.community_home_title {
+  font-weight: normal;
+  font-size: 24px;
+  color: #529cde;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  text-align: left;
+}
+
+.community_home_subtitle {
+  font-weight: normal;
+  font-size: 17px;
+  color: #939393;
+  font-family: Arial, Sans-Serif;
+  text-align: left;
+  padding-top: 5px;
+}
+
+.community_home_login {
+  color: #828282;
+  float: left;
+  width: 294px;
+  font-size: 12px;
+}
+
+.community_home_app_shortcuts {
+  margin-top: 20px;
+  padding: 10px;
+  width: 608px;
+  height: 186px;
+  background: #1b1b1b;
+  border-radius: 4px;
+  border: 1px solid #1f1f20;
+  box-shadow: 1px 1px 0 0 #39393a;
+  float: left;
+}
+
+.community_home_join_steam a, .community_home_join_steam a:visited {
+  color: #939393;
+  text-decoration: none;
+}
+
+.community_home_join_steam a:hover {
+  color: #ffffff;
+}
+
+.community_home_shortcut_content {
+  padding: 0px;
+}
+
+.community_home_app_shortcuts_list_header {
+  font-size: 12px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  color: #828282;
+}
+
+.appHubShortcut {
+  height: 42px;
+}
+
+.community_home_search_players_image {
+  position: absolute;
+  background-color: unset;
+  top: 5px;
+  right: 4px;
+  width: 23px;
+  height: 18px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.community_home_search_box {
+  margin-top: 20px;
+  padding: 10px;
+  width: 286px;
+  height: 186px;
+  margin-left: 10px;
+  background: #1b1b1b;
+  border-radius: 4px;
+  border: 1px solid #1f1f20;
+  box-shadow: 1px 1px 0 0 #39393a;
+  float: left;
+}
+
+.community_home_search_title {
+  font-size: 12px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  color: #828282;
+}
+
+.community_home_search_divider {
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #000000;
+  background-color: #333333;
+  margin: 15px 0;
+}
+
+.community_home_search_apps {
+  position: relative;
+  height: 27px;
+  background-color: #2f3e55;
+  margin-top: 5px;
+  border: 1px solid #6283b2;
+  padding: unset;
+  border-radius: 0px;
+}
+
+.community_home_search_players {
+  position: relative;
+  height: 27px;
+  background-color: #3a3a3a;
+  margin-top: 5px;
+  border: 1px solid #939393;
+  padding: unset;
+  border-radius: 0px;
+}
+
+input.community_home_search_players_input {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 250px;
+  background-color: #3a3a3a;
+  font-style: italic;
+}
+
+.community_home_tabs {
+  position: relative;
+  width: 948px;
+  margin: 0px auto;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+.apphub_sectionTabsHR {
+  background-color: #364963;
+  height: 5px;
+  width: 948px;
+  margin: 0px auto;
+}
+
+.new_items_num {
+  font-size: 12px;
+  color: #529cde;
+}
+
+.new_items_text {
+  color: #355c93;
+}
+
+.community_home_header .appHubShortcut, .community_home_header .appHubShortcut a, .community_home_header .appHubShortcut a:visited {
+  color: #8c8b8a;
+}
+
+.community_home_header .appHubShortcut a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/*Apphub cards*/
+.apphub_Card {
+  position: relative;
+  float: left;
+  background-color: #1b1b1b;
+  border: 1px solid #343434;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  padding: 0px;
+  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.apphub_Card.interactable:hover {
+  border: 1px solid #97c0e3;
+}
+
+.apphub_CardContentType.guide {
+  margin: 0px;
+  visibility: visible;
+  background: none;
+}
+
+.apphub_CardContentType {
+  visibility: hidden;
+  width: auto;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 5px;
+  z-index: 2;
+  background-image: url(https://web.archive.org/web/20140820022801im_/http://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/item_type_hover.png);
+}
+
+.apphub_CardContentGuideTitle {
+  border: 1px solid #3b3c3d;
+  border-radius: 3px;
+  background: none;
+  -moz-border-radius: 3px;
+  padding: 12px 9px 12px 9px;
+  margin: 0px 9px;
+  overflow: hidden;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.apphub_CardContentAuthorBlock.tall {
+  height: 32px;
+  padding-top: 6px;
+  padding-left: 7px;
+}
+
+.apphub_CardContentAuthorBlock {
+  height: 19px;
+  padding: 4px;
+  background-color: #3e3d3d;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.apphub_Card.interactable:hover .apphub_CardContentAuthorBlock {
+  background-color: #494949;
+}
+
+.apphub_sectionTab, a.apphub_sectionTab {
+  display: block;
+  float: left;
+  color: #dadada;
+  /* background-color: #3A3A3A; */
+  height: 30px;
+  line-height: 31px;
+  padding: 0px 12px;
+  margin-right: 5px;
+  text-decoration: none;
+  border-radius: 2px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  -moz-border-radius: 2px;
+  -moz-border-radius-bottomleft: 0px;
+  -moz-border-radius-bottomright: 0px;
+}
+
+/*Pop up community windows*/
+/* ==========================
+   VIDEO PLAYER
+========================== */
+.aKceKkwAmCX8Ar8qWcJ7T {
+  /*EQUIVALENT TO html5_video_overlay*/
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0px 0px 0px 0px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2eh4iDod50HkFNh5C0fVW6 {
+  /*EQUIVALENT TO progress_bar_wrapper*/
+  touch-action: none;
+  position: absolute;
+  bottom: 0px;
+  top: 21px;
+  left: 0px;
+  right: 0px;
+  background-color: #2c2b28;
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2eh4iDod50HkFNh5C0fVW6 ._3ezjd4FAgey-Olcl2qvfD4 {
+  /*EQUIVALENT TO progress_bar_container*/
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 1px;
+  background-color: #2c2b28;
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2eh4iDod50HkFNh5C0fVW6 ._3ezjd4FAgey-Olcl2qvfD4 ._3ezyMaw8mNCokAmQuZDbj1 {
+  /*EQUIVALENT TO progress_bar*/
+  background-color: #6f9fc8;
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2eh4iDod50HkFNh5C0fVW6 ._3ezjd4FAgey-Olcl2qvfD4 ._3f4Y1kM_nEtTF4DINVZ_rx {
+  /*EQUIVALENT TO progress_bar_background*/
+  background-color: #595959;
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I {
+  /*EQUIVALENT TO control_container*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #2c2b28;
+  height: 19px;
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._3XkD6Vq8YzOkmEr9odYcX4 {
+  /*BUTTON SIZE ICON*/
+  color: #b8bcbf;
+  width: 19px;
+  height: 19px;
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._3XkD6Vq8YzOkmEr9odYcX4 > svg {
+  display: none;
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._3XkD6Vq8YzOkmEr9odYcX4::after {
+  content: "";
+  color: #b8bcbf;
+  width: 19px;
+  height: 19px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FARUVHVx2phIAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAElJREFUOMtjjIyMZCALsPz7928k6lQIqIQwHmxox+QSZSeaOKYylr9//2LViSaOqYzl////WHWiiWMqG7WTkJ2MNjY2o3kFHwAABHVqN1R2w8sAAAAASUVORK5CYII=);
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc {
+  /* Video Controls*/
+  gap: 3px;
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc .Ul_JQ5e-7WyVgJwFfykCb {
+  /*Video Time*/
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #9d9d9d;
+  white-space: nowrap;
+  user-select: none;
+  align-self: center;
+  display: inline-flex;
+  gap: 3px;
+  line-height: 19px;
+  margin-right: 5px;
+  float: right;
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc ._1j6rW_OLdrZ-Erj3ayEBt5 {
+  /*Volume Bar*/
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc ._1j6rW_OLdrZ-Erj3ayEBt5 ._3XkD6Vq8YzOkmEr9odYcX4 {
+  /*BUTTON SIZE ICON*/
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I .ppGte6hTuxkoYS4d0ffwc ._1j6rW_OLdrZ-Erj3ayEBt5 ._3XkD6Vq8YzOkmEr9odYcX4::after {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FAQEyM0FKEhQAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAaBJREFUOMtj1NHWYCALMDGQC4jV6ezixsbGRpROR0cnNXV1CJuXl09UVDQ+IZmXl4+AzszM7EmTp/LB1Onp669bu/rz508uLm44dfLw8EyYODkrOwcuwsnJGRAQFBuXcPjQQRlZWWERERSdPDw8Jiamjo5O8xcscnZ2QTaLmZl57pxZtrZ2TMxMr1+/0tLUhoizQCgNDc35CxZhOpuHh2fN2g0hwQE3rl+3sba9eu2qlpY2UWH75cuXz58/+QcE7ty5XV5e4e2bN6KiYsTGyr69e01Nzb5//05yfKpraHz+/JmTk5M0nTw8PM7OLhs3rDcyNnn48IG0tMzr169QdH76/On0qVNPnz7F9GdiQtyXL19sbe3Onz8nLS3z+vVrFJ23bt5MSooPCQ7YsGE9muarV6/k5hWcPXvm9ZvXMrKy9+7eweLaL1++1NZUdXS0IQt+//793Lmzc2bPdHV1f/L48f3793D6c+mSxYkJcZ8+fYKLzJ0zy8ralpeXb8+eXXBBFqwBc+bM6ZDgQDiXjY1NWlpm3brVnz8jjGMcgJwNAO7wmMDjuhRMAAAAAElFTkSuQmCC);
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL {
+  /* Video Player Configs*/
+  gap: 3px;
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL ._3XkD6Vq8YzOkmEr9odYcX4 {
+  /*BUTTON SIZE ICON*/
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL ._3XkD6Vq8YzOkmEr9odYcX4::after {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAIAAAD9MqGbAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90FARYVIXFfZMwAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAGBJREFUOMtj1NHWYCALMDGQC1jk5GThnEePHuNXjayYhRgNmEbLyclS4FqsLiHGWhZkp27bvhu/Ni9PV7h+8l07qpOY1AePGHigEwRycrIsxCda6rkWOd2RlFcYByBnAwBu7B+wiL65mQAAAABJRU5ErkJggg==);
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL ._3XkD6Vq8YzOkmEr9odYcX4:has(.DpzfSpwcCrmcxUf4Hb6nM)::after {
+  content: none !important;
+  background: none !important;
+}
+.aKceKkwAmCX8Ar8qWcJ7T ._2gDbG9frVoBgp4J9N1vA7I ._2iPvkLeM34oiIhYNFbtIaL .DpzfSpwcCrmcxUf4Hb6nM {
+  /*BUTTON SIZE ICON*/
+  display: inline;
+}
+
+/* ==========================
+   GAME REVIEWS
+========================== */
+:where(#game_highlights) a {
+  color: #529cde;
+}
+
+.game_review_summary.positive {
+  color: #529cde;
+}
+
+/* ==========================
+   STORE
+========================== */
+/*Game Area Purchase Box*/
+.game_area_purchase_game {
+  position: relative;
+  background: none;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #4d4b49;
+  background-color: #262626;
+  font-size: 12px;
+  padding: 16px;
+  padding-bottom: 26px;
+  margin-bottom: 28px;
+  z-index: 1;
+}
+.game_area_purchase_game .game_purchase_discount_countdown {
+  color: #898a8c;
+}
+.game_area_purchase_game .game_purchase_action {
+  /*Game purchase box*/
+  /*Bundle Button*/
+}
+.game_area_purchase_game .game_purchase_action .game_purchase_price {
+  /*Game Purchase Page Box Price Tag*/
+  background-color: #000000;
+  font-size: 13px;
+  padding-top: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: 3px;
+  height: 26px;
+}
+.game_area_purchase_game .game_purchase_action .discount_block {
+  /*Discont Price Box*/
+  position: relative;
+  background-color: #000000;
+}
+.game_area_purchase_game .game_purchase_action .discount_block .bundle_base_discount {
+  /*Discount Price Box for BUNDLES*/
+  background-color: #4c6b22;
+  color: #ffffff;
+  height: 34px;
+}
+.game_area_purchase_game .game_purchase_action .game_purchase_discount {
+  float: left;
+  margin-left: 3px;
+  height: 34px;
+}
+.game_area_purchase_game .game_purchase_action .game_purchase_discount .discount_pct {
+  left: 0px;
+  width: 69px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 25px;
+  text-align: center;
+  background-color: #4c6b22;
+  color: #ffffff;
+}
+.game_area_purchase_game .game_purchase_action .game_purchase_action_bg {
+  /*Game Purchase Box Background*/
+  height: 34px;
+  background-color: #3c3d3e;
+  padding: 3px 3px 3px 0px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+.game_area_purchase_game .game_purchase_action .discount_prices {
+  background-color: #000000;
+}
+.game_area_purchase_game .game_purchase_action .discount_prices .discount_final_price.your_price {
+  font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+  color: #d6d7d8;
+}
+.game_area_purchase_game .game_purchase_action .discount_prices .discount_final_price.your_price .your_price_label {
+  color: #626366;
+}
+.game_area_purchase_game .game_purchase_action .btn_packageinfo .btn_blue_steamui.btn_medium > span {
+  display: none;
+}
+.game_area_purchase_game .game_purchase_action .btn_packageinfo .btn_blue_steamui.btn_medium::after {
+  content: "PACKAGE INFO";
+  display: inline-block;
+  background-image: url("https://store.akamai.steamstatic.com/public/images/v5/btn_packageinfo_repeat.gif");
+  height: 34px;
+  font-size: 11px;
+  color: #ffffff;
+  text-align: center;
+  padding: 0px 11px;
+  line-height: 34px;
+  background-repeat: repeat-x;
+  text-transform: uppercase;
+  min-width: 80px;
+}
+.game_area_purchase_game .game_area_purchase_platform {
+  /*GAME OS SUPPORT BOX*/
+  /* SYSTEM ICONS REPLACEMENT*/
+}
+.game_area_purchase_game .game_area_purchase_platform .platform_img {
+  /*PLATFORM IMAGE BASIC SPECIFICATIONS*/
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+}
+.game_area_purchase_game .game_area_purchase_platform .win {
+  /*WINDOWS*/
+  background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_win.png");
+}
+.game_area_purchase_game .game_area_purchase_platform .linux {
+  /*LINUX*/
+  background-image: url("https://images.steamusercontent.com/ugc/10414975101062247569/9C844C8149D2A06A5A85A542FC049025D8CEA0D9/");
+}
+.game_area_purchase_game .game_area_purchase_platform .mac {
+  /*MACOS*/
+  background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_mac.png");
+}
+.game_area_purchase_game .game_area_purchase_platform .music {
+  /*MUSIC*/
+  background-image: url("https://images.steamusercontent.com/ugc/14771200981187913751/4CED5B4A814D3CD411EC72A53B0497C771388251/");
+}
+
+.discount_original_price {
+  font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+  color: #626366;
+  text-decoration: line-through;
+}
+
+.discount_final_price {
+  font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+  color: #d6d7d8;
+}
+
+.price,
+.match_price {
+  font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+  font-size: 11px;
+  color: #b0aeac;
+}
+
+/*Game title font*/
+.game_area_purchase_game h1,
+.game_area_offsite_purchase h1,
+.game_area_purchase_game h2.title.title {
+  font-size: 21px;
+  line-height: 21px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================
+   BUTTONS (Reusable)
+========================== */
+button._175B12uOwmeGBNcSaQFe-Z {
+  /* Equivalent to the tab button used in the store navigation bar*/
+  float: left;
+  border-right: 1px solid #000000 !important;
+  padding: 1px !important;
+  gap: 0px !important;
+  text-decoration: none;
+  cursor: pointer;
+  background: #74706f !important;
+  background: -moz-linear-gradient(top, #74706f 0%, #6e6a69 100%) !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #74706f), color-stop(100%, #6e6a69)) !important;
+  background: -webkit-linear-gradient(top, #74706f 0%, #6e6a69 100%);
+  background: -o-linear-gradient(top, #74706f 0%, #6e6a69 100%);
+  background: -ms-linear-gradient(top, #74706f 0%, #6e6a69 100%);
+  background: linear-gradient(to bottom, #74706f 0%, #6e6a69 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#74706f", endColorstr="#6e6a69", GradientType=0);
+}
+button._175B12uOwmeGBNcSaQFe-Z:hover {
+  /* Hover*/
+  background: #82807c !important;
+  filter: none !important;
+}
+button._175B12uOwmeGBNcSaQFe-Z svg {
+  /*This hides the SVG pulldown icon*/
+  display: none !important;
+}
+
+.vj9hwW9u0MpjH7MVjjNw0 {
+  /*equivalent to tab > span*/
+  font-size: 11px;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 33px;
+  padding: 0px 15px;
+  padding-right: 7px;
+  display: block;
+  background: #5a5654;
+  background: -moz-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5a5654), color-stop(100%, #6e6a69));
+  background: -webkit-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+  background: -o-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+  background: -ms-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+  background: linear-gradient(to bottom, #5a5654 0%, #6e6a69 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#5a5654", endColorstr="#6e6a69", GradientType=0);
+}
+.vj9hwW9u0MpjH7MVjjNw0:hover {
+  /*equivalent to tab > span*/
+  background: #82807c;
+  filter: none;
+}
+.vj9hwW9u0MpjH7MVjjNw0::after {
+  /*Replaces the svg with the original pulldown icon*/
+  transition-property: transform;
+  content: "";
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  width: 19px;
+  height: 12px;
+  padding: 0;
+  display: inline-block;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_arrow_down_padded.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  vertical-align: text-bottom;
+}
+
+.btn_green_steamui {
+  /* Green button*/
+  height: 34px;
+}
+.btn_green_steamui > span {
+  border-radius: 2px;
+  border: none;
+  padding: 1px 11px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none !important;
+  background: transparent;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+  height: 34px;
+  font-size: 11px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 34px;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_addtocart_repeat.gif);
+  background-repeat: repeat-x;
+  text-transform: uppercase;
+  min-width: 80px;
+}
+.btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
+  background: transparent;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/btn_addtocart_repeat.gif);
+  background-repeat: repeat-x;
+}
+
+.btn_addtocart {
+  /*self explanatory add to cart button*/
+  position: relative;
+  height: 34px;
+}
+
+.btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active) {
+  /*Generic Blue Medium Button*/
+  border-radius: 2px;
+  border: none;
+  padding: 1px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #fff !important;
+  background: #57749e;
+  background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #57749e), color-stop(95%, #364963));
+  background: -webkit-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: -o-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: -ms-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: linear-gradient(to bottom, #57749e 5%, #364963 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#57749e", endColorstr="#364963", GradientType=0);
+}
+.btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+  /*Generic Blue Medium Button HOVER*/
+  text-decoration: none !important;
+  color: #fff !important;
+  background: #688bb1;
+  background: -moz-linear-gradient(top, #688bb1 5%, #415877 95%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #688bb1), color-stop(95%, #415877));
+  background: -webkit-linear-gradient(top, #688bb1 5%, #415877 95%);
+  background: -o-linear-gradient(top, #688bb1 5%, #415877 95%);
+  background: -ms-linear-gradient(top, #688bb1 5%, #415877 95%);
+  background: linear-gradient(to bottom, #688bb1 5%, #415877 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#688bb1", endColorstr="#415877", GradientType=0);
+}
+
+#shareEmbedRow {
+  /*share embed row, which had dark medium buttons*/
+}
+#shareEmbedRow .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active) {
+  /*Generic Gray Medium Button*/
+  border-radius: 2px;
+  border: none;
+  padding: 1px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #ebebeb !important;
+  background: #1a1a1a;
+}
+#shareEmbedRow .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+  /*Generic Gray Medium Button Hover*/
+  text-decoration: none !important;
+  color: #000 !important;
+  background: #97C0E3;
+}
+
+.app_tag {
+  display: inline-block;
+  line-height: 19px;
+  padding: 0 7px;
+  color: #b0aeac;
+  background-color: #384959;
+  margin-right: 2px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0 0 #000000;
+  cursor: pointer;
+  margin-bottom: 3px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.app_tag:hover {
+  text-decoration: none;
+  background: #516980;
+  color: #ffffff;
+}
+
+.block a.linkbar {
+  display: block;
+  position: relative;
+  height: 22px;
+  background: none !important;
+  background-image: url(https://store.akamai.steamstatic.com/public/images/v5/bg_link_bar.png) !important;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-top: 8px;
+  color: #B0AEAC;
+  margin-bottom: 2px;
+  text-decoration: none;
+}
+.block a.linkbar:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.apphub_sectionTab.active {
+  padding: 1px;
+  text-decoration: none;
+  border: none;
+  background: #57749e;
+  background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #57749e), color-stop(95%, #364963));
+  background: -webkit-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: -o-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: -ms-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: linear-gradient(to bottom, #57749e 5%, #364963 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#57749e", endColorstr="#364963",GradientType=0 );
+}
+
+.apphub_sectionTab.active > span {
+  padding: 0 19px;
+  border-radius: 2px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  display: block;
+  background: #445b7c;
+  background: -moz-linear-gradient(top, #445b7c 5%, #364963 95%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #445b7c), color-stop(95%, #364963));
+  background: -webkit-linear-gradient(top, #445b7c 5%, #364963 95%);
+  background: -o-linear-gradient(top, #445b7c 5%, #364963 95%);
+  background: -ms-linear-gradient(top, #445b7c 5%, #364963 95%);
+  background: linear-gradient(to bottom, #445b7c 5%, #364963 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#445b7c", endColorstr="#364963",GradientType=0 );
+}
+
+.apphub_sectionTab:hover {
+  background: #57749e;
+  background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #57749e), color-stop(95%, #364963));
+  background: -webkit-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: -o-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: -ms-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: linear-gradient(to bottom, #57749e 5%, #364963 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#57749e", endColorstr="#364963",GradientType=0 );
+}
+
+.apphub_sectionTab.active:hover {
+  color: #ffffff;
+  background: #57749e;
+  background: -webkit-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: linear-gradient(to bottom, #57749e 5%, #364963 95%);
+}
+
+.apphub_sectionTab, a.apphub_sectionTab, .apphub_responsive_tab .responsive_tab_control {
+  height: 30px;
+}
+
+.btn_darkblue_white_innerfade {
+  border-radius: 2px;
+  border: none;
+  padding: 1px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #fff !important;
+  background: #57749e;
+  background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #57749e), color-stop(95%, #364963));
+  background: -webkit-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: -o-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: -ms-linear-gradient(top, #57749e 5%, #364963 95%);
+  background: linear-gradient(to bottom, #57749e 5%, #364963 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#57749e", endColorstr="#364963",GradientType=0 );
+}
+
+.inner_bevel {
+  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75) inset, -2px -2px 5px rgb(150, 150, 150) inset;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75) inset, -2px -2px 5px rgb(150, 150, 150) inset;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75) inset, -2px -2px 5px rgb(150, 150, 150) inset;
+}
+
+.btn_darkblue_white_innerfade:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
+  background: #526d95;
+  background: -moz-linear-gradient(top, #526d95 5%, #415877 95%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #526d95), color-stop(95%, #415877));
+  background: -webkit-linear-gradient(top, #526d95 5%, #415877 95%);
+  background: -o-linear-gradient(top, #526d95 5%, #415877 95%);
+  background: -ms-linear-gradient(top, #526d95 5%, #415877 95%);
+  background: linear-gradient(to bottom, #526d95 5%, #415877 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#526d95", endColorstr="#415877",GradientType=0 );
+}
+
+.btn_small > span, input.btn_small {
+  padding: 0 15px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.btn_darkblue_white_innerfade > span {
+  border-radius: 2px;
+  display: block;
+  background: #445b7c;
+  background: -moz-linear-gradient(top, #445b7c 5%, #364963 95%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #445b7c), color-stop(95%, #364963));
+  background: -webkit-linear-gradient(top, #445b7c 5%, #364963 95%);
+  background: -o-linear-gradient(top, #445b7c 5%, #364963 95%);
+  background: -ms-linear-gradient(top, #445b7c 5%, #364963 95%);
+  background: linear-gradient(to bottom, #445b7c 5%, #364963 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#445b7c", endColorstr="#364963",GradientType=0 );
+}
+
+.button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+._1wn1lBlAzl3HMRqS1llwie {
+  padding-right: 0px;
+  justify-content: flex-end;
+}
+._1wn1lBlAzl3HMRqS1llwie a._175B12uOwmeGBNcSaQFe-Z, ._1wn1lBlAzl3HMRqS1llwie button._175B12uOwmeGBNcSaQFe-Z { /*wishlist button*/
+  height: 20px;
+  margin-right: 2px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-size: 11px !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  background: #5a5654;
+  background: -moz-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5a5654), color-stop(100%, #6e6a69));
+  background: -webkit-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+  background: -o-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+  background: -ms-linear-gradient(top, #5a5654 0%, #6e6a69 100%);
+  background: linear-gradient(to bottom, #5a5654 0%, #6e6a69 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#5a5654", endColorstr="#6e6a69", GradientType=0);
+}
+._1wn1lBlAzl3HMRqS1llwie a._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5, ._1wn1lBlAzl3HMRqS1llwie button._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5 { /*cart button*/
+  margin: 0px;
+  background: 51672c;
+  background: -moz-linear-gradient(top, #51672c 0%, #6d7c4d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #51672c), color-stop(100%, #6d7c4d));
+  background: -webkit-linear-gradient(top, #51672c 0%, #6d7c4d 100%);
+  background: -o-linear-gradient(top, #51672c 0%, #6d7c4d 100%);
+  background: -ms-linear-gradient(top, #51672c 0%, #6d7c4d 100%);
+  background: linear-gradient(to bottom, #51672c 0%, #6d7c4d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#5a5654", endColorstr="#6e6a69", GradientType=0);
+}
