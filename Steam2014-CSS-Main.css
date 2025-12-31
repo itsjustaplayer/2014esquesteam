@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         2014-Esque STEAM: REFACTORED
-@version      0.1.0
+@version      0.1.1
 @namespace    //userstyles.world/user/ItsJustAPlayer
 @description  2014-esque STEAM reimagines today’s Steam website with the nostalgic charm of its classic V5 (2014) design. Currently in ALPHA, it brings back the look and feel of the golden era—modernized for today’s web.
 @author       ItsJustAPlayer
@@ -63,6 +63,7 @@ Referenced with V5 files */
         color: #ffffff;
         background-color: #000000;
         font-size: 12px;
+         --store-menu-overlap-height: 56px;
     }
     /*SCROLLBAR*/
     ::-webkit-scrollbar {
@@ -352,11 +353,21 @@ Referenced with V5 files */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc861', endColorstr='#789e4c',GradientType=0 );
     filter: none;
 }
-    .playerAvatar {
+    .playerAvatar.online, .friend_block_holder.friend_status_online .friend_block_avatar, .friend_activity.friend_status_online .friend_block_avatar, .appHubIconHolder.online, .avatar_block_status_online {
+    background-color: #7bafd6;
+    background: -moz-linear-gradient(top, #7bafd6 5%, #506d92 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #7bafd6), color-stop(95%, #506d92));
+    background: -webkit-linear-gradient(top, #7bafd6 5%, #506d92 95%);
+    background: -o-linear-gradient(top, #7bafd6 5%, #506d92 95%);
+    background: -ms-linear-gradient(top, #7bafd6 5%, #506d92 95%);
+    background: linear-gradient(to bottom, #7bafd6 5%, #506d92 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7bafd6', endColorstr='#506d92', GradientType=0);
+    filter: none;
+}
+
+    .playerAvatar, .friend_block_holder .friend_block_avatar, .friend_activity .friend_block_avatar {
     width: 34px;
     height: 34px;
-}
-    .playerAvatar {
     padding: 3px;
     border-radius: 3px;
     background-color: #545454;
@@ -631,11 +642,9 @@ body.v6.widestore .game_area_already_owned.page_content {
     color: #fff;
     position: relative;
     background: -moz-linear-gradient(top, #3f5d1c 0%, #667a52 100%);
-    background: -webkit-gradient(linear, top, down, color-stop(0%, #3f5d1c), color-stop(100%, #667a52));
     background: -webkit-linear-gradient(top, #3f5d1c 0%, #667a52 100%);
     background: -o-linear-gradient(top, #3f5d1c 0%,#667a52 100%);
     background: -ms-linear-gradient(top, #3f5d1c 0%, #667a52 100%);
-    background: linear-gradient(to down, #3f5d1c 0%, #667a52 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99a3cf06', endColorstr='#994b6a21',GradientType=1 );
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
@@ -645,8 +654,17 @@ body.v6.widestore .game_area_already_owned.page_content {
     body.v6.widestore .game_area_play_stats {
     max-width: calc(940px - 32px);
     width: 100%;
+    background: #262626;
+    padding: 0px 16px 16px 16px;
+    margin: 0px auto;
+    margin-bottom: 40px;
+}
+    .ds_owned_flag.ds_flag{
+        display:none;
     }
-    
+    .already_in_library{
+        padding-left: 16px;
+    }
 
 body.v6.widestore #store_header {
 	padding: 0 1%;
@@ -801,11 +819,15 @@ body.v6.widestore #store_header {
     mix-blend-mode: normal !important;
     opacity: 1 !important;
 }
-
+/*queue and playtime*/
+        
+        
         /* hides queueActionsCtn*/
         .queue_ctn .queue_actions_ctn {
    display:none;
 }
+
+        
    
         .page_top_area {
     position: relative;
@@ -881,7 +903,7 @@ body.v6.widestore #store_header {
                     }
                 }
                 .page_title_area.game_title_area {
-                    padding-top: 7px;
+                    padding-top: 17px;
                     margin-bottom: 18px;
                     & > .breadcrumbs {
                         position:relative;
@@ -1348,6 +1370,85 @@ body.v6.widestore #store_header {
                     #languageTable{
                         padding-top: 6px;
                     }
+                         &.responsive_apppage_details_right{
+                             &.heading{
+                        background-repeat: no-repeat;
+                        background-color: #3C3D3E;
+                        position: relative;
+                        height: 25px;
+                        line-height: 25px;
+                        color: #d6d7d8;
+                        border-bottom: 1px solid #000000;
+                        font-weight: bold;
+                        font-size: 12px;
+                        display: block;
+                        padding-left: 16px;
+                             }
+                             &.recommendation_reasons{
+                                 & > hr{
+                                 padding: 0px;
+                                       background-color: #000;
+                                 }
+                                 
+                                 p.reason.info:before {
+                                     content:  none;
+                                 }
+                                                                  
+                                 p.reason.for:before {
+                                     content:  none;
+                                 }
+                                 p.reason.against:before{
+                                     content:none;
+                                 }
+                                  p.reason.info{
+                                     padding: 0px;
+                                      padding-left: 16px;
+                                      font-size: 12px;
+                                      padding-top: 5px;
+                                 }
+                                                                  
+                                 p.reason.for{
+                                     padding: 0px;
+                                      padding-left: 16px;
+                                      font-size: 12px;
+                                   
+                                 }
+                                 p.reason.against{
+                                     padding: 0px;
+                                      padding-left: 16px;
+                                      font-size: 12px;
+                                   
+                                 }
+                                 .curators_list{
+                                     padding: 0px;
+                                     padding-left: 16px;
+                                     font-size: 12px;
+                                 }
+                                 .friend_blocks_grid{
+                                     padding: 0px;
+                                     padding-left: 16px;
+                                     font-size: 12px;
+                                 }
+                                .friend_blocks_grid:not(:has(~ .friend_blocks_grid)) {
+                                    /* styles apply ONLY to the last one */
+                                    padding-bottom: 16px;
+                                 }
+                                 p{
+                                     color: #626366;
+                                 }
+                                   
+                                 a {
+                                 color: #B0AEB0;
+                                 }
+                                 
+                             }
+                                 &::before {
+                                      content: none;
+                                      
+                             }
+                           
+
+                         }
                     
                 }
                     
@@ -1396,14 +1497,42 @@ body.v6.widestore #store_header {
 
                         .label {
                             color: #8bc53f;
-                            background-color: #1a1a1a;
+                            background: #1a1a1a;
                             padding: 7px 8px;
                             padding-top: 5px;
+                            &:hover{
+                              text-decoration: underline;
+                              color: #8bc53f;
+                              background: #1a1a1a;
+                            }
                         }
                         
                     
                     }
-                    
+                    ._1CTHwmZmi5YE4kovZH_UIl{/*.game_area_details_specs_ctn for controllers*/
+                        ._3KAysk4dlhWETa6ixz7V2j
+                        {
+                        color: #8bc53f;
+                        background: #1a1a1a;
+                             &:hover{
+                              text-decoration: underline;
+                              color: #8bc53f;
+                              background: #1a1a1a;
+                            }
+                        }
+                        ._3FBEGAfvLQj4qYjstmZAPE{
+                            color: #8bc53f;
+                        padding: 7px 8px;
+                        padding-top: 5px;
+                        }
+                        .dxuI55RF56-dzbuXjj2W0{/*icons for the controller support shit*/
+                             background-color: #1a1a1a;
+                            & > svg {
+                            filter: brightness(0.6);
+                            }
+                        }
+                        
+                    }
                         ._29jQMo9DGCmcSKyDIC3V7M{ /*.icon but for "acessibility stuff*/
                             background-color: #1a1a1a;
                             width: 30px;
@@ -1417,6 +1546,11 @@ body.v6.widestore #store_header {
                     ._3sRe2CGQBgablPBz9Bc9c2{ /*.label for accessibility butotn shit idk*/
                          color: #8bc53f;
                             background-color: #1a1a1a;
+                         &:hover{
+                              text-decoration: underline;
+                              color: #8bc53f;
+                              background: #1a1a1a;
+                            }
                     }
                     
                     a.communitylink_achievement.communitylink_achivement_plusmore { /*modifies the achievement button*/
@@ -1484,7 +1618,7 @@ body.v6.widestore #store_header {
                         color: #529cde;
                         background: rgb(255 255 255 / 10%);
                     }
-                    
+                    /*Recent game news*/
                     /*See More*/
                 }
                 
@@ -1552,6 +1686,9 @@ body.v6.widestore #store_header {
                             overflow: hidden;
                             white-space: nowrap;
                             min-width: unset;
+                            &:hover{
+                                    border: 1px solid #8bb9e0;
+                            }
                         }
                         ._3Cc2bMRML2lEkSyi2IAZ9G{ /*unsets the weird width*/
                             width: unset!important;
@@ -1588,12 +1725,235 @@ body.v6.widestore #store_header {
                         
                     }
                     
+                    .XIDYByW4BEOm-YiOiwGmO{/*.block*/
+                          width: 614px;
+                        height: 164px;
+                        padding: unset;
+                        background-color: unset;
+                        ._1QLD0WY-y0hqefed0ZhMn1{/*.block header*/
+                                 background-image: url(https://store.akamai.steamstatic.com/public/images/v5/maincol_bg_gray.png);
+                            background-repeat: no-repeat;
+                            background-color: #303030;
+                            height: 26px;
+                             ._1SnxJyZ5foWgNRCNLmKm6H{ /*EXCLUSIVE gray button for this*/
+                                padding: 0px 16px;
+                                font-weight: bold;
+                                font-size: 12px;
+                                right: 0px;
+                                border-left: 1px solid #000000;
+                                height: 26px;
+                                background: none;
+                              
+                                & > span {
+                                    padding: unset;
+                                     text-transform: uppercase;
+                                    color: #b0aeac!important;
+                                    font-weight: normal;
+                                font-size: 10px;
+                                }
+                               
+                            }
+                             ._33J1_MYWJVjXbCkBFCNr6f {
+                                     padding: 0px 16px;
+                                font-weight: bold;
+                                font-size: 12px;
+                                right: 0px;
+                                border-left: 1px solid #000000;
+                                height: 26px;
+                                background: none;
+                                 & > div {
+                                    padding: unset;
+                                     text-transform: uppercase;
+                                    color: #b0aeac!important;
+                                    font-weight: normal;
+                                     margin-top: 4px;                                     
+                                     font-size: 10px!important;
+                                }
+                            }
+                              ._1l0-iEDSNo_iZ95BUT31hW{/*text*/
+                               font-size: 12px;
+                                text-transform: unset;
+                                font-weight: bold;
+                                font-family: Arial, Helvetica, sans-serif;
+                                letter-spacing: 0px;
+                                color: #d6d7d8;
+                        }
+                        .PO1KWbUEvLt8ZVYRTAvMt {/*icon*/
+                            width: 18px;
+                            height: 18px;
+
+                        }
+                            
+                        }
+                        
+                        ._2M3SnYGvMvplWUC8yGhowo.SliderBody{
+                                 border: 1px solid #4d4b49;
+                        background-color: #262626;
+                        font-size: 12px;
+                        color: #b0aeac;
+                        }
+                        .XIDYByW4BEOm-YiOiwGmO .SaleSectionCarousel .carousel__slider {
+                            padding: 0px 0px;
+                        }
+                        .jGiY7rrZh0o9qrh7XNnZU .carousel__slider-tray {/*gap*/
+                            gap: 0px;
+                        }
+                        
+                        ._3o1Ri_nyL6GsPbTQZGSZcT{
+                            gap: 0px;
+                        }
+                        ._3Cc2bMRML2lEkSyi2IAZ9G{/*unsets the weird width*/
+                            width: unset!important;
+                        }
+                        ._292IWiCTro5jiTmIxiDfyc{/*small_cap*/
+                            display: block;
+                            float: left;
+                            width: 184px;
+                            height: 106px;
+                            padding-left: 9px;
+                            padding-right: 9px;
+                            padding-bottom: 12px;
+                            padding-top: 16px;
+                            border: 1px solid #262626;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            min-width: unset;
+                            &:hover{
+                                border: 1px solid #8bb9e0;
+                            }
+                        }
+                        ._2oW_y7Mm3ihf1XQ0C1VWhx{
+                             padding: 39% 0 0 0;
+                        }
+                        ._2eQ4mkpf4IzUp1e9NnM2Wr{ /*game image*/
+                             width: 184px;
+                            height: 69px;
+                        }
+                        ._1X3j2g29SBtsrFMgNiKi_Y{
+                                 margin-left: unset;
+                        }
+                        ._3lmdEmwrmqe-kicNCZ9v-I{
+                            background-color: unset;
+                        }
+                        ._3j4dI1yA7cRfCvK8h406OB{/*text price*/
+                            font-size: 11px;
+                            font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+                            color: #b0aeac;
+                            padding: unset;
+                        }
+                    }
                     
                 }
             }
         }
     }
+/* ==========================
+   POP UP MODALS
+========================== */    
+   ._3vg1vYU7iTWqONciv9cuJN._1Ye_0niF2UqB8uQTbm8B6B {
+    opacity: 1;
+       width: 306px!important;
+       
+}
+    ._3-pnCQRItoLzipK50ezpB4{
+        left: 245px;
+        top: 100px;
+        position:relative;
+        padding: 12px;
+        
+    }
+    ._3-pnCQRItoLzipK50ezpB4::before{ /*hover_arrow_left*/
+        content: "";
+        z-index:2;
+    width: 13px;
+    height: 26px;
+    background-image: url(https://steamstore-a.akamaihd.net/public/images/v5/hover_arrow_both.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    position: absolute;
+    top: 48px;
+    left: 0px;
+}
     
+    ._2jsr3PEq2iin7lU8wSO8X9 { /*game_hover_box hover_box*/
+    box-shadow: 0 0 12px #000000;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+    border: 1px solid #82807c;
+    background: #3b3938;
+    width: 306px;
+    color: #b0aeac;
+    font-size: 12px;
+    overflow: hidden;
+        padding: 16px;
+        }
+    .oAqlZTgPU37Nb8gBT5eAM {
+     background: #3b3938;
+        box-shadow: none;
+   
+}
+    
+    .oAqlZTgPU37Nb8gBT5eAM ._2VvFLg2irh9gPAhhxE4Kpo ._2SWQMqXxu7mJMIuNemYJq8 .fTGViHKZf0UCl6es5T4KP ._1wO-t97gvSClMW2PGtV5-w { /*app_tag*/
+    margin-left: 4px;
+    position: relative;
+         display: inline-block;
+    line-height: 19px;
+    padding: 0 7px;
+    color: #b0aeac;
+    background-color: #384959;
+    margin-right: 2px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0 0 #000000;
+    cursor: pointer;
+    margin-bottom: 3px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+    ._1HFUCM8Np78V7DkzDIZp6z{
+    background-color: #1a1a1a;
+    padding: 5px;
+    }
+    span[title="Windows"]{
+                /*WINDOWS*/
+                background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_win.png");
+        background-size: 15px;
+        width: 15px;
+        height: 15px;
+                svg {
+                display:none;
+                }
+    }
+           span[title="Linux / SteamOS"] {
+                /*LINUX*/
+               background-image: url("https://images.steamusercontent.com/ugc/10414975101062247569/9C844C8149D2A06A5A85A542FC049025D8CEA0D9/");
+               background-size: 15px;
+               width: 15px;
+               height: 15px;
+                svg {
+                display:none;
+                }
+    }
+            span[title="macOS"] {
+                /*MACOS*/
+                background-image: url("https://store.akamai.steamstatic.com/public/images/v5/platforms/platform_mac.png");
+                background-size: 15px;
+                width: 15px;
+                height: 15px;
+                  svg {
+                  display:none;
+               }
+    }
+    .oAqlZTgPU37Nb8gBT5eAM ._2VvFLg2irh9gPAhhxE4Kpo ._1HFUCM8Np78V7DkzDIZp6z ._35ByaFjy9tZD1dLFAeHccQ {
+    padding: 0;
+    font-size: 1em;
+    color: #b0aeac;
+}
+    ._3qvppfM_u0yn2jrpoUo8RM ._2t-0jlGgIN_VM7R47pRKfF, ._3qvppfM_u0yn2jrpoUo8RM ._1wXL_MfRpdKQ3wZiNP5lrH, ._3qvppfM_u0yn2jrpoUo8RM ._2hfFpA6uUEs5kd5vOxYJuJ {
+    color: #b0aeac;
+}
+    
+          
 /* ==========================
    COMMUNITY PAGE
 ========================== */    
