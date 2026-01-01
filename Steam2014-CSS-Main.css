@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         2014-Esque STEAM: REFACTORED
-@version      0.1.2
+@version      0.1.1
 @namespace    //userstyles.world/user/ItsJustAPlayer
 @description  2014-esque STEAM reimagines today’s Steam website with the nostalgic charm of its classic V5 (2014) design. Currently in ALPHA, it brings back the look and feel of the golden era—modernized for today’s web.
 @author       ItsJustAPlayer
@@ -811,7 +811,7 @@ body.v6.widestore.widestore #store_header {
             z-index:1;
         
      }
-    .game_page_background.game_page_background {
+    .game_page_background {
         
         
         img.legacy-bg { /*JS CLEANUP*/
@@ -2699,7 +2699,7 @@ body.v6.widestore.widestore #store_header {
 
     #shareEmbedRow {
         /*share embed row, which had dark medium buttons*/
-        .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active) {
+        .btnv6_blue_hoverfade.btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active) {
             /*Generic Gray Medium Button*/
             border-radius: 2px;
             border: none;
