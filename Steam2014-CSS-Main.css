@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         2014-Esque STEAM: REFACTORED
-@version      0.1.6
+@version      0.1.8
 @namespace    //userstyles.world/user/ItsJustAPlayer
 @description  2014-esque STEAM reimagines today’s Steam website with the nostalgic charm of its classic V5 (2014) design. Currently in ALPHA, it brings back the look and feel of the golden era—modernized for today’s web.
 @author       ItsJustAPlayer
@@ -1991,6 +1991,34 @@ body.v6.widestore #store_header {
     content: none;
 
 }
+    [role="main"]:has(.workshop_header) {
+    background: #262627 url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png);
+    background-position: 0 0px;
+    background-repeat: repeat-x;
+}
+    [role="main"]:has(.workshop_header)::before {
+    content: none;
+
+}
+    [role="main"]:has(.screenshotApp){
+                    background: #262627 url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png);
+    background-position: 0 0px;
+    background-repeat: repeat-x;
+    }
+      [role="main"]:has(.screenshotApp)::before {
+ 
+        content: none;
+    }
+    
+    [role="main"]:has(.workshopItemDetailsHeader){
+                    background: #262627 url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png);
+    background-position: 0 0px;
+    background-repeat: repeat-x;
+    }
+      [role="main"]:has(.workshopItemDetailsHeader)::before {
+ 
+        content: none;
+    }
     
    .community_activity_signin_buttons{
     .btn_green_white_innerfade { /*equivalent to btn_login_green in the community pages*/
@@ -2017,7 +2045,7 @@ body.v6.widestore #store_header {
        
     }
     
-    .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
+/*    .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
              background: unset;
              background-image: url(https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_login_bg.png);
              border-radius: 0px;
@@ -2026,7 +2054,7 @@ body.v6.widestore #store_header {
     
     .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
         background: unset;
-}
+}*/
     .community_home_header {
     font-family: Arial, Helvetica, Verdana, sans-serif;
 
@@ -2269,13 +2297,616 @@ body.v6.widestore #store_header {
     -moz-border-radius: 2px;
     -moz-border-radius-bottomleft: 0px;
     -moz-border-radius-bottomright: 0px;
-}
+} 
     
     /*Pop up community windows*/
+    
+    #modalContentTitleBar {
+    color: white;
+    padding: 4px 2px;
+    text-align: left;
+    background: rgb(88, 88, 88);
+    background: -moz-linear-gradient(top, rgba(88,88,88,1) 0%, rgba(76,76,76,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(88, 88, 88, 1)), color-stop(100%, rgba(76, 76, 76, 1)));
+    background: -webkit-linear-gradient(top, rgba(88, 88, 88, 1) 0%, rgba(76, 76, 76, 1) 100%);
+    background: -o-linear-gradient(top, rgba(88,88,88,1) 0%,rgba(76,76,76,1) 100%);
+    background: -ms-linear-gradient(top, rgba(88,88,88,1) 0%,rgba(76,76,76,1) 100%);
+    background: linear-gradient(to bottom, rgba(88, 88, 88, 1) 0%, rgba(76, 76, 76, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585858', endColorstr='#4c4c4c',GradientType=0 );
+}
+    #modalContent.modal_frame {
+    min-width: 480px;
+    height: 600px;
+    border: 2px solid #4b4b4b;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    background-color: black;
+}
+    
     /*hide chat*/
     a[href="https://steamcommunity.com/chat/"] {
             display: none !important;
     }
+    
+              
+/* ==========================
+   WORKSHOP PAGE
+========================== */  
+    .apphub_HeaderTop.workshop {
+    background-image: url(https://web.archive.org/web/20140814001412im_/http://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/bg_workshop_header.png);
+}
+.apphub_HeaderTop {
+    width: 948px;
+    height: 78px;
+    position: relative;
+    margin: 0px auto;
+    text-align: left;
+    padding-top: 12px;
+    background-image: url(https://steamcommunity-a.akamaihd.net/public/shared/images/apphubs/bg_hub_header.png);
+    background-repeat: no-repeat;
+    margin-top: 10px;
+}
+    .apphub_OtherSiteInfo {
+    position: relative;
+    float: right;
+    right: 11px;
+}
+    .apphub_AppIcon {
+    position: relative;
+    margin-left: 12px;
+    height: 32px;
+    width: 32px;
+    float: left;
+    display: block;
+}
+    .apphub_AppName {
+    color: white;
+    font-size: 26px;
+    padding-left: 12px;
+    float: left;
+     font-family: Arial, Helvetica, Verdana, sans-serif;
+    max-width: 700px;
+}
+    .workshop_browse_menu_area {
+ background: none;
+        &::after{
+            content:"";
+            background-color: #364862;
+            height: 5px;
+            left: -21px;
+            width: 950px;
+            display:block;
+            top: 35px;
+            position:relative;
+        }
+}
+
+    .workshop_browse_tab{
+            margin-top: 7px;
+    display: block;
+    float: left;
+    color: #dadada;
+    background-color: #3A3A3A;
+    line-height: 29px;
+    height: 29px;
+    padding: 0px 12px;
+    margin-right: 5px;
+    text-decoration: none;
+    border-radius: 2px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    -moz-border-radius: 2px;
+    -moz-border-radius-bottomleft: 0px;
+    -moz-border-radius-bottomright: 0px;
+        &.drop.active{
+            margin-top: 0px;
+    height: 34px;
+    padding: 1px;
+    text-decoration: none;
+    border: none;
+    background: #57749e;
+    background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #57749e), color-stop(95%, #364963));
+    background: -webkit-linear-gradient(top, #57749e 5%, #364963 95%);
+    background: -o-linear-gradient(top, #57749e 5%,#364963 95%);
+    background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);
+    background: linear-gradient(to bottom, #57749e 5%, #364963 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );
+}
+        &.active{
+            margin-top: 0px;
+    height: 34px;
+    padding: 1px;
+    text-decoration: none;
+    border: none;
+    background: #57749e;
+    background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #57749e), color-stop(95%, #364963));
+    background: -webkit-linear-gradient(top, #57749e 5%, #364963 95%);
+    background: -o-linear-gradient(top, #57749e 5%,#364963 95%);
+    background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);
+    background: linear-gradient(to bottom, #57749e 5%, #364963 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );
+}
+         & > a {
+    color: #cccccc;
+    padding-left: 0px;
+
+        }
+     &.active a {
+    color: #cccccc;
+    padding: 0 19px;
+    border-radius: 2px;
+             height: 35px;
+    line-height: 36px;
+         
+        }
+     &.drop.active a {
+    color: #cccccc;
+    padding-left: 16px;
+        }
+        
+     
+    }
+/*search bar*/
+    .workshop_browse_search::before {
+        content:"";
+        display:block;
+    width: 296px;
+    height: 46px;
+    background-image: url(https://web.archive.org/web/20140814005606im_/http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/searchbox_workshop_bg_wide_blue.png);
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+ 
+    padding-top: 0px;
+        position: absolute;
+    top: -7px;
+    right: -7px;
+}
+.workshop_browse_search{
+        
+        width: 270px;
+    }
+    .workshop_browse_search .smallForm.searchForm{
+        width: 235px;
+        height: 31px;
+    }
+    .workshop_browse_search input.search_text {
+    
+    height: 20px;
+        top: 6px;
+   
+}
+    .customBrowseTitle {
+    font-size: 22px;
+        font-family: Arial, Helvetica, Verdana, sans-serif;
+    color: #ffffff;
+}
+    .customBrowseText {
+    font-size: 13px;
+    line-height: 17px;
+        font-family: Arial, Helvetica, Verdana, sans-serif;
+    color: #ffffff;
+}
+    .workshopBrowsePagingWithBG {
+ background: none;
+}
+    .workshopBrowsePagingInfo {
+    color: #646464;
+    font-size: 12px;
+}
+    .workshop_browsing{
+        display:none;
+        
+    }
+    #ig_bottom {
+    background: #262627 url(http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/greenlight_content_background.png) top center no-repeat;
+    width: 950px;
+    margin: 0 auto 0 auto;
+}
+    
+   #ig_bottom .browseOptionImage {
+    background-image: url(https://web.archive.org/web/20140814005606im_/http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/bluearrow.png);
+       background-size: 100%;
+    object-position: -99999px;
+}
+    #ig_bottom .sidebar .panel {
+    background: #1b1b1b;
+    background: rgba(27, 27, 27, .36);
+    border-radius: 4px;
+    padding: 10px 10px 10px 11px;
+    margin: 0 0 10px 0;
+    border: 1px solid #1f1f20;
+    box-shadow: 1px 1px 0 0 #39393a;
+}
+    .tag_category_desc {
+    color: #529CDE;
+}
+    .hover_box {
+    border: 1px solid #82807c;
+    background-color: #3b3938;
+    width: 300px;
+    color: #b0aeac;
+    font-size: 12px;
+}
+    .hover_arrow_inner {
+    position: absolute;
+    top: -13px;
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 26px;
+    background-image: url(https://web.archive.org/web/20140814005606im_/http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/hover_arrow_both.gif);
+}
+
+/* -------------- paging controls -------------*/
+.pagebtn, a.pagebtn {
+	display: inline-block;
+	line-height: 24px;
+	background-color: #000000;
+	border: 1px solid #000000;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 0px 16px;
+	color: #939393;
+}
+
+.pagebtn:not(.disabled):hover, a.pagebtn:not(.disabled):hover {
+	background-color: #97C0E3;
+	border-color: #97C0E3;
+	color: #3C3D3E;
+	text-decoration: none;
+}
+
+.pagebtn.disabled, .pagebtn.disabled:hover, a.pagebtn.disabled, a.pagebtn.disabled:hover {
+	border: 1px solid #333333;
+	background-color: transparent;
+	color: #333333;
+	cursor: default;
+}
+
+a.pagelink:hover {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+    
+    .workshopItemPreviewHolder
+{
+	display: table-cell;
+	vertical-align: middle;
+	width:200px;
+	height: 200px;
+	background-color: #000000;
+	border: 1px solid #3a3a3a;
+}
+    /*screenshot page*/
+    .breadcrumbs a {
+    font-size: 14px;
+    padding-top: 10px;
+    text-decoration: none;
+    text-align: left;
+    width: 948px;
+    margin: 0px 0 0 0px !important;
+       
+}
+    .mediaTop {
+    position: relative;
+    border: 1px solid black;
+    background-color: black;
+}
+    .general_btn.voteUp {
+    height: 30px;
+    padding: 0px;
+    padding-left: 32px;
+    padding-right: 12px;
+    background-image: url(https://web.archive.org/web/20140922075909im_/http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rate_ico_up_tiled.png);
+    background-position: 8px 0px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+}
+    .general_btn.voteDown {
+    height: 30px;
+    width: 32px;
+    padding: 0px;
+    background-image: url(https://web.archive.org/web/20140922075909im_/http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rate_ico_dn_tiled.png);
+    background-position: 8px 0px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+}
+    .general_btn.favorite {
+    height: 30px;
+    padding: 0px;
+    padding-left: 32px;
+    padding-right: 12px;
+    background-image: url(https://web.archive.org/web/20140922075909im_/http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ico_fav_tiled.png);
+    background-position: 8px 0px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+}
+    .general_btn.report {
+    height: 30px;
+    padding: 0px;
+    padding-left: 32px;
+    background-image: url(https://web.archive.org/web/20140922075909im_/http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/report_ico_tiled.png);
+    background-position: 8px 0px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 30px;
+    float: right;
+}
+    
+    .general_btn {
+    display: block;
+    background-color: #1A1A1A;
+    padding: 5px 8px 5px 8px;
+    margin-right: 5px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    cursor: pointer;
+    color: #939393;
+}
+   .workshopItemControls  .general_btn:hover
+{
+        background-color: #97C0E3;
+	    color: #3C3D3E;
+}
+    .general_btn.voteUp:hover
+{
+        background-color: #97C0E3;
+	    color: #3C3D3E;
+}
+    .general_btn.voteDown:hover
+{
+    color: #3C3D3E;
+        background-color: #97C0E3;
+}
+    .general_btn.favorite:hover
+{
+        background-color: #97C0E3;
+	    color: #3C3D3E;
+}
+       .general_btn.share:hover
+{
+        background-color: #97C0E3;
+	    color: #3C3D3E;
+}
+       .general_btn.report:hover
+{
+        background-color: #97C0E3;
+	    color: #3C3D3E;
+}
+a.general_btn {
+	color: #939393;
+}
+
+a.general_btn:hover {
+	text-decoration: none;
+	color: #AAAAAA;
+}
+    .creatorsBlock .friendBlock.persona.offline, .creatorsBlock .friendBlock.persona.online, .creatorsBlock .friendBlock.persona.in-game, .creatorsBlock .friendBlock.persona.ignored {
+    background-image: none;
+    width: 264px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    margin-top: 4px;
+    margin-right: 12px;
+    padding-left: 4px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    background-color: #2d2d2c;
+    font-size: 12px;
+    line-height: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-color: #3c3c3c;
+    border-style: solid;
+    border-width: 1px;
+}
+    /*workshop item page*/
+    
+    .workshop_item_header {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE3MTcxNyIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMjAyMCIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+    background: -moz-linear-gradient(top, rgba(23,23,23,0.8) 0%, rgba(32,32,32,0.8) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(23, 23, 23, 0.8)), color-stop(100%, rgba(32, 32, 32, 0.8)));
+    background: -webkit-linear-gradient(top, rgba(23, 23, 23, 0.8) 0%, rgba(32, 32, 32, 0.8) 100%);
+    background: -o-linear-gradient(top, rgba(23,23,23,0.8) 0%,rgba(32,32,32,0.8) 100%);
+    background: -ms-linear-gradient(top, rgba(23,23,23,0.8) 0%,rgba(32,32,32,0.8) 100%);
+    background: linear-gradient(to bottom, rgba(23, 23, 23, 0.8) 0%, rgba(32, 32, 32, 0.8) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171717', endColorstr='#252525',GradientType=0 );
+    box-shadow: 0px 0px 3px 0px rgba(20, 20, 20, 0.75);
+}
+    #ig_bottom.smallheader {
+    background: transparent url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/bg_highlight_blue_transparent_darker.png) top center no-repeat;
+}
+    
+    .sectionTab, a.sectionTab
+{
+	margin-top: 7px;
+	display: block;
+	float: left;
+	color: #dadada;
+	background-color: #3A3A3A;
+	line-height: 29px;
+	height: 29px;
+	padding: 0px 12px;
+	margin-right: 5px;
+	text-decoration: none;
+	border-radius: 2px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	-moz-border-radius: 2px;
+	-moz-border-radius-bottomleft: 0px;
+	-moz-border-radius-bottomright: 0px;
+}
+
+	.sectionTab.active
+	{
+		margin-top: 0px;
+		height: 34px;
+		padding: 1px;
+		text-decoration: none;
+		border: none;
+
+		background: #57749e; /* Old browsers */
+		background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#57749e), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #57749e 5%,#364963 95%);background: -o-linear-gradient(top, #57749e 5%,#364963 95%);background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);background: linear-gradient(to bottom, #57749e 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );	}
+		.sectionTab.active > span
+		{
+			height: 35px;
+			line-height: 36px;
+			padding: 0 19px;
+			border-radius: 2px;
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+
+			display: block;
+			background: #445b7c; /* Old browsers */
+			background: -moz-linear-gradient(top, #445b7c 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#445b7c), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #445b7c 5%,#364963 95%);background: -o-linear-gradient(top, #445b7c 5%,#364963 95%);background: -ms-linear-gradient(top, #445b7c 5%,#364963 95%);background: linear-gradient(to bottom, #445b7c 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#445b7c', endColorstr='#364963',GradientType=0 );		}
+
+
+	.sectionTab.stats {
+		float: right;
+		margin-right: 0px;
+	}
+
+		.sectionTab.stats.active {
+			background: #445b7c; /* Old browsers */
+			background: -moz-linear-gradient(top, #e2c58b 5%, #ac966a 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#e2c58b), color-stop(95%,#ac966a));background: -webkit-linear-gradient(top, #e2c58b 5%,#ac966a 95%);background: -o-linear-gradient(top, #e2c58b 5%,#ac966a 95%);background: -ms-linear-gradient(top, #e2c58b 5%,#ac966a 95%);background: linear-gradient(to bottom, #e2c58b 5%,#ac966a 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2c58b', endColorstr='#ac966a',GradientType=0 );		}
+
+			.sectionTab.stats.active > span {
+				color: #000;
+				background: #445b7c; /* Old browsers */
+			background: -moz-linear-gradient(top, #c9af7c 5%, #ac966a 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#c9af7c), color-stop(95%,#ac966a));background: -webkit-linear-gradient(top, #c9af7c 5%,#ac966a 95%);background: -o-linear-gradient(top, #c9af7c 5%,#ac966a 95%);background: -ms-linear-gradient(top, #c9af7c 5%,#ac966a 95%);background: linear-gradient(to bottom, #c9af7c 5%,#ac966a 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9af7c', endColorstr='#ac966a',GradientType=0 );			}
+
+
+.sectionTab:hover
+{
+	background-color: #454545;
+}
+
+.sectionTabActive
+{
+	position: relative;
+	margin-top: 0px;
+	margin-right: 5px;
+	font-size: 14px;
+	color: white;
+	float: left;
+}
+
+.sectionTabActive .sectionTab_leftcap, .sectionTabActive .sectionTab_rightcap, .sectionTabActive .sectionTab
+{
+	background-image: url( https://web.archive.org/web/20131109013733im_/http://cdn.steamcommunity.com/public/images/groups/tab_blue_active.png );
+}
+
+.sectionTabActive .sectionTab_leftcap
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 12px;
+	height: 36px;
+	background-position: 0 0;
+}
+
+.sectionTabActive .sectionTab_rightcap
+{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 13px;
+	height: 36px;
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+
+.sectionTabActive .sectionTab
+{
+	margin-top: 0px;
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 8px;
+	margin-right: 12px;
+	height: 36px;
+	line-height: 36px;
+	background-position: 0 0px;
+	background-repeat: repeat-x;
+	text-decoration: none;
+}
+
+.sectionTabActive .sectionTab:hover
+{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.sectionTabInactive, .sectionTabInactive .sectionTab_leftcap, .sectionTabInactive .sectionTab_rightcap
+{
+	display: inline;
+}
+    #ig_bottom .responsive_tab_baseline {
+    background-color: #364862;
+    height: 5px;
+    left: 0px;
+    width: 950px;
+}
+
+.sectionTabsHR
+{
+
+	top: 38px;
+	left: 0px;
+	background-color:#4d4d4e;
+	height:1px;
+	margin:0;
+	padding:0;
+	margin-bottom:8px;
+}
+
+	#ig_bottom	.sectionTabsHR.stats {
+		background-color: #ac966a;
+	}
+
+#profileBlock .sectionTabsHR
+{
+    top: 114px;
+}
+
+    
+    
+/* ==========================
+    PERSONA COLORS
+========================== */
+    .persona, a.persona, .persona a,
+.friend_status_offline, .friend_status_offline div, .friend_status_offline a {
+	color:#898989;
+}
+
+.persona.online, a.persona.online, .persona.online a,
+.friend_status_online, .friend_status_online div, .friend_status_online a {
+	color:#6fbdff;
+}
+
+.persona.in-game, a.persona.in-game, .persona.in-game a,
+.friend_status_in-game, .friend_status_in-game div, .friend_status_in-game a {
+	color:#b1fb50;
+}
+
+.persona.golden, a.persona.golden, .persona.golden a,
+.friend_status_golden, .friend_status_golden div, .friend_status_golden a {
+	color:#e4ca63;
+}
 /* ==========================
     PROFILE
 ========================== */
@@ -2448,16 +3079,6 @@ body.v6.widestore #store_header {
         }
         .screenshot_showcase_smallscreenshot.screenshot_count {
             line-height: 55px;
-        }
-        .pagebtn.disabled,
-        .pagebtn.disabled:hover,
-        a.pagebtn.disabled,
-        a.pagebtn.disabled:hover {
-            border: 1px solid #253e4c;
-            background-color: transparent;
-            color: #253e4c;
-            cursor: default;
-            opacity: 1;
         }
         .miniprofile_playersection .playersection_avatar_frame,
         .miniprofile_nameplate,
@@ -3465,6 +4086,7 @@ body.v6.widestore #store_header {
     padding: 1px;
     text-decoration: none;
     border: none;
+        height:28px;
     background: #57749e;
     background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #57749e), color-stop(95%, #364963));
