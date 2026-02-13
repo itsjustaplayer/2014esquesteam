@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         2014-Esque STEAM: REFACTORED
-@version      0.1.8
+@version      0.2.1
 @namespace    //userstyles.world/user/ItsJustAPlayer
 @description  2014-esque STEAM reimagines today’s Steam website with the nostalgic charm of its classic V5 (2014) design. Currently in ALPHA, it brings back the look and feel of the golden era—modernized for today’s web.
 @author       ItsJustAPlayer
@@ -438,8 +438,13 @@ Referenced with V5 files */
     display:none;
        }
        
+       /*TODO: FIX CONTENT IN NAV*/
+       
 }
- 
+    /*ERROR PAGE*/
+    
+    
+    
     /* Search Bar */
     
     ._1KU9eASfov1GnFQRbyLIdR{ /*It's the equivalent to store_search*/
@@ -582,6 +587,11 @@ Referenced with V5 files */
     .store_main_capsule .screenshots {
         display: none;
     }
+    
+    
+.home_page_body_ctn { /*gap between header*/
+    top: 80px;
+}
 
 /*  CAROUSEL & CAPSULES*/
     /*TODO: CAROUSEL*/
@@ -904,6 +914,8 @@ body.v6.widestore #store_header {
                     padding-top: 17px;
                     margin-bottom: 18px;
                     & > .breadcrumbs {
+                        margin-bottom: 0px;
+                        margin-top: 0px;
                         position:relative;
                         font-family: Arial, Helvetica, sans-serif;
                         font-size: 14px;
@@ -1973,16 +1985,10 @@ body.v6.widestore #store_header {
     color: #b0aeac;
 }
     
-          
-/* ==========================
-   COMMUNITY PAGE
-========================== */    
-.apphub_background {
-    background-image: unset!important;
-    
-    }
-    
-[role="main"]:has(.community_home_header) {
+    /* ==========================
+   BACKGROUND FOR MOST PAGES
+========================== */
+    [role="main"]:has(.community_home_header) { /*community home*/
     background: #262627 url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png);
     background-position: 0 0px;
     background-repeat: repeat-x;
@@ -1991,7 +1997,7 @@ body.v6.widestore #store_header {
     content: none;
 
 }
-    [role="main"]:has(.workshop_header) {
+    [role="main"]:has(.workshop_header) { /*workshop somehthign*/
     background: #262627 url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png);
     background-position: 0 0px;
     background-repeat: repeat-x;
@@ -2000,17 +2006,17 @@ body.v6.widestore #store_header {
     content: none;
 
 }
-    [role="main"]:has(.screenshotApp){
+    [role="main"]:has(.screenshotApp){ /*workshop screenie*/
                     background: #262627 url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png);
     background-position: 0 0px;
     background-repeat: repeat-x;
     }
-      [role="main"]:has(.screenshotApp)::before {
+      [role="main"]:has(.screenshotApp)::before { 
  
         content: none;
     }
     
-    [role="main"]:has(.workshopItemDetailsHeader){
+    [role="main"]:has(.workshopItemDetailsHeader){ /*workshop item*/
                     background: #262627 url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png);
     background-position: 0 0px;
     background-repeat: repeat-x;
@@ -2019,6 +2025,964 @@ body.v6.widestore #store_header {
  
         content: none;
     }
+       body:has(.workshopAppsRow){ /*workshop home*/
+                    background: #262627 url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png);
+    background-position: 0 0px;
+    background-repeat: repeat-x;
+    }
+      body:has(.workshopAppsRow)::before {
+ 
+        content: none;
+    }
+    
+      [role="main"]:has(.grouppage_content_area){ /*discussion & forums*/
+                    background: #262627 url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png);
+    background-position: 0 0px;
+    background-repeat: repeat-x;
+    }
+      [role="main"]:has(.grouppage_content_area)::before {
+ 
+        content: none;
+    }
+     
+    [role="main"]:has(.friends_launch_area) { /*friend acivity page */
+    background: #262627 url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/community_2_background_gradient.png);
+    background-position: 0 0px;
+    background-repeat: repeat-x;
+}
+    [role="main"]:has(.friends_launch_area)::before {
+    content: none;
+
+}
+    
+    
+    
+/* ==========================
+   DISCUSSION PAGES
+========================== */  
+    /* discussion page */
+
+.forum_discussion_profileBlock#profileBlock {
+	padding-left: 6px;
+	width: 616px;
+}
+
+.breadcrumbs {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+.breadcrumbs, .breadcrumbs a {
+	color: #838383;
+	font-size: 14px;
+}
+
+.forum_op {
+	position: relative;
+	padding: 7px 12px 21px 63px;
+	border: 1px solid #45484c;
+	border-radius: 3px;
+	margin-bottom: 8px;
+
+	background-color: #262627;
+	background-image: url( 'https://web.archive.org/web/20130913084157im_/http://cdn.steamcommunity.com/public/images//skin_1/forum_op_gradient.png?v=2' );
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+.forum_op_avatar {
+	position: absolute;
+	left: 12px;
+	top: 7px;
+}
+
+.forum_op .commentthread_comment_friendindicator {
+	top: 31px;
+	left: 40px;
+}
+
+.forum_op .editlink {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+
+	visibility: hidden;
+}
+
+.forum_op:hover .editlink {
+	visibility: visible;
+}
+
+.forum_op .authorline {
+	line-height: 40px;
+}
+
+.forum_op_author {
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.forum_op_author .forum_author_action_pulldown, .forumtopic_comments .commentthread_author_link .forum_author_action_pulldown {
+	display: inline-block;
+	background-image: url(  'data:image/gif;base64,R0lGODlhEwAMAIABAMXDwgAAACH5BAEAAAEALAAAAAATAAwAAAIUjI+py+0PEZh0wmpjjSfzD4aiUQAAOw==' );
+	background-position: right center;
+	background-repeat: no-repeat;
+	height: 16px;
+	width: 17px;
+	vertical-align: middle;
+}
+
+.forumtopic_comments .commentthread_deleted_comment .commentthread_author_link {
+	padding-right: 0px;
+	background: none;
+}
+
+.forum_op .date {
+	font-size: 11px;
+	color: #747474;
+}
+
+.forum_op .topic {
+	font-size: 30px;
+	line-height: 36px;
+	color: #ffffff;
+
+	margin-bottom: 12px;
+
+	word-wrap: break-word;
+
+	overflow: hidden;	}
+
+.forum_op .content {
+	font-size: 14px;
+	line-height: 20px;
+	color: #dbdbdb;
+
+	word-wrap: break-word;
+	overflow: hidden;
+}
+
+.forum_op .content a {
+	text-decoration: underline;
+	color: #dbdbdb;
+}
+
+.forum_op .content a:hover {
+	color: #ffffff;
+}
+
+
+.forumtopic_comments .commentthread_comment_container {
+	margin-top: 0px;
+
+	/* hack in some space for the friend indicator */
+	margin-left: -22px;
+	padding-left: 22px;
+}
+
+.forumtopic_comments .commentthread_comment {
+	background-color: #343435;
+	color: #898989;
+	border: 1px solid #3d3d3e;
+	margin-bottom: 2px;
+	padding: 12px 8px 20px 60px;
+
+	overflow: hidden;
+}
+
+.forumtopic_comments .commentthread_comment.commentthread_deleted_comment {
+	padding: 4px 11px;
+	height: auto;
+	min-height: 0px;
+}
+
+.forumtopic_comments .commentthread_comment.commentthread_deleted_comment, .forumtopic_comments .commentthread_comment.commentthread_deleted_expanded {
+	background-color: #2E2E2F;
+}
+
+.commentthread_deleted_comment_audit {
+	font-style: italic;
+	font-size: 12px;
+}
+
+.forumtopic_comments .commentthread_comment_timestamp {
+	color: #999999;
+}
+
+.forumtopic_comments .commentthread_comment_text {
+	max-height: none;
+	color: #cccccc;
+
+	overflow: visible;
+	overflow-y: visible;
+}
+
+.forumtopic_comments .commentthread_comment_text a {
+	color: #cccccc;
+}
+
+.forumtopic_comments .commentthread_comment_text a:hover {
+	color: #ffffff;
+}
+
+.forumtopic_comments .commentthread_comment.commentthread_newcomment {
+	border-color: #4c4c4d;
+	background-color: #3b3b3d;
+}
+
+.forumtopic_comments .commentthread_comment.commentthread_newcomment .forum_comment_permlink {
+	color: #909092;
+}
+
+
+.forumtopic_comments .commentthread_comment .commentthread_comment_avatar {
+	top: 11px;
+	left: 11px;
+}
+
+.forumtopic_comments .commentthread_comment .commentthread_comment_author {
+	line-height: 32px;
+	margin-bottom: 16px;
+	opacity: 0.25;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+	filter: alpha(opacity=25);
+}
+
+.forumtopic_comments .commentthread_comment:hover .commentthread_comment_author,
+.forumtopic_comments .commentthread_comment.permlinked .commentthread_comment_author{
+	opacity: 1.0;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+}
+
+.forumtopic_comments .commentthread_comment .commentthread_comment_author a {
+	font-weight: bold;
+}
+
+a.commentthread_author_valve, a.commentthread_author_developer {
+	color: #aedd08;
+}
+
+a.commentthread_author_globalmoderator {
+	color: #df7708;
+}
+
+a.commentthread_author_officer {
+	color: #ffcc00;
+}
+
+.forumtopic_comments .commentthread_comment .commentthread_comment_friendindicator {
+	top: 35px;
+	left: 39px;
+}
+
+.forumtopic_reply_entry {
+
+}
+
+.forumtopic_reply_textarea {
+	overflow: hidden;
+}
+
+.forum_comment_actions {
+	float: right;
+
+	visibility: hidden;
+}
+
+a.forum_comment_action {
+	display: inline-block;
+
+	text-align: center;
+	line-height: 28px;
+
+	width: 34px;
+	height: 28px;
+
+	background-color: #2b2b2c;
+	border-radius: 3px;
+
+	margin-left: 2px;
+}
+
+
+.commentthread_comment:hover .forum_comment_actions, .forum_op:hover .forum_comment_actions {
+	visibility: visible;
+}
+
+
+a.forum_comment_action img {
+	vertical-align: middle;
+}
+
+a.forum_comment_action:hover {
+	text-decoration: none;
+	background-color: #97c0e3;
+}
+
+.forum_comment_permlink {
+	position: absolute;
+	right: 4px;
+	bottom: 4px;
+}
+
+.forum_comment_permlink img.forumcomment_unread_indicator {
+	visibility: hidden;
+	vertical-align: text-bottom;
+}
+
+
+.forumtopic_comments .commentthread_comment.commentthread_newcomment:hover .forumcomment_unread_indicator {
+	visibility: visible;
+}
+
+.forumtopic_comments .commentthread_comment_editcontrols {
+	padding-right: 8px;
+}
+
+.forumtopic_comments .commentthread_comment_editcontrols .commentthread_edit_buttons {
+	padding-right: 1px;
+}
+
+
+.forum_comment_permlink a {
+	color: #535354;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.forumtopic_comments .commentthread_comment.permlinked {
+	border-color: #689ee0;
+}
+
+.forumtopic_comments .commentthread_comment.permlinked .forum_comment_permlink a {
+	color: #689ee0;
+}
+
+.forum_report_instructions {
+	color: #909090;
+	font-size: 12px;
+	margin-bottom: 14px;
+}
+
+#forum_modal p {
+	margin-top: 0px;
+}
+
+.forum_modal_text {
+	margin-top: 42px;
+	margin-bottom: 24px;
+	color: #a6a6a6;
+}
+
+.forum_modal_text ul {
+	margin: 2px 0px 12px;
+}
+
+#forum_modal h2.forum_error_message {
+	font-size: 18px;
+}
+
+.forum_modal_ajax_error {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+.forum_movetopic_destination_selector {
+	line-height: 32px;
+}
+
+.forum_movetopic_destination_selector .gray_bevel {
+	line-height: 23px;
+}
+
+.forum_movetopic_destination_selector img {
+	vertical-align: middle;
+}
+
+
+.searchmatch_highlight {
+	color: #d2ff96;
+	background-color: #68932f;
+	padding: 0px 2px;
+}
+
+.discussion_searchresults .forum_topic {
+	/*height: auto;*/
+	background-color: #262627;
+	background-image: url( 'https://web.archive.org/web/20130913084157im_/http://cdn.steamcommunity.com/public/images/skin_1/forum_searchresult_gradient.png' );
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+
+.discussion_searchresults .forum_topic .forum_topic_name {
+	line-height: 48px;
+}
+
+.forum_searchresult_reply {
+	position: relative;
+	cursor: pointer;
+
+	background-image: url( 'https://web.archive.org/web/20130913084157im_/http://cdn.steamcommunity.com/public/images/skin_1/forum_searchresult_replybg.png' );
+	background-repeat: no-repeat;
+	background-position: left top;
+
+	padding-left: 21px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+
+	margin-left: 18px;
+	margin-bottom: 6px;
+}
+
+.forum_searchresult_reply_inner {
+	font-size: 12px;
+	color: #a1a1a1;
+	font-style: italic;
+	line-height: 20px;
+
+	padding: 8px;
+	min-height: 40px;
+
+	margin: 1px;
+
+	word-wrap: break-word;
+}
+
+.forum_searchresult_reply:hover {
+	background-image: url( 'https://web.archive.org/web/20130913084157im_/http://cdn.steamcommunity.com/public/images/skin_1/forum_searchresult_replybg_hover.png' );
+}
+
+.forum_searchresult_reply:hover .forum_searchresult_reply_inner {
+	border: 1px solid #435979;
+	border-radius: 3px;
+	margin: 0px;
+}
+
+.forum_searchresult_reply_borderfix {
+	position: absolute;
+	display: none;
+	top: 13px;
+	left: 21px;
+
+	width: 1px;
+	height: 15px;
+	background-image: url( 'https://web.archive.org/web/20130913084157im_/http://cdn.steamcommunity.com/public/images/skin_1/forum_searchresult_replybg_hover_borderfix.png' );
+}
+
+.forum_searchresult_reply:hover .forum_searchresult_reply_borderfix {
+	display: block;
+}
+
+.forum_button, .forum_button .caps {
+	background-image: url( 'https://web.archive.org/web/20130913084157im_/http://cdn.steamcommunity.com/public/images/skin_1/forum_button.png');
+}
+
+.forum_button {
+	position: relative;
+	display: inline-block;
+
+	background-repeat: repeat-x;
+	background-position: 0px -28px;
+
+	height: 28px;
+	padding: 0px;
+
+	margin: 10px 0px;
+}
+
+.forum_button .caps {
+	background-repeat: no-repeat;
+
+	height: 28px;
+	width: 2px;
+
+	position: absolute;
+	top: 0px;
+}
+
+.forum_button .caps.leftcap {
+	left: 0px;
+	background-position: left top;
+}
+
+.forum_button .caps.rightcap {
+	right: 0px;
+	background-position: right top;
+}
+
+.forum_button input {
+
+	border: none;
+	outline: none;
+	background-color: transparent;
+	height: 26px;
+	font-size: 14px;
+	color: #cccccc;
+	margin: 0px;
+
+	padding: 0px 20px;
+
+	cursor: pointer;
+
+}
+
+.forum_button a {
+	height: 24px;
+	line-height: 24px;
+	padding: 0px 8px;
+	font-size: 14px;
+}
+
+.forum_button a:hover {
+	text-decoration: none;
+}
+
+    
+    .commentthread_valve_icon[src="https://community.fastly.steamstatic.com/public/images/skin_1/valve_comment.png"]{
+         background: url("https://web.archive.org/web/20130922164854im_/http://cdn.steamcommunity.com/public/images/skin_1/valve_comment.png");
+            background-size: 100%;
+    object-position: -99999px;
+    }
+    .discussions_forumlist_icon img[src="https://community.fastly.steamstatic.com/public/images/skin_1/forum_topicicon_read.png"]{
+        background: url("https://web.archive.org/web/20140725120853im_/http://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_topicicon_read.png");
+            background-size: 100%;
+    object-position: -99999px;
+    }
+.grouppage_content_area h2, a.large_title, h2.large_title {
+    color: #529cde;
+    font-size: 24px;
+    font-weight: normal;
+    text-decoration: none;
+}
+    .discussions_page {
+    background-image: url(https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_background.png);
+    background-color: #262627;
+    background-repeat: no-repeat;
+}
+    .group_content.bottomless {
+    background: none;
+}
+.rightbox_header, .rightbox_footer {
+	background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_topbtm.png' );
+	width: 295px;
+	height: 4px;
+}
+.rightbox_header {
+	background-position: top;
+}
+.rightbox_footer {
+	background-position: bottom;
+	height: 5px;
+
+	margin-bottom: 18px;
+}
+.rightbox {
+	background: repeat-y url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_repeat.png' );
+}
+.rightbox .content {
+	padding: 16px 14px;
+}
+.rightbox .rule {
+	height: 1px;
+	background-color: #333333;
+	border-top: 1px solid #000000;
+}
+    .discussionSearchTextContainer {
+    position: relative;
+    width: 296px;
+    height: 46px;
+    background-image: url(https://web.archive.org/web/20140725111811im_/http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/searchbox_workshop_bg_wide_blue.png);
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    padding-top: 0px;
+}
+  
+.group_tab {
+	float: left;
+	margin-right: 3px;
+	background-color: #444444;
+	color: #dadada;
+	font-size: 14px;
+	line-height: 26px;
+	padding: 0px 12px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+
+}
+
+a.group_tab:hover {
+	text-decoration: none;
+    background-color: #444444;
+}
+
+.group_tab.active {
+	line-height: 34px;
+	color: #ffffff;
+    height:35px;
+	padding: 0px 14px;
+	margin-top: 0;
+
+	border: 1px solid #57739d;
+	border-bottom: none;
+	background-color: #364862;
+	background: top center repeat-x url( 'https://web.archive.org/web/20140725120838im_/http://steamcommunity-a.akamaihd.net/public/images/groups/tab_blue_active.png' );
+}
+.group_tab.active > span {
+    padding: 0px;
+    background: none;
+}  
+    .discussions_header {
+    position: relative;
+    border-bottom: 5px solid #364862;
+}
+    
+    
+    .discussions_forumlist_header {
+	font-size: 11px;
+	color: #a6a4a1;
+	margin-bottom: 8px;
+}
+
+.discussions_forumlist_topiccount, .discussions_forumlist_lastpost {
+	float: right;
+	text-align: right;
+}
+
+.discussions_forumlist_topiccount {
+	width: 140px;
+	padding-right: 16px;
+	overflow: hidden;
+}
+
+.discussions_forumlist_lastpost {
+}
+
+.discussions_forum_row {
+	position: relative;
+	height: 67px;
+	background-color: #2f2f30;
+	margin-bottom: 2px;
+	color: #858381;
+}
+
+.discussions_forum_row:hover {
+	background-color: #3c3c3d;
+}
+
+.discussions_forum_row .discussions_forumlist_topiccount, .discussions_forum_row .discussions_forumlist_lastpost {
+	line-height: 67px;
+}
+
+.discussions_forum_row.unread .discussions_forumlist_topiccount, .discussions_forum_row.unread .discussions_forumlist_lastpost {
+	color: #e1e1e1;
+}
+
+.discussions_forumlist_icon {
+	float: left;
+	width: 44px;
+	line-height: 67px;
+
+	text-align: center;
+}
+
+.discussions_forumlist_icon img {
+	vertical-align: middle;
+}
+
+.discussions_forumlist_forumname {
+	color: #e1e1e1;
+}
+
+.discussions_forum_row.unread .discussions_forumlist_forumname {
+	font-weight: bold;
+}
+
+.discussions_forumlist_forumname.no_description {
+	line-height: 67px;
+}
+
+.discussions_forumlist_linkoverlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.discussions_forumlist_linkoverlay img {
+	width: 100%;
+	height: 67px;
+}
+
+.discussions_frame_header {
+	padding-top: 18px;
+}
+
+.discussions_frame_header h1 {
+	color: #fffffa;
+	font-weight: normal;
+	font-size: 26px;
+	margin: 0;
+}
+
+.discussions_breadcrumbs {
+	margin-bottom: 0px;
+}
+
+.discussions_tab_message {
+	float: left;
+	margin-top: 9px;
+	padding-left: 14px;
+	line-height: 26px;
+}
+
+.discussions_links .weblink {
+	margin-bottom: 8px;
+}
+
+    a.recent_game_discussion {
+    background-color: rgb(48 48 48);
+}
+    
+    .forum_list_ctn .forum_list_right {
+
+    background: repeat-y url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_box_repeat.png' );
+        background-size : 100%;
+
+}
+    
+    /*forums */
+    
+    .grouppage_header {
+    position: relative;
+    height: 242px;
+    border-bottom: 5px solid #364862;
+}
+    
+    .forum_topic {
+	position: relative;
+	height: 48px;
+	background-color: #2f2f30;
+	margin-bottom: 2px;
+	padding-right: 15px;
+	padding-left: 5px;
+}
+
+.forum_topic_overlay {
+	position: absolute;
+	display: block;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+}
+
+.forum_topic.bulk_edit_mode a.forum_topic_overlay {
+	cursor: default;
+}
+
+.forum_topic.locked {
+	background-image: url( 'https://web.archive.org/web/20140923164420im_/http://steamcommunity-a.akamaihd.net/public/images/skin_1/forum_topic_locked.png' );
+}
+
+.forum_topic.locked.sticky {
+	background-image: none;
+}
+
+.forum_topic.deleted {
+	background-image: none;
+	background-color: #242425;
+}
+
+.forum_topic .forum_topic_label {
+	font-weight: bold;
+}
+
+.forum_topic_label.sticky_label {
+	color: #AEDD08;
+}
+
+.forum_topic.moved {
+	background-color: #29292a;
+}
+
+.forum_topic.moved .forum_topic_name.op_hidden {
+	line-height: 48px;
+}
+
+
+.forum_topic:hover {
+	background-color: #3c3c3d;
+}
+
+.forum_topic:hover .forum_topic_name {
+	color: #ffffff;
+}
+
+.forum_topic.selected_for_bulk {
+	border: 1px solid #529cde;
+	padding-left: 4px;
+	padding-right: 14px;
+}
+
+.forum_topic_icon {
+	float: left;
+	height: 16px;
+	width: 16px;
+	padding: 16px 12px 16px 6px;
+
+	position: relative;
+	z-index: 4;
+}
+
+.forum_topic_details {
+	color: #969696;
+	line-height: 48px;
+}
+
+.forum_topic_reply_count {
+	font-size: 14px;
+	float: right;
+}
+
+.forum_topic_reply_count img {
+	vertical-align: middle;
+}
+
+.forum_topic_lastpost {
+	font-size: 11px;
+	float: right;
+	padding-right: 28px;
+}
+
+.forum_topic_name {
+	font-size: 14px;
+	color: #dcdcdc;
+	line-height: 30px;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-right: 20px;
+}
+
+.forum_topic_name {
+	color: #dcdcdc;
+}
+
+.forum_topic.unread .forum_topic_name {
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.forum_topic_mini {
+	height: auto;
+	background-image: url( 'https://web.archive.org/web/20140923164420im_/http://steamcommunity-a.akamaihd.net/public/images/skin_1/commentnotifications_notification.png' );
+	background-repeat: repeat-x;
+	background-position: bottom center;
+	min-height: 30px;
+}
+
+.forum_topic_mini .forum_topic_name {
+	line-height: 20px;
+	padding: 4px 0px;
+}
+
+.forum_topic_mini .forum_topic_details {
+	line-height: 30px;
+	margin-left: 5px;
+}
+
+.forum_topic_op {
+	color: #717171;
+	font-size: 11px;
+}
+
+.forum_paging
+{
+	position: relative;
+	line-height: 25px;
+	height: 25px;
+	background-color: #1c1c1d;
+	border-radius: 3px;
+	color: #747474;
+	padding: 0px 6px;
+	margin: 8px 0px;
+}
+
+.forum_paging_header
+{
+	margin-top: 0px;
+}
+
+.forum_paging_controls {
+	position: absolute;
+	top: 0px;
+	right: 6px;
+}
+
+.forum_paging_controls .pagebtn {
+	height: 17px;
+	line-height: 17px;
+}
+
+.forum_paging_pagelink, .forum_paging_controls .commentthread_pagelink {
+	color: #ffffff;
+	cursor: pointer;
+	margin: 0px 3px;
+}
+
+.forum_paging_pagelink:hover, .forum_paging_controls .commentthread_pagelink:hover {
+	text-decoration: underline;
+}
+
+.forum_paging_pagelink.active, .forum_paging_controls .commentthread_pagelink.active {
+	color: #747474;
+	cursor: default;
+}
+
+.forum_paging_pagelink.active:hover {
+	text-decoration: none;
+}
+    .forum_topic_tooltip {
+	padding: 8px 12px;
+	width: 281px;
+	border: 1px solid #82807c;
+
+	background-color: #3b3938;
+	color: #b0aeac;
+
+
+	margin: 12px;
+	box-shadow: 0 0 12px #000000;
+	overflow: hidden;
+	word-wrap: break-word;
+
+	text-align: left;
+
+}
+
+    .rightbox_list_selection_background {
+    position: absolute;
+    display: none;
+    left: -27px;
+    top: 0px;
+    background-image: url(https://web.archive.org/web/20140923020855im_/http://steamcommunity-a.akamaihd.net/public/images/groups/rightcol_option_selected.png);
+    width: 306px;
+    height: 37px;
+}
+    
+/* ==========================
+   COMMUNITY PAGES
+========================== */    
+.apphub_background {
+    background-image: unset!important;
+    
+    }
+    
     
    .community_activity_signin_buttons{
     .btn_green_white_innerfade { /*equivalent to btn_login_green in the community pages*/
@@ -2040,21 +3004,20 @@ body.v6.widestore #store_header {
             cursor: pointer;
             border-radius: 0px;
             }
-       }
-       
-       
-    }
-    
-/*    .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
+           &:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
              background: unset;
              background-image: url(https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_login_bg.png);
              border-radius: 0px;
              border: none;
             }
-    
-    .btn_green_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+        &:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
         background: unset;
-}*/
+        }
+       }
+    
+       
+    }
+    
     .community_home_header {
     font-family: Arial, Helvetica, Verdana, sans-serif;
 
@@ -2508,7 +3471,6 @@ body.v6.widestore #store_header {
     
    #ig_bottom .browseOptionImage {
     background-image: url(https://web.archive.org/web/20140814005606im_/http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/bluearrow.png);
-       background-size: 100%;
     object-position: -99999px;
 }
     #ig_bottom .sidebar .panel {
@@ -2538,7 +3500,14 @@ body.v6.widestore #store_header {
     height: 26px;
     background-image: url(https://web.archive.org/web/20140814005606im_/http://steamcommunity-a.akamaihd.net/public/images/sharedfiles/hover_arrow_both.gif);
 }
-
+.primary_panel_border {
+    background: #1b1b1b;
+    background: rgba(27, 27, 27, .36);
+    border-radius: 4px;
+    margin: 0 0 10px 0;
+    border: 1px solid #1f1f20;
+    box-shadow: 1px 1px 0 0 #39393a;
+}
 /* -------------- paging controls -------------*/
 .pagebtn, a.pagebtn {
 	display: inline-block;
@@ -2883,7 +3852,101 @@ a.general_btn:hover {
     top: 114px;
 }
 
+    .browseAppsTitleContainer {
+    padding: 10px;
+    background-color: #353535;
+    background: -moz-linear-gradient(top, #363636 91%, #303030 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(91%, #363636), color-stop(95%, #303030));
+    background: -webkit-linear-gradient(top, #363636 91%, #303030 95%);
+    background: -o-linear-gradient(top, #363636 91%,#303030 95%);
+    background: -ms-linear-gradient(top, #363636 91%,#303030 95%);
+    background: linear-gradient(to bottom, #363636 91%, #303030 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363636', endColorstr='#303030',GradientType=0 );
+}
     
+    .browseApps {
+    background-color: #686868;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    -moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.4), 0px 0px 150px rgba(0,0,0,0.4) inset;
+    -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4), 0px 0px 150px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4), 0px 0px 150px rgba(0, 0, 0, 0.4) inset;
+}
+/* ==========================
+    FRIENDS ACTIVITY
+========================== */
+    
+    .blotter_author_block {
+    position: relative;
+    padding: 6px;
+    /* margin-top: 2px; */
+    /* background-color: #3e3d3d; */
+    min-height: 40px;
+    font-size: 15px;
+    background: #3D3D3F;
+    border-bottom: 1px solid #2e3a4a;
+}
+
+.blotter_block {
+    
+    background: #1B1B1B;
+    
+}
+
+.friend_activity_header h1 {
+    font-weight: normal;
+    font-size: 24px;
+    color: #939393;
+}
+
+#friendactivity_right_column .box {
+    background-color: #3a3a3a;
+}
+
+
+#friendactivity_right_column .panel.gradient {
+    padding: 10px 10px 10px 10px;
+    color: darkGray;
+    /* border: 1px solid #000000; */
+    font-size: 12px;
+    
+     background: -moz-linear-gradient(top, #1b1b1b00 0%, #262930 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(27, 27, 27, 0)), color-stop(100%, #262930));
+    background: -webkit-linear-gradient(top, rgba(27, 27, 27, 0) 0%, #262930 100%);
+    background: -o-linear-gradient(top, rgba(27, 27, 27, 0) 0%, #262930 100%);
+    background: -ms-linear-gradient(top, rgba(27, 27, 27, 0) 0%, #262930 100%);
+    background: linear-gradient(to bottom, rgba(27, 27, 27, 0) 0%, #262930 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001b1b1b', endColorstr='#262930', GradientType=0);
+}
+
+.profileFriendSearchBox { /*profile friend search box*/
+    position: relative;
+    margin: 12px 0px 6px 0px;
+    padding: 2px;
+    font-size: 12px;
+    background-color: #3B3B3B;
+    border-radius: 4px;
+    border-left: 2px solid #262626;
+    border-top: 2px solid #262626;
+    border-right: 2px solid #262626;
+    border-bottom: 2px solid #262626;
+}
+
+.friends_add_block { /*content block for adding friends on the right*/
+    padding: 10px;
+    background-color: #3a3a3a;;
+    margin-bottom: 8px;
+}
+
+.friend_activity_header a {
+    color: #8c8b8a;
+}
+.blotter_status_entry .commentthread_entry .commentthread_entry_quotebox {
+    margin-left: 47px;
+}
+    .profile_add_friends_title {
+    color: unset;
+}
     
 /* ==========================
     PERSONA COLORS
@@ -2906,6 +3969,123 @@ a.general_btn:hover {
 .persona.golden, a.persona.golden, .persona.golden a,
 .friend_status_golden, .friend_status_golden div, .friend_status_golden a {
 	color:#e4ca63;
+}
+/* ==========================
+    REPORT THIS GAME POPUP
+========================== */
+    
+.newmodal {
+	position: absolute;
+
+	max-width: 900px;	/* our page width */
+	min-width: 500px;
+}
+
+.newmodal_header_border {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	background: -moz-linear-gradient(top, #797272 5%, #2e2e2e 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#797272), color-stop(95%,#2e2e2e));background: -webkit-linear-gradient(top, #797272 5%,#2e2e2e 95%);background: -o-linear-gradient(top, #797272 5%,#2e2e2e 95%);background: -ms-linear-gradient(top, #797272 5%,#2e2e2e 95%);background: linear-gradient(to bottom, #797272 5%,#2e2e2e 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#797272', endColorstr='#2e2e2e',GradientType=0 );	padding: 1px 1px 0 1px;
+	border-bottom: 1px solid #4a4943;
+}
+.newmodal_header .title_text {
+    padding: unset;
+    display: block;
+}
+    .modal_top_bar {
+    width: 100%;
+    height: 1px;
+    background: none;
+}
+    
+.newmodal_header {
+	height: 44px;
+	line-height: 44px;
+	padding: 0 16px;
+	text-align: left;
+
+	font-size: 16px;
+	color: #ffffff;
+
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	background-color: #393937;
+	background: -moz-linear-gradient(top, #484846 5%, #272626 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#484846), color-stop(95%,#272626));background: -webkit-linear-gradient(top, #484846 5%,#272626 95%);background: -o-linear-gradient(top, #484846 5%,#272626 95%);background: -ms-linear-gradient(top, #484846 5%,#272626 95%);background: linear-gradient(to bottom, #484846 5%,#272626 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484846', endColorstr='#272626',GradientType=0 );
+    }
+
+.newmodal_close {
+	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVBREZBRDlBNzdCNzExRTI5ODAzRUE3MDU0Mzk5MjM5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVBREZBRDlCNzdCNzExRTI5ODAzRUE3MDU0Mzk5MjM5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NUFERkFEOTg3N0I3MTFFMjk4MDNFQTcwNTQzOTkyMzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NUFERkFEOTk3N0I3MTFFMjk4MDNFQTcwNTQzOTkyMzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4iulRzAAABPElEQVR42mI8cuQIAyWABUqbAXEylH0fiDtwqI8FYhsoewEQH4cZcBaI64DYG8p/AVWADDyAeD4QMwPxJiA+BRJkgkr+BeJoIL4D5U8DYi0kzepAvAKq+TJU7V9kA0DgIxD7Q2lOIF4NpfmBeAuUfg3EPkD8BaaJCc2Z14A4EcoGuWAC1NkqQPwLqvkRsgYmLAG1HoiboOw0IA6EshNh/iZkAAjUA/FBJP5KIF6GTSEuAwygUQsDflAxogwQAuJ10AAExcpNKHsjEIsSMoAZGl2K0EALBeIIKFsOKSpxGtACxK5Qdi4QX4DiAqiYExB34TIgBIgrkAJtFpLcdKgYCBQBcRRMghGamUBxfhKIeaB+NkFOLFAAkjsDTZXfgdgK5DpYXvBGiqYpWDQzQMVAYZKDlDcuMFKanQECDAAqw0LA+GRiqAAAAABJRU5ErkJggg== );
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	float: right;
+	margin-top: 14px;
+	height: 16px;
+	width: 16px;
+
+	opacity: 0.7;
+}
+
+.newmodal_close:hover {
+	opacity: 1;
+}
+
+.newmodal_content_border {
+	background: -moz-linear-gradient(top, #4c4c4c 5%, #4a6279 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#4c4c4c), color-stop(95%,#4a6279));background: -webkit-linear-gradient(top, #4c4c4c 5%,#4a6279 95%);background: -o-linear-gradient(top, #4c4c4c 5%,#4a6279 95%);background: -ms-linear-gradient(top, #4c4c4c 5%,#4a6279 95%);background: linear-gradient(to bottom, #4c4c4c 5%,#4a6279 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#4a6279',GradientType=0 );	background-color: #4c4c4c;
+	padding: 0 1px 1px 1px;
+}
+
+.newmodal_content {
+	background: -moz-linear-gradient(top, #252b33 5%, #1d1d1d 25%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#252b33), color-stop(25%,#1d1d1d));background: -webkit-linear-gradient(top, #252b33 5%,#1d1d1d 25%);background: -o-linear-gradient(top, #252b33 5%,#1d1d1d 25%);background: -ms-linear-gradient(top, #252b33 5%,#1d1d1d 25%);background: linear-gradient(to bottom, #252b33 5%,#1d1d1d 25%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#252b33', endColorstr='#1d1d1d',GradientType=0 );	background-color: #1d1d1d;
+
+	overflow: auto;
+	word-wrap: break-word;
+
+	padding: 15px 21px;
+
+	font-size: 13px;
+	color: #939393;
+
+	position: relative;
+}
+
+.newmodal_content_innerbg {
+	background-color: #323233;
+	border: 1px solid #4d4b49;
+	padding: 8px;
+
+	color: #8f8f8f;
+}
+
+.newmodal_buttons {
+	text-align: right;
+	margin-top: 12px;
+}
+
+.newmodal_buttons .btn_medium {
+	margin-left: 12px;
+}
+
+.newmodal_prompt_description {
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+
+.newmodal_prompt_input {
+}
+
+.newmodal_prompt_input input[type=text] {
+	width: 100%;
+}
+
+.newmodal_prompt_textarea {
+	height: 396px;
+}
+
+.newmodal_prompt_with_textarea {
+	display: inline-block;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	width: 500px;
 }
 /* ==========================
     PROFILE
@@ -2978,7 +4158,7 @@ a.general_btn:hover {
             height: 102px;
             margin: 0 auto;
         }
-        body.profile_page,
+      /*  body.profile_page, this is used to force background on profiles
         div.profile_page,
         body.profile_page.has_profile_background,
         div.profile_page.has_profile_background {
@@ -2986,7 +4166,7 @@ a.general_btn:hover {
             background-position: center top;
             background-color: #262627;
             background-repeat: repeat-x;
-        }
+        }*/
         .profile_header_bg_texture {
             max-width: 976px;
             min-height: 224px;
@@ -3987,7 +5167,7 @@ a.general_btn:hover {
         /*Generic Blue Medium Button*/
         border-radius: 2px;
         border: none;
-        padding: 1px;
+        padding: 1px!important;
         display: inline-block;
         cursor: pointer;
         text-decoration: none !important;
@@ -4132,40 +5312,54 @@ a.general_btn:hover {
     height: 30px;
   
 }
-    
 .btn_darkblue_white_innerfade {
-    border-radius: 2px;
-    border: none;
-    padding: 1px;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none !important;
-    color: #fff !important;
-    background: #57749e;
-    background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #57749e), color-stop(95%, #364963));
-    background: -webkit-linear-gradient(top, #57749e 5%, #364963 95%);
-    background: -o-linear-gradient(top, #57749e 5%,#364963 95%);
-    background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);
-    background: linear-gradient(to bottom, #57749e 5%, #364963 95%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );
-}
+	border-radius: 2px;
+	border: none;
+	padding: 1px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none !important;
+	color: #fff !important;
+
+				background: #57749e;
+			background: -moz-linear-gradient(top, #57749e 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#57749e), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #57749e 5%,#364963 95%);background: -o-linear-gradient(top, #57749e 5%,#364963 95%);background: -ms-linear-gradient(top, #57749e 5%,#364963 95%);background: linear-gradient(to bottom, #57749e 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57749e', endColorstr='#364963',GradientType=0 );	}
+
+	.btn_darkblue_white_innerfade > span {
+		border-radius: 2px;
+		display: block;
+
+
+					background: #445b7c;
+			background: -moz-linear-gradient(top, #445b7c 5%, #364963 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#445b7c), color-stop(95%,#364963));background: -webkit-linear-gradient(top, #445b7c 5%,#364963 95%);background: -o-linear-gradient(top, #445b7c 5%,#364963 95%);background: -ms-linear-gradient(top, #445b7c 5%,#364963 95%);background: linear-gradient(to bottom, #445b7c 5%,#364963 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#445b7c', endColorstr='#364963',GradientType=0 );			}
+
+.btn_darkblue_white_innerfade:not(.btn_disabled):not(.btn_active):hover:not(.active):hover {
+	text-decoration: none !important;
+	color: #fff !important;
+
+				background: #688bb1;
+			background: -moz-linear-gradient(top, #688bb1 5%, #415877 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#688bb1), color-stop(95%,#415877));background: -webkit-linear-gradient(top, #688bb1 5%,#415877 95%);background: -o-linear-gradient(top, #688bb1 5%,#415877 95%);background: -ms-linear-gradient(top, #688bb1 5%,#415877 95%);background: linear-gradient(to bottom, #688bb1 5%,#415877 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#688bb1', endColorstr='#415877',GradientType=0 );	}
+
+	.btn_darkblue_white_innerfade:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
+					background: #526d95;
+			background: -moz-linear-gradient(top, #526d95 5%, #415877 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#526d95), color-stop(95%,#415877));background: -webkit-linear-gradient(top, #526d95 5%,#415877 95%);background: -o-linear-gradient(top, #526d95 5%,#415877 95%);background: -ms-linear-gradient(top, #526d95 5%,#415877 95%);background: linear-gradient(to bottom, #526d95 5%,#415877 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#526d95', endColorstr='#415877',GradientType=0 );			}
+
+	.btn_darkblue_white_innerfade.btn_active, btn_darkblue_white_innerfade.active {
+	text-decoration: none !important;
+	color: #323b49 !important;
+
+		background: #fff !important;			}
+
+	.btn_darkblue_white_innerfade.btn_active > span, btn_darkblue_white_innerfade.active > span {
+					background: #989b9e;
+			background: -moz-linear-gradient(top, #989b9e 5%, #aeb1b5 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#989b9e), color-stop(95%,#aeb1b5));background: -webkit-linear-gradient(top, #989b9e 5%,#aeb1b5 95%);background: -o-linear-gradient(top, #989b9e 5%,#aeb1b5 95%);background: -ms-linear-gradient(top, #989b9e 5%,#aeb1b5 95%);background: linear-gradient(to bottom, #989b9e 5%,#aeb1b5 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#989b9e', endColorstr='#aeb1b5',GradientType=0 );			
+    
+    }
 .inner_bevel {
     -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.75) inset, -2px -2px 5px rgba(150,150,150,1) inset;
     -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75) inset, -2px -2px 5px rgba(150, 150, 150, 1) inset;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75) inset, -2px -2px 5px rgba(150, 150, 150, 1) inset;
 }
-.btn_darkblue_white_innerfade:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
-    background: #526d95;
-    background: -moz-linear-gradient(top, #526d95 5%, #415877 95%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #526d95), color-stop(95%, #415877));
-    background: -webkit-linear-gradient(top, #526d95 5%, #415877 95%);
-    background: -o-linear-gradient(top, #526d95 5%,#415877 95%);
-    background: -ms-linear-gradient(top, #526d95 5%,#415877 95%);
-    background: linear-gradient(to bottom, #526d95 5%, #415877 95%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#526d95', endColorstr='#415877',GradientType=0 );
-}
-    
+ 
 .btn_small > span, input.btn_small {
     padding: 0 15px;
     font-size: 12px;
@@ -4183,6 +5377,49 @@ a.general_btn:hover {
     background: linear-gradient(to bottom, #445b7c 5%, #364963 95%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#445b7c', endColorstr='#364963',GradientType=0 );
 }
+   .btn_grey_steamui {
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #fff !important;
+    background: #b3b3b3;
+    background: -moz-linear-gradient(top, #b3b3b3 5%, #484848 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #b3b3b3), color-stop(95%, #484848));
+    background: -webkit-linear-gradient(top, #b3b3b3 5%, #484848 95%);
+    background: -o-linear-gradient(top, #b3b3b3 5%,#484848 95%);
+    background: -ms-linear-gradient(top, #b3b3b3 5%,#484848 95%);
+    background: linear-gradient(to bottom, #b3b3b3 5%, #484848 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3b3b3', endColorstr='#484848',GradientType=0 );
+}
+    .btn_grey_steamui > span {
+    border-radius: 2px;
+    display: block;
+    background: #7e7e7e;
+    background: -moz-linear-gradient(top, #7e7e7e 5%, #484848 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #7e7e7e), color-stop(95%, #484848));
+    background: -webkit-linear-gradient(top, #7e7e7e 5%, #484848 95%);
+    background: -o-linear-gradient(top, #7e7e7e 5%,#484848 95%);
+    background: -ms-linear-gradient(top, #7e7e7e 5%,#484848 95%);
+    background: linear-gradient(to bottom, #7e7e7e 5%, #484848 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7e7e7e', endColorstr='#484848',GradientType=0 );
+}
+    .btn_grey_steamui:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
+    background: #969696;
+    background: -moz-linear-gradient(top, #969696 5%, #565656 95%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #969696), color-stop(95%, #565656));
+    background: -webkit-linear-gradient(top, #969696 5%, #565656 95%);
+    background: -o-linear-gradient(top, #969696 5%,#565656 95%);
+    background: -ms-linear-gradient(top, #969696 5%,#565656 95%);
+    background: linear-gradient(to bottom, #969696 5%, #565656 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#969696', endColorstr='#565656',GradientType=0 );
+}
+    .btn_grey_steamui:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
+					background: #969696;
+			background: -moz-linear-gradient(top, #969696 5%, #565656 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#969696), color-stop(95%,#565656));background: -webkit-linear-gradient(top, #969696 5%,#565656 95%);background: -o-linear-gradient(top, #969696 5%,#565656 95%);background: -ms-linear-gradient(top, #969696 5%,#565656 95%);background: linear-gradient(to bottom, #969696 5%,#565656 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#969696', endColorstr='#565656',GradientType=0 );			}
+
     
 .button {
     font-family: Arial, Helvetica, sans-serif;
@@ -4240,4 +5477,37 @@ a.general_btn:hover {
     background: #97C0E3;
 }
 
+    .btn_green_white_innerfade {
+	border-radius: 2px;
+	border: none;
+	padding: 1px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none !important;
+	color: #fff !important;
+
+				background: #a4d007;
+			background: -moz-linear-gradient(top, #a4d007 5%, #6b8805 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#a4d007), color-stop(95%,#6b8805));background: -webkit-linear-gradient(top, #a4d007 5%,#6b8805 95%);background: -o-linear-gradient(top, #a4d007 5%,#6b8805 95%);background: -ms-linear-gradient(top, #a4d007 5%,#6b8805 95%);background: linear-gradient(to bottom, #a4d007 5%,#6b8805 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4d007', endColorstr='#6b8805',GradientType=0 );	}
+
+	.btn_green_white_innerfade > span {
+		border-radius: 2px;
+		display: block;
+
+
+					background: #8bb006;
+			background: -moz-linear-gradient(top, #8bb006 5%, #6b8805 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#8bb006), color-stop(95%,#6b8805));background: -webkit-linear-gradient(top, #8bb006 5%,#6b8805 95%);background: -o-linear-gradient(top, #8bb006 5%,#6b8805 95%);background: -ms-linear-gradient(top, #8bb006 5%,#6b8805 95%);background: linear-gradient(to bottom, #8bb006 5%,#6b8805 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bb006', endColorstr='#6b8805',GradientType=0 );			}
+
+.btn_green_white_innerfade:not(.btn_disabled):not(.btn_active):hover:not(.active):hover {
+	text-decoration: none !important;
+	color: #fff !important;
+
+				background: #b6d908;
+			background: -moz-linear-gradient(top, #b6d908 5%, #80a006 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#b6d908), color-stop(95%,#80a006));background: -webkit-linear-gradient(top, #b6d908 5%,#80a006 95%);background: -o-linear-gradient(top, #b6d908 5%,#80a006 95%);background: -ms-linear-gradient(top, #b6d908 5%,#80a006 95%);background: linear-gradient(to bottom, #b6d908 5%,#80a006 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b6d908', endColorstr='#80a006',GradientType=0 );	}
+
+	.btn_green_white_innerfade:not(.btn_disabled):not(.btn_active):hover:not(.active):hover > span {
+					background: #a1bf07;
+			background: -moz-linear-gradient(top, #a1bf07 5%, #80a006 95%);background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#a1bf07), color-stop(95%,#80a006));background: -webkit-linear-gradient(top, #a1bf07 5%,#80a006 95%);background: -o-linear-gradient(top, #a1bf07 5%,#80a006 95%);background: -ms-linear-gradient(top, #a1bf07 5%,#80a006 95%);background: linear-gradient(to bottom, #a1bf07 5%,#80a006 95%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1bf07', endColorstr='#80a006',GradientType=0 );			}
+
+    
+    
 }
